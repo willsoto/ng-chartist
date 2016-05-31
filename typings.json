@@ -1,0 +1,9 @@
+{
+  "name": "angular2-chartist",
+  "version": false,
+  "dependencies": {},
+  "globalDependencies": {
+    "chartist": "registry:dt/chartist#0.9.5+20160412141028",
+    "es6-shim": "registry:dt/es6-shim#0.31.2+20160317120654"
+  }
+}
