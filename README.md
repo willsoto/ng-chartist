@@ -23,14 +23,14 @@ Chartist component for Angular 2
 
 Install through npm:
 ```
-npm install --save @angular/core@2.0.0-rc.1 angular2-chartist
+npm install --save @angular/core@2.0.0-rc.1 angular2-chartist chartist
 ```
 
 Then use it in your app like so:
 
 ```typescript
-import {Component} from '@angular/core';
-import {ChartistComponent} from 'angular2-chartist';
+import { Component } from '@angular/core';
+import { ChartistComponent } from 'angular2-chartist';
 
 @Component({
   selector: 'demo-app',
@@ -61,7 +61,7 @@ https://paradox41.github.io/angular2-chartist/docs/
 * Install local dev dependencies: `npm install` while current directory is this repo
 
 ### Development server
-Run `npm start` to start a development server on port 8000 with auto reload + tests. 
+Run `npm start` to start a development server on port 8080 with auto reload + tests. 
 
 ### Testing
 Run `npm test` to run tests once or `npm run test:watch` to continually run tests.
