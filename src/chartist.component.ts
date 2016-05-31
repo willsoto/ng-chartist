@@ -13,7 +13,7 @@ export type ChartType = 'Pie' | 'Bar' | 'Line';
 
 @Component({
   selector: 'chartist',
-  template: '<div><div>'
+  template: '<ng-content></ng-content>'
 })
 class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   @Input() data: Chartist.IChartistData;
