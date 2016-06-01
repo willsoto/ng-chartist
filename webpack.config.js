@@ -26,6 +26,12 @@ module.exports = {
       exclude: [
         /node_modules/
       ]
+    }, {
+      test: /\.json$/,
+      loader: 'json',
+      exclude: [
+        /node_modules/
+      ]
     }]
   },
   resolve: {

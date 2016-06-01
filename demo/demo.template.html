@@ -1,1 +1,9 @@
-<chartist [(data)]="data" [(type)]="type"></chartist>
+<div *ngFor="let chart of charts">
+  <chartist
+    class="col-md-6"
+    [(data)]="chart.data"
+    [(type)]="chart.type"
+    [(options)]="chart.options"
+    [(responsiveOptions)]="chart.responsiveOptions">
+  </chartist>
+</div>
