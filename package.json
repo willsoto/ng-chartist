@@ -11,7 +11,7 @@
     "build:dist": "webpack --config webpack.config.dist.js",
     "pretest": "typings install",
     "test": "karma start",
-    "test:watch": "karma start --watch",
+    "test:watch": "karma start --auto-watch --no-single-run",
     "clean": "del ./src/*.d.ts ./demo/*.d.ts ./test/*.d.ts angular2-chartist.d.ts angular2-chartist.js*",
     "commit": "git-cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",

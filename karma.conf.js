@@ -1,8 +1,5 @@
 'use strict';
 
-const webpack = require('webpack');
-const WATCH = process.argv.indexOf('--watch') > -1;
-
 module.exports = function(config) {
   config.set({
     basePath: './',
@@ -37,10 +34,10 @@ module.exports = function(config) {
         }]
       },
       tslint: {
-        emitErrors: !WATCH,
+        emitErrors: false,
         failOnHint: false
       },
-      plugins: WATCH ? [] : [new webpack.NoErrorsPlugin()]
+      plugins: []
     },
     coverageReporter: {
       dir: 'coverage',
@@ -54,9 +51,9 @@ module.exports = function(config) {
     reporters: ['mocha', 'coverage'],
     port: 9876,
     colors: true,
-    logLevel: config.LOG_DEBUG,
-    autoWatch: WATCH,
+    logLevel: config.LOG_INFO,
+    autoWatch: false,
     browsers: ['PhantomJS'],
-    singleRun: !WATCH
+    singleRun: true
   });
 };
