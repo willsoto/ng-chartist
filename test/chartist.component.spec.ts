@@ -46,7 +46,7 @@ describe('chartist component', function() {
 
       fixture.detectChanges();
 
-      expect(Chartist.Bar).toHaveBeenCalled();
+      expect(Chartist.Bar).toHaveBeenCalledTimes(1);
     });
   }));
 });
