@@ -5,7 +5,7 @@ const data: any = require('./data.json');
 
 interface Chart {
   type: ChartType;
-  data: any;
+  data: Chartist.IChartistData;
   options?: any;
   responsiveOptions?: any;
 }
@@ -17,7 +17,9 @@ interface Chart {
   styleUrls: ['./demo.styles.css']
 })
 export class DemoApp {
-  charts: Array<Chart>;
+  charts: Chart[];
+  asyncData: Promise<Chartist.IChartistData>;
+  asyncType: Promise<ChartType>;
 
   constructor() {
     this.charts = [{
@@ -35,7 +37,7 @@ export class DemoApp {
       options: {
         showLine: false,
         axisX: {
-          labelInterpolationFnc: function(value: number, index: number) {
+          labelInterpolationFnc: function(value: number, index: number): string {
             return index % 13 === 0 ? 'W' + value : null;
           }
         }
@@ -43,7 +45,7 @@ export class DemoApp {
       responsiveOptions: [
         ['screen and (min-width: 640px)', {
           axisX: {
-            labelInterpolationFnc: function(value: number, index: number) {
+            labelInterpolationFnc: function(value: number, index: number): string {
               return index % 4 === 0 ? 'W' + value : null;
             }
           }
@@ -63,7 +65,7 @@ export class DemoApp {
         high: 10,
         low: -10,
         axisX: {
-          labelInterpolationFnc: function(value: number, index: number) {
+          labelInterpolationFnc: function(value: number, index: number): number {
             return index % 2 === 0 ? value : null;
           }
         }
@@ -85,5 +87,18 @@ export class DemoApp {
         showLabel: false
       }
     }];
+
+    // simulate slow API call
+    this.asyncData = new Promise(function(resolve) {
+      setTimeout(function() {
+        resolve(data['Pie']);
+      }, 5000);
+    });
+
+    this.asyncType = new Promise(function(resolve) {
+      setTimeout(function() {
+        resolve('Pie');
+      }, 5000);
+    });
   }
 }
