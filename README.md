@@ -35,7 +35,14 @@ import { ChartistComponent } from 'angular2-chartist';
 @Component({
   selector: 'demo-app',
   directives: [ChartistComponent],
-  template: '<chartist></chartist>'
+  template: `
+    <chartist
+      [(data)]="data"
+      [(type)]="type"
+      [(options)]="options"
+      [(responsiveOptions)]="responsiveOptions">
+    </chartist>
+  `
 })
 export class DemoApp {}
 ```
