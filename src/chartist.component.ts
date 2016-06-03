@@ -42,7 +42,7 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     console.log('ngOnDestroy');
   }
 
-  private renderChart(): void {
+  renderChart(): Promise<Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart> {
     const promises: any[] = [
       this.type,
       this.element,
@@ -51,10 +51,12 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
       this.responsiveOptions
     ];
 
-    Promise.all(promises).then((values) => {
+    return Promise.all(promises).then((values) => {
       const [type, ...args]: any = values;
 
       this.chart = Chartist[type](...args);
+
+      return this.chart;
     });
   }
 }

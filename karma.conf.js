@@ -26,6 +26,10 @@ module.exports = function(config) {
           test: /\.ts$/,
           loader: 'ts',
           exclude: /node_modules/
+        }, {
+          test: /\.json$/,
+          loader: 'json',
+          exclude: /node_modules/
         }],
         postLoaders: [{
           test: /\.ts$/,

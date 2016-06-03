@@ -6,10 +6,17 @@ import {
   inject,
   async
 } from '@angular/core/testing';
-import { TestComponentBuilder, ComponentFixture } from '@angular/compiler/testing';
+
+import {
+  TestComponentBuilder,
+  ComponentFixture
+} from '@angular/compiler/testing';
+
 import * as Chartist from 'chartist';
 
 import { ChartistComponent } from './../angular2-chartist';
+
+const data: any = require('./data.json');
 
 describe('chartist component', function() {
   let builder: TestComponentBuilder;
@@ -18,35 +25,31 @@ describe('chartist component', function() {
     builder = tcb;
   }));
 
-  it('should initialize the correct chart', async(() => {
+  it('should initialize the correct chart only once', async(() => {
     builder.createAsync(ChartistComponent).then((fixture: ComponentFixture<ChartistComponent>) => {
-      spyOn(Chartist, 'Bar').and.callThrough();
+      const chartType = 'Bar';
 
-      fixture.componentInstance.data = {
-        labels: [
-          'Jan',
-          'Feb',
-          'Mar',
-          'Apr',
-          'May',
-          'Jun',
-          'Jul',
-          'Aug',
-          'Sep',
-          'Oct',
-          'Nov',
-          'Dec'
-        ],
-        series: [
-          [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-          [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
-        ]
-      };
-      fixture.componentInstance.type = 'Bar';
+      spyOn(Chartist, chartType).and.callThrough();
 
-      fixture.detectChanges();
+      fixture.componentInstance.data = data[chartType];
+      fixture.componentInstance.type = chartType;
 
-      expect(Chartist.Bar).toHaveBeenCalledTimes(1);
+      fixture.componentInstance.renderChart().then(function() {
+        expect(Chartist.Bar).toHaveBeenCalledTimes(1);
+      });
+    });
+  }));
+
+  it('should return the correct chart instance', async(() => {
+    builder.createAsync(ChartistComponent).then((fixture: ComponentFixture<ChartistComponent>) => {
+      const chartType = 'Bar';
+
+      fixture.componentInstance.data = data[chartType];
+      fixture.componentInstance.type = chartType;
+
+      fixture.componentInstance.renderChart().then(function(chart) {
+        expect(chart instanceof Chartist.Bar).toBe(true);
+      });
     });
   }));
 });
