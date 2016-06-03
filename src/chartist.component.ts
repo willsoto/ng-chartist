@@ -16,29 +16,46 @@ export type ChartType = 'Pie' | 'Bar' | 'Line';
   template: '<ng-content></ng-content>'
 })
 class ChartistComponent implements OnInit, OnChanges, OnDestroy {
-  @Input() data: Chartist.IChartistData;
-  @Input() type: ChartType;
-  @Input() options: Chartist.IChartOptions;
+  @Input() data: (Promise<Chartist.IChartistData> | Chartist.IChartistData);
+  @Input() type: (Promise<ChartType> | ChartType);
+  @Input() options: (Promise<Chartist.IChartOptions> | Chartist.IChartOptions);
   // TODO: give this a better type
-  @Input() responsiveOptions: Chartist.IResponsiveOptionTuple<any>;
+  @Input() responsiveOptions: (Promise<Chartist.IResponsiveOptionTuple<any>> | Chartist.IResponsiveOptionTuple<any>);
 
   private element: HTMLElement;
+  private chart: (Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart);
 
   constructor(element: ElementRef) {
     this.element = element.nativeElement;
   }
 
-  ngOnInit() {
-    console.log('ngOnInit');
-    Chartist[this.type](this.element, this.data, this.options, this.responsiveOptions);
+  ngOnInit(): void {
+    this.renderChart();
   }
 
-  ngOnChanges() {
-    console.log('ngOnChanges');
+  // https://github.com/angular/angular/issues/6292
+  ngOnChanges(changeRecord: any): void {
+    console.log('ngOnChanges', changeRecord);
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     console.log('ngOnDestroy');
+  }
+
+  private renderChart(): void {
+    const promises: any[] = [
+      this.type,
+      this.element,
+      this.data,
+      this.options,
+      this.responsiveOptions
+    ];
+
+    Promise.all(promises).then((values) => {
+      const [type, ...args] = values;
+
+      this.chart = Chartist[type](...args);
+    });
   }
 }
 
