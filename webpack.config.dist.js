@@ -1,10 +1,15 @@
+const path = require('path');
+
 module.exports = {
   devtool: 'source-map',
-  entry: './angular2-chartist.ts',
+  entry: {
+    'angular2-chartist': './angular2-chartist.ts'
+  },
   output: {
-    filename: './angular2-chartist.js',
+    filename: '[name].js',
     libraryTarget: 'umd',
-    library: 'angular2Chartist'
+    library: 'angular2Chartist',
+    path: path.resolve(__dirname, 'dist')
   },
   externals: {
     '@angular/core': {
@@ -37,12 +42,13 @@ module.exports = {
       loader: 'ts',
       exclude: [
         /node_modules/
-      ],
-      query: {
-        compilerOptions: {
-          declaration: true
-        }
-      }
+      ]
+      // TODO: get this working
+      // query: {
+      //   compilerOptions: {
+      //     declaration: true
+      //   }
+      // }
     }]
   },
   resolve: {

@@ -2,8 +2,8 @@
   "name": "angular2-chartist",
   "version": "0.0.0",
   "description": "Chartist component for Angular 2",
-  "main": "./angular2-chartist.js",
-  "typings": "./angular2-chartist.d.ts",
+  "main": "./dist/angular2-chartist.js",
+  "typings": "./dist/angular2-chartist.d.ts",
   "scripts": {
     "prestart": "typings install",
     "start": "webpack-dev-server",
