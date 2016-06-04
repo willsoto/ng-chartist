@@ -4,12 +4,20 @@ import {
   Input,
   OnInit,
   OnChanges,
-  OnDestroy
+  OnDestroy,
+  SimpleChange
 } from '@angular/core';
 
 import * as Chartist from 'chartist';
 
 export type ChartType = 'Pie' | 'Bar' | 'Line';
+
+interface Changes {
+  type?: SimpleChange;
+  data?: SimpleChange;
+  options?: SimpleChange;
+  responsiveOptions?: SimpleChange;
+}
 
 @Component({
   selector: 'chartist',
@@ -34,8 +42,38 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   // https://github.com/angular/angular/issues/6292
-  ngOnChanges(changeRecord: any): void {
-    console.log('ngOnChanges', changeRecord);
+  ngOnChanges(changes: Changes): void {
+    if (!this.chart || 'type' in changes) {
+      this.renderChart();
+    } else {
+      let data: any;
+      let options: Chartist.IChartOptions;
+      let responsiveOptions: any;
+
+      if (changes.data === undefined) {
+        data = this.data;
+      } else {
+        data = changes.data.currentValue;
+      }
+
+      if (options === undefined) {
+        options = this.options;
+      } else {
+        options = changes.options.currentValue;
+      }
+
+      if (responsiveOptions === undefined) {
+        responsiveOptions = this.responsiveOptions;
+      } else {
+        responsiveOptions = changes.responsiveOptions.currentValue;
+      }
+
+      (<any>this.chart).update(
+        data,
+        options,
+        responsiveOptions
+      );
+    }
   }
 
   ngOnDestroy(): void {
