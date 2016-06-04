@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { ChartistComponent, ChartType } from './../angular2-chartist';
+
+import { ChartistComponent, ChartType } from '../angular2-chartist';
+
+import { LiveChartComponent } from './components/live-chart.component';
+import { AsyncChartComponent } from './components/async-chart.component';
+import { DynamicChartComponent } from './components/dynamic-chart.component';
 
 const data: any = require('./data.json');
 
@@ -12,14 +17,16 @@ interface Chart {
 
 @Component({
   selector: 'demo-app',
-  directives: [ChartistComponent],
-  templateUrl: './demo.template.html',
-  styleUrls: ['./demo.styles.css']
+  directives: [
+    ChartistComponent,
+    LiveChartComponent,
+    AsyncChartComponent,
+    DynamicChartComponent
+  ],
+  templateUrl: './demo.template.html'
 })
 export class DemoApp {
   charts: Chart[];
-  asyncData: Promise<Chartist.IChartistData>;
-  asyncType: Promise<ChartType>;
 
   constructor() {
     this.charts = [{
@@ -87,18 +94,5 @@ export class DemoApp {
         showLabel: false
       }
     }];
-
-    // simulate slow API call
-    this.asyncData = new Promise(function(resolve) {
-      setTimeout(function() {
-        resolve(data['Pie']);
-      }, 5000);
-    });
-
-    this.asyncType = new Promise(function(resolve) {
-      setTimeout(function() {
-        resolve('Pie');
-      }, 5000);
-    });
   }
 }

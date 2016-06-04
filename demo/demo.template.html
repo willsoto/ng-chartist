@@ -1,20 +1,26 @@
 <div *ngFor="let chart of charts">
   <chartist
     class="col-md-6"
-    [(data)]="chart.data"
-    [(type)]="chart.type"
-    [(options)]="chart.options"
-    [(responsiveOptions)]="chart.responsiveOptions">
+    [data]="chart.data"
+    [type]="chart.type"
+    [options]="chart.options"
+    [responsiveOptions]="chart.responsiveOptions">
   </chartist>
 </div>
 
 <div class="row">
   <div class="col-md-6">
-    <h4>Async</h4>
-    <chartist
-      [(data)]="asyncData"
-      [(type)]="asyncType">
-    </chartist>
+    <async-chart></async-chart>
   </div>
-  <div class="col-md-6"></div>
+  <div class="col-md-6">
+    <live-chart></live-chart>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <dynamic-chart></dynamic-chart>
+  </div>
+  <div class="col-md-6">
+  </div>
 </div>
