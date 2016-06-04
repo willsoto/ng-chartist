@@ -77,7 +77,9 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    console.log('ngOnDestroy');
+    if (this.chart) {
+      this.chart.detatch();
+    }
   }
 
   renderChart(): Promise<Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart> {
