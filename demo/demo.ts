@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ChartistComponent, ChartType } from '../angular2-chartist';
+import { ChartistComponent, ChartType, ChartEvent } from '../angular2-chartist';
 
 import { LiveChartComponent } from './components/live-chart.component';
 import { AsyncChartComponent } from './components/async-chart.component';
@@ -13,6 +13,7 @@ interface Chart {
   data: Chartist.IChartistData;
   options?: any;
   responsiveOptions?: any;
+  events?: ChartEvent;
 }
 
 @Component({
@@ -92,6 +93,18 @@ export class DemoApp {
         startAngle: 270,
         total: 200,
         showLabel: false
+      }
+    }, {
+      type: 'Pie',
+      data: data['Pie'],
+      options: {
+        donut: true,
+        showLabel: false
+      },
+      events: {
+        draw(data: any): void {
+          console.log(data);
+        }
       }
     }];
   }
