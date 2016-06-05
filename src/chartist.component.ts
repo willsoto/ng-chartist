@@ -46,16 +46,21 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   @Input() responsiveOptions: (Promise<Chartist.IResponsiveOptionTuple<any>> | Chartist.IResponsiveOptionTuple<any>);
   @Input() events: ChartEvent;
 
+  chart: (Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart);
+
   private element: HTMLElement;
-  private chart: (Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart);
 
   constructor(element: ElementRef) {
     this.element = element.nativeElement;
   }
 
-  ngOnInit(): void {
-    this.renderChart().then((chart) => {
-      this.bindEvents(chart);
+  ngOnInit(): Promise<Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart> {
+    return this.renderChart().then((chart) => {
+      if (this.events !== undefined) {
+        this.bindEvents(chart);
+      }
+
+      return chart;
     });
   }
 
@@ -123,10 +128,8 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   bindEvents(chart: any): void {
-    if (this.events !== undefined) {
-      for (let event of Object.keys(this.events)) {
-        chart.on(event, this.events[event]);
-      }
+    for (let event of Object.keys(this.events)) {
+      chart.on(event, this.events[event]);
     }
   }
 }
