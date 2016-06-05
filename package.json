@@ -12,7 +12,6 @@
     "test": "karma start",
     "test:watch": "karma start --auto-watch --no-single-run",
     "clean": "del ./src/*.d.ts ./demo/*.d.ts ./test/*.d.ts angular2-chartist.d.ts angular2-chartist.js*",
-    "commit": "git-cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "typedoc": "typedoc --options typedoc.json angular2-chartist.ts src/*.ts",
     "gh-pages": "git checkout gh-pages && git merge master && npm run build:demo && npm run typedoc && git add . && git commit -m 'chore: build demo and docs' && git push && git checkout master",
@@ -25,7 +24,11 @@
     "url": "git+https://github.com/paradox41/angular2-chartist.git"
   },
   "keywords": [
-    "angular2"
+    "angular2",
+    "chartist",
+    "charting",
+    "charts",
+    "angular"
   ],
   "author": "Will Soto",
   "license": "Apache-2.0",
@@ -39,14 +42,13 @@
     "@angular/core": "2.0.0-rc.1",
     "@angular/platform-browser": "2.0.0-rc.1",
     "@angular/platform-browser-dynamic": "2.0.0-rc.1",
-    "commitizen": "~2.8.1",
     "conventional-changelog": "~1.1.0",
     "conventional-changelog-cli": "~1.2.0",
     "cz-conventional-changelog": "~1.1.6",
     "del-cli": "~0.2.0",
     "es6-shim": "~0.35.0",
     "eslint": "^2.11.1",
-    "ghooks": "~1.2.1",
+    "git-scripts": "^0.2.1",
     "istanbul-instrumenter-loader": "~0.2.0",
     "jasmine-core": "~2.4.1",
     "json-loader": "^0.5.4",
@@ -67,7 +69,7 @@
     "typedoc": "~0.3.12",
     "typescript": "~1.8.10",
     "typings": "~1.0.4",
-    "validate-commit-msg": "~2.6.1",
+    "validate-commit": "^2.2.0",
     "webpack": "~1.13.0",
     "webpack-dev-server": "~1.14.1",
     "zone.js": "~0.6.12"
@@ -82,12 +84,9 @@
     "angular2-chartist.d.ts",
     "src/**/*.d.ts"
   ],
-  "config": {
-    "ghooks": {
-      "commit-msg": "validate-commit-msg"
-    },
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
+  "git": {
+    "scripts": {
+      "commit-msg": "./node_modules/.bin/validate-commit-msg $1"
     }
   }
 }
