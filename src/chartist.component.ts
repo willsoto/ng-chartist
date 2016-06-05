@@ -10,12 +10,23 @@ import {
 
 import * as Chartist from 'chartist';
 
+/**
+ * Possible chart types
+ * @type {String}
+ */
 export type ChartType = 'Pie' | 'Bar' | 'Line';
 
+/**
+ * Represent a chart event.
+ * For possible values, check the Chartist docs.
+ */
 export interface ChartEvent {
   [eventName: string]: (data: any) => void;
 }
 
+/**
+ * @private
+ */
 interface Changes {
   type?: SimpleChange;
   data?: SimpleChange;
