@@ -12,6 +12,10 @@ import * as Chartist from 'chartist';
 
 export type ChartType = 'Pie' | 'Bar' | 'Line';
 
+export interface ChartEvent {
+  [eventName: string]: (data: any) => void;
+}
+
 interface Changes {
   type?: SimpleChange;
   data?: SimpleChange;
@@ -29,6 +33,7 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   @Input() options: (Promise<Chartist.IChartOptions> | Chartist.IChartOptions);
   // TODO: give this a better type
   @Input() responsiveOptions: (Promise<Chartist.IResponsiveOptionTuple<any>> | Chartist.IResponsiveOptionTuple<any>);
+  @Input() events: ChartEvent;
 
   private element: HTMLElement;
   private chart: (Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart);
@@ -38,7 +43,9 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.renderChart();
+    this.renderChart().then((chart) => {
+      this.bindEvents(chart);
+    });
   }
 
   // https://github.com/angular/angular/issues/6292
@@ -101,6 +108,14 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
         options,
         responsiveOptions
       );
+    }
+  }
+
+  bindEvents(chart: any): void {
+    if (this.events !== undefined) {
+      for (let event of Object.keys(this.events)) {
+        chart.on(event, this.events[event]);
+      }
     }
   }
 }
