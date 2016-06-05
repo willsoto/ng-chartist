@@ -43,6 +43,34 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
 
   // https://github.com/angular/angular/issues/6292
   ngOnChanges(changes: Changes): void {
+    this.update(changes);
+  }
+
+  ngOnDestroy(): void {
+    if (this.chart) {
+      this.chart.detatch();
+    }
+  }
+
+  renderChart(): Promise<Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart> {
+    const promises: any[] = [
+      this.type,
+      this.element,
+      this.data,
+      this.options,
+      this.responsiveOptions
+    ];
+
+    return Promise.all(promises).then((values) => {
+      const [type, ...args]: any = values;
+
+      this.chart = Chartist[type](...args);
+
+      return this.chart;
+    });
+  }
+
+  update(changes: Changes): void {
     if (!this.chart || 'type' in changes) {
       this.renderChart();
     } else {
@@ -74,30 +102,6 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
         responsiveOptions
       );
     }
-  }
-
-  ngOnDestroy(): void {
-    if (this.chart) {
-      this.chart.detatch();
-    }
-  }
-
-  renderChart(): Promise<Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart> {
-    const promises: any[] = [
-      this.type,
-      this.element,
-      this.data,
-      this.options,
-      this.responsiveOptions
-    ];
-
-    return Promise.all(promises).then((values) => {
-      const [type, ...args]: any = values;
-
-      this.chart = Chartist[type](...args);
-
-      return this.chart;
-    });
   }
 }
 
