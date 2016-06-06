@@ -6,4 +6,8 @@ node_js:
   - '5'
   - '4'
 
-script: npm test
+install:
+  - npm install chartist @angular/core@2.0.0-rc.1
+  - npm install -g typings
+  - typings install
+  - npm install
