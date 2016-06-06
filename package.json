@@ -1,6 +1,6 @@
 {
   "name": "angular2-chartist",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Chartist component for Angular 2",
   "main": "./dist/angular2-chartist.js",
   "typings": "./dist/angular2-chartist.d.ts",
