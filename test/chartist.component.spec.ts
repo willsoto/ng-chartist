@@ -14,7 +14,7 @@ import {
 
 import * as Chartist from 'chartist';
 
-import { ChartistComponent, ChartType, ChartEvent } from './../angular2-chartist';
+import { ChartistComponent, ChartType, ChartEvent } from '../src/chartist.component';
 
 const data: any = require('./data.json');
 

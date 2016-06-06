@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { ChartistComponent, ChartType } from './../../angular2-chartist';
+import { ChartistComponent, ChartType } from '../../src/chartist.component';
 
 interface LiveData {
   labels: string[];

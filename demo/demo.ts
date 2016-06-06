@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ChartistComponent, ChartType, ChartEvent } from '../angular2-chartist';
+import { ChartistComponent, ChartType, ChartEvent } from '../src/chartist.component';
 
 import { LiveChartComponent } from './components/live-chart.component';
 import { AsyncChartComponent } from './components/async-chart.component';

@@ -2,8 +2,9 @@ const path = require('path');
 
 module.exports = {
   devtool: 'source-map',
+  context: path.resolve(__dirname, 'src'),
   entry: {
-    'angular2-chartist': './angular2-chartist.ts'
+    'angular2-chartist': './chartist.component.ts'
   },
   output: {
     filename: '[name].js',
@@ -29,9 +30,7 @@ module.exports = {
     preLoaders: [{
       test: /\.ts$/,
       loader: 'tslint',
-      exclude: [
-        /node_modules/
-      ],
+      exclude: /node_modules/,
       query: {
         emitErrors: true,
         failOnHint: true
@@ -40,13 +39,13 @@ module.exports = {
     loaders: [{
       test: /\.ts$/,
       loader: 'ts',
-      exclude: [
-        /node_modules/
-      ]
-      // TODO: get this working
+      exclude: /node_modules/
+      // Currently broken it seems
+      // https://github.com/TypeStrong/ts-loader/issues/186
       // query: {
       //   compilerOptions: {
-      //     declaration: true
+      //     declaration: true,
+      //     listFiles: true
       //   }
       // }
     }]
