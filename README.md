@@ -51,7 +51,7 @@ You may also find it useful to view the [demo source](https://github.com/paradox
 
 ### Usage without a module bundler
 ```
-<script src="node_modules/angular2-chartist/angular2-chartist.js"></script>
+<script src="node_modules/angular2-chartist/dist/angular2-chartist.js"></script>
 <script>
     // everything is exported angular2Chartist namespace
 </script>
