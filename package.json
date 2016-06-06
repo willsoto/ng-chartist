@@ -78,10 +78,8 @@
     "chartist": "^0.9.7"
   },
   "files": [
-    "angular2-chartist.js",
-    "angular2-chartist.js.map",
-    "angular2-chartist.d.ts",
-    "src/**/*.d.ts"
+    "src/",
+    "dist/"
   ],
   "git": {
     "scripts": {
