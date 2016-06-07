@@ -37,10 +37,10 @@ import { ChartistComponent } from 'angular2-chartist';
   directives: [ChartistComponent],
   template: `
     <chartist
-      [(data)]="data"
-      [(type)]="type"
-      [(options)]="options"
-      [(responsiveOptions)]="responsiveOptions">
+      [data]="data"
+      [type]="type"
+      [options]="options"
+      [responsiveOptions]="responsiveOptions">
     </chartist>
   `
 })
