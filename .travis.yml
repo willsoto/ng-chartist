@@ -11,3 +11,6 @@ install:
   - npm install -g typings
   - typings install
   - npm install
+
+after_script:
+  - npm run coveralls
