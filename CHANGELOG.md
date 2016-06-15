@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/paradox41/angular2-chartist/compare/v0.2.0...v0.2.1) (2016-06-15)
+
+
+### Bug Fixes
+
+* **build:** angular/core really wants beta.6 ([e85d68f](https://github.com/paradox41/angular2-chartist/commit/e85d68f))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/paradox41/angular2-chartist/compare/v0.1.3...v0.2.0) (2016-06-15)
 
