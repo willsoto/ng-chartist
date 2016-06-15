@@ -38,11 +38,11 @@
   },
   "homepage": "https://github.com/paradox41/angular2-chartist#readme",
   "devDependencies": {
-    "@angular/common": "2.0.0-rc.1",
-    "@angular/compiler": "2.0.0-rc.1",
-    "@angular/core": "2.0.0-rc.1",
-    "@angular/platform-browser": "2.0.0-rc.1",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
+    "@angular/common": "2.0.0-rc.2",
+    "@angular/compiler": "2.0.0-rc.2",
+    "@angular/core": "2.0.0-rc.2",
+    "@angular/platform-browser": "2.0.0-rc.2",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.2",
     "conventional-changelog": "~1.1.0",
     "conventional-changelog-cli": "~1.2.0",
     "coveralls": "^2.11.9",
@@ -78,7 +78,7 @@
     "zone.js": "~0.6.12"
   },
   "peerDependencies": {
-    "@angular/core": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.2",
     "chartist": "^0.9.7"
   },
   "files": [
