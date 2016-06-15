@@ -15,7 +15,7 @@
     "typedoc": "typedoc --options typedoc.json src/*.ts",
     "gh-pages": "git checkout gh-pages && git merge master && npm run build:demo && npm run typedoc && git add . && git commit -m 'chore: build demo and docs' && git push && git checkout master",
     "prerelease": "npm test",
-    "release": "standard-version && git push --follow-tags origin master && npm run build:dist && npm publish",
+    "release": "standard-version --sign && git push --follow-tags origin master && npm run build:dist && npm publish",
     "postrelease": "npm run gh-pages",
     "coveralls": "coveralls < coverage/lcov.info",
     "postcoveralls": "rimraf ./coverage"
