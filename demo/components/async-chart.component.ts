@@ -8,10 +8,10 @@ const data: any = require('../data.json');
   directives: [ChartistComponent],
   template: `
     <h4>Async</h4>
-    <chartist
+    <x-chartist
       [data]="data"
       [type]="type">
-    </chartist>
+    </x-chartist>
   `
 })
 class AsyncChartComponent {

@@ -26,7 +26,7 @@ interface Chart {
   ],
   templateUrl: './demo.template.html'
 })
-export class DemoApp {
+export class DemoAppComponent {
   charts: Chart[];
 
   constructor() {

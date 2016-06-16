@@ -37,12 +37,12 @@ import { ChartistComponent } from 'angular2-chartist';
   selector: 'demo-app',
   directives: [ChartistComponent],
   template: `
-    <chartist
+    <x-chartist
       [data]="data"
       [type]="type"
       [options]="options"
       [responsiveOptions]="responsiveOptions">
-    </chartist>
+    </x-chartist>
   `
 })
 export class DemoApp {}
@@ -69,7 +69,7 @@ https://paradox41.github.io/angular2-chartist/docs/
 * Install local dev dependencies: `npm install` while current directory is this repo
 
 ### Development server
-Run `npm start` to start a development server on port 8080 with auto reload + tests. 
+Run `npm start` to start a development server on port 8080 with auto reload + tests.
 
 ### Testing
 Run `npm test` to run tests once or `npm run test:watch` to continually run tests.

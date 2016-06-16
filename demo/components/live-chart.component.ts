@@ -15,10 +15,10 @@ function getRandomInt(min: number, max: number): number {
   directives: [ChartistComponent],
   template: `
     <h4>Live Updating</h4>
-    <chartist
+    <x-chartist
       [data]="data"
       [type]="type">
-    </chartist>
+    </x-chartist>
   `
 })
 class LiveChartComponent implements OnDestroy {

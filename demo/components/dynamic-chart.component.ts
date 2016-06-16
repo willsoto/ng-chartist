@@ -17,11 +17,11 @@ const data: any = require('../data.json');
         </select>
       </div>
     </div>
-    <chartist
+    <x-chartist
       [data]="data"
       [type]="type"
       [options]="options">
-    </chartist>
+    </x-chartist>
   `
 })
 class DynamicChartComponent {
