@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/paradox41/angular2-chartist/compare/v0.2.1...v0.3.0) (2016-06-16)
+
+
+### Code Refactoring
+
+* **chartist.component:** rename selector to be spec compliant ([02b228e](https://github.com/paradox41/angular2-chartist/commit/02b228e))
+
+
+### BREAKING CHANGES
+
+* chartist.component: chartist is now x-chartist
+
+Signed-off-by: Will Soto <will.soto9@gmail.com>
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://github.com/paradox41/angular2-chartist/compare/v0.2.0...v0.2.1) (2016-06-15)
 
