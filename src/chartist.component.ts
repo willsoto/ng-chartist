@@ -35,7 +35,7 @@ interface Changes {
 }
 
 @Component({
-  selector: 'chartist',
+  selector: 'x-chartist',
   template: '<ng-content></ng-content>'
 })
 class ChartistComponent implements OnInit, OnChanges, OnDestroy {
