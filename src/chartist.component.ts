@@ -5,7 +5,7 @@ import {
   OnInit,
   OnChanges,
   OnDestroy,
-  SimpleChange
+  SimpleChanges
 } from '@angular/core';
 
 import * as Chartist from 'chartist';
@@ -16,22 +16,17 @@ import * as Chartist from 'chartist';
  */
 export type ChartType = 'Pie' | 'Bar' | 'Line';
 
+type ChartInterfaces = Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart;
+type ChartOptions = Chartist.IBarChartOptions | Chartist.ILineChartOptions | Chartist.IPieChartOptions;
+type ResponsiveOptionTuple = Chartist.IResponsiveOptionTuple<ChartOptions>;
+type ResponsiveOptions = Array<ResponsiveOptionTuple>;
+
 /**
  * Represent a chart event.
  * For possible values, check the Chartist docs.
  */
 export interface ChartEvent {
   [eventName: string]: (data: any) => void;
-}
-
-/**
- * @private
- */
-interface Changes {
-  type?: SimpleChange;
-  data?: SimpleChange;
-  options?: SimpleChange;
-  responsiveOptions?: SimpleChange;
 }
 
 @Component({
@@ -42,11 +37,10 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   @Input() data: (Promise<Chartist.IChartistData> | Chartist.IChartistData);
   @Input() type: (Promise<ChartType> | ChartType);
   @Input() options: (Promise<Chartist.IChartOptions> | Chartist.IChartOptions);
-  // TODO: give this a better type
-  @Input() responsiveOptions: (Promise<Chartist.IResponsiveOptionTuple<any>> | Chartist.IResponsiveOptionTuple<any>);
+  @Input() responsiveOptions: (Promise<ResponsiveOptions> | ResponsiveOptions);
   @Input() events: ChartEvent;
 
-  chart: (Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart);
+  chart: ChartInterfaces;
 
   private element: HTMLElement;
 
@@ -54,7 +48,7 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     this.element = element.nativeElement;
   }
 
-  ngOnInit(): Promise<Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart> {
+  ngOnInit(): Promise<ChartInterfaces> {
     return this.renderChart().then((chart) => {
       if (this.events !== undefined) {
         this.bindEvents(chart);
@@ -65,7 +59,7 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   // https://github.com/angular/angular/issues/6292
-  ngOnChanges(changes: Changes): void {
+  ngOnChanges(changes: SimpleChanges): void {
     this.update(changes);
   }
 
@@ -75,7 +69,7 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     }
   }
 
-  renderChart(): Promise<Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart> {
+  renderChart(): Promise<ChartInterfaces> {
     const promises: any[] = [
       this.type,
       this.element,
@@ -93,37 +87,26 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     });
   }
 
-  update(changes: Changes): void {
+  update(changes: SimpleChanges): void {
     if (!this.chart || 'type' in changes) {
       this.renderChart();
     } else {
       let data: any;
       let options: Chartist.IChartOptions;
-      let responsiveOptions: any;
 
-      if (changes.data === undefined) {
+      if (changes['data'] === undefined) {
         data = this.data;
       } else {
-        data = changes.data.currentValue;
+        data = changes['data'].currentValue;
       }
 
-      if (options === undefined) {
+      if (changes['options'] === undefined) {
         options = this.options;
       } else {
-        options = changes.options.currentValue;
+        options = changes['options'].currentValue;
       }
 
-      if (responsiveOptions === undefined) {
-        responsiveOptions = this.responsiveOptions;
-      } else {
-        responsiveOptions = changes.responsiveOptions.currentValue;
-      }
-
-      (<any>this.chart).update(
-        data,
-        options,
-        responsiveOptions
-      );
+      (<any>this.chart).update(data, options);
     }
   }
 
