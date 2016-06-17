@@ -24,6 +24,12 @@ module.exports = {
       commonjs: '@angular/common',
       commonjs2: '@angular/common',
       amd: '@angular/common'
+    },
+    'chartist': {
+      root: ['chartist'],
+      commonjs: 'chartist',
+      commonjs2: 'chartist',
+      amd: 'chartist'
     }
   },
   module: {
