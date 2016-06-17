@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/paradox41/angular2-chartist/compare/v0.3.0...v0.3.1) (2016-06-17)
+
+
+### Bug Fixes
+
+* **build:** don't include Chartist in the bundle ([e4c0fb0](https://github.com/paradox41/angular2-chartist/commit/e4c0fb0))
+* **chartist.component:** fix typo. Actual error exists in typings ([46b55b2](https://github.com/paradox41/angular2-chartist/commit/46b55b2)), closes [#6](https://github.com/paradox41/angular2-chartist/issues/6)
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/paradox41/angular2-chartist/compare/v0.2.1...v0.3.0) (2016-06-16)
 
