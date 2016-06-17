@@ -14,7 +14,7 @@ import {
 
 import * as Chartist from 'chartist';
 
-import { ChartistComponent, ChartType, ChartEvent } from '../src/chartist.component';
+import { ChartistComponent, ChartType } from '../src/chartist.component';
 
 const data: any = require('./data.json');
 
@@ -113,6 +113,37 @@ describe('chartist component', function(): void {
       instance.renderChart().then(function(): void {
         instance.data = data['Line'];
         instance.type = 'Line';
+
+        spyOn(instance.chart, 'update').and.callThrough();
+        spyOn(instance, 'renderChart').and.callThrough();
+
+        fixture.detectChanges();
+
+        instance.update(changes);
+
+        expect(instance.renderChart).not.toHaveBeenCalled();
+        expect(instance.chart.update).toHaveBeenCalled();
+      });
+    });
+  }));
+
+  it('should update the chart if the options change', async(() => {
+    builder.createAsync(ChartistComponent).then((fixture: ComponentFixture<ChartistComponent>) => {
+      const instance: ChartistComponent = fixture.componentInstance;
+      const changes: any = {
+        options: {
+          reverseData: true
+        }
+      };
+
+      instance.data = data['Bar'];
+      instance.type = 'Bar';
+
+      fixture.detectChanges();
+
+      instance.renderChart().then(function(): void {
+        instance.data = data['Bar'];
+        instance.type = 'Bar';
 
         spyOn(instance.chart, 'update').and.callThrough();
         spyOn(instance, 'renderChart').and.callThrough();
