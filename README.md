@@ -24,7 +24,7 @@ Chartist component for Angular 2
 
 Install through npm:
 ```
-npm install --save @angular/core@2.0.0-rc.2 angular2-chartist chartist
+npm install --save @angular/core@2.0.0-rc.3 angular2-chartist chartist
 ```
 
 Then use it in your app like so:
