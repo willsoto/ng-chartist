@@ -10,7 +10,7 @@ import {
 import {
   TestComponentBuilder,
   ComponentFixture
-} from '@angular/compiler/testing';
+} from '@angular/core/testing';
 
 import * as Chartist from 'chartist';
 
