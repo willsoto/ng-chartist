@@ -52,7 +52,7 @@
     "cz-conventional-changelog": "^1.1.6",
     "del-cli": "^0.2.0",
     "es6-shim": "^0.35.0",
-    "eslint": "^2.11.1",
+    "eslint": "^3.0.0",
     "git-scripts": "^0.2.1",
     "istanbul-instrumenter-loader": "^0.2.0",
     "jasmine-core": "^2.4.1",
