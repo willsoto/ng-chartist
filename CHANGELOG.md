@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/paradox41/angular2-chartist/compare/v0.4.0...v0.6.0) (2016-07-06)
+
+
+### Bug Fixes
+
+* **typings:** include typings in build ([3ae78d8](https://github.com/paradox41/angular2-chartist/commit/3ae78d8)), closes [#11](https://github.com/paradox41/angular2-chartist/issues/11)
+
+
+### Features
+
+* **angular:** bump angular to rc.4 ([cbb135f](https://github.com/paradox41/angular2-chartist/commit/cbb135f))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/paradox41/angular2-chartist/compare/v0.4.0...v0.5.0) (2016-07-01)
 
