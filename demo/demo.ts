@@ -8,7 +8,7 @@ import { DynamicChartComponent } from './components/dynamic-chart.component';
 
 const data: any = require('./data.json');
 
-interface Chart {
+export interface Chart {
   type: ChartType;
   data: Chartist.IChartistData;
   options?: any;

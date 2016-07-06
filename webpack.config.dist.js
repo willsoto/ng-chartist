@@ -45,15 +45,15 @@ module.exports = {
     loaders: [{
       test: /\.ts$/,
       loader: 'ts',
-      exclude: /node_modules/
-      // Currently broken it seems
+      exclude: /node_modules/,
+      // Currently broken on 0.8.2
       // https://github.com/TypeStrong/ts-loader/issues/186
-      // query: {
-      //   compilerOptions: {
-      //     declaration: true,
-      //     listFiles: true
-      //   }
-      // }
+      query: {
+        compilerOptions: {
+          declaration: true,
+          listFiles: true
+        }
+      }
     }]
   },
   resolve: {

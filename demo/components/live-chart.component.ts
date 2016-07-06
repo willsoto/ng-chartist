@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { ChartistComponent, ChartType } from '../../src/chartist.component';
 
-interface LiveData {
+export interface LiveData {
   labels: string[];
   series: Array<Array<number>>;
 }

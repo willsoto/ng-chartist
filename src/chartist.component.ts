@@ -16,10 +16,10 @@ import * as Chartist from 'chartist';
  */
 export type ChartType = 'Pie' | 'Bar' | 'Line';
 
-type ChartInterfaces = Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart;
-type ChartOptions = Chartist.IBarChartOptions | Chartist.ILineChartOptions | Chartist.IPieChartOptions;
-type ResponsiveOptionTuple = Chartist.IResponsiveOptionTuple<ChartOptions>;
-type ResponsiveOptions = Array<ResponsiveOptionTuple>;
+export type ChartInterfaces = Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart;
+export type ChartOptions = Chartist.IBarChartOptions | Chartist.ILineChartOptions | Chartist.IPieChartOptions;
+export type ResponsiveOptionTuple = Chartist.IResponsiveOptionTuple<ChartOptions>;
+export type ResponsiveOptions = Array<ResponsiveOptionTuple>;
 
 /**
  * Represent a chart event.
