@@ -4,8 +4,16 @@
   "description": "Chartist component for Angular 2",
   "main": "./dist/angular2-chartist.js",
   "typings": "./dist/chartist.component.d.ts",
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "git": {
+    "scripts": {
+      "commit-msg": "./node_modules/.bin/validate-commit-msg $1"
+    }
+  },
   "scripts": {
-    "prestart": "typings install",
     "start": "webpack-dev-server",
     "build:demo": "webpack -p",
     "build:dist": "webpack --config webpack.config.dist.js",
@@ -38,6 +46,11 @@
     "url": "https://github.com/paradox41/angular2-chartist/issues"
   },
   "homepage": "https://github.com/paradox41/angular2-chartist#readme",
+  "dependencies": {
+    "@types/chartist": "^0.9.28-alpha",
+    "@types/es6-shim": "0.0.27-alpha",
+    "@types/jasmine": "^2.2.28-alpha"
+  },
   "devDependencies": {
     "@angular/common": "2.0.0-rc.4",
     "@angular/compiler": "2.0.0-rc.4",
@@ -73,8 +86,7 @@
     "tslint": "^3.12.0",
     "tslint-loader": "^2.1.4",
     "typedoc": "^0.4.2",
-    "typescript": "^1.8.10",
-    "typings": "^1.2.0",
+    "typescript": "^2.0.0",
     "uglify-js": "^2.6.2",
     "validate-commit": "^2.2.0",
     "webpack": "^1.13.0",
@@ -84,14 +96,5 @@
   "peerDependencies": {
     "@angular/core": "2.0.0-rc.4",
     "chartist": "^0.9.7"
-  },
-  "files": [
-    "src/",
-    "dist/"
-  ],
-  "git": {
-    "scripts": {
-      "commit-msg": "./node_modules/.bin/validate-commit-msg $1"
-    }
   }
 }
