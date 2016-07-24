@@ -47,9 +47,9 @@
   },
   "homepage": "https://github.com/paradox41/angular2-chartist#readme",
   "dependencies": {
-    "@types/chartist": "^0.9.28-alpha",
-    "@types/es6-shim": "0.0.27-alpha",
-    "@types/jasmine": "^2.2.28-alpha"
+    "@types/chartist": "^0.9.29",
+    "@types/es6-shim": "0.0.28",
+    "@types/jasmine": "^2.2.30"
   },
   "devDependencies": {
     "@angular/common": "2.0.0-rc.4",
