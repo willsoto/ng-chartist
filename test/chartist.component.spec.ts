@@ -4,10 +4,7 @@ import {
   expect,
   beforeEach,
   inject,
-  async
-} from '@angular/core/testing';
-
-import {
+  async,
   TestComponentBuilder,
   ComponentFixture
 } from '@angular/core/testing';
@@ -21,7 +18,7 @@ const data: any = require('./data.json');
 describe('chartist component', function(): void {
   let builder: TestComponentBuilder;
 
-  beforeEach(inject([TestComponentBuilder], function(tcb): void {
+  beforeEach(inject([TestComponentBuilder], function(tcb: any): void {
     builder = tcb;
   }));
 
