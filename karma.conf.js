@@ -44,7 +44,8 @@ module.exports = function(config) {
       plugins: []
     },
     webpackMiddleware: {
-      noInfo: true
+      noInfo: true,
+      stats: 'errors-only'
     },
     coverageReporter: {
       dir: 'coverage',
