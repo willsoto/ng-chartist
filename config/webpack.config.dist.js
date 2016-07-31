@@ -1,8 +1,8 @@
-const path = require('path');
+const helpers = require('./helpers');
 
 module.exports = {
   devtool: 'source-map',
-  context: path.resolve(__dirname, 'src'),
+  context: helpers.root('src'),
   entry: {
     'angular2-chartist': './chartist.component.ts'
   },
@@ -10,7 +10,7 @@ module.exports = {
     filename: '[name].js',
     libraryTarget: 'umd',
     library: 'angular2Chartist',
-    path: path.resolve(__dirname, 'dist')
+    path: helpers.root('dist')
   },
   externals: {
     '@angular/core': {
@@ -36,7 +36,10 @@ module.exports = {
     preLoaders: [{
       test: /\.ts$/,
       loader: 'tslint',
-      exclude: /node_modules/,
+      include: [
+        helpers.root('src'),
+        helpers.root('demo')
+      ],
       query: {
         emitErrors: true,
         failOnHint: true
@@ -45,7 +48,10 @@ module.exports = {
     loaders: [{
       test: /\.ts$/,
       loader: 'ts',
-      exclude: /node_modules/,
+      include: [
+        helpers.root('src'),
+        helpers.root('demo')
+      ],
       // Currently broken on 0.8.2
       // https://github.com/TypeStrong/ts-loader/issues/186
       query: {

@@ -1,5 +1,7 @@
 'use strict';
 
+const helpers = require('./config/helpers');
+
 module.exports = function(config) {
   config.set({
     basePath: './',
@@ -20,21 +22,32 @@ module.exports = function(config) {
         preLoaders: [{
           test: /\.ts$/,
           loader: 'tslint',
-          exclude: /node_modules/
+          include: [
+            helpers.root('src'),
+            helpers.root('test')
+          ]
         }],
         loaders: [{
           test: /\.ts$/,
           loader: 'ts',
-          exclude: /node_modules/
+          include: [
+            helpers.root('src'),
+            helpers.root('test')
+          ]
         }, {
           test: /\.json$/,
           loader: 'json',
-          exclude: /node_modules/
+          include: [
+            helpers.root('src'),
+            helpers.root('test')
+          ]
         }],
         postLoaders: [{
           test: /\.ts$/,
           loader: 'istanbul-instrumenter',
-          exclude: /(test|node_modules)/
+          include: [
+            helpers.root('src')
+          ]
         }]
       },
       tslint: {
