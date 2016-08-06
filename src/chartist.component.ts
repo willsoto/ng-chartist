@@ -58,7 +58,6 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     });
   }
 
-  // https://github.com/angular/angular/issues/6292
   ngOnChanges(changes: SimpleChanges): void {
     this.update(changes);
   }
