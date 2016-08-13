@@ -4,7 +4,7 @@
     "experimentalDecorators": true,
     "lib": [
       "dom",
-      "es2015"
+      "es6"
     ],
     "module": "commonjs",
     "moduleResolution": "node",
@@ -14,10 +14,12 @@
     "removeComments": false,
     "sourceMap": true,
     "strictNullChecks": true,
-    "target": "ES5"
-  },
-  "compileOnSave": false,
-  "include": [
-    "src/*.ts"
-  ]
+    "target": "es5",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "jasmine"
+    ]
+  }
 }

@@ -1,8 +1,9 @@
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
 import { enableProdMode } from '@angular/core';
-import { bootstrap } from '@angular/platform-browser-dynamic';
-import { DemoAppComponent } from './demo';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app.module';
 
 declare var ENV: string;
 
@@ -10,4 +11,4 @@ if (ENV === 'production') {
   enableProdMode();
 }
 
-bootstrap(DemoAppComponent);
+platformBrowserDynamic().bootstrapModule(AppModule);
