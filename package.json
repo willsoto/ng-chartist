@@ -16,7 +16,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build:demo": "webpack -p",
-    "build:dist": "webpack --config ./config/webpack.config.dist.js",
+    "build:dist": "webpack --config ./config/webpack.dist.js",
     "postbuild:dist": "uglifyjs dist/angular2-chartist.js --compress --mangle --screw-ie8 -o dist/angular2-chartist.min.js",
     "test": "karma start",
     "test:watch": "karma start --auto-watch --no-single-run",

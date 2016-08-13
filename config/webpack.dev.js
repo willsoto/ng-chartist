@@ -1,7 +1,5 @@
 const webpack = require('webpack');
 
-const helpers = require('./helpers');
-
 const IS_PROD = process.argv.indexOf('-p') > -1;
 
 module.exports = {
@@ -15,10 +13,7 @@ module.exports = {
     preLoaders: [{
       test: /\.ts$/,
       loader: 'tslint',
-      include: [
-        helpers.root('src'),
-        helpers.root('demo')
-      ],
+      exclude: /node_modules/,
       query: {
         emitErrors: false,
         failOnHint: false
@@ -27,17 +22,11 @@ module.exports = {
     loaders: [{
       test: /\.ts$/,
       loader: 'ts',
-      include: [
-        helpers.root('src'),
-        helpers.root('demo')
-      ]
+      exclude: /node_modules/
     }, {
       test: /\.json$/,
       loader: 'json',
-      include: [
-        helpers.root('src'),
-        helpers.root('demo')
-      ]
+      exclude: /node_modules/
     }]
   },
   resolve: {

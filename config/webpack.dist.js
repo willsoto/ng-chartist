@@ -36,10 +36,7 @@ module.exports = {
     preLoaders: [{
       test: /\.ts$/,
       loader: 'tslint',
-      include: [
-        helpers.root('src'),
-        helpers.root('demo')
-      ],
+      exclude: /node_modules/,
       query: {
         emitErrors: true,
         failOnHint: true
@@ -48,10 +45,7 @@ module.exports = {
     loaders: [{
       test: /\.ts$/,
       loader: 'ts',
-      include: [
-        helpers.root('src'),
-        helpers.root('demo')
-      ],
+      exclude: /node_modules/,
       // Currently broken on 0.8.2
       // https://github.com/TypeStrong/ts-loader/issues/186
       query: {
