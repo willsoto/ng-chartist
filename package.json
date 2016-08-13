@@ -56,7 +56,7 @@
     "@types/jasmine": "^2.2.31",
     "@types/rx": "^2.5.29",
     "chartist": "^0.9.7",
-    "codelyzer": "0.0.26",
+    "codelyzer": "0.0.28",
     "coveralls": "^2.11.9",
     "es6-shim": "^0.35.0",
     "eslint": "^3.0.0",
