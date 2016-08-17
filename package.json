@@ -81,7 +81,7 @@
     "tslint-loader": "^2.1.4",
     "typedoc": "^0.4.2",
     "typescript": "^2.0.0",
-    "uglify-js": "^2.6.2",
+    "uglify-js": "^2.7.3",
     "validate-commit": "^2.2.0",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
