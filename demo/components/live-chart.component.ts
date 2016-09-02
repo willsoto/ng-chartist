@@ -1,5 +1,11 @@
-import { Component, OnDestroy } from '@angular/core';
-import { ChartistComponent, ChartType } from '../../src/chartist.component';
+import {
+  Component,
+  OnDestroy
+} from '@angular/core';
+
+import {
+  ChartType
+} from '../../src/chartist.component';
 
 export interface LiveData {
   labels: string[];
@@ -12,7 +18,6 @@ function getRandomInt(min: number, max: number): number {
 
 @Component({
   selector: 'live-chart',
-  directives: [ChartistComponent],
   template: `
     <h4>Live Updating</h4>
     <x-chartist

@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
-import { ChartistComponent, ChartType } from '../../src/chartist.component';
+import {
+  Component
+} from '@angular/core';
+
+import {
+  ChartType
+} from '../../src/chartist.component';
 
 const data: any = require('../data.json');
 
 @Component({
   selector: 'dynamic-chart',
-  directives: [ChartistComponent],
   template: `
     <div class="row">
       <div class="col-md-6">

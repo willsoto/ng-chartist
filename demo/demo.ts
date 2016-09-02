@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import {
+  Component
+} from '@angular/core';
 
-import { ChartistComponent, ChartType, ChartEvent } from '../src/chartist.component';
+import * as Chartist from 'chartist';
 
-import { LiveChartComponent } from './components/live-chart.component';
-import { AsyncChartComponent } from './components/async-chart.component';
-import { DynamicChartComponent } from './components/dynamic-chart.component';
+import {
+  ChartType,
+  ChartEvent
+} from '../src/chartist.component';
 
 const data: any = require('./data.json');
 
@@ -18,12 +21,6 @@ export interface Chart {
 
 @Component({
   selector: 'demo-app',
-  directives: [
-    ChartistComponent,
-    LiveChartComponent,
-    AsyncChartComponent,
-    DynamicChartComponent
-  ],
   templateUrl: './demo.template.html'
 })
 export class DemoAppComponent {
@@ -46,7 +43,7 @@ export class DemoAppComponent {
         showLine: false,
         axisX: {
           labelInterpolationFnc: function(value: number, index: number): string {
-            return index % 13 === 0 ? 'W' + value : null;
+            return index % 13 === 0 ? `W${value}` : null;
           }
         }
       },
@@ -54,7 +51,7 @@ export class DemoAppComponent {
         ['screen and (min-width: 640px)', {
           axisX: {
             labelInterpolationFnc: function(value: number, index: number): string {
-              return index % 4 === 0 ? 'W' + value : null;
+              return index % 4 === 0 ? `W${value}` : null;
             }
           }
         }]

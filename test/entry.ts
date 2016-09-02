@@ -10,17 +10,17 @@ import 'zone.js/dist/jasmine-patch';
 import 'rxjs';
 
 import {
-  setBaseTestProviders
+  TestBed
 } from '@angular/core/testing';
 
 import {
-  TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
-  TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
 
-setBaseTestProviders(
-  TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
-  TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS
+TestBed.initTestEnvironment(
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting()
 );
 
 declare var require: any;
