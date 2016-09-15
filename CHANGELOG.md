@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.0"></a>
+# [0.9.0](https://github.com/paradox41/angular2-chartist/compare/v0.8.0...v0.9.0) (2016-09-15)
+
+
+### Features
+
+* **angular:** upgrade to angular 2.0 stable ([b62ea60](https://github.com/paradox41/angular2-chartist/commit/b62ea60))
+
+
+
 <a name="0.8.0"></a>
 # [0.8.0](https://github.com/paradox41/angular2-chartist/compare/v0.7.0...v0.8.0) (2016-09-02)
 
