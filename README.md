@@ -22,12 +22,28 @@ Chartist component for Angular 2
 
 ## Installation
 
-Install through npm:
+### Install through npm:
 ```
 npm install --save @angular/core@2.0.0-rc.4 angular2-chartist chartist
 ```
+### Additionally typings for the chartist library need to be installed:
 
-Then use it in your app like so:
+* For TSC <= 1.8:
+
+```
+npm install -g typings --save
+```
+```
+typings install -g dt~chartist --save
+```
+
+* For TSC = 2.0+:
+
+```
+npm install @types/chartist --save-dev
+```
+
+### Then use it in your app like so:
 
 ```typescript
 import { Component } from '@angular/core';
