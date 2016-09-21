@@ -37,7 +37,7 @@ npm install -g typings --save
 typings install -g dt~chartist --save
 ```
 
-* For TSC = 2.0+:
+* For TSC = 2.0+ typings can be installed through npm directly:
 
 ```
 npm install @types/chartist --save-dev
