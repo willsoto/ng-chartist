@@ -80,7 +80,7 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     return Promise.all(promises).then((values) => {
       const [type, ...args]: any = values;
 
-      this.chart = Chartist[type](...args);
+      this.chart = (<any>Chartist)[type](...args);
 
       return this.chart;
     });

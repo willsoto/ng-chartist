@@ -6,6 +6,8 @@ import {
   ChartType
 } from '../../src/chartist.component';
 
+import * as Chartist from 'chartist';
+
 const data: any = require('../data.json');
 
 @Component({
