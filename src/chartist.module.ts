@@ -9,6 +9,9 @@ import {
 @NgModule({
   declarations: [
     ChartistComponent
+  ],
+  exports: [
+    ChartistComponent
   ]
 })
 export class ChartistModule {}
