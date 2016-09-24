@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.9.5"></a>
+## [0.9.5](https://github.com/paradox41/angular2-chartist/compare/v0.9.4...v0.9.5) (2016-09-24)
+
+
+
 <a name="0.9.4"></a>
 ## [0.9.4](https://github.com/paradox41/angular2-chartist/compare/v0.9.3...v0.9.4) (2016-09-24)
 
