@@ -46,22 +46,53 @@ npm install @types/chartist --save-dev
 ### Then use it in your app like so:
 
 ```typescript
-import { Component } from '@angular/core';
-import { ChartistComponent } from 'angular2-chartist';
+import {
+  Component
+} from '@angular/core';
+
+import {
+  ChartistComponent,
+  ChartType
+} from 'angular2-chartist';
 
 @Component({
-  selector: 'demo-app',
+  selector: 'my-element',
   directives: [ChartistComponent],
   template: `
     <x-chartist
       [data]="data"
-      [type]="type"
-      [options]="options"
-      [responsiveOptions]="responsiveOptions">
+      [type]="type">
     </x-chartist>
   `
 })
-export class DemoApp {}
+export class MyElementComponent {
+  type: ChartType;
+  data: any;
+
+  constructor() {
+    this.type = 'Bar';
+    this.data = {
+      "labels": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "series": [
+        [5, 4, 3, 7, 5, 10 ,3, 4, 8, 10 ,6, 8],
+        [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+      ]
+    }
+  }
+}
 ```
 
 You may also find it useful to view the [demo source](https://github.com/paradox41/angular2-chartist/blob/master/demo/demo.ts).
