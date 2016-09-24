@@ -147,4 +147,22 @@ describe('chartist component', function(): void {
       expect(instance.chart.update).toHaveBeenCalled();
     });
   }));
+
+  it('should throw an error when missing type', async(() => {
+    let fixture = TestBed.createComponent(ChartistComponent);
+    let instance: ChartistComponent = fixture.debugElement.componentInstance;
+
+    instance.data = data['Bar'];
+
+    expect(instance.ngOnInit).toThrow();
+  }));
+
+  it('should throw an error when missing data', async(() => {
+    let fixture = TestBed.createComponent(ChartistComponent);
+    let instance: ChartistComponent = fixture.debugElement.componentInstance;
+
+    instance.type = 'Bar';
+
+    expect(instance.ngOnInit).toThrow();
+  }));
 });

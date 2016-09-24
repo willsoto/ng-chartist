@@ -49,6 +49,10 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnInit(): Promise<ChartInterfaces> {
+    if (!this.type || !this.data) {
+      Promise.reject(`Expected at least type and data. Got ${this.type} for type and ${this.data} for data`);
+    }
+
     return this.renderChart().then((chart) => {
       if (this.events !== undefined) {
         this.bindEvents(chart);
