@@ -90,6 +90,7 @@
   },
   "peerDependencies": {
     "@angular/core": "^2.0.0",
+    "@types/chartist": "^0.9.33",
     "chartist": "^0.9.8"
   }
 }
