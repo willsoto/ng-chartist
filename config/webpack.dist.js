@@ -4,10 +4,10 @@ module.exports = {
   devtool: 'source-map',
   context: helpers.root('src'),
   entry: {
-    'angular2-chartist': './chartist.component.ts'
+    'angular2-chartist': './chartist.module.ts'
   },
   output: {
-    filename: '[name].js',
+    filename: 'angular2-chartist.js',
     libraryTarget: 'umd',
     library: 'angular2Chartist',
     path: helpers.root('dist')

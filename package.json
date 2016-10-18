@@ -5,7 +5,6 @@
   "main": "./dist/angular2-chartist.js",
   "typings": "./dist/chartist.component.d.ts",
   "files": [
-    "src/",
     "dist/"
   ],
   "git": {
@@ -14,8 +13,10 @@
     }
   },
   "scripts": {
+    "clean": "rimraf dist/",
     "start": "webpack-dev-server",
     "build:demo": "webpack -p",
+    "prebuild:dist": "npm run clean",
     "build:dist": "webpack --config ./config/webpack.dist.js",
     "postbuild:dist": "uglifyjs dist/angular2-chartist.js --compress --mangle --screw-ie8 -o dist/angular2-chartist.min.js",
     "test": "karma start",
