@@ -10,6 +10,8 @@ import {
   ChartistComponent
 } from '../src/chartist.component';
 
+declare var require: any;
+
 const data: any = require('./data.json');
 
 describe('chartist component', function(): void {
