@@ -76,15 +76,15 @@
     "rimraf": "^2.5.4",
     "rxjs": "5.0.0-beta.12",
     "standard-version": "^3.0.0",
-    "ts-loader": "0.9.4",
+    "ts-loader": "^0.9.4",
     "tslint": "^3.15.1",
     "tslint-loader": "^2.1.5",
     "typedoc": "^0.5.0",
     "typescript": "^2.0.3",
     "uglify-js": "^2.7.3",
     "validate-commit": "^2.3.2",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2",
+    "webpack": "beta",
+    "webpack-dev-server": "beta",
     "zone.js": "^0.6.25"
   },
   "peerDependencies": {

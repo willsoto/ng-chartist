@@ -7,10 +7,11 @@ module.exports = {
   entry: './demo/entry.ts',
   output: {
     filename: 'demo.js',
-    path: IS_PROD ? './demo' : ''
+    path: IS_PROD ? './demo' : '/'
   },
   module: {
-    preLoaders: [{
+    loaders: [{
+      enforce: 'pre',
       test: /\.ts$/,
       loader: 'tslint',
       exclude: /node_modules/,
@@ -18,8 +19,7 @@ module.exports = {
         emitErrors: false,
         failOnHint: false
       }
-    }],
-    loaders: [{
+    }, {
       test: /\.ts$/,
       loader: 'ts',
       exclude: /node_modules/
@@ -30,7 +30,7 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['', '.ts', '.js', '.json']
+    extensions: ['.ts', '.js', '.json']
   },
   devServer: {
     inline: true,
@@ -41,7 +41,8 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.DedupePlugin(),
+    // https://github.com/webpack/webpack/issues/2644
+    // new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
       ENV: JSON.stringify(IS_PROD ? 'production' : 'development')
     })

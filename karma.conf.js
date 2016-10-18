@@ -1,4 +1,4 @@
-'use strict';
+const webpack = require('webpack');
 
 const helpers = require('./config/helpers');
 
@@ -16,18 +16,18 @@ module.exports = function(config) {
     webpack: {
       devtool: 'inline-source-map',
       resolve: {
-        extensions: ['', '.ts', '.js']
+        extensions: ['.ts', '.js']
       },
       module: {
-        preLoaders: [{
+        loaders: [{
+          enforce: 'pre',
           test: /\.ts$/,
           loader: 'tslint',
           include: [
             helpers.root('src'),
             helpers.root('test')
           ]
-        }],
-        loaders: [{
+        }, {
           test: /\.ts$/,
           loader: 'ts',
           include: [
@@ -41,8 +41,8 @@ module.exports = function(config) {
             helpers.root('src'),
             helpers.root('test')
           ]
-        }],
-        postLoaders: [{
+        }, {
+          enforce: 'post',
           test: /\.ts$/,
           loader: 'istanbul-instrumenter',
           include: [
@@ -50,11 +50,14 @@ module.exports = function(config) {
           ]
         }]
       },
-      tslint: {
-        emitErrors: false,
-        failOnHint: false
-      },
-      plugins: []
+      plugins: [
+        new webpack.LoaderOptionsPlugin({
+          tslint: {
+            emitErrors: false,
+            failOnHint: false
+          }
+        })
+      ]
     },
     webpackMiddleware: {
       noInfo: true,

@@ -33,7 +33,8 @@ module.exports = {
     }
   },
   module: {
-    preLoaders: [{
+    loaders: [{
+      enforce: 'pre',
       test: /\.ts$/,
       loader: 'tslint',
       exclude: /node_modules/,
@@ -41,22 +42,13 @@ module.exports = {
         emitErrors: true,
         failOnHint: true
       }
-    }],
-    loaders: [{
+    }, {
       test: /\.ts$/,
       loader: 'ts',
-      exclude: /node_modules/,
-      // Currently broken on 0.8.2
-      // https://github.com/TypeStrong/ts-loader/issues/186
-      query: {
-        compilerOptions: {
-          declaration: true,
-          listFiles: true
-        }
-      }
+      exclude: /node_modules/
     }]
   },
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['.ts', '.js']
   }
 };
