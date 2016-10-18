@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.10.0"></a>
+# [0.10.0](https://github.com/paradox41/angular2-chartist/compare/v0.8.0...v0.10.0) (2016-10-18)
+
+
+### Bug Fixes
+
+* **chartist.component:** throw error if chart does not have data or type ([0c0dea0](https://github.com/paradox41/angular2-chartist/commit/0c0dea0)), closes [#41](https://github.com/paradox41/angular2-chartist/issues/41)
+* **chartist.module:** export ChartistComponent correctly ([cbc2873](https://github.com/paradox41/angular2-chartist/commit/cbc2873)), closes [#39](https://github.com/paradox41/angular2-chartist/issues/39)
+* **dist:** concat to one file and include the module declaration ([d385bee](https://github.com/paradox41/angular2-chartist/commit/d385bee)), closes [#48](https://github.com/paradox41/angular2-chartist/issues/48)
+
+
+### Features
+
+* **angular:** upgrade to angular 2.0 stable ([b62ea60](https://github.com/paradox41/angular2-chartist/commit/b62ea60))
+
+
+
 <a name="0.9.5"></a>
 ## [0.9.5](https://github.com/paradox41/angular2-chartist/compare/v0.9.4...v0.9.5) (2016-09-24)
 
