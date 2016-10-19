@@ -9,6 +9,8 @@ import {
   ChartEvent
 } from '../src/chartist.component';
 
+declare var require: any;
+
 const data: any = require('./data.json');
 
 export interface Chart {

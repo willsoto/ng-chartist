@@ -9,18 +9,14 @@ import {
 } from '@angular/forms';
 
 import {
-  ChartistComponent
-} from '../src/chartist.component';
+  ChartistModule
+} from '../dist/angular2-chartist';
 
 import {
+  AsyncChartComponent,
+  DynamicChartComponent,
   LiveChartComponent
-} from './components/live-chart.component';
-import {
-  AsyncChartComponent
-} from './components/async-chart.component';
-import {
-  DynamicChartComponent
-} from './components/dynamic-chart.component';
+} from './components';
 
 import {
   DemoAppComponent
@@ -29,12 +25,12 @@ import {
 @NgModule({
   declarations: [
     DemoAppComponent,
-    ChartistComponent,
     LiveChartComponent,
     AsyncChartComponent,
     DynamicChartComponent
   ],
   imports: [
+    ChartistModule,
     BrowserModule,
     FormsModule
   ],
