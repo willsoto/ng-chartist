@@ -10,7 +10,7 @@ import {
 
 import {
   ChartistModule
-} from '../dist/angular2-chartist';
+} from '../src/chartist.component';
 
 import {
   AsyncChartComponent,
