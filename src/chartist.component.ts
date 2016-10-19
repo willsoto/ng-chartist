@@ -1,4 +1,5 @@
 import {
+  NgModule,
   Component,
   ElementRef,
   Input,
@@ -120,8 +121,19 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   }
 }
 
+@NgModule({
+  declarations: [
+    ChartistComponent
+  ],
+  exports: [
+    ChartistComponent
+  ]
+})
+class ChartistModule {}
+
 export {
-  ChartistComponent
+  ChartistComponent,
+  ChartistModule
 };
 
 // for angular-cli
