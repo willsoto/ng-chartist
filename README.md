@@ -45,6 +45,8 @@ npm install @types/chartist --save-dev
 
 ### Then use it in your app like so:
 
+#### As a component
+
 ```typescript
 import {
   Component
@@ -93,6 +95,31 @@ export class MyElementComponent {
     }
   }
 }
+```
+
+#### As a module
+
+```typescript
+import {
+  NgModule
+} from '@angular/core';
+
+import {
+  ChartistModule
+} from 'angular2-chartist';
+
+import {
+  MyAppComponent
+} from './my-app';
+
+@NgModule({
+  imports: [
+    ChartistModule,
+  ],
+  bootstrap: [MyAppComponent]
+})
+export class AppModule { }
+
 ```
 
 You may also find it useful to view the [demo source](https://github.com/paradox41/angular2-chartist/blob/master/demo/demo.ts).
