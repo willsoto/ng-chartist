@@ -5,6 +5,7 @@
   "main": "./dist/angular2-chartist.js",
   "typings": "./dist/chartist.component.d.ts",
   "files": [
+    "src/",
     "dist/"
   ],
   "git": {
