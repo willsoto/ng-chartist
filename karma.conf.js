@@ -22,21 +22,21 @@ module.exports = function(config) {
         loaders: [{
           enforce: 'pre',
           test: /\.ts$/,
-          loader: 'tslint',
+          loader: 'tslint-loader',
           include: [
             helpers.root('src'),
             helpers.root('test')
           ]
         }, {
           test: /\.ts$/,
-          loader: 'ts',
+          loader: 'ts-loader',
           include: [
             helpers.root('src'),
             helpers.root('test')
           ]
         }, {
           test: /\.json$/,
-          loader: 'json',
+          loader: 'json-loader',
           include: [
             helpers.root('src'),
             helpers.root('test')
@@ -44,7 +44,7 @@ module.exports = function(config) {
         }, {
           enforce: 'post',
           test: /\.ts$/,
-          loader: 'istanbul-instrumenter',
+          loader: 'istanbul-instrumenter-loader',
           include: [
             helpers.root('src')
           ]

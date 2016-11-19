@@ -13,7 +13,7 @@ module.exports = {
     loaders: [{
       enforce: 'pre',
       test: /\.ts$/,
-      loader: 'tslint',
+      loader: 'tslint-loader',
       exclude: /node_modules/,
       query: {
         emitErrors: false,
@@ -21,11 +21,11 @@ module.exports = {
       }
     }, {
       test: /\.ts$/,
-      loader: 'ts',
+      loader: 'ts-loader',
       exclude: /node_modules/
     }, {
       test: /\.json$/,
-      loader: 'json',
+      loader: 'json-loader',
       exclude: /node_modules/
     }]
   },
