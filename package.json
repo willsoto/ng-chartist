@@ -87,7 +87,7 @@
     "validate-commit": "^2.3.2",
     "webpack": "beta",
     "webpack-dev-server": "beta",
-    "zone.js": "^0.6.26"
+    "zone.js": "^0.7.0"
   },
   "peerDependencies": {
     "@angular/core": "^2.0.0",
