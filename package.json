@@ -76,7 +76,7 @@
     "phantomjs-prebuilt": "^2.1.13",
     "reflect-metadata": "0.1.8",
     "rimraf": "^2.5.4",
-    "rxjs": "5.0.0-rc.3",
+    "rxjs": "5.0.0",
     "standard-version": "^4.0.0",
     "ts-loader": "^1.2.2",
     "tslint": "3.15.1",
