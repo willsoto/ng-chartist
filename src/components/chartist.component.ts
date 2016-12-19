@@ -1,5 +1,4 @@
 import {
-  NgModule,
   Component,
   ElementRef,
   Input,
@@ -9,7 +8,7 @@ import {
   SimpleChanges
 } from '@angular/core';
 
-import * as Chartist from 'chartist';
+ import  * as Chartist  from 'chartist';
 
 /**
  * Possible chart types
@@ -26,7 +25,7 @@ export type ResponsiveOptions = Array<ResponsiveOptionTuple>;
  * Represent a chart event.
  * For possible values, check the Chartist docs.
  */
-export interface ChartEvent {
+interface ChartEvent {
   [eventName: string]: (data: any) => void;
 }
 
@@ -34,16 +33,17 @@ export interface ChartEvent {
   selector: 'x-chartist',
   template: '<ng-content></ng-content>'
 })
-class ChartistComponent implements OnInit, OnChanges, OnDestroy {
+
+export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   @Input() data: (Promise<Chartist.IChartistData> | Chartist.IChartistData);
   @Input() type: (Promise<ChartType> | ChartType);
   @Input() options: (Promise<Chartist.IChartOptions> | Chartist.IChartOptions);
   @Input() responsiveOptions: (Promise<ResponsiveOptions> | ResponsiveOptions);
   @Input() events: ChartEvent;
 
-  chart: ChartInterfaces;
+  public chart: ChartInterfaces;
 
-  private element: HTMLElement;
+  public element: HTMLElement;
 
   constructor(element: ElementRef) {
     this.element = element.nativeElement;
@@ -121,22 +121,12 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   }
 }
 
-@NgModule({
-  declarations: [
-    ChartistComponent
-  ],
-  exports: [
-    ChartistComponent
-  ]
-})
-class ChartistModule {}
+//export class ChartistComponent {}
 
-export {
-  ChartistComponent,
-  ChartistModule
-};
+
 
 // for angular-cli
+
 export default {
   directives: [ChartistComponent]
 };
