@@ -34,7 +34,7 @@ export interface ChartEvent {
   selector: 'x-chartist',
   template: '<ng-content></ng-content>'
 })
-class ChartistComponent implements OnInit, OnChanges, OnDestroy {
+export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   @Input() data: (Promise<Chartist.IChartistData> | Chartist.IChartistData);
   @Input() type: (Promise<ChartType> | ChartType);
   @Input() options: (Promise<Chartist.IChartOptions> | Chartist.IChartOptions);
@@ -129,12 +129,7 @@ class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     ChartistComponent
   ]
 })
-class ChartistModule {}
-
-export {
-  ChartistComponent,
-  ChartistModule
-};
+export class ChartistModule {}
 
 // for angular-cli
 export default {
