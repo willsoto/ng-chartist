@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paradox41/angular2-chartist.git"
+    "url": "git+https://github.com/willsoto/angular2-chartist.git"
   },
   "keywords": [
     "angular2",
@@ -44,9 +44,9 @@
   "author": "Will Soto",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/paradox41/angular2-chartist/issues"
+    "url": "https://github.com/willsoto/angular2-chartist/issues"
   },
-  "homepage": "https://github.com/paradox41/angular2-chartist#readme",
+  "homepage": "https://github.com/willsoto/angular2-chartist#readme",
   "devDependencies": {
     "@angular/common": "^2.4.2",
     "@angular/compiler": "^2.4.2",
