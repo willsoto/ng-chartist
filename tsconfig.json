@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "declaration": true,
+    "declarationDir": "./dist",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
@@ -13,6 +14,7 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "outDir": "./dist",
     "removeComments": false,
     "sourceMap": true,
     "strictNullChecks": false,
