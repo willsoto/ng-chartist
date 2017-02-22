@@ -1,3 +1,6 @@
+const webpack = require('webpack');
+const AotPlugin = require('@ngtools/webpack').AotPlugin;
+
 const helpers = require('./helpers');
 
 module.exports = {
@@ -36,19 +39,32 @@ module.exports = {
     loaders: [{
       enforce: 'pre',
       test: /\.ts$/,
-      loader: 'tslint-loader',
+      use: [{
+        loader: 'tslint-loader',
+        options: {
+          emitErrors: true,
+          failOnHint: true
+        }
+      }],
       exclude: /node_modules/,
-      query: {
-        emitErrors: true,
-        failOnHint: true
-      }
     }, {
       test: /\.ts$/,
-      loader: 'ts-loader',
+      use: [{
+        loader: '@ngtools/webpack'
+      }],
       exclude: /node_modules/
     }]
   },
   resolve: {
     extensions: ['.ts', '.js']
-  }
+  },
+  plugins: [
+    new AotPlugin({
+      tsConfigPath: helpers.root('tsconfig.json'),
+      entryModule: helpers.root('src', 'chartist.component#ChartistModule')
+    }),
+    new webpack.DefinePlugin({
+      ENV: JSON.stringify('production')
+    })
+  ]
 };

@@ -22,21 +22,22 @@ module.exports = function(config) {
         loaders: [{
           enforce: 'pre',
           test: /\.ts$/,
-          loader: 'tslint-loader',
+          use: [{
+            loader: 'tslint-loader',
+            options: {
+              emitErrors: false,
+              failOnHint: false
+            }
+          }],
           include: [
             helpers.root('src'),
             helpers.root('test')
           ]
         }, {
           test: /\.ts$/,
-          loader: 'ts-loader',
-          include: [
-            helpers.root('src'),
-            helpers.root('test')
-          ]
-        }, {
-          test: /\.json$/,
-          loader: 'json-loader',
+          use: [{
+            loader: 'awesome-typescript-loader'
+          }],
           include: [
             helpers.root('src'),
             helpers.root('test')
@@ -44,20 +45,14 @@ module.exports = function(config) {
         }, {
           enforce: 'post',
           test: /\.ts$/,
-          loader: 'istanbul-instrumenter-loader',
+          use: [{
+            loader: 'istanbul-instrumenter-loader'
+          }],
           include: [
             helpers.root('src')
           ]
         }]
-      },
-      plugins: [
-        new webpack.LoaderOptionsPlugin({
-          tslint: {
-            emitErrors: false,
-            failOnHint: false
-          }
-        })
-      ]
+      }
     },
     webpackMiddleware: {
       noInfo: true,

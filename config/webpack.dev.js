@@ -13,19 +13,19 @@ module.exports = {
     loaders: [{
       enforce: 'pre',
       test: /\.ts$/,
-      loader: 'tslint-loader',
-      exclude: /node_modules/,
-      query: {
-        emitErrors: false,
-        failOnHint: false
-      }
-    }, {
-      test: /\.ts$/,
-      loader: 'ts-loader',
+      loader: [{
+        loader: 'tslint-loader',
+        options: {
+          emitErrors: false,
+          failOnHint: false
+        }
+      }],
       exclude: /node_modules/
     }, {
-      test: /\.json$/,
-      loader: 'json-loader',
+      test: /\.ts$/,
+      use: [{
+        loader: 'awesome-typescript-loader'
+      }],
       exclude: /node_modules/
     }]
   },
@@ -41,8 +41,6 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    // https://github.com/webpack/webpack/issues/2644
-    // new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
       ENV: JSON.stringify(IS_PROD ? 'production' : 'development')
     })
