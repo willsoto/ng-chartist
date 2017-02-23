@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const AotPlugin = require('@ngtools/webpack').AotPlugin;
 
 const helpers = require('./helpers');
 
@@ -50,7 +49,7 @@ module.exports = {
     }, {
       test: /\.ts$/,
       use: [{
-        loader: '@ngtools/webpack'
+        loader: 'awesome-typescript-loader'
       }],
       exclude: /node_modules/
     }]
@@ -59,10 +58,6 @@ module.exports = {
     extensions: ['.ts', '.js']
   },
   plugins: [
-    new AotPlugin({
-      tsConfigPath: helpers.root('tsconfig.json'),
-      entryModule: helpers.root('src', 'chartist.component#ChartistModule')
-    }),
     new webpack.DefinePlugin({
       ENV: JSON.stringify('production')
     })
