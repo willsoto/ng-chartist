@@ -1,12 +1,12 @@
 # Angular2 Chartist
-[![Build Status](https://travis-ci.org/paradox41/angular2-chartist.svg?branch=master)](https://travis-ci.org/paradox41/angular2-chartist)
+[![Build Status](https://travis-ci.org/willsoto/angular2-chartist.svg?branch=master)](https://travis-ci.org/willsoto/angular2-chartist)
 [![npm version](https://badge.fury.io/js/angular2-chartist.svg)](http://badge.fury.io/js/angular2-chartist)
-[![devDependency Status](https://david-dm.org/paradox41/angular2-chartist/dev-status.svg)](https://david-dm.org/paradox41/angular2-chartist#info=devDependencies)
-[![GitHub issues](https://img.shields.io/github/issues/paradox41/angular2-chartist.svg)](https://github.com/paradox41/angular2-chartist/issues)
-[![Coverage Status](https://coveralls.io/repos/github/paradox41/angular2-chartist/badge.svg?branch=master)](https://coveralls.io/github/paradox41/angular2-chartist?branch=master)
+[![devDependency Status](https://david-dm.org/willsoto/angular2-chartist/dev-status.svg)](https://david-dm.org/willsoto/angular2-chartist#info=devDependencies)
+[![GitHub issues](https://img.shields.io/github/issues/willsoto/angular2-chartist.svg)](https://github.com/willsoto/angular2-chartist/issues)
+[![Coverage Status](https://coveralls.io/repos/github/willsoto/angular2-chartist/badge.svg?branch=master)](https://coveralls.io/github/willsoto/angular2-chartist?branch=master)
 
 ## Demo
-https://paradox41.github.io/angular2-chartist/demo/
+https://willsoto.github.io/angular2-chartist/demo/
 
 ## Table of contents
 
