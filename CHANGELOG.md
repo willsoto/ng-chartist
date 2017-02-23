@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.12.2"></a>
+## [0.12.2](https://github.com/willsoto/angular2-chartist/compare/v0.12.1...v0.12.2) (2017-02-23)
+
+
+### Bug Fixes
+
+* **dist:** revert AoT changes. Too many issues ([94e8a4d](https://github.com/willsoto/angular2-chartist/commit/94e8a4d)), closes [#94](https://github.com/willsoto/angular2-chartist/issues/94)
+
+
+
 <a name="0.12.1"></a>
 ## [0.12.1](https://github.com/willsoto/angular2-chartist/compare/v0.12.0...v0.12.1) (2017-02-22)
 
