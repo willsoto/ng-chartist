@@ -79,8 +79,7 @@ You may also find it useful to view the [demo source](https://github.com/paradox
 ```
 
 ## Documentation
-All documentation is auto-generated from the source via typedoc and can be viewed here:
-https://paradox41.github.io/angular2-chartist/docs/
+All documentation is auto-generated from the source via typedoc and can be viewed [here](https://willsoto.github.io/angular2-chartist/docs/)
 
 ## Development
 
