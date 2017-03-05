@@ -1,4 +1,6 @@
 # Angular2 Chartist
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/willsoto/angular2-chartist.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/willsoto/angular2-chartist.svg?branch=master)](https://travis-ci.org/willsoto/angular2-chartist)
 [![npm version](https://badge.fury.io/js/angular2-chartist.svg)](http://badge.fury.io/js/angular2-chartist)
 [![devDependency Status](https://david-dm.org/willsoto/angular2-chartist/dev-status.svg)](https://david-dm.org/willsoto/angular2-chartist#info=devDependencies)
