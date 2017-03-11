@@ -1,8 +1,8 @@
 {
-  "name": "angular2-chartist",
+  "name": "ng-chartist",
   "version": "0.12.2",
-  "description": "Chartist component for Angular 2",
-  "main": "./dist/angular2-chartist.js",
+  "description": "Chartist component for Angular",
+  "main": "./dist/ng-chartist.js",
   "typings": "./dist/chartist.component.d.ts",
   "files": [
     "src/",
@@ -19,7 +19,7 @@
     "build:demo": "webpack -p",
     "prebuild:dist": "npm run clean",
     "build:dist": "webpack --config ./config/webpack.dist.js && tsc --project tsconfig.json",
-    "postbuild:dist": "uglifyjs dist/angular2-chartist.js --compress --mangle --screw-ie8 -o dist/angular2-chartist.min.js",
+    "postbuild:dist": "uglifyjs dist/ng-chartist.js --compress --mangle --screw-ie8 -o dist/ng-chartist.min.js",
     "test": "karma start",
     "test:watch": "karma start --auto-watch --no-single-run",
     "typedoc": "typedoc --options typedoc.json src/*.ts",
@@ -32,21 +32,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/willsoto/angular2-chartist.git"
+    "url": "git+https://github.com/willsoto/ng-chartist.git"
   },
   "keywords": [
-    "angular2",
+    "angular",
     "chartist",
     "charting",
-    "charts",
-    "angular"
+    "charts"
   ],
   "author": "Will Soto",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/willsoto/angular2-chartist/issues"
+    "url": "https://github.com/willsoto/ng-chartist/issues"
   },
-  "homepage": "https://github.com/willsoto/angular2-chartist#readme",
+  "homepage": "https://github.com/willsoto/ng-chartist#readme",
   "devDependencies": {
     "@angular/common": "^2.4.8",
     "@angular/compiler": "^2.4.8",

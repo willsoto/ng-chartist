@@ -6,12 +6,12 @@ module.exports = {
   devtool: 'source-map',
   context: helpers.root('src'),
   entry: {
-    'angular2-chartist': './chartist.component.ts'
+    'ng-chartist': './chartist.component.ts'
   },
   output: {
     filename: '[name].js',
     libraryTarget: 'umd',
-    library: 'angular2Chartist',
+    library: 'ngChartist',
     path: helpers.root('dist')
   },
   externals: {

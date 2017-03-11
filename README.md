@@ -1,14 +1,14 @@
-# Angular2 Chartist
+# Angular Chartist
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/willsoto/angular2-chartist.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/willsoto/angular2-chartist.svg?branch=master)](https://travis-ci.org/willsoto/angular2-chartist)
-[![npm version](https://badge.fury.io/js/angular2-chartist.svg)](http://badge.fury.io/js/angular2-chartist)
-[![devDependency Status](https://david-dm.org/willsoto/angular2-chartist/dev-status.svg)](https://david-dm.org/willsoto/angular2-chartist#info=devDependencies)
-[![GitHub issues](https://img.shields.io/github/issues/willsoto/angular2-chartist.svg)](https://github.com/willsoto/angular2-chartist/issues)
-[![Coverage Status](https://coveralls.io/repos/github/willsoto/angular2-chartist/badge.svg?branch=master)](https://coveralls.io/github/willsoto/angular2-chartist?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/willsoto/ng-chartist.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/willsoto/ng-chartist.svg?branch=master)](https://travis-ci.org/willsoto/ng-chartist)
+[![npm version](https://badge.fury.io/js/ng-chartist.svg)](http://badge.fury.io/js/ng-chartist)
+[![devDependency Status](https://david-dm.org/willsoto/ng-chartist/dev-status.svg)](https://david-dm.org/willsoto/ng-chartist#info=devDependencies)
+[![GitHub issues](https://img.shields.io/github/issues/willsoto/ng-chartist.svg)](https://github.com/willsoto/ng-chartist/issues)
+[![Coverage Status](https://coveralls.io/repos/github/willsoto/ng-chartist/badge.svg?branch=master)](https://coveralls.io/github/willsoto/ng-chartist?branch=master)
 
 ## Demo
-https://willsoto.github.io/angular2-chartist/demo/
+https://willsoto.github.io/ng-chartist/demo/
 
 ## Table of contents
 
@@ -26,7 +26,7 @@ Chartist component for Angular 2
 
 ### Install through npm:
 ```
-npm install @angular/core angular2-chartist chartist --save
+npm install @angular/core ng-chartist chartist --save
 ```
 ### Additionally typings for the chartist library need to be installed:
 
@@ -54,7 +54,7 @@ import {
 
 import {
   ChartistModule
-} from 'angular2-chartist';
+} from 'ng-chartist';
 
 import {
   MyAppComponent
@@ -70,18 +70,18 @@ export class AppModule { }
 
 ```
 
-You may also find it useful to view the [demo source](https://github.com/paradox41/angular2-chartist/blob/master/demo/demo.ts).
+You may also find it useful to view the [demo source](https://github.com/paradox41/ng-chartist/blob/master/demo/demo.ts).
 
 ### Usage without a module bundler
 ```
-<script src="node_modules/angular2-chartist/dist/angular2-chartist.js"></script>
+<script src="node_modules/ng-chartist/dist/ng-chartist.js"></script>
 <script>
-    // everything is exported angular2Chartist namespace
+    // everything is exported ngChartist namespace
 </script>
 ```
 
 ## Documentation
-All documentation is auto-generated from the source via typedoc and can be viewed [here](https://willsoto.github.io/angular2-chartist/docs/)
+All documentation is auto-generated from the source via typedoc and can be viewed [here](https://willsoto.github.io/ng-chartist/docs/)
 
 ## Development
 
