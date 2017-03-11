@@ -167,4 +167,16 @@ describe('chartist component', function(): void {
 
     expect(instance.ngOnInit).toThrow();
   }));
+
+  it('should throw an error when an invalid chart type is passed', async(() => {
+    let fixture = TestBed.createComponent(ChartistComponent);
+    let instance: ChartistComponent = fixture.debugElement.componentInstance;
+
+    instance.data = data['Bar'];
+    instance.type = 'NotAChart';
+
+    instance.renderChart().catch((err) => {
+      expect(err.message).toBe('NotAChart is not a valid chart type');
+    });
+  }))
 });

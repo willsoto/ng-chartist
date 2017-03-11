@@ -85,6 +85,10 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     return Promise.all(promises).then((values) => {
       const [type, ...args]: any = values;
 
+      if (!(type in Chartist)) {
+        throw new Error(`${type} is not a valid chart type`);
+      }
+
       this.chart = (<any>Chartist)[type](...args);
 
       return this.chart;
