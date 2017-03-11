@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/willsoto/ng-chartist/compare/v0.12.2...v1.0.0) (2017-03-11)
+
+
+### Features
+
+* **all:** rename package to ng-chartist ([572f6d8](https://github.com/willsoto/ng-chartist/commit/572f6d8))
+
+
+### BREAKING CHANGES
+
+* all: rename package from  to  to conform with new Angular Naming Guidelines.
+This only affect how you install and import the library (no actual breaking changes in code).
+Before:
+
+```
+npm install --save angular2-chartist
+...
+import { ChartistModule } from 'angular2-chartist';
+```
+
+After:
+
+```
+npm install --save ng-chartist
+...
+import { ChartistModule } from 'ng-chartist';
+```
+
+Signed-off-by: Will Soto <will.soto9@gmail.com>
+
+
+
 <a name="0.12.2"></a>
 ## [0.12.2](https://github.com/willsoto/angular2-chartist/compare/v0.12.1...v0.12.2) (2017-02-23)
 
