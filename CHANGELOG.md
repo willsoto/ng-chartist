@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/willsoto/ng-chartist/compare/v1.0.0...v1.1.0) (2017-03-11)
+
+
+### Features
+
+* **chartist:** throw error when invalid chart type is passed ([a1637cf](https://github.com/willsoto/ng-chartist/commit/a1637cf)), closes [#97](https://github.com/willsoto/ng-chartist/issues/97)
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/willsoto/ng-chartist/compare/v0.12.2...v1.0.0) (2017-03-11)
 
