@@ -24,7 +24,7 @@ describe('chartist component', function(): void {
   });
 
   it('should initialize the correct chart only once', async(() => {
-    let fixture = TestBed.createComponent(ChartistComponent);
+    let fixture: any = TestBed.createComponent(ChartistComponent);
     let instance: ChartistComponent = fixture.debugElement.componentInstance;
     let chartType: ChartType = 'Bar';
 
@@ -39,7 +39,7 @@ describe('chartist component', function(): void {
   }));
 
   it('should return the correct chart instance', async(() => {
-    let fixture = TestBed.createComponent(ChartistComponent);
+    let fixture: any = TestBed.createComponent(ChartistComponent);
     let instance: ChartistComponent = fixture.debugElement.componentInstance;
     let chartType: ChartType = 'Bar';
 
@@ -52,7 +52,7 @@ describe('chartist component', function(): void {
   }));
 
   it('should bind events if there are events', async(() => {
-    let fixture = TestBed.createComponent(ChartistComponent);
+    let fixture: any = TestBed.createComponent(ChartistComponent);
     let instance: ChartistComponent = fixture.debugElement.componentInstance;
     let chartType: ChartType = 'Bar';
 
@@ -74,7 +74,7 @@ describe('chartist component', function(): void {
   }));
 
   it('should re-render the chart if the chart type changes', async(() => {
-    let fixture = TestBed.createComponent(ChartistComponent);
+    let fixture: any = TestBed.createComponent(ChartistComponent);
     let instance: ChartistComponent = fixture.componentInstance;
     let changes: any = {
       type: 'Bar'
@@ -90,7 +90,7 @@ describe('chartist component', function(): void {
   }));
 
   it('should update the chart if the data changes', async(() => {
-    let fixture = TestBed.createComponent(ChartistComponent);
+    let fixture: any = TestBed.createComponent(ChartistComponent);
     let instance: ChartistComponent = fixture.componentInstance;
     let changes: any = {
       data: {
@@ -121,7 +121,7 @@ describe('chartist component', function(): void {
   }));
 
   it('should update the chart if the options change', async(() => {
-    let fixture = TestBed.createComponent(ChartistComponent);
+    let fixture: any = TestBed.createComponent(ChartistComponent);
     let instance: ChartistComponent = fixture.componentInstance;
     let changes: any = {
       options: {
@@ -151,7 +151,7 @@ describe('chartist component', function(): void {
   }));
 
   it('should throw an error when missing type', async(() => {
-    let fixture = TestBed.createComponent(ChartistComponent);
+    let fixture: any = TestBed.createComponent(ChartistComponent);
     let instance: ChartistComponent = fixture.debugElement.componentInstance;
 
     instance.data = data['Bar'];
@@ -160,7 +160,7 @@ describe('chartist component', function(): void {
   }));
 
   it('should throw an error when missing data', async(() => {
-    let fixture = TestBed.createComponent(ChartistComponent);
+    let fixture: any = TestBed.createComponent(ChartistComponent);
     let instance: ChartistComponent = fixture.debugElement.componentInstance;
 
     instance.type = 'Bar';
@@ -169,7 +169,7 @@ describe('chartist component', function(): void {
   }));
 
   it('should throw an error when an invalid chart type is passed', async(() => {
-    let fixture = TestBed.createComponent(ChartistComponent);
+    let fixture: any = TestBed.createComponent(ChartistComponent);
     let instance: ChartistComponent = fixture.debugElement.componentInstance;
 
     instance.data = data['Bar'];
@@ -178,5 +178,5 @@ describe('chartist component', function(): void {
     instance.renderChart().catch((err) => {
       expect(err.message).toBe('NotAChart is not a valid chart type');
     });
-  }))
+  }));
 });
