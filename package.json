@@ -92,7 +92,7 @@
     "zone.js": "^0.7.7"
   },
   "peerDependencies": {
-    "@angular/core": ">=2.0.0",
+    "@angular/core": ">=4.1.2",
     "@types/chartist": "^0.9.34",
     "chartist": ">=0.9.8"
   }
