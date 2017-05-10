@@ -48,7 +48,7 @@
   "homepage": "https://github.com/willsoto/ng-chartist#readme",
   "devDependencies": {
     "@angular/common": "^2.4.8",
-    "@angular/compiler": "^2.4.8",
+    "@angular/compiler": "^4.1.2",
     "@angular/compiler-cli": "^2.4.8",
     "@angular/core": "^2.4.8",
     "@angular/forms": "^2.4.8",
