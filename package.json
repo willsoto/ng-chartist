@@ -52,7 +52,7 @@
     "@angular/compiler-cli": "^4.1.2",
     "@angular/core": "^2.4.8",
     "@angular/forms": "^2.4.8",
-    "@angular/platform-browser": "^2.4.8",
+    "@angular/platform-browser": "^4.1.2",
     "@angular/platform-browser-dynamic": "^2.4.8",
     "@angular/router": "^3.4.8",
     "@ngtools/webpack": "^1.2.10",
