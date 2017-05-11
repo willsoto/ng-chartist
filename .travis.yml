@@ -7,7 +7,7 @@ addons:
     sources:
       - google-chrome
     packages:
-      - google-chrome-beta
+      - google-chrome-stable
 
 node_js:
   - 'stable'
