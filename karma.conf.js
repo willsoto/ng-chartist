@@ -1,78 +1,41 @@
-const webpack = require('webpack');
-
-const helpers = require('./config/helpers');
-
 module.exports = function(config) {
   config.set({
-    basePath: './',
+    basePath: '',
     frameworks: ['jasmine'],
     files: [
-      'test/entry.ts'
+      {
+        pattern: 'config/spec-bundle.js',
+        watched: false
+      }
     ],
     exclude: [],
     preprocessors: {
-      'test/entry.ts': ['webpack', 'sourcemap']
+      'config/spec-bundle.js': ['coverage', 'webpack', 'sourcemap']
     },
-    webpack: {
-      devtool: 'inline-source-map',
-      resolve: {
-        extensions: ['.ts', '.js']
-      },
-      module: {
-        loaders: [{
-          enforce: 'pre',
-          test: /\.ts$/,
-          use: [{
-            loader: 'tslint-loader',
-            options: {
-              emitErrors: false,
-              failOnHint: false
-            }
-          }],
-          include: [
-            helpers.root('src'),
-            helpers.root('test')
-          ]
-        }, {
-          test: /\.ts$/,
-          use: [{
-            loader: 'awesome-typescript-loader'
-          }],
-          include: [
-            helpers.root('src'),
-            helpers.root('test')
-          ]
-        }, {
-          enforce: 'post',
-          test: /\.ts$/,
-          use: [{
-            loader: 'istanbul-instrumenter-loader'
-          }],
-          include: [
-            helpers.root('src')
-          ]
-        }]
-      }
+    client: {
+      captureConsole: false
     },
+    webpack: require('./config/webpack.test'),
     webpackMiddleware: {
       noInfo: true,
-      stats: 'errors-only'
+      stats: {
+        chunks: false
+      }
     },
     coverageReporter: {
-      dir: 'coverage',
-      subdir: '.',
-      reporters: [{
-        type: 'text-summary'
-      }, {
-        type: 'lcov'
-      }]
+      type: 'in-memory'
     },
-    reporters: ['mocha', 'coverage'],
+    remapCoverageReporter: {
+      'text-summary': null,
+      html: './coverage/html',
+      lcovonly: './coverage/lcov.info'
+    },
+    reporters: ['mocha', 'coverage', 'remap-coverage'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: false,
-    browsers: ['PhantomJS'],
+    browsers: ['ChromeHeadless'],
     singleRun: true
   });
 };
