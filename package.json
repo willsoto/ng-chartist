@@ -87,7 +87,7 @@
     "standard-version": "^4.0.0",
     "tslint": "5.2.0",
     "tslint-loader": "^3.5.3",
-    "typedoc": "^0.6.0",
+    "typedoc": "^0.7.0",
     "typescript": "^2.3.2",
     "uglify-js": "^3.0.3",
     "validate-commit": "^2.3.2",
