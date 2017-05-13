@@ -90,7 +90,7 @@
     "typedoc": "^0.7.0",
     "typescript": "^2.3.2",
     "uglify-js": "^3.0.3",
-    "validate-commit": "^2.3.2",
+    "validate-commit": "^3.2.0",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5",
     "zone.js": "^0.8.10"
