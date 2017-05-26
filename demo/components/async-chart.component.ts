@@ -1,14 +1,10 @@
-import {
-  Component
-} from '@angular/core';
+import {Component} from "@angular/core";
 
-import {
-  ChartType
-} from '../../src/chartist.component';
+import {ChartType} from "../../src/chartist.component";
 
-import * as Chartist from 'chartist';
+import * as Chartist from "chartist";
 
-declare var require: any;
+declare let require: any;
 
 const data: any = require('../data.json');
 
@@ -28,14 +24,14 @@ class AsyncChartComponent {
 
   constructor() {
     // simulate slow API call
-    this.data = new Promise(function(resolve: any): void {
-      setTimeout(function(): void {
+    this.data = new Promise(function (resolve: any): void {
+      setTimeout(function (): void {
         resolve(data['Pie']);
       }, 5000);
     });
 
-    this.type = new Promise(function(resolve: any): void {
-      setTimeout(function(): void {
+    this.type = new Promise(function (resolve: any): void {
+      setTimeout(function (): void {
         resolve('Pie');
       }, 5000);
     });

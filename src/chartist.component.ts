@@ -8,7 +8,6 @@ import * as Chartist from "chartist";
  */
 export type ChartType = 'Pie' | 'Bar' | 'Line' | 'Candle';
 
-/* tslint:disable:max-line-length */
 export type ChartInterfaces =
   Chartist.IChartistPieChart
   | Chartist.IChartistBarChart
@@ -21,7 +20,6 @@ export type ChartOptions =
   | Chartist.ICandleChartOptions;
 export type ResponsiveOptionTuple = Chartist.IResponsiveOptionTuple<ChartOptions>;
 export type ResponsiveOptions = Array<ResponsiveOptionTuple>;
-/* tslint:enable:max-line-length */
 
 /**
  * Represent a chart event.
@@ -127,7 +125,8 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     ChartistComponent
   ]
 })
-export class ChartistModule {}
+export class ChartistModule {
+}
 
 // for angular-cli
 export default {
