@@ -163,10 +163,8 @@ describe('chartist component', function (): void {
 
   it('should throw an error when an invalid chart type is passed', function (): void {
     instance.data = data['Bar'];
-    // instance.type = 'NotAChart';
-
     instance.renderChart().catch((err) => {
-      expect(err.message).toBe('Expected at least type and data.');
+      expect(err.message).toBe('undefined is not a valid chart type');
     });
   });
 });
