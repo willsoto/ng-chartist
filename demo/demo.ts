@@ -1,8 +1,8 @@
-import {Component} from "@angular/core";
+import { Component } from '@angular/core';
 
-import * as Chartist from "chartist";
+import * as Chartist from 'chartist';
 
-import {ChartEvent, ChartType} from "../src/chartist.component";
+import { ChartEvent, ChartType } from '../src/chartist.component';
 
 declare let require: any;
 
