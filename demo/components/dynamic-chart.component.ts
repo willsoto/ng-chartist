@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import {
+  Component
+} from '@angular/core';
 
-import { ChartType } from '../../src/chartist.component';
+import {
+  ChartType
+} from '../../src/chartist.component';
 
 import * as Chartist from 'chartist';
 
-declare let require: any;
+declare var require: any;
 
 const data: any = require('../data.json');
 

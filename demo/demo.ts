@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import {
+  Component
+} from '@angular/core';
 
 import * as Chartist from 'chartist';
 
-import { ChartEvent, ChartType } from '../src/chartist.component';
+import {
+  ChartType,
+  ChartEvent
+} from '../src/chartist.component';
 
-declare let require: any;
+declare var require: any;
 
 const data: any = require('./data.json');
 
@@ -39,7 +44,7 @@ export class DemoAppComponent {
       options: {
         showLine: false,
         axisX: {
-          labelInterpolationFnc: function(value: number, index: number): any {
+          labelInterpolationFnc: function(value: number, index: number): string {
             return index % 13 === 0 ? `W${value}` : null;
           }
         }
@@ -47,7 +52,7 @@ export class DemoAppComponent {
       responsiveOptions: [
         ['screen and (min-width: 640px)', {
           axisX: {
-            labelInterpolationFnc: function(value: number, index: number): any {
+            labelInterpolationFnc: function(value: number, index: number): string {
               return index % 4 === 0 ? `W${value}` : null;
             }
           }
@@ -67,7 +72,7 @@ export class DemoAppComponent {
         high: 10,
         low: -10,
         axisX: {
-          labelInterpolationFnc: function(value: number, index: number): any {
+          labelInterpolationFnc: function(value: number, index: number): number {
             return index % 2 === 0 ? value : null;
           }
         }
@@ -100,27 +105,6 @@ export class DemoAppComponent {
       //     return data;
       //   }
       // }
-    }, {
-      type: 'Candle',
-      data: data['Candle'],
-      options: {
-        axisX: {
-          labelOffset: {
-            x: -8,
-            y: 0
-          }
-        },
-        axisY: {
-          showGrid: false,
-          labelOffset: {
-            x: -12,
-            y: 0
-          },
-          labelInterpolationFnc: function (value: number): string {
-            return value + 12000 + ' pt';
-          }
-        }
-      }
     }];
   }
 }

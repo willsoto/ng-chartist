@@ -1,4 +1,13 @@
-import { Component, ElementRef, Input, NgModule, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import {
+  NgModule,
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  OnChanges,
+  OnDestroy,
+  SimpleChanges
+} from '@angular/core';
 
 import * as Chartist from 'chartist';
 
@@ -6,18 +15,10 @@ import * as Chartist from 'chartist';
  * Possible chart types
  * @type {String}
  */
-export type ChartType = 'Pie' | 'Bar' | 'Line' | 'Candle';
+export type ChartType = 'Pie' | 'Bar' | 'Line';
 
-export type ChartInterfaces =
-  Chartist.IChartistPieChart
-  | Chartist.IChartistBarChart
-  | Chartist.IChartistLineChart
-  | Chartist.IChartistCandleChart;
-export type ChartOptions =
-  Chartist.IBarChartOptions
-  | Chartist.ILineChartOptions
-  | Chartist.IPieChartOptions
-  | Chartist.ICandleChartOptions;
+export type ChartInterfaces = Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart;
+export type ChartOptions = Chartist.IBarChartOptions | Chartist.ILineChartOptions | Chartist.IPieChartOptions;
 export type ResponsiveOptionTuple = Chartist.IResponsiveOptionTuple<ChartOptions>;
 export type ResponsiveOptions = Array<ResponsiveOptionTuple>;
 
@@ -125,8 +126,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     ChartistComponent
   ]
 })
-export class ChartistModule {
-}
+export class ChartistModule {}
 
 // for angular-cli
 export default {
