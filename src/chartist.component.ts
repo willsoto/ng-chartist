@@ -1,6 +1,6 @@
-import {Component, ElementRef, Input, NgModule, OnChanges, OnDestroy, OnInit, SimpleChanges} from "@angular/core";
+import { Component, ElementRef, Input, NgModule, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 
-import * as Chartist from "chartist";
+import * as Chartist from 'chartist';
 
 /**
  * Possible chart types
