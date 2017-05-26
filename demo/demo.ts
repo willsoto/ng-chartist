@@ -1,13 +1,8 @@
-import {
-  Component
-} from '@angular/core';
+import {Component} from "@angular/core";
 
-import * as Chartist from 'chartist';
+import * as Chartist from "chartist";
 
-import {
-  ChartType,
-  ChartEvent
-} from '../src/chartist.component';
+import {ChartEvent, ChartType} from "../src/chartist.component";
 
 declare let require: any;
 
@@ -105,6 +100,27 @@ export class DemoAppComponent {
       //     return data;
       //   }
       // }
+    }, {
+      type: 'Candle',
+      data: data['Candle'],
+      options: {
+        axisX: {
+          labelOffset: {
+            x: -8,
+            y: 0
+          }
+        },
+        axisY: {
+          showGrid: false,
+          labelOffset: {
+            x: -12,
+            y: 0
+          },
+          labelInterpolationFnc: function (value: number): string {
+            return value + 12000 + ' pt';
+          }
+        }
+      }
     }];
   }
 }
