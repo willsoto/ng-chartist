@@ -9,7 +9,7 @@ import {
   ChartEvent
 } from '../src/chartist.component';
 
-declare var require: any;
+declare let require: any;
 
 const data: any = require('./data.json');
 
@@ -44,7 +44,7 @@ export class DemoAppComponent {
       options: {
         showLine: false,
         axisX: {
-          labelInterpolationFnc: function(value: number, index: number): string {
+          labelInterpolationFnc: function(value: number, index: number): any {
             return index % 13 === 0 ? `W${value}` : null;
           }
         }
@@ -52,7 +52,7 @@ export class DemoAppComponent {
       responsiveOptions: [
         ['screen and (min-width: 640px)', {
           axisX: {
-            labelInterpolationFnc: function(value: number, index: number): string {
+            labelInterpolationFnc: function(value: number, index: number): any {
               return index % 4 === 0 ? `W${value}` : null;
             }
           }
@@ -72,7 +72,7 @@ export class DemoAppComponent {
         high: 10,
         low: -10,
         axisX: {
-          labelInterpolationFnc: function(value: number, index: number): number {
+          labelInterpolationFnc: function(value: number, index: number): any {
             return index % 2 === 0 ? value : null;
           }
         }
