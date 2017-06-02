@@ -12,6 +12,7 @@
     "outDir": "./dist",
     "removeComments": false,
     "target": "es5",
+    "skipLibCheck": true,
     "strict": true
   },
   "include": [
