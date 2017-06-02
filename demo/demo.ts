@@ -105,6 +105,27 @@ export class DemoAppComponent {
       //     return data;
       //   }
       // }
+    }, {
+      type: 'Candle',
+      data: data['Candle'],
+      options: {
+        axisX: {
+          labelOffset: {
+            x: -8,
+            y: 0
+          }
+        },
+        axisY: {
+          showGrid: false,
+          labelOffset: {
+            x: -12,
+            y: 0
+          },
+          labelInterpolationFnc: function (value: number): string {
+            return value + 12000 + ' pt';
+          }
+        }
+      }
     }];
   }
 }

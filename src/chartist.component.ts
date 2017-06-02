@@ -15,10 +15,18 @@ import * as Chartist from 'chartist';
  * Possible chart types
  * @type {String}
  */
-export type ChartType = 'Pie' | 'Bar' | 'Line';
+export type ChartType = 'Pie' | 'Bar' | 'Line' | 'Candle';
 
-export type ChartInterfaces = Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart;
-export type ChartOptions = Chartist.IBarChartOptions | Chartist.ILineChartOptions | Chartist.IPieChartOptions;
+export type ChartInterfaces =
+  Chartist.IChartistPieChart
+  | Chartist.IChartistBarChart
+  | Chartist.IChartistLineChart
+  | Chartist.IChartistCandleChart;
+export type ChartOptions =
+  Chartist.IBarChartOptions
+  | Chartist.ILineChartOptions
+  | Chartist.IPieChartOptions
+  | Chartist.ICandleChartOptions;
 export type ResponsiveOptionTuple = Chartist.IResponsiveOptionTuple<ChartOptions>;
 export type ResponsiveOptions = Array<ResponsiveOptionTuple>;
 
