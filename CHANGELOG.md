@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/willsoto/ng-chartist/compare/v1.1.0...v1.1.1) (2017-06-02)
+
+
+### Bug Fixes
+
+* **AoT:** ignore lib check to allow ngc to compile ([1de026f](https://github.com/willsoto/ng-chartist/commit/1de026f)), closes [#104](https://github.com/willsoto/ng-chartist/issues/104) [#124](https://github.com/willsoto/ng-chartist/issues/124)
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/willsoto/ng-chartist/compare/v1.0.0...v1.1.0) (2017-03-11)
 

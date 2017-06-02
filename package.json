@@ -1,6 +1,6 @@
 {
   "name": "ng-chartist",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Chartist component for Angular",
   "main": "./dist/ng-chartist.js",
   "typings": "./dist/chartist.component.d.ts",
