@@ -8,11 +8,6 @@
     "src/",
     "dist/"
   ],
-  "git": {
-    "scripts": {
-      "commit-msg": "./node_modules/.bin/validate-commit-msg $1"
-    }
-  },
   "scripts": {
     "clean": "rimraf dist/",
     "start": "webpack-dev-server",
@@ -28,7 +23,8 @@
     "release": "standard-version --sign && git push --follow-tags origin master && npm run build:dist && npm publish",
     "postrelease": "npm run gh-pages",
     "coveralls": "coveralls < coverage/lcov.info",
-    "postcoveralls": "rimraf ./coverage"
+    "postcoveralls": "rimraf ./coverage",
+    "commitmsg": "validate-commit-msg"
   },
   "repository": {
     "type": "git",
@@ -66,7 +62,7 @@
     "coveralls": "^2.13.1",
     "es6-shim": "^0.35.3",
     "eslint": "^3.19.0",
-    "git-scripts": "^0.2.1",
+    "husky": "^0.13.4",
     "istanbul-instrumenter-loader": "^2.0.0",
     "jasmine-core": "^2.6.2",
     "json-loader": "^0.5.4",
