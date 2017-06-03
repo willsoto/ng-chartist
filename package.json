@@ -24,7 +24,18 @@
     "postrelease": "npm run gh-pages",
     "coveralls": "coveralls < coverage/lcov.info",
     "postcoveralls": "rimraf ./coverage",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --print-width 120 --single-quote --parser typescript --write",
+      "git add"
+    ],
+    "*.js": [
+      "prettier --print-width 120 --single-quote --write",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -75,7 +86,9 @@
     "karma-remap-coverage": "^0.1.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.3",
+    "lint-staged": "^3.6.0",
     "phantomjs-prebuilt": "^2.1.14",
+    "prettier": "^1.4.1",
     "reflect-metadata": "0.1.10",
     "rimraf": "^2.6.1",
     "rxjs": "5.4.0",
