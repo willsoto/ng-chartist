@@ -27,7 +27,7 @@ module.exports = {
       commonjs2: '@angular/common',
       amd: '@angular/common'
     },
-    'chartist': {
+    chartist: {
       root: ['chartist'],
       commonjs: 'chartist',
       commonjs2: 'chartist',
@@ -35,24 +35,31 @@ module.exports = {
     }
   },
   module: {
-    loaders: [{
-      enforce: 'pre',
-      test: /\.ts$/,
-      use: [{
-        loader: 'tslint-loader',
-        options: {
-          emitErrors: true,
-          failOnHint: true
-        }
-      }],
-      exclude: /node_modules/,
-    }, {
-      test: /\.ts$/,
-      use: [{
-        loader: 'awesome-typescript-loader'
-      }],
-      exclude: /node_modules/
-    }]
+    loaders: [
+      {
+        enforce: 'pre',
+        test: /\.ts$/,
+        use: [
+          {
+            loader: 'tslint-loader',
+            options: {
+              emitErrors: true,
+              failOnHint: true
+            }
+          }
+        ],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.ts$/,
+        use: [
+          {
+            loader: 'awesome-typescript-loader'
+          }
+        ],
+        exclude: /node_modules/
+      }
+    ]
   },
   resolve: {
     extensions: ['.ts', '.js']

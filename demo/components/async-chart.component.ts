@@ -1,10 +1,6 @@
-import {
-  Component
-} from '@angular/core';
+import { Component } from '@angular/core';
 
-import {
-  ChartType
-} from '../../src/chartist.component';
+import { ChartType } from '../../src/chartist.component';
 
 import * as Chartist from 'chartist';
 
@@ -42,6 +38,4 @@ class AsyncChartComponent {
   }
 }
 
-export {
-  AsyncChartComponent
-};
+export { AsyncChartComponent };

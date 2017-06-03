@@ -1,15 +1,8 @@
-import {
-  async,
-  ComponentFixture,
-  TestBed
-} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import * as Chartist from 'chartist';
 
-import {
-  ChartType,
-  ChartistComponent
-} from '../src/chartist.component';
+import { ChartType, ChartistComponent } from '../src/chartist.component';
 
 const data: any = require('./data.json');
 
@@ -17,13 +10,13 @@ describe('chartist component', function(): void {
   let instance: ChartistComponent;
   let fixture: ComponentFixture<ChartistComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        ChartistComponent
-      ]
-    }).compileComponents();
-  }));
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        declarations: [ChartistComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(function(): void {
     fixture = TestBed.createComponent(ChartistComponent);
@@ -32,12 +25,10 @@ describe('chartist component', function(): void {
     fixture.detectChanges();
   });
 
-
   it(`should be initialized`, () => {
     expect(fixture).toBeDefined();
     expect(instance).toBeDefined();
   });
-
 
   it('should initialize the correct chart only once', function(): void {
     let chartType: ChartType = 'Bar';
@@ -172,7 +163,7 @@ describe('chartist component', function(): void {
     instance.data = data['Bar'];
     instance.type = 'NotAChart';
 
-    instance.renderChart().catch((err) => {
+    instance.renderChart().catch(err => {
       expect(err.message).toBe('NotAChart is not a valid chart type');
     });
   });

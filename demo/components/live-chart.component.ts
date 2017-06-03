@@ -1,11 +1,6 @@
-import {
-  Component,
-  OnDestroy
-} from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
-import {
-  ChartType
-} from '../../src/chartist.component';
+import { ChartType } from '../../src/chartist.component';
 
 export interface LiveData {
   labels: string[];
@@ -41,11 +36,7 @@ class LiveChartComponent implements OnDestroy {
 
     this.interval = setInterval(() => {
       let time: Date = new Date();
-      let formattedTime: string = [
-        time.getHours(),
-        time.getMinutes(),
-        time.getSeconds()
-      ].join(':');
+      let formattedTime: string = [time.getHours(), time.getMinutes(), time.getSeconds()].join(':');
       let random: number = getRandomInt(1, 40);
 
       this.data.labels.push(formattedTime);
@@ -53,7 +44,6 @@ class LiveChartComponent implements OnDestroy {
 
       this.data = Object.assign({}, this.data);
     }, 2500);
-
   }
 
   ngOnDestroy(): void {
@@ -61,6 +51,4 @@ class LiveChartComponent implements OnDestroy {
   }
 }
 
-export {
-  LiveChartComponent
-};
+export { LiveChartComponent };

@@ -10,24 +10,31 @@ module.exports = {
     path: IS_PROD ? './demo' : '/'
   },
   module: {
-    loaders: [{
-      enforce: 'pre',
-      test: /\.ts$/,
-      loader: [{
-        loader: 'tslint-loader',
-        options: {
-          emitErrors: false,
-          failOnHint: false
-        }
-      }],
-      exclude: /node_modules/
-    }, {
-      test: /\.ts$/,
-      use: [{
-        loader: 'awesome-typescript-loader'
-      }],
-      exclude: /node_modules/
-    }]
+    loaders: [
+      {
+        enforce: 'pre',
+        test: /\.ts$/,
+        loader: [
+          {
+            loader: 'tslint-loader',
+            options: {
+              emitErrors: false,
+              failOnHint: false
+            }
+          }
+        ],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.ts$/,
+        use: [
+          {
+            loader: 'awesome-typescript-loader'
+          }
+        ],
+        exclude: /node_modules/
+      }
+    ]
   },
   resolve: {
     extensions: ['.ts', '.js', '.json']

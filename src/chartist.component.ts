@@ -1,13 +1,4 @@
-import {
-  NgModule,
-  Component,
-  ElementRef,
-  Input,
-  OnInit,
-  OnChanges,
-  OnDestroy,
-  SimpleChanges
-} from '@angular/core';
+import { NgModule, Component, ElementRef, Input, OnInit, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
 
 import * as Chartist from 'chartist';
 
@@ -54,7 +45,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
       Promise.reject(`Expected at least type and data.`);
     }
 
-    return this.renderChart().then((chart) => {
+    return this.renderChart().then(chart => {
       if (this.events !== undefined) {
         this.bindEvents(chart);
       }
@@ -74,15 +65,9 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   renderChart(): Promise<ChartInterfaces> {
-    const promises: any[] = [
-      this.type,
-      this.element,
-      this.data,
-      this.options,
-      this.responsiveOptions
-    ];
+    const promises: any[] = [this.type, this.element, this.data, this.options, this.responsiveOptions];
 
-    return Promise.all(promises).then((values) => {
+    return Promise.all(promises).then(values => {
       const [type, ...args]: any = values;
 
       if (!(type in Chartist)) {
@@ -119,12 +104,8 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
 }
 
 @NgModule({
-  declarations: [
-    ChartistComponent
-  ],
-  exports: [
-    ChartistComponent
-  ]
+  declarations: [ChartistComponent],
+  exports: [ChartistComponent]
 })
 export class ChartistModule {}
 
