@@ -86,7 +86,7 @@
     "karma-remap-coverage": "^0.1.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.3",
-    "lint-staged": "^3.6.0",
+    "lint-staged": "^4.0.0",
     "phantomjs-prebuilt": "^2.1.14",
     "prettier": "^1.4.1",
     "reflect-metadata": "0.1.10",
