@@ -73,7 +73,7 @@
     "coveralls": "^2.13.1",
     "es6-shim": "^0.35.3",
     "eslint": "^3.19.0",
-    "husky": "^0.13.4",
+    "husky": "^0.14.1",
     "istanbul-instrumenter-loader": "^2.0.0",
     "jasmine-core": "^2.6.2",
     "json-loader": "^0.5.4",
