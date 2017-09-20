@@ -70,7 +70,7 @@ export class AppModule { }
 
 ```
 
-You may also find it useful to view the [demo source](https://github.com/paradox41/ng-chartist/blob/master/demo/demo.ts).
+You may also find it useful to view the [demo source](https://github.com/willsoto/ng-chartist/blob/master/demo/demo.ts).
 
 ### Usage without a module bundler
 ```
