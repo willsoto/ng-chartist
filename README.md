@@ -70,6 +70,22 @@ export class AppModule { }
 
 ```
 
+### Add chart styles to your app:
+* using `.angular-cli.json`:
+
+```javascript
+"styles": [
+  "scss/style.scss",
+  "../node_modules/chartist/dist/chartist.css"
+],
+```
+
+* or in the `index.html` file with:
+```html
+<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+```
+
+
 You may also find it useful to view the [demo source](https://github.com/willsoto/ng-chartist/blob/master/demo/demo.ts).
 
 ### Usage without a module bundler
