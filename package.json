@@ -26,12 +26,8 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.ts": [
-      "prettier --print-width 120 --single-quote --parser typescript --write",
-      "git add"
-    ],
-    "*.js": [
-      "prettier --print-width 120 --single-quote --write",
+    "*.{ts,js,md,json}": [
+      "prettier --write",
       "git add"
     ]
   },
