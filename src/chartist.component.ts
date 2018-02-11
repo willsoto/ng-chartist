@@ -26,12 +26,17 @@ export interface ChartEvent {
   template: '<ng-content></ng-content>'
 })
 export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
-  @Input() data: (Promise<Chartist.IChartistData> | Chartist.IChartistData);
-  @Input() type: (Promise<ChartType> | ChartType);
-  @Input() options: (Promise<Chartist.IChartOptions> | Chartist.IChartOptions);
-  @Input() responsiveOptions: (Promise<ResponsiveOptions> | ResponsiveOptions);
+  // @ts-ignore
+  @Input() data: Promise<Chartist.IChartistData> | Chartist.IChartistData;
+  // @ts-ignore
+  @Input() type: Promise<ChartType> | ChartType;
+  // @ts-ignore
+  @Input() options: Promise<Chartist.IChartOptions> | Chartist.IChartOptions;
+  // @ts-ignore
+  @Input() responsiveOptions: Promise<ResponsiveOptions> | ResponsiveOptions;
+  // @ts-ignore
   @Input() events: ChartEvent;
-
+  // @ts-ignore
   chart: ChartInterfaces;
 
   private element: HTMLElement;
@@ -42,10 +47,10 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
 
   ngOnInit(): Promise<ChartInterfaces> {
     if (!this.type || !this.data) {
-      Promise.reject(`Expected at least type and data.`);
+      Promise.reject('Expected at least type and data.');
     }
 
-    return this.renderChart().then(chart => {
+    return this.renderChart().then((chart) => {
       if (this.events !== undefined) {
         this.bindEvents(chart);
       }
@@ -67,7 +72,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   renderChart(): Promise<ChartInterfaces> {
     const promises: any[] = [this.type, this.element, this.data, this.options, this.responsiveOptions];
 
-    return Promise.all(promises).then(values => {
+    return Promise.all(promises).then((values) => {
       const [type, ...args]: any = values;
 
       if (!(type in Chartist)) {
