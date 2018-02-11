@@ -2,6 +2,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/willsoto/ng-chartist.svg)](https://greenkeeper.io/)
 [![npm version](https://badge.fury.io/js/ng-chartist.svg)](http://badge.fury.io/js/ng-chartist)
+[![CircleCI](https://circleci.com/gh/willsoto/ng-chartist.svg?style=svg)](https://circleci.com/gh/willsoto/ng-chartist)
 
 ## Demo
 
