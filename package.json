@@ -66,6 +66,7 @@
     "core-js": "^2.5.3",
     "es6-shim": "^0.35.3",
     "eslint": "^4.17.0",
+    "greenkeeper-lockfile": "1",
     "husky": "^0.14.3",
     "istanbul-instrumenter-loader": "^3.0.0",
     "jasmine-core": "^2.99.1",
