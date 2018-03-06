@@ -60,7 +60,7 @@
     "@types/chartist": "^0.9.38",
     "@types/jasmine": "^2.8.6",
     "@types/rx": "^4.1.1",
-    "awesome-typescript-loader": "^3.4.1",
+    "awesome-typescript-loader": "^4.0.0",
     "chartist": "^0.11.0",
     "codelyzer": "^4.1.0",
     "core-js": "^2.5.3",
