@@ -93,7 +93,7 @@
     "typescript": "^2.7.1",
     "uglify-js": "^3.3.10",
     "validate-commit": "^3.4.0",
-    "webpack": "^3.11.0",
+    "webpack": "^4.2.0",
     "webpack-dev-server": "^2.11.1",
     "zone.js": "^0.8.20"
   },
