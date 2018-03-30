@@ -79,7 +79,7 @@
     "karma-remap-coverage": "^0.1.5",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.9",
-    "lint-staged": "^6.1.0",
+    "lint-staged": "^7.0.1",
     "prettier": "^1.10.2",
     "puppeteer": "^1.0.0",
     "reflect-metadata": "0.1.12",
