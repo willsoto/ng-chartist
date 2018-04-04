@@ -23,7 +23,8 @@
     "release": "standard-version --sign && git push --follow-tags origin master && yarn run build:dist && yarn publish",
     "postrelease": "yarn run gh-pages",
     "commitmsg": "validate-commit-msg",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "lint": "tslint --project tsconfig.json --fix"
   },
   "lint-staged": {
     "*.{ts,js,md,json}": [
