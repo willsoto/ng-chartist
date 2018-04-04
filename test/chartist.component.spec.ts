@@ -163,7 +163,7 @@ describe('chartist component', function(): void {
     instance.data = data['Bar'];
     instance.type = 'NotAChart';
 
-    instance.renderChart().catch(err => {
+    instance.renderChart().catch((err) => {
       expect(err.message).toBe('NotAChart is not a valid chart type');
     });
   });

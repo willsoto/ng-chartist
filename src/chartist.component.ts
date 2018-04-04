@@ -1,4 +1,13 @@
-import { NgModule, Component, ElementRef, Input, OnInit, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
+import {
+  NgModule,
+  Component,
+  ElementRef,
+  Input,
+  OnInit,
+  OnChanges,
+  OnDestroy,
+  SimpleChanges
+} from '@angular/core';
 
 import * as Chartist from 'chartist';
 
@@ -8,9 +17,17 @@ import * as Chartist from 'chartist';
  */
 export type ChartType = 'Pie' | 'Bar' | 'Line';
 
-export type ChartInterfaces = Chartist.IChartistPieChart | Chartist.IChartistBarChart | Chartist.IChartistLineChart;
-export type ChartOptions = Chartist.IBarChartOptions | Chartist.ILineChartOptions | Chartist.IPieChartOptions;
-export type ResponsiveOptionTuple = Chartist.IResponsiveOptionTuple<ChartOptions>;
+export type ChartInterfaces =
+  | Chartist.IChartistPieChart
+  | Chartist.IChartistBarChart
+  | Chartist.IChartistLineChart;
+export type ChartOptions =
+  | Chartist.IBarChartOptions
+  | Chartist.ILineChartOptions
+  | Chartist.IPieChartOptions;
+export type ResponsiveOptionTuple = Chartist.IResponsiveOptionTuple<
+  ChartOptions
+>;
 export type ResponsiveOptions = Array<ResponsiveOptionTuple>;
 
 /**
@@ -70,7 +87,13 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   renderChart(): Promise<ChartInterfaces> {
-    const promises: any[] = [this.type, this.element, this.data, this.options, this.responsiveOptions];
+    const promises: any[] = [
+      this.type,
+      this.element,
+      this.data,
+      this.options,
+      this.responsiveOptions
+    ];
 
     return Promise.all(promises).then((values) => {
       const [type, ...args]: any = values;
