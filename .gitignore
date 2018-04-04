@@ -7,3 +7,5 @@ dist/
 *.log
 demo/*.js
 *.map
+/.rpt2_cache/
+/dist.tgz

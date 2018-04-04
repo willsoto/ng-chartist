@@ -2,36 +2,6 @@
   "name": "ng-chartist",
   "version": "1.1.1",
   "description": "Chartist component for Angular",
-  "main": "./dist/ng-chartist.js",
-  "typings": "./dist/chartist.component.d.ts",
-  "files": [
-    "src/",
-    "dist/"
-  ],
-  "scripts": {
-    "clean": "rimraf dist/",
-    "start": "webpack-dev-server",
-    "build:demo": "webpack -p",
-    "prebuild:dist": "yarn run clean",
-    "build:dist": "webpack --config ./config/webpack.dist.js && ngc --project tsconfig.json",
-    "postbuild:dist": "uglifyjs dist/ng-chartist.js --compress --mangle --screw-ie8 -o dist/ng-chartist.min.js",
-    "test": "karma start",
-    "test:watch": "karma start --auto-watch --no-single-run",
-    "typedoc": "typedoc --options typedoc.json src/*.ts",
-    "gh-pages": "git checkout gh-pages && git merge master && yarn run build:demo && yarn run typedoc && git add . && git commit -m 'chore: build demo and docs' && git push && git checkout master",
-    "prerelease": "yarn test",
-    "release": "standard-version --sign && git push --follow-tags origin master && yarn run build:dist && yarn publish",
-    "postrelease": "yarn run gh-pages",
-    "commitmsg": "validate-commit-msg",
-    "precommit": "lint-staged",
-    "lint": "tslint --project tsconfig.json --fix"
-  },
-  "lint-staged": {
-    "*.{ts,js,md,json}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/willsoto/ng-chartist.git"
@@ -47,7 +17,26 @@
   "bugs": {
     "url": "https://github.com/willsoto/ng-chartist/issues"
   },
-  "homepage": "https://github.com/willsoto/ng-chartist#readme",
+  "homepage": "https://github.com/willsoto/ng-chartist",
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "scripts": {
+    "prebuild": "yarn run lint && yarn run test",
+    "build": "ng-packagr",
+    "start": "webpack-dev-server",
+    "build:demo": "webpack -p",
+    "test": "karma start",
+    "typedoc": "typedoc --options typedoc.json src/*.ts",
+    "gh-pages": "git checkout gh-pages && git merge master && yarn run build:demo && yarn run typedoc && git add . && git commit -m 'chore: build demo and docs' && git push && git checkout master",
+    "prerelease": "yarn test",
+    "release": "standard-version --sign && git push --follow-tags origin master && yarn run build && npm publish dist",
+    "postrelease": "yarn run gh-pages",
+    "commitmsg": "validate-commit-msg",
+    "precommit": "lint-staged",
+    "lint": "tslint --project tsconfig.json --fix && tslint --project test/tsconfig.json --fix"
+  },
   "devDependencies": {
     "@angular/common": "^5.2.4",
     "@angular/compiler": "^5.2.4",
@@ -63,7 +52,6 @@
     "@types/rx": "^4.1.1",
     "awesome-typescript-loader": "^3.4.1",
     "chartist": "^0.11.0",
-    "codelyzer": "^4.1.0",
     "core-js": "^2.5.3",
     "es6-shim": "^0.35.3",
     "greenkeeper-lockfile": "1",
@@ -80,10 +68,10 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.9",
     "lint-staged": "^7.0.3",
+    "ng-packagr": "^2.4.1",
     "prettier": "^1.10.2",
     "puppeteer": "^1.0.0",
     "reflect-metadata": "0.1.12",
-    "rimraf": "^2.6.2",
     "rxjs": "6.0.0-alpha.0",
     "source-map-loader": "^0.2.3",
     "standard-version": "^4.3.0",
@@ -91,7 +79,6 @@
     "tslint-loader": "^3.5.3",
     "typedoc": "^0.10.0",
     "typescript": "^2.7.1",
-    "uglify-js": "^3.3.10",
     "validate-commit": "^3.4.0",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1",
@@ -101,5 +88,11 @@
     "@angular/core": ">=4.1.2",
     "@types/chartist": "^0.9.38",
     "chartist": ">=0.9.8"
+  },
+  "lint-staged": {
+    "*.{ts,js,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

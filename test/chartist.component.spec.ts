@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import * as Chartist from 'chartist';
 
-import { ChartType, ChartistComponent } from '../src/chartist.component';
+import { ChartistComponent, ChartType } from '../src/chartist.component';
 
 const data: any = require('./data.json');
 
@@ -31,7 +31,7 @@ describe('chartist component', function(): void {
   });
 
   it('should initialize the correct chart only once', function(): void {
-    let chartType: ChartType = 'Bar';
+    const chartType: ChartType = 'Bar';
 
     spyOn(Chartist, chartType).and.callThrough();
 
@@ -46,7 +46,7 @@ describe('chartist component', function(): void {
   });
 
   it('should return the correct chart instance', function(): void {
-    let chartType: ChartType = 'Bar';
+    const chartType: ChartType = 'Bar';
 
     instance.data = data[chartType];
     instance.type = chartType;
@@ -57,7 +57,7 @@ describe('chartist component', function(): void {
   });
 
   it('should bind events if there are events', function(): void {
-    let chartType: ChartType = 'Bar';
+    const chartType: ChartType = 'Bar';
 
     spyOn(instance, 'bindEvents').and.callThrough();
 
@@ -91,20 +91,20 @@ describe('chartist component', function(): void {
   });
 
   it('should update the chart if the data changes', function(): void {
-    let changes: any = {
+    const changes: any = {
       data: {
         labels: [],
         series: []
       }
     };
 
-    instance.data = data['Bar'];
+    instance.data = data.Bar;
     instance.type = 'Bar';
 
     fixture.detectChanges();
 
     instance.renderChart().then(function(): void {
-      instance.data = data['Line'];
+      instance.data = data.Line;
       instance.type = 'Line';
 
       spyOn(instance.chart, 'update').and.callThrough();
@@ -120,19 +120,19 @@ describe('chartist component', function(): void {
   });
 
   it('should update the chart if the options change', function(): void {
-    let changes: any = {
+    const changes: any = {
       options: {
         reverseData: true
       }
     };
 
-    instance.data = data['Bar'];
+    instance.data = data.Bar;
     instance.type = 'Bar';
 
     fixture.detectChanges();
 
     instance.renderChart().then(function(): void {
-      instance.data = data['Bar'];
+      instance.data = data.Bar;
       instance.type = 'Bar';
 
       spyOn(instance.chart, 'update').and.callThrough();
@@ -148,7 +148,7 @@ describe('chartist component', function(): void {
   });
 
   it('should throw an error when missing type', function(): void {
-    instance.data = data['Bar'];
+    instance.data = data.Bar;
 
     expect(instance.ngOnInit).toThrow();
   });
@@ -160,7 +160,7 @@ describe('chartist component', function(): void {
   });
 
   it('should throw an error when an invalid chart type is passed', function() {
-    instance.data = data['Bar'];
+    instance.data = data.Bar;
     instance.type = 'NotAChart';
 
     instance.renderChart().catch((err) => {

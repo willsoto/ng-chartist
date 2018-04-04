@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "lib": {
+    "entryFile": "./src/chartist.module.ts",
+    "umdModuleIds": {
+      "chartist": "Chartist",
+      "@angular/core": "@angular/core",
+      "@angular/common": "@angular/common"
+    }
+  }
+}
