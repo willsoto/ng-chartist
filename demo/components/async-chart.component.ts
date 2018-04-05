@@ -19,14 +19,14 @@ const data: any = require('../data.json');
   `
 })
 class AsyncChartComponent {
-  data: Promise<Chartist.IChartistData>;
-  type: Promise<ChartType>;
+  public data: Promise<Chartist.IChartistData>;
+  public type: Promise<ChartType>;
 
   constructor() {
     // simulate slow API call
     this.data = new Promise(function(resolve: any): void {
       setTimeout(function(): void {
-        resolve(data['Pie']);
+        resolve(data.Pie);
       }, 5000);
     });
 

@@ -4,7 +4,7 @@ import { ChartType } from '../../src/chartist.component';
 
 export interface LiveData {
   labels: string[];
-  series: Array<Array<number>>;
+  series: number[][];
 }
 
 function getRandomInt(min: number, max: number): number {
@@ -22,8 +22,8 @@ function getRandomInt(min: number, max: number): number {
   `
 })
 class LiveChartComponent implements OnDestroy {
-  data: LiveData;
-  type: ChartType;
+  public data: LiveData;
+  public type: ChartType;
 
   private interval: any;
 
@@ -35,9 +35,13 @@ class LiveChartComponent implements OnDestroy {
     this.type = 'Bar';
 
     this.interval = setInterval(() => {
-      let time: Date = new Date();
-      let formattedTime: string = [time.getHours(), time.getMinutes(), time.getSeconds()].join(':');
-      let random: number = getRandomInt(1, 40);
+      const time: Date = new Date();
+      const formattedTime: string = [
+        time.getHours(),
+        time.getMinutes(),
+        time.getSeconds()
+      ].join(':');
+      const random: number = getRandomInt(1, 40);
 
       this.data.labels.push(formattedTime);
       this.data.series.push([random]);
@@ -46,7 +50,7 @@ class LiveChartComponent implements OnDestroy {
     }, 2500);
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     clearInterval(this.interval);
   }
 }

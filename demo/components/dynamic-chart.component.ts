@@ -29,17 +29,17 @@ const data: any = require('../data.json');
   `
 })
 class DynamicChartComponent {
-  type: ChartType;
-  data: Chartist.IChartistData;
-  options: any;
+  public type: ChartType;
+  public data: Chartist.IChartistData;
+  public options: any;
 
-  chartTypes: ChartType[];
+  public chartTypes: ChartType[];
 
   constructor() {
     this.chartTypes = ['Bar', 'Line'];
 
     this.type = 'Bar';
-    this.data = data['Bar'];
+    this.data = data.Bar;
     this.options = {
       axisX: {
         showLabel: false

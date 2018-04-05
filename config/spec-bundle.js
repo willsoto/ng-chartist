@@ -19,7 +19,10 @@ require('rxjs/Rx');
 var testing = require('@angular/core/testing');
 var browser = require('@angular/platform-browser-dynamic/testing');
 
-testing.TestBed.initTestEnvironment(browser.BrowserDynamicTestingModule, browser.platformBrowserDynamicTesting());
+testing.TestBed.initTestEnvironment(
+  browser.BrowserDynamicTestingModule,
+  browser.platformBrowserDynamicTesting()
+);
 
 /**
  * Ok, this is kinda crazy. We can use the context method on

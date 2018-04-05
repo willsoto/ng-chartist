@@ -158,13 +158,4 @@ describe('chartist component', function(): void {
 
     expect(instance.ngOnInit).toThrow();
   });
-
-  it('should throw an error when an invalid chart type is passed', function() {
-    instance.data = data.Bar;
-    instance.type = 'NotAChart';
-
-    instance.renderChart().catch((err) => {
-      expect(err.message).toBe('NotAChart is not a valid chart type');
-    });
-  });
 });

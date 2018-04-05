@@ -1,7 +1,7 @@
 const helpers = require('./helpers');
 
 module.exports = {
-  devtool: 'inline-source-map',
+  mode: 'production',
   resolve: {
     extensions: ['.ts', '.js'],
     modules: [helpers.root('src'), 'node_modules']
@@ -12,7 +12,10 @@ module.exports = {
         enforce: 'pre',
         test: /\.js$/,
         loader: 'source-map-loader',
-        exclude: [helpers.root('node_modules/rxjs'), helpers.root('node_modules/@angular')]
+        exclude: [
+          helpers.root('node_modules/rxjs'),
+          helpers.root('node_modules/@angular')
+        ]
       },
       {
         enforce: 'pre',
@@ -32,14 +35,7 @@ module.exports = {
         test: /\.ts$/,
         use: [
           {
-            loader: 'awesome-typescript-loader',
-            query: {
-              sourceMap: false,
-              inlineSourceMap: true,
-              compilerOptions: {
-                removeComments: true
-              }
-            }
+            loader: 'awesome-typescript-loader'
           }
         ],
         include: [helpers.root('src'), helpers.root('test')]
