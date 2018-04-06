@@ -665,15 +665,15 @@ autoprefixer@^7.1.1:
     postcss "^6.0.17"
     postcss-value-parser "^3.2.3"
 
-awesome-typescript-loader@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-4.0.1.tgz#bddae8183f06eb65184390d596e4342ca2089281"
+awesome-typescript-loader@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-5.0.0.tgz#130c304ae52a60933f15d93f7629003b483fa8b1"
   dependencies:
     chalk "^2.3.1"
-    enhanced-resolve "3.3.0"
+    enhanced-resolve "^4.0.0"
     loader-utils "^1.1.0"
-    lodash "^4.17.4"
-    micromatch "^3.0.3"
+    lodash "^4.17.5"
+    micromatch "^3.1.9"
     mkdirp "^0.5.1"
     source-map-support "^0.5.3"
 
@@ -2870,15 +2870,6 @@ engine.io@~3.1.0:
     ws "~3.3.1"
   optionalDependencies:
     uws "~0.14.4"
-
-enhanced-resolve@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-3.3.0.tgz#950964ecc7f0332a42321b673b38dc8ff15535b3"
-  dependencies:
-    graceful-fs "^4.1.2"
-    memory-fs "^0.4.0"
-    object-assign "^4.0.1"
-    tapable "^0.2.5"
 
 enhanced-resolve@^4.0.0:
   version "4.0.0"
@@ -5626,7 +5617,7 @@ micromatch@^2.1.5, micromatch@^2.3.11, micromatch@^2.3.7:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-micromatch@^3.0.3, micromatch@^3.1.4:
+micromatch@^3.1.4:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-3.1.5.tgz#d05e168c206472dfbca985bfef4f57797b4cd4ba"
   dependencies:
@@ -5644,7 +5635,7 @@ micromatch@^3.0.3, micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-micromatch@^3.1.8:
+micromatch@^3.1.8, micromatch@^3.1.9:
   version "3.1.10"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-3.1.10.tgz#70859bc95c9840952f359a068a3fc49f9ecfac23"
   dependencies:
@@ -8279,10 +8270,6 @@ syntax-error@^1.1.1:
   resolved "https://registry.yarnpkg.com/syntax-error/-/syntax-error-1.4.0.tgz#2d9d4ff5c064acb711594a3e3b95054ad51d907c"
   dependencies:
     acorn-node "^1.2.0"
-
-tapable@^0.2.5:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/tapable/-/tapable-0.2.8.tgz#99372a5c999bf2df160afc0d74bed4f47948cd22"
 
 tapable@^1.0.0:
   version "1.0.0"
