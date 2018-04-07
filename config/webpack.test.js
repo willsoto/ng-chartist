@@ -10,15 +10,6 @@ module.exports = {
     rules: [
       {
         enforce: 'pre',
-        test: /\.js$/,
-        loader: 'source-map-loader',
-        exclude: [
-          helpers.root('node_modules/rxjs'),
-          helpers.root('node_modules/@angular')
-        ]
-      },
-      {
-        enforce: 'pre',
         test: /\.ts$/,
         use: [
           {
@@ -39,17 +30,6 @@ module.exports = {
           }
         ],
         include: [helpers.root('src'), helpers.root('test')]
-      },
-      {
-        enforce: 'post',
-        test: /\.(js|ts)$/,
-        use: [
-          {
-            loader: 'istanbul-instrumenter-loader'
-          }
-        ],
-        include: [helpers.root('src')],
-        exclude: [/\.spec\.ts$/, /node_modules/]
       }
     ]
   }

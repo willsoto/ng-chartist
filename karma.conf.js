@@ -12,7 +12,7 @@ module.exports = function(config) {
     ],
     exclude: [],
     preprocessors: {
-      'config/spec-bundle.js': ['coverage', 'webpack', 'sourcemap']
+      'config/spec-bundle.js': ['webpack']
     },
     client: {
       captureConsole: false
@@ -24,15 +24,7 @@ module.exports = function(config) {
         chunks: false
       }
     },
-    coverageReporter: {
-      type: 'in-memory'
-    },
-    remapCoverageReporter: {
-      'text-summary': null,
-      html: './coverage/html',
-      lcovonly: './coverage/lcov.info'
-    },
-    reporters: ['mocha', 'coverage', 'remap-coverage'],
+    reporters: ['mocha'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
