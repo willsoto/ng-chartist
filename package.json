@@ -48,7 +48,7 @@
     "@angular/forms": "^5.2.9",
     "@angular/platform-browser": "^5.2.9",
     "@angular/platform-browser-dynamic": "^5.2.9",
-    "@angular/router": "^5.2.9",
+    "@angular/router": "^6.0.0",
     "@types/chartist": "^0.9.38",
     "@types/jasmine": "^2.8.6",
     "@types/rx": "^4.1.1",
