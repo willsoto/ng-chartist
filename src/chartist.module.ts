@@ -7,9 +7,3 @@ import { ChartistComponent } from './chartist.component';
   exports: [ChartistComponent]
 })
 export class ChartistModule {}
-
-// // for angular-cli
-// @todo [Will] is this still needed?
-// export default {
-//   directives: [ChartistComponent]
-// };
