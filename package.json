@@ -79,7 +79,7 @@
     "validate-commit": "^3.4.0",
     "webpack": "^4.9.2",
     "webpack-cli": "^3.0.7",
-    "webpack-serve": "^1.0.2",
+    "webpack-serve": "^2.0.0",
     "zone.js": "^0.8.25"
   },
   "peerDependencies": {
