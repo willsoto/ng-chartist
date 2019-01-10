@@ -14,7 +14,7 @@ https://willsoto.github.io/ng-chartist/demo/
 - [Installation](#installation)
 - [Documentation](#documentation)
 - [Development](#development)
-- [License](#licence)
+- [License](#license)
 
 ## About
 
