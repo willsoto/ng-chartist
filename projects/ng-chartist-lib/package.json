@@ -1,0 +1,10 @@
+{
+  "name": "ng-chartist",
+  "version": "3.0.0",
+  "peerDependencies": {
+    "@angular/common": ">=4.1.2",
+	"@angular/core": ">=4.1.2",
+    "@types/chartist": "^0.9.38",
+    "chartist": ">=0.9.8"
+  }
+}
