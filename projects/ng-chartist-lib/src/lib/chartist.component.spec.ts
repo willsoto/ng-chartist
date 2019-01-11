@@ -26,7 +26,7 @@ describe('chartist component', function(): void {
     expect(instance).toBeDefined();
   });
 
-  it('should initialize the correct chart only once', function(): void {
+  it('should initialize the correct chart only once', async function() {
     const chartType: ChartType = 'Bar';
 
     spyOn(Chartist, chartType).and.callThrough();
@@ -34,23 +34,23 @@ describe('chartist component', function(): void {
     instance.data = data[chartType];
     instance.type = chartType;
 
-    instance.renderChart().then(function(): void {
-      expect(Chartist.Bar).toHaveBeenCalledTimes(1);
-    });
+    await instance.renderChart();
+
+    expect(Chartist.Bar).toHaveBeenCalledTimes(1);
   });
 
-  it('should return the correct chart instance', function(): void {
+  it('should return the correct chart instance', async function() {
     const chartType: ChartType = 'Bar';
 
     instance.data = data[chartType];
     instance.type = chartType;
 
-    instance.renderChart().then(function(chart: any): void {
-      expect(chart instanceof Chartist.Bar).toBe(true);
-    });
+    const chart = await instance.renderChart();
+
+    expect(chart instanceof Chartist.Bar).toBe(true);
   });
 
-  it('should bind events if there are events', function(): void {
+  it('should bind events if there are events', async function() {
     const chartType: ChartType = 'Bar';
 
     spyOn(instance, 'bindEvents').and.callThrough();
@@ -63,9 +63,9 @@ describe('chartist component', function(): void {
       }
     };
 
-    instance.ngOnInit().then(function(): void {
-      expect(instance.bindEvents).toHaveBeenCalled();
-    });
+    await instance.ngOnInit();
+
+    expect(instance.bindEvents).toHaveBeenCalled();
   });
 
   it('should re-render the chart if the chart type changes', function(): void {
@@ -82,7 +82,7 @@ describe('chartist component', function(): void {
     expect(instance.renderChart).toHaveBeenCalled();
   });
 
-  it('should update the chart if the data changes', function(): void {
+  it('should update the chart if the data changes', async function() {
     const changes: any = {
       data: {
         labels: [],
@@ -95,23 +95,23 @@ describe('chartist component', function(): void {
 
     fixture.detectChanges();
 
-    instance.renderChart().then(function(): void {
-      instance.data = data.Line;
-      instance.type = 'Line';
+    await instance.renderChart();
 
-      spyOn(instance.chart, 'update').and.callThrough();
-      spyOn(instance, 'renderChart').and.callThrough();
+    instance.data = data.Line;
+    instance.type = 'Line';
 
-      fixture.detectChanges();
+    spyOn(instance.chart, 'update').and.callThrough();
+    spyOn(instance, 'renderChart').and.callThrough();
 
-      instance.update(changes);
+    fixture.detectChanges();
 
-      expect(instance.renderChart).not.toHaveBeenCalled();
-      expect(instance.chart.update).toHaveBeenCalled();
-    });
+    instance.update(changes);
+
+    expect(instance.renderChart).not.toHaveBeenCalled();
+    expect(instance.chart.update).toHaveBeenCalled();
   });
 
-  it('should update the chart if the options change', function(): void {
+  it('should update the chart if the options change', async function() {
     const changes: any = {
       options: {
         reverseData: true
@@ -123,20 +123,20 @@ describe('chartist component', function(): void {
 
     fixture.detectChanges();
 
-    instance.renderChart().then(function(): void {
-      instance.data = data.Bar;
-      instance.type = 'Bar';
+    await instance.renderChart();
 
-      spyOn(instance.chart, 'update').and.callThrough();
-      spyOn(instance, 'renderChart').and.callThrough();
+    instance.data = data.Bar;
+    instance.type = 'Bar';
 
-      fixture.detectChanges();
+    spyOn(instance.chart, 'update').and.callThrough();
+    spyOn(instance, 'renderChart').and.callThrough();
 
-      instance.update(changes);
+    fixture.detectChanges();
 
-      expect(instance.renderChart).not.toHaveBeenCalled();
-      expect(instance.chart.update).toHaveBeenCalled();
-    });
+    instance.update(changes);
+
+    expect(instance.renderChart).not.toHaveBeenCalled();
+    expect(instance.chart.update).toHaveBeenCalled();
   });
 
   it('should throw an error when missing type', function(): void {
