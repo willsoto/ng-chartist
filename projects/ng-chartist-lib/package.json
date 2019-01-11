@@ -1,6 +1,23 @@
 {
   "name": "ng-chartist",
   "version": "3.0.0",
+  "description": "Chartist component for Angular",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willsoto/ng-chartist.git"
+  },
+  "keywords": [
+    "angular",
+    "chartist",
+    "charting",
+    "charts"
+  ],
+  "author": "Will Soto",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/willsoto/ng-chartist/issues"
+  },
+  "homepage": "https://github.com/willsoto/ng-chartist",
   "peerDependencies": {
     "@angular/common": ">=4.1.2",
 	"@angular/core": ">=4.1.2",
