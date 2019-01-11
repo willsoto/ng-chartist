@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/willsoto/ng-chartist/compare/v3.0.0-alpha.0...v3.0.0) (2019-01-11)
+
+
+
 <a name="3.0.0-alpha.0"></a>
 # [3.0.0-alpha.0](https://github.com/willsoto/ng-chartist/compare/v2.0.0-beta.1...v3.0.0-alpha.0) (2019-01-11)
 

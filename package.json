@@ -1,6 +1,6 @@
 {
   "name": "ng-chartist",
-  "version": "3.0.0-alpha.0",
+  "version": "3.0.0",
   "description": "Chartist component for Angular",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "test": "ng test ng-chartist-lib --watch=false --browsers=ChromeHeadless",
     "typedoc": "typedoc --exclude \"**/*+(.spec.ts|.json)\" projects/ng-chartist-lib/src/lib/",
     "gh-pages": "git checkout gh-pages && git merge master && yarn run build && yarn run typedoc && git add . && git commit -m 'chore(*): build demo and docs' && git push && git checkout master",
-    "release": "standard-version --sign && git push --follow-tags origin master && yarn run build && yarn publish dist/ng-chartist-lib",
+    "release": "standard-version --sign && git push --follow-tags origin master && yarn run build && npm publish dist/ng-chartist-lib",
     "postrelease": "yarn run gh-pages",
     "lint": "yarn run lint:lib && yarn run lint:demo",
     "lint:demo": "ng lint ng-chartist-demo",
