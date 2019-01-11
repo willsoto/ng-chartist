@@ -1,11 +1,14 @@
 {
   "name": "ng-chartist",
-  "version": "3.0.0",
+  "version": "v2.0.0-beta.1",
   "description": "Chartist component for Angular",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/willsoto/ng-chartist.git"
   },
+  "files": [
+    "./dist/ng-chartist-lib/**"
+  ],
   "keywords": [
     "angular",
     "chartist",
