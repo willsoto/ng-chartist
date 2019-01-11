@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0-alpha.0"></a>
+# [3.0.0-alpha.0](https://github.com/willsoto/ng-chartist/compare/v2.0.0-beta.1...v3.0.0-alpha.0) (2019-01-11)
+
+
+### Bug Fixes
+
+* **aot:** Recreated the library using Angular cli generated projects and as a result: ([7506bfd](https://github.com/willsoto/ng-chartist/commit/7506bfd))
+* **lib:** add missing information to library's package.json. ([810ef8b](https://github.com/willsoto/ng-chartist/commit/810ef8b))
+* **live-chart:** a couple of fixes for the live chart demo: ([818e8a1](https://github.com/willsoto/ng-chartist/commit/818e8a1))
+* **style:** increase axis label size and move global styling to style.css in the demo app. ([76585ae](https://github.com/willsoto/ng-chartist/commit/76585ae))
+* **styling:** include missing bootstrap CSS and top menu toolbar. ([e305299](https://github.com/willsoto/ng-chartist/commit/e305299))
+* **typedoc:** fixed generation of documentation. ([e985153](https://github.com/willsoto/ng-chartist/commit/e985153))
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/willsoto/ng-chartist/compare/v2.0.0-beta.1...v3.0.0) (2019-01-10)
 
