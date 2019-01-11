@@ -5,7 +5,11 @@
 
 ## Demo
 
-https://willsoto.github.io/ng-chartist/demo/
+[https://willsoto.github.io/ng-chartist/demo/](https://willsoto.github.io/ng-chartist/demo/index.html)
+
+## Docs
+
+[https://willsoto.github.io/ng-chartist/docs/](https://willsoto.github.io/ng-chartist/docs/)
 
 ## Table of contents
 
