@@ -1,6 +1,5 @@
 # Angular Chartist
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/willsoto/ng-chartist.svg)](https://greenkeeper.io/)
 [![npm version](https://badge.fury.io/js/ng-chartist.svg)](http://badge.fury.io/js/ng-chartist)
 [![CircleCI](https://circleci.com/gh/willsoto/ng-chartist.svg?style=svg)](https://circleci.com/gh/willsoto/ng-chartist)
 
@@ -28,25 +27,7 @@ Chartist component for Angular 2
 npm install @angular/core ng-chartist chartist --save
 ```
 
-### Additionally typings for the chartist library need to be installed:
-
-- For TSC <= 1.8:
-
-```
-npm install -g typings --save
-```
-
-```
-typings install -g dt~chartist --save
-```
-
-- For TSC = 2.0+ typings can be installed through npm directly:
-
-```
-npm install @types/chartist --save-dev
-```
-
-### Then use it in your app like so:
+### Usage
 
 ```typescript
 import { NgModule } from '@angular/core';
