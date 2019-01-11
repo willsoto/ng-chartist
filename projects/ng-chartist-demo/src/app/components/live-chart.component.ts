@@ -27,7 +27,7 @@ export class LiveChartComponent implements OnDestroy {
   constructor() {
     this.data = {
       labels: [],
-      series: []
+      series: [[]]
     };
     this.type = 'Bar';
 
@@ -38,10 +38,16 @@ export class LiveChartComponent implements OnDestroy {
         time.getMinutes(),
         time.getSeconds()
       ].join(':');
-      const random: number = getRandomInt(1, 40);
+      const random: number = getRandomInt(1, 40),
+        data = this.data.series[0],
+        labels = this.data.labels;
 
-      this.data.labels.push(formattedTime);
-      this.data.series.push([random]);
+      labels.push(formattedTime);
+      data.push(random);
+
+      // We only want to display 10 data points at a time
+      this.data.labels = labels.slice(-9);
+      this.data.series[0] = data.slice(-9);
 
       this.data = Object.assign({}, this.data);
     }, 2500);
