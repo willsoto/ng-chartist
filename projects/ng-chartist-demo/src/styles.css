@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+x-chartist {
+    display: block;
+    height: 300px;
+}
+
+.ct-label {
+    font-size: 1.25rem !important;
+}
