@@ -103,5 +103,5 @@
     "test": "ng test ng-chartist --watch=false --browsers=ChromeHeadless",
     "typedoc": "typedoc --exclude \"**/*+(.spec.ts|.json)\" projects/ng-chartist/src/lib/"
   },
-  "version": "3.0.2"
+  "version": "3.0.3"
 }
