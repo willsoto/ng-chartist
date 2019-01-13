@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git+https://github.com/willsoto/ng-chartist.git"
   },
+  "files": [
+    "./**/.{js,ts,json,map}"
+  ],
   "keywords": [
     "angular",
     "chartist",
@@ -20,7 +23,7 @@
   "homepage": "https://github.com/willsoto/ng-chartist",
   "peerDependencies": {
     "@angular/common": ">=4.1.2",
-	"@angular/core": ">=4.1.2",
+    "@angular/core": ">=4.1.2",
     "@types/chartist": "^0.9.38",
     "chartist": ">=0.9.8"
   }
