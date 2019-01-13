@@ -51,7 +51,7 @@
     "zone.js": "~0.8.27"
   },
   "files": [
-    "./**/.{js,ts,json,map}"
+    "**/*.{js,ts,json,map}"
   ],
   "homepage": "https://github.com/willsoto/ng-chartist",
   "husky": {
