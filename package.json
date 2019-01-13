@@ -6,9 +6,6 @@
     "type": "git",
     "url": "git+https://github.com/willsoto/ng-chartist.git"
   },
-  "files": [
-    "./dist/ng-chartist-lib/**"
-  ],
   "keywords": [
     "angular",
     "chartist",
@@ -25,19 +22,19 @@
     "ng": "ng",
     "start": "ng serve ng-chartist-demo",
     "build:demo": "ng build ng-chartist-demo --prod",
-    "build:lib": "ng build ng-chartist-lib",
+    "build:lib": "ng build ng-chartist",
     "build": "yarn run build:lib && yarn run build:demo",
-    "test": "ng test ng-chartist-lib --watch=false --browsers=ChromeHeadless",
-    "typedoc": "typedoc --exclude \"**/*+(.spec.ts|.json)\" projects/ng-chartist-lib/src/lib/",
+    "test": "ng test ng-chartist --watch=false --browsers=ChromeHeadless",
+    "typedoc": "typedoc --exclude \"**/*+(.spec.ts|.json)\" projects/ng-chartist/src/lib/",
     "gh-pages": "git checkout gh-pages && git merge master && yarn run build && yarn run typedoc && mv dist/ng-chartist-demo demo",
     "postgh-pages": "git add . && git commit -m 'chore(*): build demo and docs' && git push && git checkout master",
     "release": "standard-version --sign && git push --follow-tags origin master && yarn run build && npm publish dist/ng-chartist-lib",
     "postrelease": "yarn run gh-pages",
     "lint": "yarn run lint:lib && yarn run lint:demo",
     "lint:demo": "ng lint ng-chartist-demo",
-    "lint:lib": "ng lint ng-chartist-lib",
+    "lint:lib": "ng lint ng-chartist",
     "e2e": "ng e2e",
-    "pack": "cd dist/ng-chartist-lib && yarn pack",
+    "pack": "cd dist/ng-chartist && yarn pack",
     "package": "yarn run build:lib && yarn run pack"
   },
   "dependencies": {

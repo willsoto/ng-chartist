@@ -3,33 +3,33 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-chartist-lib": {
-      "root": "projects/ng-chartist-lib",
-      "sourceRoot": "projects/ng-chartist-lib/src",
+    "ng-chartist": {
+      "root": "projects/ng-chartist",
+      "sourceRoot": "projects/ng-chartist/src",
       "projectType": "library",
       "prefix": "x",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ng-chartist-lib/tsconfig.lib.json",
-            "project": "projects/ng-chartist-lib/ng-package.json"
+            "tsConfig": "projects/ng-chartist/tsconfig.lib.json",
+            "project": "projects/ng-chartist/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-chartist-lib/src/test.ts",
-            "tsConfig": "projects/ng-chartist-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-chartist-lib/karma.conf.js"
+            "main": "projects/ng-chartist/src/test.ts",
+            "tsConfig": "projects/ng-chartist/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-chartist/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-chartist-lib/tsconfig.lib.json",
-              "projects/ng-chartist-lib/tsconfig.spec.json"
+              "projects/ng-chartist/tsconfig.lib.json",
+              "projects/ng-chartist/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -162,5 +162,5 @@
       }
     }
   },
-  "defaultProject": "ng-chartist-lib"
+  "defaultProject": "ng-chartist"
 }
