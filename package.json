@@ -1,69 +1,33 @@
 {
-  "name": "ng-chartist",
-  "version": "3.0.1",
-  "description": "Chartist component for Angular",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/willsoto/ng-chartist.git"
-  },
-  "keywords": [
-    "angular",
-    "chartist",
-    "charting",
-    "charts"
-  ],
-  "files": [
-    "./**/.{js,ts,json,map}"
-  ],
   "author": "Will Soto",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/willsoto/ng-chartist/issues"
   },
-  "homepage": "https://github.com/willsoto/ng-chartist",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve ng-chartist-demo",
-    "build:demo": "ng build ng-chartist-demo --prod",
-    "build:lib": "ng build ng-chartist",
-    "build": "yarn run build:lib && yarn run build:demo",
-    "test": "ng test ng-chartist --watch=false --browsers=ChromeHeadless",
-    "typedoc": "typedoc --exclude \"**/*+(.spec.ts|.json)\" projects/ng-chartist/src/lib/",
-    "gh-pages": "git checkout gh-pages && git merge master && yarn run build && yarn run typedoc && mv dist/ng-chartist-demo demo",
-    "postgh-pages": "git add . && git commit -m 'chore(*): build demo and docs' && git push && git checkout master",
-    "lint": "yarn run lint:lib && yarn run lint:demo",
-    "lint:demo": "ng lint ng-chartist-demo",
-    "lint:lib": "ng lint ng-chartist",
-    "e2e": "ng e2e",
-    "pack": "cd dist/ng-chartist && yarn pack",
-    "package": "yarn run build:lib && yarn run pack"
-  },
-  "dependencies": {
-    "@angular/animations": "~7.2.0",
-    "@angular/common": "~7.2.0",
-    "@angular/compiler": "~7.2.0",
-    "@angular/core": "~7.2.0",
-    "@angular/forms": "~7.2.0",
-    "@angular/http": "~7.2.0",
-    "@angular/platform-browser": "~7.2.0",
-    "@angular/platform-browser-dynamic": "~7.2.0",
-    "@angular/router": "~7.2.0",
-    "chartist": "^0.11.0",
-    "core-js": "^2.6.2",
-    "rxjs": "~6.3.3",
-    "zone.js": "~0.8.27"
-  },
+  "description": "Chartist component for Angular",
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.12.1",
     "@angular-devkit/build-ng-packagr": "~0.12.1",
+    "@angular/animations": "~7.2.0",
     "@angular/cli": "~7.2.1",
+    "@angular/common": "~7.2.0",
+    "@angular/compiler": "~7.2.0",
     "@angular/compiler-cli": "~7.2.0",
+    "@angular/core": "~7.2.0",
+    "@angular/forms": "~7.2.0",
+    "@angular/http": "~7.2.0",
     "@angular/language-service": "~7.2.0",
+    "@angular/platform-browser": "~7.2.0",
+    "@angular/platform-browser-dynamic": "~7.2.0",
+    "@angular/router": "~7.2.0",
     "@types/chartist": "^0.9.43",
     "@types/jasmine": "~3.3.5",
     "@types/jasminewd2": "~2.0.6",
     "@types/node": "~10.12.18",
+    "chartist": "^0.11.0",
     "codelyzer": "~4.5.0",
+    "core-js": "^2.6.2",
+    "greenkeeper-lockfile": "^1.15.1",
+    "husky": "^1.3.1",
     "jasmine-core": "~3.3.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.4",
@@ -71,39 +35,73 @@
     "karma-coverage-istanbul-reporter": "~2.0.4",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "lint-staged": "^8.1.0",
     "ng-packagr": "^4.4.5",
+    "prettier": "^1.15.3",
     "protractor": "~5.4.2",
+    "rxjs": "~6.3.3",
+    "standard-version": "^4.4.0",
     "ts-node": "~7.0.1",
     "tsickle": ">=0.34.0",
     "tslib": "^1.9.3",
     "tslint": "~5.12.1",
-    "typescript": "~3.2.2",
-    "prettier": "^1.15.3",
     "typedoc": "^0.14.1",
-    "lint-staged": "^8.1.0",
-    "standard-version": "^4.4.0",
+    "typescript": "~3.2.2",
     "validate-commit": "^3.4.0",
-    "greenkeeper-lockfile": "^1.15.1",
-    "husky": "^1.3.1"
+    "zone.js": "~0.8.27"
   },
-  "peerDependencies": {
-    "@angular/common": ">=4.1.2",
-    "@angular/core": ">=4.1.2",
-    "@types/chartist": "^0.9.38",
-    "chartist": ">=0.9.8"
+  "files": [
+    "./**/.{js,ts,json,map}"
+  ],
+  "homepage": "https://github.com/willsoto/ng-chartist",
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-build": "yarn run test && yarn run lint",
+      "pre-commit": "lint-staged",
+      "pre-release": "yarn test"
+    }
   },
+  "keywords": [
+    "angular",
+    "chartist",
+    "charting",
+    "charts"
+  ],
+  "license": "Apache-2.0",
   "lint-staged": {
     "*.{ts,js,md,json}": [
       "prettier --write",
       "git add"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "validate-commit-msg",
-      "pre-release": "yarn test",
-      "pre-build": "yarn run test && yarn run lint"
-    }
-  }
+  "name": "ng-chartist",
+  "peerDependencies": {
+    "@angular/common": ">=4.1.2",
+    "@angular/core": ">=4.1.2",
+    "@types/chartist": "^0.9.38",
+    "chartist": ">=0.9.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willsoto/ng-chartist.git"
+  },
+  "scripts": {
+    "build": "yarn run build:lib && yarn run build:demo",
+    "build:demo": "ng build ng-chartist-demo --prod",
+    "build:lib": "ng build ng-chartist",
+    "e2e": "ng e2e",
+    "gh-pages": "git checkout gh-pages && git merge master && yarn run build && yarn run typedoc && mv dist/ng-chartist-demo demo",
+    "lint": "yarn run lint:lib && yarn run lint:demo",
+    "lint:demo": "ng lint ng-chartist-demo",
+    "lint:lib": "ng lint ng-chartist",
+    "ng": "ng",
+    "pack": "cd dist/ng-chartist && yarn pack",
+    "package": "yarn run build:lib && yarn run pack",
+    "postgh-pages": "git add . && git commit -m 'chore(*): build demo and docs' && git push && git checkout master",
+    "start": "ng serve ng-chartist-demo",
+    "test": "ng test ng-chartist --watch=false --browsers=ChromeHeadless",
+    "typedoc": "typedoc --exclude \"**/*+(.spec.ts|.json)\" projects/ng-chartist/src/lib/"
+  },
+  "version": "3.0.1"
 }
