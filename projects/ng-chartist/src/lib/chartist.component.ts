@@ -41,23 +41,25 @@ export interface ChartEvent {
   template: '<ng-content></ng-content>'
 })
 export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
+  // @ts-ignore
   @Input()
-  // @ts-ignore
-  public data: Promise<Chartist.IChartistData> | Chartist.IChartistData;
+  data: Promise<Chartist.IChartistData> | Chartist.IChartistData;
 
   // @ts-ignore
-  @Input() public type: Promise<ChartType> | ChartType;
-
   @Input()
-  // @ts-ignore
-  public options: Promise<Chartist.IChartOptions> | Chartist.IChartOptions;
+  type: Promise<ChartType> | ChartType;
 
+  // @ts-ignore
   @Input()
-  // @ts-ignore
-  public responsiveOptions: Promise<ResponsiveOptions> | ResponsiveOptions;
+  options: Promise<Chartist.IChartOptions> | Chartist.IChartOptions;
 
   // @ts-ignore
-  @Input() public events: ChartEvent;
+  @Input()
+  responsiveOptions: Promise<ResponsiveOptions> | ResponsiveOptions;
+
+  // @ts-ignore
+  @Input()
+  events: ChartEvent;
 
   // @ts-ignore
   public chart: ChartInterfaces;
@@ -68,7 +70,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     this.element = element.nativeElement;
   }
 
-  public ngOnInit(): Promise<ChartInterfaces> {
+  ngOnInit(): Promise<ChartInterfaces> {
     if (!this.type || !this.data) {
       Promise.reject('Expected at least type and data.');
     }
@@ -82,17 +84,17 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     });
   }
 
-  public ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(changes: SimpleChanges): void {
     this.update(changes);
   }
 
-  public ngOnDestroy(): void {
+  ngOnDestroy(): void {
     if (this.chart) {
       this.chart.detach();
     }
   }
 
-  public renderChart(): Promise<ChartInterfaces> {
+  private renderChart(): Promise<ChartInterfaces> {
     const promises: any[] = [
       this.type,
       this.element,
@@ -114,7 +116,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     });
   }
 
-  public update(changes: SimpleChanges): void {
+  private update(changes: SimpleChanges): void {
     if (!this.chart || 'type' in changes) {
       this.renderChart();
     } else {
@@ -130,7 +132,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     }
   }
 
-  public bindEvents(chart: any): void {
+  private bindEvents(chart: any): void {
     for (const event of Object.keys(this.events)) {
       chart.on(event, this.events[event]);
     }
