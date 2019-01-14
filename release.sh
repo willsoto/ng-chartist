@@ -7,6 +7,7 @@ npx standard-version --sign
 echo "Copying package.json"
 
 cp ./package.json ./projects/ng-chartist
+cp ./README.md ./projects/ng-chartist
 
 yarn build
 
