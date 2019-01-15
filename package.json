@@ -26,6 +26,7 @@
     "@types/node": "~10.12.18",
     "chartist": "^0.11.0",
     "codelyzer": "~4.5.0",
+    "copyfiles": "^2.1.0",
     "core-js": "^2.6.2",
     "greenkeeper-lockfile": "^1.15.1",
     "husky": "^1.3.1",
@@ -89,7 +90,7 @@
   "scripts": {
     "build": "yarn run build:lib && yarn run build:demo",
     "build:demo": "ng build ng-chartist-demo --prod",
-    "build:lib": "ng build ng-chartist",
+    "build:lib": "copyfiles package.json README.md projects/ng-chartist && ng build ng-chartist",
     "e2e": "ng e2e",
     "gh-pages": "git checkout gh-pages && git merge master && yarn run build && yarn run doc && mv dist/ng-chartist-demo demo",
     "lint": "yarn run lint:lib && yarn run lint:demo",
