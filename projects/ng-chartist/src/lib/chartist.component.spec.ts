@@ -34,7 +34,7 @@ describe('chartist component', function(): void {
     instance.data = data[chartType];
     instance.type = chartType;
 
-    await instance.renderChart();
+    await instance['renderChart']();
 
     expect(Chartist.Bar).toHaveBeenCalledTimes(1);
   });
@@ -45,7 +45,7 @@ describe('chartist component', function(): void {
     instance.data = data[chartType];
     instance.type = chartType;
 
-    const chart = await instance.renderChart();
+    const chart = await instance['renderChart']();
 
     expect(chart instanceof Chartist.Bar).toBe(true);
   });
@@ -53,7 +53,7 @@ describe('chartist component', function(): void {
   it('should bind events if there are events', async function() {
     const chartType: ChartType = 'Bar';
 
-    spyOn(instance, 'bindEvents').and.callThrough();
+    spyOn(<any>instance, 'bindEvents').and.callThrough();
 
     instance.data = data[chartType];
     instance.type = chartType;
@@ -65,7 +65,7 @@ describe('chartist component', function(): void {
 
     await instance.ngOnInit();
 
-    expect(instance.bindEvents).toHaveBeenCalled();
+    expect(instance['bindEvents']).toHaveBeenCalled();
   });
 
   it('should re-render the chart if the chart type changes', function(): void {
@@ -75,11 +75,11 @@ describe('chartist component', function(): void {
 
     instance.type = 'Line';
 
-    spyOn(instance, 'renderChart').and.callThrough();
+    spyOn(<any>instance, 'renderChart').and.callThrough();
 
-    instance.update(changes);
+    instance['update'](changes);
 
-    expect(instance.renderChart).toHaveBeenCalled();
+    expect(instance['renderChart']).toHaveBeenCalled();
   });
 
   it('should update the chart if the data changes', async function() {
@@ -95,19 +95,19 @@ describe('chartist component', function(): void {
 
     fixture.detectChanges();
 
-    await instance.renderChart();
+    await instance['renderChart']();
 
     instance.data = data.Line;
     instance.type = 'Line';
 
     spyOn(instance.chart, 'update').and.callThrough();
-    spyOn(instance, 'renderChart').and.callThrough();
+    spyOn(<any>instance, 'renderChart').and.callThrough();
 
     fixture.detectChanges();
 
-    instance.update(changes);
+    instance['update'](changes);
 
-    expect(instance.renderChart).not.toHaveBeenCalled();
+    expect(instance['renderChart']).not.toHaveBeenCalled();
     expect(instance.chart.update).toHaveBeenCalled();
   });
 
@@ -123,19 +123,19 @@ describe('chartist component', function(): void {
 
     fixture.detectChanges();
 
-    await instance.renderChart();
+    await instance['renderChart']();
 
     instance.data = data.Bar;
     instance.type = 'Bar';
 
     spyOn(instance.chart, 'update').and.callThrough();
-    spyOn(instance, 'renderChart').and.callThrough();
+    spyOn(<any>instance, 'renderChart').and.callThrough();
 
     fixture.detectChanges();
 
-    instance.update(changes);
+    instance['update'](changes);
 
-    expect(instance.renderChart).not.toHaveBeenCalled();
+    expect(instance['renderChart']).not.toHaveBeenCalled();
     expect(instance.chart.update).toHaveBeenCalled();
   });
 
