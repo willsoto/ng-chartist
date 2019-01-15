@@ -62,11 +62,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   // @ts-ignore
   public chart: ChartInterfaces;
 
-  private element: HTMLElement;
-
-  constructor(element: ElementRef) {
-    this.element = element.nativeElement;
-  }
+  constructor(private elementRef: ElementRef) {}
 
   public ngOnInit(): Promise<ChartInterfaces> {
     if (!this.type || !this.data) {
@@ -95,7 +91,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   public renderChart(): Promise<ChartInterfaces> {
     const promises: any[] = [
       this.type,
-      this.element,
+      this.elementRef.nativeElement,
       this.data,
       this.options,
       this.responsiveOptions
