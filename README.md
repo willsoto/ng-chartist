@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/ng-chartist.svg)](http://badge.fury.io/js/ng-chartist)
 [![NPM downloads](https://img.shields.io/npm/dt/ng-chartist.svg)](https://npmjs.org/package/ng-chartist)
-[![CircleCI](https://circleci.com/gh/willsoto/ng-chartist.svg?style=svg)](https://circleci.com/gh/willsoto/ng-chartist)
+[![CircleCI](https://circleci.com/gh/willsoto/ng-chartist.svg?style=shield)](https://circleci.com/gh/willsoto/ng-chartist)
 
 ## Demo
 
@@ -66,15 +66,19 @@ import { ChartistModule } from 'ng-chartist';
 @NgModule({
   imports: [
     ChartistModule // add ChartistModule to your imports
-  ],
+  ]
 })
 export class AppModule {}
 ```
 
 ```typescript
 // bar-chart.component.ts
-import {IBarChartOptions, IChartistAnimationOptions, IChartistData} from 'chartist';
-import {ChartEvent, ChartType} from 'ng-chartist';
+import {
+  IBarChartOptions,
+  IChartistAnimationOptions,
+  IChartistData
+} from 'chartist';
+import { ChartEvent, ChartType } from 'ng-chartist';
 
 @Component({
   selector: 'app-bar-chart',
@@ -86,44 +90,58 @@ import {ChartEvent, ChartType} from 'ng-chartist';
       [events]="events"
     ></x-chartist>
   `,
-  styles: [`
-    x-chartist {
-      display: block;
-      height: 300px;
-    }
-  `]
+  styles: [
+    `
+      x-chartist {
+        display: block;
+        height: 300px;
+      }
+    `
+  ]
 })
 export class BarChartComponent {
-    type: ChartType = 'Bar';
-    data: IChartistData = {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
-          'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        series: [
-          [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-          [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
-        ]
-    };
-    
-    options: IBarChartOptions = {
-      axisX: {
-        showGrid: false
+  type: ChartType = 'Bar';
+  data: IChartistData = {
+    labels: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec'
+    ],
+    series: [
+      [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+      [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+    ]
+  };
+
+  options: IBarChartOptions = {
+    axisX: {
+      showGrid: false
+    }
+  };
+
+  events: ChartEvent = {
+    draw: (data) => {
+      if (data.type === 'bar') {
+        data.element.animate({
+          y2: <IChartistAnimationOptions>{
+            dur: '0.5s',
+            from: data.y1,
+            to: data.y2,
+            easing: 'easeOutQuad'
+          }
+        });
       }
-    };
-    
-    events: ChartEvent = {
-      draw: (data) => {
-        if (data.type === 'bar') {
-          data.element.animate({
-            y2: <IChartistAnimationOptions>{
-              dur: '0.5s',
-              from: data.y1,
-              to: data.y2,
-              easing: 'easeOutQuad'
-            }
-          });
-        }
-      }
-    };
+    }
+  };
 }
 ```
 

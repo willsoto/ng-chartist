@@ -41,34 +41,24 @@ export interface ChartEvent {
   template: '<ng-content></ng-content>'
 })
 export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
-  // @ts-ignore
   @Input()
   data: Promise<Chartist.IChartistData> | Chartist.IChartistData;
 
-  // @ts-ignore
   @Input()
   type: Promise<ChartType> | ChartType;
 
-  // @ts-ignore
   @Input()
   options: Promise<Chartist.IChartOptions> | Chartist.IChartOptions;
 
-  // @ts-ignore
   @Input()
   responsiveOptions: Promise<ResponsiveOptions> | ResponsiveOptions;
 
-  // @ts-ignore
   @Input()
   events: ChartEvent;
 
-  // @ts-ignore
   public chart: ChartInterfaces;
 
-  private element: HTMLElement;
-
-  constructor(element: ElementRef) {
-    this.element = element.nativeElement;
-  }
+  constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): Promise<ChartInterfaces> {
     if (!this.type || !this.data) {
@@ -97,7 +87,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   private renderChart(): Promise<ChartInterfaces> {
     const promises: any[] = [
       this.type,
-      this.element,
+      this.elementRef.nativeElement,
       this.data,
       this.options,
       this.responsiveOptions

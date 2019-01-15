@@ -19,12 +19,14 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@compodoc/compodoc": "^1.1.7",
     "@types/chartist": "^0.9.43",
     "@types/jasmine": "~3.3.5",
     "@types/jasminewd2": "~2.0.6",
     "@types/node": "~10.12.18",
     "chartist": "^0.11.0",
     "codelyzer": "~4.5.0",
+    "copyfiles": "^2.1.0",
     "core-js": "^2.6.2",
     "greenkeeper-lockfile": "^1.15.1",
     "husky": "^1.3.1",
@@ -45,7 +47,6 @@
     "tsickle": ">=0.34.0",
     "tslib": "^1.9.3",
     "tslint": "~5.12.1",
-    "typedoc": "^0.14.1",
     "typescript": "~3.2.2",
     "validate-commit": "^3.4.0",
     "zone.js": "~0.8.27"
@@ -89,9 +90,9 @@
   "scripts": {
     "build": "yarn run build:lib && yarn run build:demo",
     "build:demo": "ng build ng-chartist-demo --prod",
-    "build:lib": "ng build ng-chartist",
+    "build:lib": "copyfiles package.json README.md projects/ng-chartist && ng build ng-chartist",
     "e2e": "ng e2e",
-    "gh-pages": "git checkout gh-pages && git merge master && yarn run build && yarn run typedoc && mv dist/ng-chartist-demo demo",
+    "gh-pages": "git checkout gh-pages && git merge master && yarn run build && yarn run doc && mv dist/ng-chartist-demo demo",
     "lint": "yarn run lint:lib && yarn run lint:demo",
     "lint:demo": "ng lint ng-chartist-demo",
     "lint:lib": "ng lint ng-chartist",
@@ -101,7 +102,7 @@
     "postgh-pages": "git add . && git commit -m 'chore(*): build demo and docs' && git push && git checkout master",
     "start": "ng serve ng-chartist-demo",
     "test": "ng test ng-chartist --watch=false --browsers=ChromeHeadless",
-    "typedoc": "typedoc --exclude \"**/*+(.spec.ts|.json)\" projects/ng-chartist/src/lib/"
+    "doc": "compodoc projects/ng-chartist/src/lib -p projects/ng-chartist/tsconfig.lib.json -d docs"
   },
   "version": "3.1.0"
 }
