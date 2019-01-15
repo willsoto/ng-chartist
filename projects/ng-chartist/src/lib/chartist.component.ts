@@ -42,24 +42,18 @@ export interface ChartEvent {
 })
 export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   @Input()
-  // @ts-ignore
   public data: Promise<Chartist.IChartistData> | Chartist.IChartistData;
 
-  // @ts-ignore
   @Input() public type: Promise<ChartType> | ChartType;
 
   @Input()
-  // @ts-ignore
   public options: Promise<Chartist.IChartOptions> | Chartist.IChartOptions;
 
   @Input()
-  // @ts-ignore
   public responsiveOptions: Promise<ResponsiveOptions> | ResponsiveOptions;
 
-  // @ts-ignore
   @Input() public events: ChartEvent;
 
-  // @ts-ignore
   public chart: ChartInterfaces;
 
   constructor(private elementRef: ElementRef) {}
