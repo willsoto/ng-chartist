@@ -1,13 +1,12 @@
-<div *ngFor="let chart of charts">
-  <x-chartist
-          class="col-md-6"
-          [data]="chart.data"
-          [type]="chart.type"
-          [options]="chart.options"
-          [responsiveOptions]="chart.responsiveOptions"
-          [events]="chart.events">
-  </x-chartist>
-</div>
+ <x-chartist
+     *ngFor="let chart of charts"
+      class="col-md-6"
+      [data]="chart.data"
+      [type]="chart.type"
+      [options]="chart.options"
+      [responsiveOptions]="chart.responsiveOptions"
+      [events]="chart.events">
+</x-chartist>
 
 <div class="row">
   <div class="col-md-6">
