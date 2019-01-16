@@ -77,6 +77,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   ngOnDestroy(): void {
     if (this.chart) {
       this.chart.detach();
+      this.chart = null;
     }
   }
 
