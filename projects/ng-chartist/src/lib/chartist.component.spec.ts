@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import * as Chartist from 'chartist';
 
@@ -6,19 +6,19 @@ import { ChartistComponent, ChartType } from './chartist.component';
 
 const data: any = require('./testdata.json');
 
-describe('chartist component', function(): void {
+describe('chartist component', () => {
   let instance: ChartistComponent;
   let fixture: ComponentFixture<ChartistComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ChartistComponent]
     }).compileComponents();
-  }));
+  });
 
-  beforeEach(function(): void {
+  beforeEach(() => {
     fixture = TestBed.createComponent(ChartistComponent);
-    instance = fixture.debugElement.componentInstance;
+    instance = fixture.componentInstance;
   });
 
   it(`should be initialized`, () => {
@@ -26,7 +26,7 @@ describe('chartist component', function(): void {
     expect(instance).toBeDefined();
   });
 
-  it('should initialize the correct chart only once', async function() {
+  it('should initialize the correct chart only once', () => {
     const chartType: ChartType = 'Bar';
 
     spyOn(Chartist, chartType).and.callThrough();
@@ -34,23 +34,23 @@ describe('chartist component', function(): void {
     instance.data = data[chartType];
     instance.type = chartType;
 
-    await instance['renderChart']();
+    instance.ngOnInit();
 
     expect(Chartist.Bar).toHaveBeenCalledTimes(1);
   });
 
-  it('should return the correct chart instance', async function() {
+  it('should return the correct chart instance', () => {
     const chartType: ChartType = 'Bar';
 
     instance.data = data[chartType];
     instance.type = chartType;
 
-    const chart = await instance['renderChart']();
+    instance.ngOnInit();
 
-    expect(chart instanceof Chartist.Bar).toBe(true);
+    expect(instance.chart instanceof Chartist.Bar).toBe(true);
   });
 
-  it('should bind events if there are events', async function() {
+  it('should bind events if there are events', () => {
     const chartType: ChartType = 'Bar';
 
     spyOn(<any>instance, 'bindEvents').and.callThrough();
@@ -58,96 +58,83 @@ describe('chartist component', function(): void {
     instance.data = data[chartType];
     instance.type = chartType;
     instance.events = {
-      draw(): boolean {
-        return false;
-      }
+      draw: () => {}
     };
 
-    await instance.ngOnInit();
+    instance.ngOnInit();
 
     expect(instance['bindEvents']).toHaveBeenCalled();
   });
 
-  it('should re-render the chart if the chart type changes', function(): void {
-    const changes: any = {
-      type: 'Bar'
-    };
-
-    instance.type = 'Line';
-
+  it('should re-render the chart if the chart type changes', () => {
     spyOn(<any>instance, 'renderChart').and.callThrough();
 
-    instance['update'](changes);
+    instance.type = 'Bar';
+    instance.data = data.Bar;
+
+    instance.ngOnChanges({
+      type: <any>{
+        currentValue: instance.type
+      }
+    });
 
     expect(instance['renderChart']).toHaveBeenCalled();
   });
 
-  it('should update the chart if the data changes', async function() {
-    const changes: any = {
-      data: {
-        labels: [],
-        series: []
-      }
-    };
-
+  it('should update the chart if the data changes', () => {
     instance.data = data.Bar;
     instance.type = 'Bar';
 
-    fixture.detectChanges();
-
-    await instance['renderChart']();
-
-    instance.data = data.Line;
-    instance.type = 'Line';
+    instance.ngOnInit();
 
     spyOn(instance.chart, 'update').and.callThrough();
     spyOn(<any>instance, 'renderChart').and.callThrough();
 
-    fixture.detectChanges();
-
-    instance['update'](changes);
+    instance.ngOnChanges({
+      data: <any>{
+        currentValue: instance.data
+      }
+    });
 
     expect(instance['renderChart']).not.toHaveBeenCalled();
     expect(instance.chart.update).toHaveBeenCalled();
   });
 
-  it('should update the chart if the options change', async function() {
-    const changes: any = {
-      options: {
-        reverseData: true
-      }
-    };
-
+  it('should update the chart if the options change', () => {
     instance.data = data.Bar;
     instance.type = 'Bar';
 
-    fixture.detectChanges();
-
-    await instance['renderChart']();
-
-    instance.data = data.Bar;
-    instance.type = 'Bar';
+    instance.ngOnInit();
 
     spyOn(instance.chart, 'update').and.callThrough();
     spyOn(<any>instance, 'renderChart').and.callThrough();
 
-    fixture.detectChanges();
-
-    instance['update'](changes);
+    instance.options = {
+      reverseData: true
+    };
+    instance.ngOnChanges({
+      options: <any>{
+        currentValue: instance.options
+      }
+    });
 
     expect(instance['renderChart']).not.toHaveBeenCalled();
     expect(instance.chart.update).toHaveBeenCalled();
   });
 
-  it('should throw an error when missing type', function(): void {
+  it('should not initialize chart when type is missing', () => {
     instance.data = data.Bar;
 
-    expect(instance.ngOnInit).toThrow();
+    instance.ngOnInit();
+
+    expect(instance.chart).toBeUndefined();
   });
 
-  it('should throw an error when missing data', function(): void {
+  it('should not initialize chart when data is missing', () => {
     instance.type = 'Bar';
 
-    expect(instance.ngOnInit).toThrow();
+    instance.ngOnInit();
+
+    expect(instance.chart).toBeUndefined();
   });
 });
