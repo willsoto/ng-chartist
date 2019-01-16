@@ -3,6 +3,9 @@ import { Component } from '@angular/core';
 import { ChartType } from 'ng-chartist';
 
 import * as Chartist from 'chartist';
+import { Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
+import { getRandomInt } from './live-chart.component';
 
 declare var require: any;
 
@@ -12,25 +15,16 @@ const data: any = require('../data.json');
   selector: 'async-chart',
   template: `
     <h4>Async</h4>
-    <x-chartist [data]="data" [type]="type"> </x-chartist>
+    <x-chartist [data]="data$ | async" [type]="type$ | async"> </x-chartist>
   `
 })
 export class AsyncChartComponent {
-  public data: Promise<Chartist.IChartistData>;
-  public type: Promise<ChartType>;
+  data$: Observable<Chartist.IChartistData>;
+  type$: Observable<ChartType>;
 
   constructor() {
     // simulate slow API call
-    this.data = new Promise(function(resolve: any): void {
-      setTimeout(function(): void {
-        resolve(data.Pie);
-      }, 5000);
-    });
-
-    this.type = new Promise(function(resolve: any): void {
-      setTimeout(function(): void {
-        resolve('Pie');
-      }, 5000);
-    });
+    this.data$ = of(data.Pie).pipe(delay(getRandomInt(1000, 3000)));
+    this.type$ = of(<ChartType>'Pie').pipe(delay(getRandomInt(1000, 3000)));
   }
 }
