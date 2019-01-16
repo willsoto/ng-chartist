@@ -39,7 +39,7 @@ export interface ChartEvent {
 
 @Component({
   selector: 'x-chartist',
-  template: '<ng-content></ng-content>'
+  template: '<div></div>'
 })
 export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   @Input()
