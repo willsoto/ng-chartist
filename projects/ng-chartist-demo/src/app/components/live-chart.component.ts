@@ -1,6 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 
 import { ChartType } from 'ng-chartist';
+import { Subscription, timer } from 'rxjs';
 
 export interface LiveData {
   labels: string[];
@@ -22,7 +23,7 @@ export class LiveChartComponent implements OnDestroy {
   public data: LiveData;
   public type: ChartType;
 
-  private interval: any;
+  private timerSubscription: Subscription;
 
   constructor() {
     this.data = {
@@ -31,29 +32,31 @@ export class LiveChartComponent implements OnDestroy {
     };
     this.type = 'Bar';
 
-    this.interval = setInterval(() => {
-      const time: Date = new Date();
-      const formattedTime: string = [
+    this.timerSubscription = timer(0, 2500).subscribe(() => this.updateData());
+  }
+
+  updateData() {
+    const time: Date = new Date(),
+      formattedTime: string = [
         time.getHours(),
         time.getMinutes(),
         time.getSeconds()
-      ].join(':');
-      const random: number = getRandomInt(1, 40),
-        data = this.data.series[0],
-        labels = this.data.labels;
+      ].join(':'),
+      random = getRandomInt(1, 40),
+      data = this.data.series[0],
+      labels = this.data.labels;
 
-      labels.push(formattedTime);
-      data.push(random);
+    labels.push(formattedTime);
+    data.push(random);
 
-      // We only want to display 10 data points at a time
-      this.data.labels = labels.slice(-9);
-      this.data.series[0] = data.slice(-9);
+    // We only want to display 10 data points at a time
+    this.data.labels = labels.slice(-9);
+    this.data.series[0] = data.slice(-9);
 
-      this.data = Object.assign({}, this.data);
-    }, 2500);
+    this.data = { ...this.data };
   }
 
   public ngOnDestroy(): void {
-    clearInterval(this.interval);
+    this.timerSubscription.unsubscribe();
   }
 }
