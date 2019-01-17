@@ -56,8 +56,8 @@
               "projects/ng-chartist-demo/src/assets"
             ],
             "styles": [
-              "projects/ng-chartist-demo/src/styles.css",
-              "node_modules/chartist/dist/chartist.css"
+              "node_modules/chartist/dist/chartist.css",
+              "projects/ng-chartist-demo/src/styles.css"
             ],
             "scripts": []
           },
@@ -113,8 +113,8 @@
             "tsConfig": "projects/ng-chartist-demo/tsconfig.spec.json",
             "karmaConfig": "projects/ng-chartist-demo/karma.conf.js",
             "styles": [
-              "projects/ng-chartist-demo/src/styles.css",
-              "node_modules/chartist/dist/chartist.css"
+              "node_modules/chartist/dist/chartist.css",
+              "projects/ng-chartist-demo/src/styles.css"
             ],
             "scripts": [],
             "assets": [
