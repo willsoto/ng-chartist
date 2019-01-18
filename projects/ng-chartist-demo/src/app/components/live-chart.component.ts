@@ -2,6 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 
 import { ChartType } from 'ng-chartist';
 import { Subscription, timer } from 'rxjs';
+import { DatePipe } from '@angular/common';
 
 export interface LiveData {
   labels: string[];
@@ -37,11 +38,8 @@ export class LiveChartComponent implements OnDestroy {
 
   updateData() {
     const time: Date = new Date(),
-      formattedTime: string = [
-        time.getHours(),
-        time.getMinutes(),
-        time.getSeconds()
-      ].join(':'),
+      datePipe = new DatePipe('en'),
+      formattedTime = datePipe.transform(time, 'HH:mm:ss'),
       random = getRandomInt(1, 40),
       data = this.data.series[0],
       labels = this.data.labels;
