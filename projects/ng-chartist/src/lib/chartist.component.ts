@@ -71,9 +71,6 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   ngOnInit(): void {
     if (this.type && this.data) {
       this.renderChart();
-      if (this.events) {
-        this.bindEvents();
-      }
     }
   }
 
@@ -101,6 +98,10 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
       this.options,
       this.responsiveOptions
     );
+
+    if (this.events) {
+      this.bindEvents();
+    }
   }
 
   private update(changes: SimpleChanges): void {
