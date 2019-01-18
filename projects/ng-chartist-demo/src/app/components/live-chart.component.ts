@@ -25,6 +25,7 @@ export class LiveChartComponent implements OnDestroy {
   public type: ChartType;
 
   private timerSubscription: Subscription;
+  private datePipe = new DatePipe('en');
 
   constructor() {
     this.data = {
@@ -38,8 +39,7 @@ export class LiveChartComponent implements OnDestroy {
 
   updateData() {
     const time: Date = new Date(),
-      datePipe = new DatePipe('en'),
-      formattedTime = datePipe.transform(time, 'HH:mm:ss'),
+      formattedTime = this.datePipe.transform(time, 'HH:mm:ss'),
       random = getRandomInt(1, 40),
       data = this.data.series[0],
       labels = this.data.labels;
