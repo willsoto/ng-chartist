@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 
 import { ChartType } from 'ng-chartist';
 import { Subscription, timer } from 'rxjs';
-import { DatePipe } from '@angular/common';
+import { formatDate } from '@angular/common';
 
 export interface LiveData {
   labels: string[];
@@ -18,8 +18,7 @@ export function getRandomInt(min: number, max: number): number {
   template: `
     <h4>Live Updating</h4>
     <x-chartist [data]="data" [type]="type"> </x-chartist>
-  `,
-  providers: [DatePipe]
+  `
 })
 export class LiveChartComponent implements OnDestroy {
   public data: LiveData;
@@ -27,7 +26,7 @@ export class LiveChartComponent implements OnDestroy {
 
   private timerSubscription: Subscription;
 
-  constructor(private datePipe: DatePipe) {
+  constructor() {
     this.data = {
       labels: [],
       series: [[]]
@@ -39,7 +38,7 @@ export class LiveChartComponent implements OnDestroy {
 
   updateData() {
     const time: Date = new Date(),
-      formattedTime = this.datePipe.transform(time, 'HH:mm:ss'),
+      formattedTime = formatDate(time, 'HH:mm:ss', 'en'),
       random = getRandomInt(1, 40),
       data = this.data.series[0],
       labels = this.data.labels;
