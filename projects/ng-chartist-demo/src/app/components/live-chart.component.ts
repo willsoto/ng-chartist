@@ -18,16 +18,16 @@ export function getRandomInt(min: number, max: number): number {
   template: `
     <h4>Live Updating</h4>
     <x-chartist [data]="data" [type]="type"> </x-chartist>
-  `
+  `,
+  providers: [DatePipe]
 })
 export class LiveChartComponent implements OnDestroy {
   public data: LiveData;
   public type: ChartType;
 
   private timerSubscription: Subscription;
-  private datePipe = new DatePipe('en');
 
-  constructor() {
+  constructor(private datePipe: DatePipe) {
     this.data = {
       labels: [],
       series: [[]]
