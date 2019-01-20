@@ -102,7 +102,9 @@
     "postgh-pages": "git add . && git commit -m 'chore(*): build demo and docs' && git push && git checkout master",
     "start": "ng serve ng-chartist-demo",
     "test": "ng test ng-chartist --watch=false --browsers=ChromeHeadless",
-    "doc": "compodoc projects/ng-chartist/src/lib -p projects/ng-chartist/tsconfig.lib.json -d docs"
+    "doc": "compodoc projects/ng-chartist/src/lib -p projects/ng-chartist/tsconfig.lib.json -d docs",
+    "release": "standard-version --sign --message 'chore(release): %s [skip ci]'",
+    "postrelease":"yarn build && npm publish dist/ng-chartist-lib && git push --follow-tags origin master"
   },
   "version": "4.0.0"
 }
