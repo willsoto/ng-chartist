@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/willsoto/ng-chartist/compare/v3.1.0...v4.0.0) (2019-01-20)
+
+
+### Bug Fixes
+
+* **async-chart:** using "async" pipe since promises are no longer accepted as input values. ([4063f8d](https://github.com/willsoto/ng-chartist/commit/4063f8d))
+* **chartist-cmp:** component should have "display: block" style set by default. ([f4a894f](https://github.com/willsoto/ng-chartist/commit/f4a894f))
+* **chartist-cmp:** component template should be just empty. ([b6bc795](https://github.com/willsoto/ng-chartist/commit/b6bc795))
+* **chartist-cmp:** events should be bound with every new chart initialization. ([ba78c62](https://github.com/willsoto/ng-chartist/commit/ba78c62))
+* **chartist-cmp:** unset chart reference on component destruction. ([985d068](https://github.com/willsoto/ng-chartist/commit/985d068))
+* **chartist-cmp:** use "div" tag instead of "ng-content" since nothing is projected. ([0498e3e](https://github.com/willsoto/ng-chartist/commit/0498e3e))
+* **demo-app:** removed useless "div" container. ([23cace7](https://github.com/willsoto/ng-chartist/commit/23cace7))
+* **library-build:** package.json should be copied in cross-platform way before every library build. ([15258d3](https://github.com/willsoto/ng-chartist/commit/15258d3))
+* **live-chart:** fix memory leak. ([27ab67f](https://github.com/willsoto/ng-chartist/commit/27ab67f))
+* **live-chart:** use Angular DI to inject DatePipe. ([9a0b104](https://github.com/willsoto/ng-chartist/commit/9a0b104))
+* **live-chart:** use Angular formatDate() function instead of DatePipe to format time. ([83683db](https://github.com/willsoto/ng-chartist/commit/83683db))
+* **ng-chartist:** corrected method visibility in chartist component. ([de1f891](https://github.com/willsoto/ng-chartist/commit/de1f891))
+* **ng-chartist:** get nativeElement from ElementRef in ngOnInit() instead of constructor. ([8c79179](https://github.com/willsoto/ng-chartist/commit/8c79179))
+* **ng-chartist:** Remove useless "ts-ignore" annotations. ([c84201c](https://github.com/willsoto/ng-chartist/commit/c84201c))
+* **package.json:** fix "pack" script. ([74002e6](https://github.com/willsoto/ng-chartist/commit/74002e6))
+* **style:** load Chartist stylesheet before demo app stylesheet and remove "!important" CSS rule. ([326ce65](https://github.com/willsoto/ng-chartist/commit/326ce65))
+
+
+### Features
+
+* **library:** chartist component simplification and unit test refactoring. ([5357a66](https://github.com/willsoto/ng-chartist/commit/5357a66))
+* **live-chart:** improve label formatting. ([9c34d86](https://github.com/willsoto/ng-chartist/commit/9c34d86))
+* **live-chart:** replaced setInterval() with RxJS timer since it allows setting initial delay. ([b0be49a](https://github.com/willsoto/ng-chartist/commit/b0be49a))
+
+
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/willsoto/ng-chartist/compare/v3.0.3...v3.1.0) (2019-01-14)
 
