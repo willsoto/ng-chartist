@@ -97,7 +97,7 @@
     "lint:demo": "ng lint ng-chartist-demo",
     "lint:lib": "ng lint ng-chartist",
     "ng": "ng",
-    "pack": "cd dist/ng-chartist && yarn pack",
+    "pack": "cd dist/ng-chartist-lib && yarn pack",
     "package": "yarn run build:lib && yarn run pack",
     "postgh-pages": "git add . && git commit -m 'chore(*): build demo and docs' && git push && git checkout master",
     "start": "ng serve ng-chartist-demo",

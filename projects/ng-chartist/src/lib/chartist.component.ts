@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 
 import * as Chartist from 'chartist';
+import { IChartistBase, IChartOptions } from 'chartist';
 
 /**
  * Possible chart types
@@ -38,20 +39,27 @@ export interface ChartEvent {
 
 @Component({
   selector: 'x-chartist',
-  template: '<ng-content></ng-content>'
+  template: '',
+  styles: [
+    `
+      :host {
+        display: block;
+      }
+    `
+  ]
 })
 export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   @Input()
-  data: Promise<Chartist.IChartistData> | Chartist.IChartistData;
+  data: Chartist.IChartistData;
 
   @Input()
-  type: Promise<ChartType> | ChartType;
+  type: ChartType;
 
   @Input()
-  options: Promise<Chartist.IChartOptions> | Chartist.IChartOptions;
+  options: Chartist.IChartOptions;
 
   @Input()
-  responsiveOptions: Promise<ResponsiveOptions> | ResponsiveOptions;
+  responsiveOptions: ResponsiveOptions;
 
   @Input()
   events: ChartEvent;
@@ -60,18 +68,10 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
 
   constructor(private elementRef: ElementRef) {}
 
-  ngOnInit(): Promise<ChartInterfaces> {
-    if (!this.type || !this.data) {
-      Promise.reject('Expected at least type and data.');
+  ngOnInit(): void {
+    if (this.type && this.data) {
+      this.renderChart();
     }
-
-    return this.renderChart().then((chart) => {
-      if (this.events !== undefined) {
-        this.bindEvents(chart);
-      }
-
-      return chart;
-    });
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -81,50 +81,47 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   ngOnDestroy(): void {
     if (this.chart) {
       this.chart.detach();
+      this.chart = null;
     }
   }
 
-  private renderChart(): Promise<ChartInterfaces> {
-    const promises: any[] = [
-      this.type,
-      this.elementRef.nativeElement,
+  private renderChart() {
+    const nativeElement = this.elementRef.nativeElement;
+
+    if (!(this.type in Chartist)) {
+      throw new Error(`${this.type} is not a valid chart type`);
+    }
+
+    this.chart = (<any>Chartist)[this.type](
+      nativeElement,
       this.data,
       this.options,
       this.responsiveOptions
-    ];
+    );
 
-    return Promise.all(promises).then((values) => {
-      const [type, ...args]: any = values;
-
-      if (!(type in Chartist)) {
-        throw new Error(`${type} is not a valid chart type`);
-      }
-
-      this.chart = (Chartist as any)[type](...args);
-
-      return this.chart;
-    });
-  }
-
-  private update(changes: SimpleChanges): void {
-    if (!this.chart || 'type' in changes) {
-      this.renderChart();
-    } else {
-      if (changes.data) {
-        this.data = changes.data.currentValue;
-      }
-
-      if (changes.options) {
-        this.options = changes.options.currentValue;
-      }
-
-      (this.chart as any).update(this.data, this.options);
+    if (this.events) {
+      this.bindEvents();
     }
   }
 
-  private bindEvents(chart: any): void {
+  private update(changes: SimpleChanges): void {
+    if (!this.type || !this.data) {
+      return;
+    }
+
+    if (!this.chart || 'type' in changes) {
+      this.renderChart();
+    } else if (changes.data || changes.options) {
+      (<IChartistBase<IChartOptions>>this.chart).update(
+        this.data,
+        this.options
+      );
+    }
+  }
+
+  private bindEvents(): void {
     for (const event of Object.keys(this.events)) {
-      chart.on(event, this.events[event]);
+      this.chart.on(event, this.events[event]);
     }
   }
 }
