@@ -89,14 +89,7 @@ import { ChartEvent, ChartType } from 'ng-chartist';
       [options]="options"
       [events]="events"
     ></x-chartist>
-  `,
-  styles: [
-    `
-      x-chartist {
-        display: block;
-        height: 300px;
-      }
-    `
+  `
   ]
 })
 export class BarChartComponent {
@@ -125,7 +118,8 @@ export class BarChartComponent {
   options: IBarChartOptions = {
     axisX: {
       showGrid: false
-    }
+    },
+    height: 300
   };
 
   events: ChartEvent = {
@@ -149,7 +143,7 @@ You may also find it useful to view the [demo source](https://github.com/willsot
 
 ## Documentation
 
-All documentation is auto-generated from the source via typedoc and can be viewed [here](https://willsoto.github.io/ng-chartist/docs/)
+All documentation is auto-generated from the source via compodoc and can be viewed [here](https://willsoto.github.io/ng-chartist/docs/)
 
 ## Development
 
