@@ -1,10 +1,12 @@
 import {
   Component,
   ElementRef,
+  EventEmitter,
   Input,
   OnChanges,
   OnDestroy,
   OnInit,
+  Output,
   SimpleChanges
 } from '@angular/core';
 
@@ -89,7 +91,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   responsiveOptions: ResponsiveOptions;
 
   /**
-   * Events object where keys are event names and values are event handler functions.
+   * Events object where keys are Chartist event names and values are event handler functions.
    *
    * Supported events are: draw, optionsChanged, data, animationBegin, animationEnd, created.
    *
@@ -99,9 +101,15 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   events: ChartEvent;
 
   /**
-   * Chartist chart instance
+   * Event emitted after Chartist chart has been initialized.
+   *
+   * Event handler function will receive chart instance argument.
    */
-  public chart: ChartInterfaces;
+  @Output()
+  initialized = new EventEmitter<ChartInterfaces>();
+
+  /** @ignore */
+  private chart: ChartInterfaces;
 
   /** @ignore */
   constructor(private elementRef: ElementRef) {}
@@ -144,6 +152,8 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     if (this.events) {
       this.bindEvents();
     }
+
+    this.initialized.emit(this.chart);
   }
 
   /** @ignore */
