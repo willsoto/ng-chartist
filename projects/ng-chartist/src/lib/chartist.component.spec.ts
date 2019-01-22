@@ -47,7 +47,20 @@ describe('chartist component', () => {
 
     instance.ngOnInit();
 
-    expect(instance.chart instanceof Chartist.Bar).toBe(true);
+    expect(instance['chart'] instanceof Chartist.Bar).toBe(true);
+  });
+
+  it('should emit initialized event when chart is initialized', () => {
+    const chartType: ChartType = 'Bar';
+
+    instance.data = data[chartType];
+    instance.type = chartType;
+
+    spyOn(<any>instance.initialized, 'emit').and.callThrough();
+
+    instance.ngOnInit();
+
+    expect(instance.initialized.emit).toHaveBeenCalled();
   });
 
   it('should bind events if there are events', () => {
@@ -81,13 +94,28 @@ describe('chartist component', () => {
     expect(instance['renderChart']).toHaveBeenCalled();
   });
 
+  it('should emit initialized event when the chart type changes', () => {
+    spyOn(<any>instance.initialized, 'emit').and.callThrough();
+
+    instance.type = 'Bar';
+    instance.data = data.Bar;
+
+    instance.ngOnChanges({
+      type: <any>{
+        currentValue: instance.type
+      }
+    });
+
+    expect(instance.initialized.emit).toHaveBeenCalled();
+  });
+
   it('should update the chart if the data changes', () => {
     instance.data = data.Bar;
     instance.type = 'Bar';
 
     instance.ngOnInit();
 
-    spyOn(instance.chart, 'update').and.callThrough();
+    spyOn(instance['chart'], 'update').and.callThrough();
     spyOn(<any>instance, 'renderChart').and.callThrough();
 
     instance.ngOnChanges({
@@ -97,7 +125,7 @@ describe('chartist component', () => {
     });
 
     expect(instance['renderChart']).not.toHaveBeenCalled();
-    expect(instance.chart.update).toHaveBeenCalled();
+    expect(instance['chart'].update).toHaveBeenCalled();
   });
 
   it('should update the chart if the options change', () => {
@@ -106,7 +134,7 @@ describe('chartist component', () => {
 
     instance.ngOnInit();
 
-    spyOn(instance.chart, 'update').and.callThrough();
+    spyOn(instance['chart'], 'update').and.callThrough();
     spyOn(<any>instance, 'renderChart').and.callThrough();
 
     instance.options = {
@@ -119,7 +147,7 @@ describe('chartist component', () => {
     });
 
     expect(instance['renderChart']).not.toHaveBeenCalled();
-    expect(instance.chart.update).toHaveBeenCalled();
+    expect(instance['chart'].update).toHaveBeenCalled();
   });
 
   it('should not initialize chart when type is missing', () => {
@@ -127,7 +155,7 @@ describe('chartist component', () => {
 
     instance.ngOnInit();
 
-    expect(instance.chart).toBeUndefined();
+    expect(instance['chart']).toBeUndefined();
   });
 
   it('should not initialize chart when data is missing', () => {
@@ -135,6 +163,6 @@ describe('chartist component', () => {
 
     instance.ngOnInit();
 
-    expect(instance.chart).toBeUndefined();
+    expect(instance['chart']).toBeUndefined();
   });
 });
