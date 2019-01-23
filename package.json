@@ -36,7 +36,8 @@
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.4",
     "karma-jasmine": "~2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.0",
+    "karma-jasmine-diff-reporter": "^2.0.0",
+    "karma-mocha-reporter": "^2.2.5",
     "lint-staged": "^8.1.0",
     "ng-packagr": "^4.6.0",
     "prettier": "^1.15.3",
@@ -104,7 +105,7 @@
     "test": "ng test ng-chartist --watch=false --browsers=ChromeHeadless",
     "doc": "compodoc projects/ng-chartist/src/lib -p projects/ng-chartist/tsconfig.lib.json -d docs",
     "release": "standard-version --sign --message 'chore(release): %s [skip ci]'",
-    "postrelease":"yarn build && npm publish dist/ng-chartist-lib && git push --follow-tags origin master"
+    "postrelease": "yarn build && npm publish dist/ng-chartist-lib && git push --follow-tags origin master"
   },
   "version": "4.0.0"
 }
