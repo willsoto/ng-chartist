@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/willsoto/ng-chartist/compare/v4.0.0...v4.1.0) (2019-01-24)
+
+
+### Features
+
+* **chartist-cmp:** "initialized" event emitted when the chart object is created. ([#226](https://github.com/willsoto/ng-chartist/issues/226)) ([25baa49](https://github.com/willsoto/ng-chartist/commit/25baa49))
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/willsoto/ng-chartist/compare/v3.1.0...v4.0.0) (2019-01-20)
 

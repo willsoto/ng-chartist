@@ -107,5 +107,5 @@
     "release": "standard-version --sign --message 'chore(release): %s [skip ci]'",
     "postrelease": "yarn build && npm publish dist/ng-chartist-lib && git push --follow-tags origin master"
   },
-  "version": "4.0.0"
+  "version": "4.1.0"
 }
