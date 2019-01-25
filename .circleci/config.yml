@@ -28,10 +28,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-        # https://github.com/greenkeeperio/greenkeeper-lockfile#setup
-      - run: npx greenkeeper-lockfile-update
-
       # run tests!
       - run: yarn test
-
-      - run: npx greenkeeper-lockfile-upload
