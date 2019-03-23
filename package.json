@@ -40,7 +40,7 @@
     "lint-staged": "^8.1.4",
     "ng-packagr": "^4.7.1",
     "prettier": "^1.16.4",
-    "protractor": "~5.4.2",
+    "protractor": "~6.0.0",
     "rxjs": "~6.4.0",
     "standard-version": "^5.0.0",
     "ts-node": "~8.0.2",
