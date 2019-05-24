@@ -1715,9 +1715,9 @@ chardet@^0.7.0:
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
 chartist@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.npmjs.org/chartist/-/chartist-0.11.0.tgz#84ba5e05490d096d93dcfa9343ebc31ef6a3bd28"
-  integrity sha1-hLpeBUkNCW2T3PqTQ+vDHvajvSg=
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/chartist/-/chartist-0.11.2.tgz#cd8aed966a81cc950d280b91224f97e39cf602d1"
+  integrity sha512-k81nArypp1eG/ecvWzzVsTJeHhGULsqocbX+Kh/kJbAosqp3hvoHMzjJ/ibLHqbDGurQFeZGJHF7uYQbVvy3NQ==
 
 cheerio@^1.0.0-rc.2:
   version "1.0.0-rc.2"
