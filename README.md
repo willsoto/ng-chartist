@@ -3,7 +3,6 @@
 [![npm version](https://badge.fury.io/js/ng-chartist.svg)](http://badge.fury.io/js/ng-chartist)
 [![NPM downloads](https://img.shields.io/npm/dt/ng-chartist.svg)](https://npmjs.org/package/ng-chartist)
 [![CircleCI](https://circleci.com/gh/willsoto/ng-chartist.svg?style=shield)](https://circleci.com/gh/willsoto/ng-chartist)
-[![Greenkeeper badge](https://badges.greenkeeper.io/willsoto/ng-chartist.svg)](https://greenkeeper.io/)
 
 ## Demo
 
