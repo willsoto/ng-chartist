@@ -449,9 +449,9 @@
     semver-intersect "1.4.0"
 
 "@types/chartist@^0.9.44":
-  version "0.9.44"
-  resolved "https://registry.npmjs.org/@types/chartist/-/chartist-0.9.44.tgz#ab298a61ca44fe2c3a978eb909dd494725cfce1f"
-  integrity sha512-HOmxOPqfMk5ShDjESmmmzIph1k6bRdLfEWudTVgcC5LqErruNUksv2Vw86Qqm/0Oiccehyz/Ns/titsXMS/5DA==
+  version "0.9.46"
+  resolved "https://registry.yarnpkg.com/@types/chartist/-/chartist-0.9.46.tgz#cb1a33f8062f117d3bc6c0b5dd373360c8e33da2"
+  integrity sha512-p29+DAkJRBVtuiTx5kObF6n/RipOWH0GeWVwYinljrwPMruy7BW+Ms6iHS4vIsHzb9c79x+opon3GJo75rlhcQ==
 
 "@types/estree@0.0.39":
   version "0.0.39"
