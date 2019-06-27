@@ -6,7 +6,8 @@ import { ChartistModule } from 'ng-chartist';
 import {
   AsyncChartComponent,
   DynamicChartComponent,
-  LiveChartComponent
+  LiveChartComponent,
+  TooltipChartComponent
 } from './components';
 import { FormsModule } from '@angular/forms';
 
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     AsyncChartComponent,
     DynamicChartComponent,
-    LiveChartComponent
+    LiveChartComponent,
+    TooltipChartComponent
   ],
   imports: [BrowserModule, ChartistModule, FormsModule],
   providers: [],
