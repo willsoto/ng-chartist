@@ -46,7 +46,7 @@
     "ts-node": "~8.3.0",
     "tsickle": ">=0.34.3",
     "tslib": "^1.9.3",
-    "tslint": "~5.17.0",
+    "tslint": "~5.18.0",
     "typescript": "~3.2.2",
     "validate-commit": "^3.4.0",
     "zone.js": "~0.8.29"
