@@ -224,10 +224,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/language-service@~8.0.0":
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-8.0.3.tgz#25909e6a9ce5336768e489401bc9c3abb57b4304"
-  integrity sha512-04XojOo9FJgEQE/rZafnaJQxPEU+//TSzTgpGoIVzCSMx+joCY/ZSSwJZPWxiHlOE57W/zX02ZY+TwcM81oTdw==
+"@angular/language-service@~8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-8.1.0.tgz#6f7701ac81cfd51f7f9678d9952af0672c8f7d7d"
+  integrity sha512-CCuxGiaGWrjDo9YEFaW1aj7p5PEPDpBLutnJ3iaOrtYvYpX8303b5XnQjqAJvFK47CyBFV+hj+Agpl+h+OG36g==
 
 "@angular/platform-browser-dynamic@~7.2.5":
   version "7.2.5"
@@ -2552,7 +2552,7 @@ cosmiconfig@^4.0.0:
     parse-json "^4.0.0"
     require-from-string "^2.0.1"
 
-cosmiconfig@^5.1.0, cosmiconfig@^5.2.0, cosmiconfig@^5.2.1:
+cosmiconfig@^5.1.0, cosmiconfig@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.2.1.tgz#040f726809c591e77a17c0a3626ca45b4f168b1a"
   integrity sha512-H65gsXo1SKjf8zmrJ67eJk8aIRKV5ff2D4uKZIBZShbhGSpEmsQOPW/SKMKYhSTrqR7ufy6RP69rPogdaPh/kA==
