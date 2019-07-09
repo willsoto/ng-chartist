@@ -23,7 +23,7 @@
     "@types/chartist": "^0.9.44",
     "@types/jasmine": "3.3.13",
     "@types/jasminewd2": "~2.0.6",
-    "@types/node": "~12.0.2",
+    "@types/node": "~12.6.1",
     "chartist": "^0.11.0",
     "codelyzer": "~5.1.0",
     "copyfiles": "^2.1.0",
