@@ -2,14 +2,6 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.801.0":
-  version "0.801.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.801.0.tgz#c21b1288d7aa4042656a4efbc98be146f7d9f430"
-  integrity sha512-3EQtRfa5IL2aVWPLr17QNwCoh+0URuQd4t2cEPw0eqfNNSQxjNKcA8AUvpXU+YNvstZ46lSzbM9q/RekJGeA1A==
-  dependencies:
-    "@angular-devkit/core" "8.1.0"
-    rxjs "6.4.0"
-
 "@angular-devkit/architect@0.801.1":
   version "0.801.1"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.801.1.tgz#c95a7bda7407b66220932517fbe8c44dabc83aa9"
@@ -99,17 +91,6 @@
     "@angular-devkit/core" "8.1.1"
     rxjs "6.4.0"
     webpack-merge "4.2.1"
-
-"@angular-devkit/core@8.1.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.1.0.tgz#eb91d2f620ae75533c301e549249ae2287f6e2f6"
-  integrity sha512-Xdtkrs62WMMR1BnSfpBvwjapRYalvArewAi7NXo0QxIFWPhQGbgSqT5PJMie4V3vHHNMbcC9cPzjKGjwwF8FHw==
-  dependencies:
-    ajv "6.10.0"
-    fast-json-stable-stringify "2.0.0"
-    magic-string "0.25.3"
-    rxjs "6.4.0"
-    source-map "0.7.3"
 
 "@angular-devkit/core@8.1.1":
   version "8.1.1"
@@ -506,15 +487,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@^12.0.8":
-  version "12.0.12"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.12.tgz#cc791b402360db1eaf7176479072f91ee6c6c7ca"
-  integrity sha512-Uy0PN4R5vgBUXFoJrKryf5aTk3kJ8Rv3PdlHjl6UaX+Cqp1QE0yPQ68MPXGrZOfG7gZVNDIJZYyot0B9ubXUrQ==
-
-"@types/node@~12.6.2":
-  version "12.6.2"
-  resolved "https://registry.npmjs.org/@types/node/-/node-12.6.2.tgz#a5ccec6abb6060d5f20d256fb03ed743e9774999"
-  integrity sha512-gojym4tX0FWeV2gsW4Xmzo5wxGjXGm550oVUII7f7G5o4BV6c7DBdiG1RRQd+y1bvqRyYtPfMK85UM95vsapqQ==
+"@types/node@*", "@types/node@^12.0.8", "@types/node@~12.6.2":
+  version "12.6.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.3.tgz#44d507c5634f85e7164707ca36bba21b5213d487"
+  integrity sha512-7TEYTQT1/6PP53NftXXabIZDaZfaoBdeBm8Md/i7zsWRoBe0YwOXguyK8vhHs8ehgB/w9U4K/6EWuTyp0W6nIA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
