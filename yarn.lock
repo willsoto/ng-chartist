@@ -1858,17 +1858,22 @@ chardet@^0.7.0:
   resolved "https://registry.npmjs.org/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-chartist-plugin-tooltips-updated@^0.0.21:
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/chartist-plugin-tooltips-updated/-/chartist-plugin-tooltips-updated-0.0.21.tgz#67b57cd31d58bbdfbe1e635c99fb9cc6ce173f02"
-  integrity sha512-GP2ZM17C8YxnJdVgb2277SWw8/rgKgEXFCQXjco3KSwjODYwTp8yT3qFt9UTXHXPJTk7MwVDm51OD7OLCIUBZg==
+chartist-plugin-tooltips-updated@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/chartist-plugin-tooltips-updated/-/chartist-plugin-tooltips-updated-0.1.1.tgz#338aeed6f7b48be4a14f649ffa8b3ce8d6d4e3a3"
+  integrity sha512-EyuZMQFk/OBRRLJhKap0EW5hUzN4sFf4Cx+OBZtJfB0WJx6VHsdZXgRtc6xvpzY3kWHku/0YA3I1KdxULOuikg==
   dependencies:
-    chartist "~0.11.0"
+    chartist "~0.11.3"
 
-chartist@^0.11.0, chartist@~0.11.0:
+chartist@^0.11.0:
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/chartist/-/chartist-0.11.2.tgz#cd8aed966a81cc950d280b91224f97e39cf602d1"
   integrity sha512-k81nArypp1eG/ecvWzzVsTJeHhGULsqocbX+Kh/kJbAosqp3hvoHMzjJ/ibLHqbDGurQFeZGJHF7uYQbVvy3NQ==
+
+chartist@~0.11.3:
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/chartist/-/chartist-0.11.3.tgz#939d525669d9bffdb0dbcd0f38e7416d2bf0a93a"
+  integrity sha512-ENqCECh7iu0Mm36NNKqeECdGQ9dIcHXmf8fqSWmcmt/XDtl0mqpVNNC9aChoyrJYrlFBOlLGOeAb7fIHFDMNvg==
 
 cheerio@^1.0.0-rc.2:
   version "1.0.0-rc.2"
