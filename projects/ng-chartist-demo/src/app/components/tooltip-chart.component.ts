@@ -3,6 +3,11 @@ import { ChartType } from 'ng-chartist';
 import { IChartistData, ILineChartOptions } from 'chartist';
 import ChartistTooltip from 'chartist-plugin-tooltips-updated';
 
+/**
+ * Following example shows how to use updated version of Chartist tooltip plugin with ng-chartist
+ * More information about the plugin can be found on github:
+ * https://github.com/LukBukkit/chartist-plugin-tooltip
+ */
 @Component({
   selector: 'tooltip-chart',
   template: `
