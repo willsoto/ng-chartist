@@ -1,4 +1,4 @@
-workflow "CI" {
+workflow "Pull Request Verifier" {
   resolves = [
     "Install",
     "Test",
