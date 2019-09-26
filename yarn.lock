@@ -81,11 +81,11 @@
     worker-plugin "3.2.0"
 
 "@angular-devkit/build-ng-packagr@~0.803.0":
-  version "0.803.5"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-ng-packagr/-/build-ng-packagr-0.803.5.tgz#80e0ebfa52b8cf73306c8c171c72f4b5afc8d90d"
-  integrity sha512-STzdW8pVIEAEAQnB7S0C6nJ2fm330BmPpWpNFIhbsL59ntbDX2mHNzHe29u8qePav4WHuxy1o20/32x5KGmf6g==
+  version "0.803.6"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-ng-packagr/-/build-ng-packagr-0.803.6.tgz#407a20850e74f6b52b75c9257602ca720809dac0"
+  integrity sha512-LElf9Q8mfUAzhap+CHEmOtlWkDB6uK+R5xB1fomdP9n22PKzWBaxFYlrkCOe/6kADhOjcdjuSCdkzqv58eS13g==
   dependencies:
-    "@angular-devkit/architect" "0.803.5"
+    "@angular-devkit/architect" "0.803.6"
     rxjs "6.4.0"
 
 "@angular-devkit/build-optimizer@0.803.6":
