@@ -2,14 +2,6 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.803.10":
-  version "0.803.10"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.803.10.tgz#227ffd2dd4845c71b9be7225d67827f84bbbc012"
-  integrity sha512-MqlmmQ6d4o4lqgZF0Nq0YiESW3CuSeLUIl9SZW6pphGTPDTA1LyyDhP1Dd2GIB5hxwBmH/EkbwbBtzJCauZHZQ==
-  dependencies:
-    "@angular-devkit/core" "8.3.10"
-    rxjs "6.4.0"
-
 "@angular-devkit/architect@0.803.12":
   version "0.803.12"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.803.12.tgz#0dac8d648ab6cd7f6aeb2dd6a0f919c9b5cb7c5f"
@@ -115,17 +107,6 @@
     "@angular-devkit/architect" "0.803.12"
     "@angular-devkit/core" "8.3.12"
     rxjs "6.4.0"
-
-"@angular-devkit/core@8.3.10":
-  version "8.3.10"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.10.tgz#c7aa228e31f10c0cdf8ae4b8cbb391a6a63860a2"
-  integrity sha512-qDqgOGOL3arCTF3u7DRCWGKhcU1N6d1Bb1ynBh1b30krLIQbZTXRToz5VovN4sxOvxN8xV0NjFaXpsRAIC2QfQ==
-  dependencies:
-    ajv "6.10.2"
-    fast-json-stable-stringify "2.0.0"
-    magic-string "0.25.3"
-    rxjs "6.4.0"
-    source-map "0.7.3"
 
 "@angular-devkit/core@8.3.12":
   version "8.3.12"
@@ -6358,9 +6339,9 @@ karma-source-map-support@1.4.0:
     source-map-support "^0.5.5"
 
 karma@>=0.9, karma@~4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/karma/-/karma-4.4.0.tgz#10f16117a37b388aa86618a8815b5c9acf1d7d6d"
-  integrity sha512-+mvzi+gBWHPrlqt1KE0WrrjcKuePX7WWJjTYNaewp6U00inno/DTSk+QHMbc+aV09scErWjhJukxswFyS7u2qw==
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/karma/-/karma-4.4.1.tgz#6d9aaab037a31136dc074002620ee11e8c2e32ab"
+  integrity sha512-L5SIaXEYqzrh6b1wqYC42tNsFMx2PWuxky84pK9coK09MvmL7mxii3G3bZBh/0rvD27lqDd0le9jyhzvwif73A==
   dependencies:
     bluebird "^3.3.0"
     body-parser "^1.16.1"
