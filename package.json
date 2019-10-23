@@ -24,7 +24,7 @@
     "@types/jasminewd2": "~2.0.6",
     "@types/node": "~12.11.1",
     "chartist": "^0.11.3",
-    "codelyzer": "~5.1.0",
+    "codelyzer": "~5.2.0",
     "copyfiles": "^2.1.1",
     "core-js": "^3.1.4",
     "husky": "^3.0.0",
