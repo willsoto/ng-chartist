@@ -2,14 +2,6 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.803.13":
-  version "0.803.13"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.803.13.tgz#94ec501ac5b9819b4eb0213584ba94054ea007d7"
-  integrity sha512-fjitfdD+e4Y+5ltyuKd+5bfok+O9PZaDs9sji3DlNQLjc8k43RwTGE3GPrcLVIWy7dEUh1KkfuiuYFXY1QTemA==
-  dependencies:
-    "@angular-devkit/core" "8.3.13"
-    rxjs "6.4.0"
-
 "@angular-devkit/architect@0.803.14":
   version "0.803.14"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.803.14.tgz#548d0a2e4e0052162c53ab75c50171e6496d4c0c"
@@ -107,17 +99,6 @@
     "@angular-devkit/architect" "0.803.14"
     "@angular-devkit/core" "8.3.14"
     rxjs "6.4.0"
-
-"@angular-devkit/core@8.3.13":
-  version "8.3.13"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.13.tgz#8139de9eaaf0b56d62589b0b876bbe8d21d9ba7f"
-  integrity sha512-na+GZv2cMYfguBa2/godRzwJGHagd9K/eudqvsaSqc9hP3mGSF42+/4uFOVHzj0bRmxyFB5OQ2u29nwHMeq6DQ==
-  dependencies:
-    ajv "6.10.2"
-    fast-json-stable-stringify "2.0.0"
-    magic-string "0.25.3"
-    rxjs "6.4.0"
-    source-map "0.7.3"
 
 "@angular-devkit/core@8.3.14":
   version "8.3.14"
@@ -1100,9 +1081,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*", "@types/node@^12.0.8", "@types/node@~12.11.1":
-  version "12.11.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.6.tgz#2f8d551aef252de78f42acdccd53f5a8ce0cac4d"
-  integrity sha512-4uPUyY1Aofo1YzoypalYHNd2SnKYxH2b6LzXwpryZCJKA2XlagZSynXx5C8sfPH0r1cSltUpaVHV2q5sYXschQ==
+  version "12.11.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.7.tgz#57682a9771a3f7b09c2497f28129a0462966524a"
+  integrity sha512-JNbGaHFCLwgHn/iCckiGSOZ1XYHsKFwREtzPwSGCVld1SGhOlmZw2D4ZI94HQCrBHbADzW9m4LER/8olJTRGHA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
