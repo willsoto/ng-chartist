@@ -2,14 +2,6 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.803.18":
-  version "0.803.18"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.803.18.tgz#5318b0e1d523a21312abc38952720b8ba0e751ab"
-  integrity sha512-/oNutcuUduXH/4nxHSDRTYK3VGP0PkVUniPdo0yjpg8c2dbfoNkt1ILIV82LPaC8sDwjuXGLx0EH70ETtcnBwg==
-  dependencies:
-    "@angular-devkit/core" "8.3.18"
-    rxjs "6.4.0"
-
 "@angular-devkit/architect@0.803.19":
   version "0.803.19"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.803.19.tgz#03c13c94cd9c71f6a6c74b80b7323b973325a1fc"
@@ -107,17 +99,6 @@
     "@angular-devkit/architect" "0.803.19"
     "@angular-devkit/core" "8.3.19"
     rxjs "6.4.0"
-
-"@angular-devkit/core@8.3.18":
-  version "8.3.18"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.18.tgz#442596384965371d7c88908716bb0985f11b714d"
-  integrity sha512-SPlQmBlrcaKZeE9srvuFElcen9iOled4lkD3M4cGwe56u6YoJ71oTAtmGiw9nofTtW0PghGVq8WdDQG5BRqX8Q==
-  dependencies:
-    ajv "6.10.2"
-    fast-json-stable-stringify "2.0.0"
-    magic-string "0.25.3"
-    rxjs "6.4.0"
-    source-map "0.7.3"
 
 "@angular-devkit/core@8.3.19":
   version "8.3.19"
@@ -2460,13 +2441,13 @@ chardet@^0.7.0:
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
 chartist-plugin-tooltips-updated@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/chartist-plugin-tooltips-updated/-/chartist-plugin-tooltips-updated-0.1.1.tgz#338aeed6f7b48be4a14f649ffa8b3ce8d6d4e3a3"
-  integrity sha512-EyuZMQFk/OBRRLJhKap0EW5hUzN4sFf4Cx+OBZtJfB0WJx6VHsdZXgRtc6xvpzY3kWHku/0YA3I1KdxULOuikg==
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/chartist-plugin-tooltips-updated/-/chartist-plugin-tooltips-updated-0.1.2.tgz#c3b55809f1c399124acd7a8ca22e075f6cfa5039"
+  integrity sha512-s2qpzZ18CYh3hNFHGbxvs1Yp/aGAdqnXaHJw+E1EW4VAd7kY9y81mXpALRgb2oXyHcrXpXA70KwE/OFw22hbTw==
   dependencies:
-    chartist "~0.11.3"
+    chartist "0.11.4"
 
-chartist@^0.11.3, chartist@~0.11.3:
+chartist@0.11.4, chartist@^0.11.3:
   version "0.11.4"
   resolved "https://registry.yarnpkg.com/chartist/-/chartist-0.11.4.tgz#e96e1c573d8b67478920a3a6ae52359d9fc8d8b7"
   integrity sha512-H4AimxaUD738/u9Mq8t27J4lh6STsLi4BQHt65nOtpLk3xyrBPaLiLMrHw7/WV9CmsjGA02WihjuL5qpSagLYw==
