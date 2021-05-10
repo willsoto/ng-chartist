@@ -37,7 +37,7 @@
     "karma-jasmine-diff-reporter": "^2.0.0",
     "karma-mocha-reporter": "^2.2.5",
     "lint-staged": "^9.1.0",
-    "ng-packagr": "^5.3.0",
+    "ng-packagr": "^10.1.1",
     "prettier": "^1.18.2",
     "protractor": "~6.0.0",
     "rxjs": "~6.5.2",
