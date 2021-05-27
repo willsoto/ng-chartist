@@ -26,8 +26,8 @@
     "build:demo": "ng build ng-chartist-demo --configuration production",
     "build:lib": "copyfiles package.json README.md projects/ng-chartist && ng build ng-chartist",
     "e2e": "ng e2e",
-    "gh-pages": "git checkout gh-pages && git merge master && npm run build && npm run doc && mv dist/ng-chartist-demo demo",
-    "postgh-pages": "git add . && git commit -m 'chore(*): build demo and docs' && git push && git checkout master",
+    "gh-pages": "git checkout gh-pages && git merge main && npm run build && npm run doc && mv dist/ng-chartist-demo demo",
+    "postgh-pages": "git add . && git commit -m 'chore(*): build demo and docs' && git push && git checkout main",
     "lint": "npm run lint:lib && npm run lint:demo",
     "lint:demo": "ng lint ng-chartist-demo",
     "lint:lib": "ng lint ng-chartist",
@@ -38,7 +38,7 @@
     "test": "ng test ng-chartist --watch=false --browsers=ChromeHeadless",
     "doc": "compodoc projects/ng-chartist/src/lib -p projects/ng-chartist/tsconfig.lib.json -d docs",
     "release": "standard-version --sign --message 'chore(release): %s [skip ci]'",
-    "postrelease": "npm run build && npm publish dist/ng-chartist-lib && git push --follow-tags origin master",
+    "postrelease": "npm run build && npm publish dist/ng-chartist-lib && git push --follow-tags origin main",
     "prepare": "husky install"
   },
   "commitlint": {
