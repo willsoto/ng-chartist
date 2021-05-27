@@ -65,8 +65,8 @@ import { ChartistModule } from 'ng-chartist';
 
 @NgModule({
   imports: [
-    ChartistModule // add ChartistModule to your imports
-  ]
+    ChartistModule, // add ChartistModule to your imports
+  ],
 })
 export class AppModule {}
 ```
@@ -149,16 +149,16 @@ All documentation is auto-generated from the source via compodoc and can be view
 
 ### Prepare your environment
 
-- Install [Node.js](http://nodejs.org/) and yarn
-- Install local dev dependencies: `yarn install` while current directory is this repo
+- Install [Node.js](http://nodejs.org/)
+- Install local dev dependencies: `npm ci` while current directory is this repo
 
 ### Development server
 
-Run `yarn run build:lib` and then `yarn start` to start a development server.
+Run `npm run build:lib` and then `npm run start` to start a development server.
 
 ### Testing
 
-Run `yarn test` to run tests.
+Run `npm run test` to run tests.
 
 ## License
 
