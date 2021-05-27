@@ -1,110 +1,120 @@
 {
-  "author": "Will Soto",
-  "bugs": {
-    "url": "https://github.com/willsoto/ng-chartist/issues"
-  },
+  "name": "ng-chartist",
+  "version": "4.1.0",
   "description": "Chartist component for Angular",
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.0",
-    "@angular-devkit/build-ng-packagr": "~0.803.0",
-    "@angular/animations": "~8.1.0",
-    "@angular/cli": "~8.3.0",
-    "@angular/common": "~8.1.0",
-    "@angular/compiler": "~8.1.0",
-    "@angular/compiler-cli": "~8.1.0",
-    "@angular/core": "~8.1.0",
-    "@angular/forms": "~8.1.0",
-    "@angular/language-service": "~8.2.0",
-    "@angular/platform-browser": "~8.1.0",
-    "@angular/platform-browser-dynamic": "~8.1.0",
-    "@angular/router": "~8.1.0",
-    "@compodoc/compodoc": "^1.1.10",
-    "@types/chartist": "^0.9.46",
-    "@types/jasmine": "3.5.0",
-    "@types/jasminewd2": "~2.0.6",
-    "@types/node": "~12.12.0",
-    "chartist": "^0.11.3",
-    "codelyzer": "~5.2.0",
-    "copyfiles": "^2.1.1",
-    "core-js": "^3.1.4",
-    "husky": "^3.0.0",
-    "jasmine-core": "~3.5.0",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~4.4.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage-istanbul-reporter": "~2.1.0",
-    "karma-jasmine": "~2.0.1",
-    "karma-jasmine-diff-reporter": "^2.0.0",
-    "karma-mocha-reporter": "^2.2.5",
-    "lint-staged": "^9.1.0",
-    "ng-packagr": "^10.1.1",
-    "prettier": "^1.18.2",
-    "protractor": "~6.0.0",
-    "rxjs": "~6.5.2",
-    "standard-version": "^8.0.1",
-    "ts-node": "~8.5.0",
-    "tsickle": ">=0.35.0",
-    "tslib": "^1.10.0",
-    "tslint": "~5.20.0",
-    "typescript": "3.4.5",
-    "validate-commit": "^3.4.0",
-    "zone.js": "~0.9.1",
-    "chartist-plugin-tooltips-updated": "^0.1.1"
-  },
-  "files": [
-    "**/*.{js,ts,json,map}"
-  ],
-  "homepage": "https://github.com/willsoto/ng-chartist",
-  "husky": {
-    "hooks": {
-      "commit-msg": "validate-commit-msg",
-      "pre-build": "yarn run test && yarn run lint",
-      "pre-commit": "lint-staged",
-      "pre-release": "yarn test"
-    }
-  },
   "keywords": [
     "angular",
     "chartist",
     "charting",
     "charts"
   ],
-  "license": "Apache-2.0",
-  "lint-staged": {
-    "*.{ts,js,md,json}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "name": "ng-chartist",
-  "peerDependencies": {
-    "@angular/common": ">=4.1.2",
-    "@angular/core": ">=4.1.2",
-    "@types/chartist": "^0.9.38",
-    "chartist": ">=0.9.8"
+  "homepage": "https://github.com/willsoto/ng-chartist",
+  "bugs": {
+    "url": "https://github.com/willsoto/ng-chartist/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/willsoto/ng-chartist.git"
   },
+  "license": "Apache-2.0",
+  "author": "Will Soto",
+  "files": [
+    "**/*.{js,ts,json,map}"
+  ],
   "scripts": {
-    "build": "yarn run build:lib && yarn run build:demo",
+    "build": "npm run build:lib && npm run build:demo",
     "build:demo": "ng build ng-chartist-demo --prod",
     "build:lib": "copyfiles package.json README.md projects/ng-chartist && ng build ng-chartist",
     "e2e": "ng e2e",
-    "gh-pages": "git checkout gh-pages && git merge master && yarn run build && yarn run doc && mv dist/ng-chartist-demo demo",
-    "lint": "yarn run lint:lib && yarn run lint:demo",
+    "gh-pages": "git checkout gh-pages && git merge master && npm run build && npm run doc && mv dist/ng-chartist-demo demo",
+    "postgh-pages": "git add . && git commit -m 'chore(*): build demo and docs' && git push && git checkout master",
+    "lint": "npm run lint:lib && npm run lint:demo",
     "lint:demo": "ng lint ng-chartist-demo",
     "lint:lib": "ng lint ng-chartist",
     "ng": "ng",
-    "pack": "cd dist/ng-chartist-lib && yarn pack",
-    "package": "yarn run build:lib && yarn run pack",
-    "postgh-pages": "git add . && git commit -m 'chore(*): build demo and docs' && git push && git checkout master",
+    "pack": "cd dist/ng-chartist-lib && npm run pack",
+    "package": "npm run build:lib && npm run pack",
     "start": "ng serve ng-chartist-demo",
     "test": "ng test ng-chartist --watch=false --browsers=ChromeHeadless",
     "doc": "compodoc projects/ng-chartist/src/lib -p projects/ng-chartist/tsconfig.lib.json -d docs",
     "release": "standard-version --sign --message 'chore(release): %s [skip ci]'",
-    "postrelease": "yarn build && npm publish dist/ng-chartist-lib && git push --follow-tags origin master"
+    "postrelease": "npm run build && npm publish dist/ng-chartist-lib && git push --follow-tags origin master",
+    "prepare": "husky install"
   },
-  "version": "4.1.0"
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,js,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "semi": true,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~12.0.2",
+    "@angular-devkit/build-ng-packagr": "~0.1002.0",
+    "@angular/animations": "~12.0.2",
+    "@angular/cli": "~12.0.2",
+    "@angular/common": "~8.1.0",
+    "@angular/compiler": "~12.0.2",
+    "@angular/compiler-cli": "~12.0.2",
+    "@angular/core": "~8.1.0",
+    "@angular/forms": "~12.0.2",
+    "@angular/language-service": "~12.0.2",
+    "@angular/platform-browser": "~12.0.2",
+    "@angular/platform-browser-dynamic": "~12.0.2",
+    "@angular/router": "~12.0.2",
+    "@commitlint/config-conventional": "~12.1.4",
+    "@compodoc/compodoc": "^1.1.11",
+    "@types/chartist": "^0.9.46",
+    "@types/jasmine": "3.7.5",
+    "@types/jasminewd2": "~2.0.9",
+    "@types/node": "~15.6.1",
+    "chartist": "^0.11.3",
+    "chartist-plugin-tooltips-updated": "^0.1.4",
+    "codelyzer": "~6.0.2",
+    "commitlint": "~12.1.4",
+    "copyfiles": "^2.4.1",
+    "core-js": "^3.13.0",
+    "husky": "^6.0.0",
+    "jasmine-core": "~3.7.1",
+    "jasmine-spec-reporter": "~7.0.0",
+    "karma": "~6.3.2",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.3",
+    "karma-jasmine": "~4.0.1",
+    "karma-jasmine-diff-reporter": "^2.0.1",
+    "karma-mocha-reporter": "^2.2.5",
+    "lint-staged": "^11.0.0",
+    "ng-packagr": "^12.0.2",
+    "prettier": "~2.3.0",
+    "prettier-plugin-organize-imports": "~2.1.0",
+    "prettier-plugin-packagejson": "~2.2.11",
+    "protractor": "~7.0.0",
+    "rxjs": "~7.1.0",
+    "standard-version": "^9.3.0",
+    "ts-node": "~10.0.0",
+    "tsickle": ">=0.39.1",
+    "tslib": "^2.2.0",
+    "tslint": "~5.20.1",
+    "typescript": "4.2.3",
+    "zone.js": "~0.11.4"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=12.0.2",
+    "@angular/core": ">=12.0.2",
+    "@types/chartist": "^0.11.0",
+    "chartist": ">=0.11.4"
+  },
+  "volta": {
+    "node": "14.17.0",
+    "npm": "7.14.0"
+  }
 }
