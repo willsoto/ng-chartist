@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "build": "npm run build:lib && npm run build:demo",
-    "build:demo": "ng build ng-chartist-demo --prod",
+    "build:demo": "ng build ng-chartist-demo --configuration production",
     "build:lib": "copyfiles package.json README.md projects/ng-chartist && ng build ng-chartist",
     "e2e": "ng e2e",
     "gh-pages": "git checkout gh-pages && git merge master && npm run build && npm run doc && mv dist/ng-chartist-demo demo",
