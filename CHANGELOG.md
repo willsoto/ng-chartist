@@ -1,6 +1,25 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [5.0.0](https://github.com/willsoto/ng-chartist/compare/v4.0.0...v5.0.0) (2021-05-27)
+
+
+### Features
+
+* enable ivy and partial compilation mode ([b8f3957](https://github.com/willsoto/ng-chartist/commit/b8f395778112031ba950bf3967cd7f287f8a8254))
+* update all packages ([419aee6](https://github.com/willsoto/ng-chartist/commit/419aee6743ad58b75464de8518831081ef42d1be))
+* **chartist-cmp:** "initialized" event emitted when the chart object is created. ([#226](https://github.com/willsoto/ng-chartist/issues/226)) ([25baa49](https://github.com/willsoto/ng-chartist/commit/25baa499ea0399091932e36912ce01a9754b48b8))
+* **github:** add push workflow ([8821f66](https://github.com/willsoto/ng-chartist/commit/8821f66cf3c683dddc8c576b58cf602bb3528be5))
+* **github:** add workflow ([11e7764](https://github.com/willsoto/ng-chartist/commit/11e7764ce284d97b79bbd1f3ee5a1af6c1f44b11))
+
+
+### Bug Fixes
+
+* clear deprecation for --prod flag ([adefce0](https://github.com/willsoto/ng-chartist/commit/adefce016675cb93e0cdd35b2b012eb1e9d2fb46))
+* library builder ([7e5cf9a](https://github.com/willsoto/ng-chartist/commit/7e5cf9a4353915a9e30ed21df6757a69510c575a))
+* **ci:** use lts node container ([2a55c03](https://github.com/willsoto/ng-chartist/commit/2a55c03d4d4c3f0434de8ec644a3c6f75b21fd5e))
+* pin @types/jasmine to 3.3.11 ([d74b7fa](https://github.com/willsoto/ng-chartist/commit/d74b7fa7dd08fc4e1be3b6891fbfc2d787ef38d8))
 
 <a name="4.1.0"></a>
 # [4.1.0](https://github.com/willsoto/ng-chartist/compare/v4.0.0...v4.1.0) (2019-01-24)
