@@ -12,6 +12,13 @@
 
 [https://willsoto.github.io/ng-chartist/docs/](https://willsoto.github.io/ng-chartist/docs/)
 
+## Angular Version Support
+
+| Angular | ng-chartist |
+| ------- | ----------- |
+| 12x     | 5x          |
+| <=11x   | 4x          |
+
 ## Table of contents
 
 - [About](#about)
