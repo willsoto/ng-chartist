@@ -58,7 +58,7 @@
     "singleQuote": true
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.0.2",
+    "@angular-devkit/build-angular": "~12.1.0",
     "@angular/animations": "~12.1.0",
     "@angular/cli": "~12.0.2",
     "@angular/common": "~12.0.2",
