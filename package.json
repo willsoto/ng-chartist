@@ -69,7 +69,7 @@
     "@angular/language-service": "~12.1.0",
     "@angular/platform-browser": "~12.0.2",
     "@angular/platform-browser-dynamic": "~12.0.2",
-    "@angular/router": "~12.0.2",
+    "@angular/router": "~12.1.0",
     "@commitlint/config-conventional": "~12.1.4",
     "@compodoc/compodoc": "^1.1.11",
     "@types/chartist": "^0.11.0",
