@@ -82,7 +82,7 @@
     "commitlint": "~12.1.4",
     "copyfiles": "^2.4.1",
     "core-js": "^3.13.0",
-    "husky": "^6.0.0",
+    "husky": "^7.0.0",
     "jasmine-core": "~3.7.1",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.3.2",
