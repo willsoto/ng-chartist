@@ -79,7 +79,7 @@
     "chartist": "^0.11.4",
     "chartist-plugin-tooltips-updated": "^0.1.4",
     "codelyzer": "~6.0.2",
-    "commitlint": "~12.1.4",
+    "commitlint": "~13.1.0",
     "copyfiles": "^2.4.1",
     "core-js": "^3.13.0",
     "husky": "^7.0.0",
