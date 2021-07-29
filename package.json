@@ -73,7 +73,7 @@
     "@commitlint/config-conventional": "~13.1.0",
     "@compodoc/compodoc": "^1.1.11",
     "@types/chartist": "^0.11.0",
-    "@types/jasmine": "3.8.1",
+    "@types/jasmine": "3.8.2",
     "@types/jasminewd2": "~2.0.9",
     "@types/node": "~16.4.0",
     "chartist": "^0.11.4",
