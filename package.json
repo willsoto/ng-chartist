@@ -68,7 +68,7 @@
     "@angular/forms": "~12.2.0",
     "@angular/language-service": "~12.1.0",
     "@angular/platform-browser": "~12.1.0",
-    "@angular/platform-browser-dynamic": "~12.1.0",
+    "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.1.0",
     "@commitlint/config-conventional": "~13.1.0",
     "@compodoc/compodoc": "^1.1.11",
