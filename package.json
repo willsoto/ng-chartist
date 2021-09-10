@@ -93,7 +93,7 @@
     "karma-mocha-reporter": "^2.2.5",
     "lint-staged": "^11.0.0",
     "ng-packagr": "^12.0.2",
-    "prettier": "~2.3.0",
+    "prettier": "~2.4.0",
     "prettier-plugin-organize-imports": "~2.3.2",
     "prettier-plugin-packagejson": "~2.2.11",
     "protractor": "~7.0.0",
