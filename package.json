@@ -37,6 +37,7 @@
     "start": "ng serve ng-chartist-demo",
     "test": "ng test ng-chartist --watch=false --browsers=ChromeHeadless",
     "doc": "compodoc projects/ng-chartist/src/lib -p projects/ng-chartist/tsconfig.lib.json -d docs",
+    "prerelease": "npm run build:lib",
     "release": "semantic-release",
     "postrelease": "npm run build && npm publish ./dist/ng-chartist-lib && git push --follow-tags origin main",
     "prepare": "husky install",
