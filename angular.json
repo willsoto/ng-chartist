@@ -25,13 +25,12 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ng-chartist/tsconfig.lib.json",
-              "projects/ng-chartist/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": [
+              "projects/ng-chartist/**/*.ts",
+              "projects/ng-chartist/**/*.html"
+            ]
           }
         }
       }
@@ -125,13 +124,12 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ng-chartist-demo/tsconfig.app.json",
-              "projects/ng-chartist-demo/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": [
+              "projects/ng-chartist-demo/**/*.ts",
+              "projects/ng-chartist-demo/**/*.html"
+            ]
           }
         }
       }
@@ -139,7 +137,7 @@
     "ng-chartist-demo-e2e": {
       "root": "projects/ng-chartist-demo-e2e/",
       "projectType": "application",
-      "prefix": "",
+      "prefix": "e2e",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
@@ -154,14 +152,19 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": "projects/ng-chartist-demo-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": [
+              "projects/ng-chartist-demo-e2e/**/*.ts",
+              "projects/ng-chartist-demo-e2e/**/*.html"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "ng-chartist"
+  "defaultProject": "ng-chartist",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

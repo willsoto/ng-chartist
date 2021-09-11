@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-
 import * as Chartist from 'chartist';
-
 import { ChartEvent, ChartType } from 'ng-chartist';
 
-declare var require: any;
+declare let require: any;
 
 const data: any = require('./data.json');
 
@@ -19,7 +17,7 @@ export interface Chart {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   public charts: Chart[];
@@ -28,15 +26,15 @@ export class AppComponent {
     this.charts = [
       {
         data: data.Bar,
-        type: 'Bar'
+        type: 'Bar',
       },
       {
         data: data.Line,
-        type: 'Line'
+        type: 'Line',
       },
       {
         data: data.Line2,
-        type: 'Line'
+        type: 'Line',
       },
       {
         data: data.Scatter,
@@ -44,9 +42,9 @@ export class AppComponent {
           axisX: {
             labelInterpolationFnc(value: number, index: number): string | null {
               return index % 13 === 0 ? `W${value}` : null;
-            }
+            },
           },
-          showLine: false
+          showLine: false,
         },
         responsiveOptions: [
           [
@@ -58,20 +56,20 @@ export class AppComponent {
                   index: number
                 ): string | null {
                   return index % 4 === 0 ? `W${value}` : null;
-                }
-              }
-            }
-          ]
+                },
+              },
+            },
+          ],
         ],
-        type: 'Line'
+        type: 'Line',
       },
       {
         data: data.LineWithArea,
         options: {
           low: 0,
-          showArea: true
+          showArea: true,
         },
-        type: 'Line'
+        type: 'Line',
       },
       {
         data: data['Bi-PolarBar'],
@@ -79,19 +77,19 @@ export class AppComponent {
           axisX: {
             labelInterpolationFnc(value: number, index: number): number | null {
               return index % 2 === 0 ? value : null;
-            }
+            },
           },
           high: 10,
-          low: -10
+          low: -10,
         },
-        type: 'Bar'
+        type: 'Bar',
       },
       {
         data: data.DistributedSeries,
         options: {
-          distributeSeries: true
+          distributeSeries: true,
         },
-        type: 'Bar'
+        type: 'Bar',
       },
       {
         data: data.Pie,
@@ -100,18 +98,18 @@ export class AppComponent {
           donutWidth: 60,
           showLabel: false,
           startAngle: 270,
-          total: 200
+          total: 200,
         },
-        type: 'Pie'
+        type: 'Pie',
       },
       {
         data: data.Pie,
         options: {
           donut: true,
-          showLabel: false
+          showLabel: false,
         },
-        type: 'Pie'
-      }
+        type: 'Pie',
+      },
     ];
   }
 }

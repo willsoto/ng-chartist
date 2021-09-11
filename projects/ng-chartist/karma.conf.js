@@ -1,7 +1,7 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     plugins: [
       require('karma-jasmine'),
@@ -9,7 +9,7 @@ module.exports = function(config) {
       require('karma-mocha-reporter'),
       require('karma-jasmine-diff-reporter'),
       require('karma-coverage-istanbul-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      require('@angular-devkit/build-angular/plugins/karma'),
     ],
 
     // TRIGGER
@@ -20,7 +20,7 @@ module.exports = function(config) {
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     basePath: '',
     angularCli: {
-      environment: 'dev'
+      environment: 'dev',
     },
 
     // RUN
@@ -42,15 +42,15 @@ module.exports = function(config) {
 
         actualBg: 'bgWhite',
         actualWhitespaceBg: 'bgWhite',
-        actualFg: 'blue'
+        actualFg: 'blue',
       },
-      legacy: true
+      legacy: true,
     },
 
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, '../../coverage'),
       reports: ['html', 'lcovonly'],
-      fixWebpackSourcePaths: true
-    }
+      fixWebpackSourcePaths: true,
+    },
   });
 };

@@ -1,15 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { ChartistModule } from 'ng-chartist';
+import { AppComponent } from './app.component';
 import {
   AsyncChartComponent,
   DynamicChartComponent,
   LiveChartComponent,
-  TooltipChartComponent
+  TooltipChartComponent,
 } from './components';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +16,10 @@ import { FormsModule } from '@angular/forms';
     AsyncChartComponent,
     DynamicChartComponent,
     LiveChartComponent,
-    TooltipChartComponent
+    TooltipChartComponent,
   ],
   imports: [BrowserModule, ChartistModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

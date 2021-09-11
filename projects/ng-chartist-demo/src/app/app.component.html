@@ -1,28 +1,29 @@
- <x-chartist
-     *ngFor="let chart of charts"
-      class="col-md-6"
-      [data]="chart.data"
-      [type]="chart.type"
-      [options]="chart.options"
-      [responsiveOptions]="chart.responsiveOptions"
-      [events]="chart.events">
+<x-chartist
+  *ngFor="let chart of charts"
+  class="col-md-6"
+  [data]="chart.data"
+  [type]="chart.type"
+  [options]="chart.options"
+  [responsiveOptions]="chart.responsiveOptions"
+  [events]="chart.events"
+>
 </x-chartist>
 <div class="row"></div>
 
 <div class="row">
   <div class="col-md-6">
-    <async-chart></async-chart>
+    <app-async-chart></app-async-chart>
   </div>
   <div class="col-md-6">
-    <live-chart></live-chart>
+    <app-live-chart></app-live-chart>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6">
-    <dynamic-chart></dynamic-chart>
+    <app-dynamic-chart></app-dynamic-chart>
   </div>
   <div class="col-md-6">
-    <tooltip-chart></tooltip-chart>
+    <app-tooltip-chart></app-tooltip-chart>
   </div>
 </div>

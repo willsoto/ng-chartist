@@ -1,28 +1,26 @@
 import { Component } from '@angular/core';
-
+import * as Chartist from 'chartist';
 import { ChartType } from 'ng-chartist';
 
-import * as Chartist from 'chartist';
-
-declare var require: any;
+declare let require: any;
 
 const data: any = require('../data.json');
 
 @Component({
-  selector: 'dynamic-chart',
+  selector: 'app-dynamic-chart',
   template: `
     <div class="row">
       <div class="col-md-6"><h4>Dynamic Chart Types</h4></div>
       <div class="col-md-6">
         <select class="form-control" [(ngModel)]="type">
-          <option *ngFor="let type of chartTypes" [ngValue]="type">{{
-            type
-          }}</option>
+          <option *ngFor="let type of chartTypes" [ngValue]="type">
+            {{ type }}
+          </option>
         </select>
       </div>
     </div>
     <x-chartist [data]="data" [type]="type" [options]="options"> </x-chartist>
-  `
+  `,
 })
 export class DynamicChartComponent {
   public type: ChartType;
@@ -38,11 +36,11 @@ export class DynamicChartComponent {
     this.data = data.Bar;
     this.options = {
       axisX: {
-        showLabel: false
+        showLabel: false,
       },
       axisY: {
-        showLabel: false
-      }
+        showLabel: false,
+      },
     };
   }
 }
