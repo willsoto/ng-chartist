@@ -7,11 +7,9 @@ import {
   OnDestroy,
   OnInit,
   Output,
-  SimpleChanges
+  SimpleChanges,
 } from '@angular/core';
-
 import * as Chartist from 'chartist';
-import { IChartistBase, IChartOptions } from 'chartist';
 
 /**
  * Possible chart types
@@ -26,9 +24,8 @@ export type ChartOptions =
   | Chartist.IBarChartOptions
   | Chartist.ILineChartOptions
   | Chartist.IPieChartOptions;
-export type ResponsiveOptionTuple = Chartist.IResponsiveOptionTuple<
-  ChartOptions
->;
+export type ResponsiveOptionTuple =
+  Chartist.IResponsiveOptionTuple<ChartOptions>;
 export type ResponsiveOptions = ResponsiveOptionTuple[];
 
 /**
@@ -62,8 +59,8 @@ export interface ChartEvent {
       :host {
         display: block;
       }
-    `
-  ]
+    `,
+  ],
 })
 export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   /**
@@ -108,25 +105,20 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   @Output()
   initialized = new EventEmitter<ChartInterfaces>();
 
-  /** @ignore */
-  private chart: ChartInterfaces;
+  chart: ChartInterfaces;
 
-  /** @ignore */
   constructor(private elementRef: ElementRef) {}
 
-  /** @ignore */
   ngOnInit(): void {
     if (this.type && this.data) {
       this.renderChart();
     }
   }
 
-  /** @ignore */
   ngOnChanges(changes: SimpleChanges): void {
     this.update(changes);
   }
 
-  /** @ignore */
   ngOnDestroy(): void {
     if (this.chart) {
       this.chart.detach();
@@ -134,15 +126,16 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     }
   }
 
-  /** @ignore */
-  private renderChart() {
+  renderChart() {
     const nativeElement = this.elementRef.nativeElement;
 
     if (!(this.type in Chartist)) {
       throw new Error(`${this.type} is not a valid chart type`);
     }
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    const Chart = Chartist[this.type];
 
-    this.chart = (<any>Chartist)[this.type](
+    this.chart = new Chart(
       nativeElement,
       this.data,
       this.options,
@@ -156,8 +149,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     this.initialized.emit(this.chart);
   }
 
-  /** @ignore */
-  private update(changes: SimpleChanges): void {
+  update(changes: SimpleChanges): void {
     if (!this.type || !this.data) {
       return;
     }
@@ -165,15 +157,11 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     if (!this.chart || 'type' in changes) {
       this.renderChart();
     } else if (changes.data || changes.options) {
-      (<IChartistBase<IChartOptions>>this.chart).update(
-        this.data,
-        this.options
-      );
+      this.chart.update(this.data, this.options);
     }
   }
 
-  /** @ignore */
-  private bindEvents(): void {
+  bindEvents(): void {
     for (const event of Object.keys(this.events)) {
       this.chart.on(event, this.events[event]);
     }

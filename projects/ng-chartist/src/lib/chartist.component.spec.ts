@@ -1,7 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import * as Chartist from 'chartist';
-
 import { ChartistComponent, ChartType } from './chartist.component';
 
 const data: any = require('./testdata.json');
@@ -12,14 +10,14 @@ describe('chartist component', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ChartistComponent]
+      declarations: [ChartistComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ChartistComponent);
     instance = fixture.componentInstance;
   });
 
-  it(`should be initialized`, () => {
+  it('should be initialized', () => {
     expect(fixture).toBeDefined();
     expect(instance).toBeDefined();
   });
@@ -46,16 +44,16 @@ describe('chartist component', () => {
     });
 
     it('should emit initialized event when chart is initialized', () => {
-      spyOn(<any>instance.initialized, 'emit').and.callThrough();
+      spyOn(instance.initialized, 'emit').and.callThrough();
       instance.ngOnInit();
 
       expect(instance.initialized.emit).toHaveBeenCalled();
     });
 
     it('should bind events if there are events', () => {
-      spyOn(<any>instance, 'bindEvents').and.callThrough();
+      spyOn(instance, 'bindEvents').and.callThrough();
       instance.events = {
-        draw: () => {}
+        draw: () => {},
       };
       instance.ngOnInit();
 
@@ -88,22 +86,22 @@ describe('chartist component', () => {
     });
 
     it('should re-render the chart if the chart type changes', () => {
-      spyOn(<any>instance, 'renderChart').and.callThrough();
+      spyOn(instance, 'renderChart').and.callThrough();
       instance.ngOnChanges({
-        type: <any>{
-          currentValue: instance.type
-        }
+        type: {
+          currentValue: instance.type,
+        } as any,
       });
 
       expect(instance['renderChart']).toHaveBeenCalled();
     });
 
     it('should emit initialized event when the chart type changes', () => {
-      spyOn(<any>instance.initialized, 'emit').and.callThrough();
+      spyOn(instance.initialized, 'emit').and.callThrough();
       instance.ngOnChanges({
-        type: <any>{
-          currentValue: instance.type
-        }
+        type: {
+          currentValue: instance.type,
+        } as any,
       });
 
       expect(instance.initialized.emit).toHaveBeenCalled();
@@ -113,12 +111,12 @@ describe('chartist component', () => {
       instance.ngOnInit();
 
       spyOn(instance['chart'], 'update').and.callThrough();
-      spyOn(<any>instance, 'renderChart').and.callThrough();
+      spyOn(instance, 'renderChart').and.callThrough();
 
       instance.ngOnChanges({
-        data: <any>{
-          currentValue: instance.data
-        }
+        data: {
+          currentValue: instance.data,
+        } as any,
       });
 
       expect(instance['renderChart']).not.toHaveBeenCalled();
@@ -129,15 +127,15 @@ describe('chartist component', () => {
       instance.ngOnInit();
 
       spyOn(instance['chart'], 'update').and.callThrough();
-      spyOn(<any>instance, 'renderChart').and.callThrough();
+      spyOn(instance, 'renderChart').and.callThrough();
 
       instance.options = {
-        reverseData: true
+        reverseData: true,
       };
       instance.ngOnChanges({
-        options: <any>{
-          currentValue: instance.options
-        }
+        options: {
+          currentValue: instance.options,
+        } as any,
       });
 
       expect(instance['renderChart']).not.toHaveBeenCalled();
