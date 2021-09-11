@@ -16,5 +16,8 @@
       "ng-chartist": ["dist/ng-chartist-lib"],
       "ng-chartist/*": ["dist/ng-chartist-lib/*"]
     }
+  },
+  "angularCompilerOptions": {
+    "disableTypeScriptVersionCheck": true
   }
 }
