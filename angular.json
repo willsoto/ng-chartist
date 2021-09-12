@@ -4,17 +4,25 @@
   "newProjectRoot": "projects",
   "projects": {
     "ng-chartist": {
+      "projectType": "library",
       "root": "projects/ng-chartist",
       "sourceRoot": "projects/ng-chartist/src",
-      "projectType": "library",
       "prefix": "x",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ng-chartist/tsconfig.lib.json",
             "project": "projects/ng-chartist/ng-package.json"
-          }
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-chartist/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-chartist/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -133,38 +141,12 @@
           }
         }
       }
-    },
-    "ng-chartist-demo-e2e": {
-      "root": "projects/ng-chartist-demo-e2e/",
-      "projectType": "application",
-      "prefix": "e2e",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/ng-chartist-demo-e2e/protractor.conf.js",
-            "devServerTarget": "ng-chartist-demo:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ng-chartist-demo:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "projects/ng-chartist-demo-e2e/**/*.ts",
-              "projects/ng-chartist-demo-e2e/**/*.html"
-            ]
-          }
-        }
-      }
     }
   },
   "defaultProject": "ng-chartist",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "defaultCollection": "@angular-eslint/schematics",
+    "packageManager": "npm",
+    "analytics": false
   }
 }

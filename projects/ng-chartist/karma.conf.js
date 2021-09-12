@@ -3,54 +3,39 @@
 
 module.exports = function (config) {
   config.set({
+    basePath: '',
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
-      require('karma-mocha-reporter'),
-      require('karma-jasmine-diff-reporter'),
-      require('karma-coverage-istanbul-reporter'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma'),
     ],
-
-    // TRIGGER
-    autoWatch: true,
-    singleRun: false,
-
-    // BUILD
-    frameworks: ['jasmine', '@angular-devkit/build-angular'],
-    basePath: '',
-    angularCli: {
-      environment: 'dev',
+    client: {
+      jasmine: {
+        // you can add configuration options for Jasmine here
+        // the possible options are listed at https://jasmine.github.io/api/edge/Configuration.html
+        // for example, you can disable the random execution with `random: false`
+        // or set a specific seed with `seed: 4321`
+      },
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser
     },
-
-    // RUN
+    jasmineHtmlReporter: {
+      suppressAll: true, // removes the duplicated traces
+    },
+    coverageReporter: {
+      dir: require('path').join(__dirname, '../../coverage/ng-chartist'),
+      subdir: '.',
+      reporters: [{ type: 'html' }, { type: 'text-summary' }],
+    },
+    reporters: ['progress', 'kjhtml'],
     port: 9876,
-    browsers: ['ChromeHeadless'],
-
-    // REPORT
     colors: true,
     logLevel: config.LOG_INFO,
-
-    reporters: ['jasmine-diff', 'mocha'],
-
-    jasmineDiffReporter: {
-      color: {
-        // white is actually gray here
-        expectedBg: 'bgWhite',
-        expectedWhitespaceBg: 'bgWhite',
-        expectedFg: 'red',
-
-        actualBg: 'bgWhite',
-        actualWhitespaceBg: 'bgWhite',
-        actualFg: 'blue',
-      },
-      legacy: true,
-    },
-
-    coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, '../../coverage'),
-      reports: ['html', 'lcovonly'],
-      fixWebpackSourcePaths: true,
-    },
+    autoWatch: true,
+    browsers: ['ChromeHeadless'],
+    singleRun: false,
+    restartOnFileChange: true,
   });
 };
