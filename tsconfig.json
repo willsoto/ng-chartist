@@ -10,11 +10,12 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
+    "resolveJsonModule": true,
     "target": "es5",
     "lib": ["es2018", "dom"],
     "paths": {
-      "ng-chartist": ["dist/ng-chartist-lib"],
-      "ng-chartist/*": ["dist/ng-chartist-lib/*"]
+      "ng-chartist": ["projects/ng-chartist/dist"],
+      "ng-chartist/*": ["projects/ng-chartist/dist/*"]
     }
   },
   "angularCompilerOptions": {
