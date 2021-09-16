@@ -50,7 +50,7 @@
     "@angular/language-service": "~12.2.5",
     "@angular/platform-browser": "~12.2.5",
     "@angular/platform-browser-dynamic": "~12.2.5",
-    "@angular/router": "~12.2.5",
+    "@angular/router": "~12.2.6",
     "@commitlint/config-conventional": "~13.1.0",
     "@semantic-release/changelog": "~5.0.1",
     "@types/chartist": "~0.11.1",
