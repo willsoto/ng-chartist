@@ -19,6 +19,7 @@
     }
   },
   "angularCompilerOptions": {
+    "strictTemplates": true,
     "disableTypeScriptVersionCheck": true
   }
 }
