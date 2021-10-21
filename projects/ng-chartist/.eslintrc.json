@@ -27,31 +27,7 @@
             "prefix": "x",
             "style": "camelCase"
           }
-        ],
-        "@typescript-eslint/consistent-type-definitions": "error",
-        "@typescript-eslint/dot-notation": "off",
-        "@typescript-eslint/explicit-member-accessibility": [
-          "off",
-          {
-            "accessibility": "explicit"
-          }
-        ],
-        "@typescript-eslint/quotes": [
-          "error",
-          "single",
-          {
-            "avoidEscape": true
-          }
-        ],
-        "brace-style": ["error", "1tbs"],
-        "dot-notation": "off",
-        "id-blacklist": "off",
-        "id-match": "off",
-        "no-empty-function": "off",
-        "no-shadow": "error",
-        "no-underscore-dangle": "off",
-        "no-unused-expressions": "error",
-        "prefer-arrow/prefer-arrow-functions": "off"
+        ]
       }
     },
     {
