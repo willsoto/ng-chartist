@@ -33,7 +33,7 @@
     "bracketSameLine": true,
     "bracketSpacing": true,
     "semi": true,
-    "singleQuote": true
+    "singleQuote": false
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.11",

@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import * as Chartist from 'chartist';
-import { ChartEvent, ChartType } from 'ng-chartist';
+import { Component } from "@angular/core";
+import * as Chartist from "chartist";
+import { ChartEvent, ChartType } from "ng-chartist";
 
 declare let require: any;
 
-const data: any = require('./data.json');
+const data: any = require("./data.json");
 
 export interface Chart {
   type: ChartType;
@@ -15,9 +15,9 @@ export interface Chart {
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
   public charts: Chart[];
@@ -26,15 +26,15 @@ export class AppComponent {
     this.charts = [
       {
         data: data.Bar,
-        type: 'Bar',
+        type: "Bar",
       },
       {
         data: data.Line,
-        type: 'Line',
+        type: "Line",
       },
       {
         data: data.Line2,
-        type: 'Line',
+        type: "Line",
       },
       {
         data: data.Scatter,
@@ -48,7 +48,7 @@ export class AppComponent {
         },
         responsiveOptions: [
           [
-            'screen and (min-width: 640px)',
+            "screen and (min-width: 640px)",
             {
               axisX: {
                 labelInterpolationFnc(
@@ -61,7 +61,7 @@ export class AppComponent {
             },
           ],
         ],
-        type: 'Line',
+        type: "Line",
       },
       {
         data: data.LineWithArea,
@@ -69,10 +69,10 @@ export class AppComponent {
           low: 0,
           showArea: true,
         },
-        type: 'Line',
+        type: "Line",
       },
       {
-        data: data['Bi-PolarBar'],
+        data: data["Bi-PolarBar"],
         options: {
           axisX: {
             labelInterpolationFnc(value: number, index: number): number | null {
@@ -82,14 +82,14 @@ export class AppComponent {
           high: 10,
           low: -10,
         },
-        type: 'Bar',
+        type: "Bar",
       },
       {
         data: data.DistributedSeries,
         options: {
           distributeSeries: true,
         },
-        type: 'Bar',
+        type: "Bar",
       },
       {
         data: data.Pie,
@@ -100,7 +100,7 @@ export class AppComponent {
           startAngle: 270,
           total: 200,
         },
-        type: 'Pie',
+        type: "Pie",
       },
       {
         data: data.Pie,
@@ -108,7 +108,7 @@ export class AppComponent {
           donut: true,
           showLabel: false,
         },
-        type: 'Pie',
+        type: "Pie",
       },
     ];
   }

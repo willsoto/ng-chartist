@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import * as Chartist from 'chartist';
-import { ChartType } from 'ng-chartist';
+import { Component } from "@angular/core";
+import * as Chartist from "chartist";
+import { ChartType } from "ng-chartist";
 
 declare let require: any;
 
-const data: any = require('../data.json');
+const data: any = require("../data.json");
 
 @Component({
-  selector: 'app-dynamic-chart',
+  selector: "app-dynamic-chart",
   template: `
     <div class="row">
       <div class="col-md-6"><h4>Dynamic Chart Types</h4></div>
@@ -30,9 +30,9 @@ export class DynamicChartComponent {
   public chartTypes: ChartType[];
 
   constructor() {
-    this.chartTypes = ['Bar', 'Line'];
+    this.chartTypes = ["Bar", "Line"];
 
-    this.type = 'Bar';
+    this.type = "Bar";
     this.data = data.Bar;
     this.options = {
       axisX: {

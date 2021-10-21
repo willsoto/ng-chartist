@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { ChartistModule } from 'ng-chartist';
-import { AppComponent } from './app.component';
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+import { ChartistModule } from "ng-chartist";
+import { AppComponent } from "./app.component";
 import {
   AsyncChartComponent,
   DynamicChartComponent,
   LiveChartComponent,
   TooltipChartComponent,
-} from './components';
+} from "./components";
 
 @NgModule({
   declarations: [

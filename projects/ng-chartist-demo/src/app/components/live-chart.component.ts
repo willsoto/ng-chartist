@@ -1,7 +1,7 @@
-import { formatDate } from '@angular/common';
-import { Component, OnDestroy } from '@angular/core';
-import { ChartType } from 'ng-chartist';
-import { Subscription, timer } from 'rxjs';
+import { formatDate } from "@angular/common";
+import { Component, OnDestroy } from "@angular/core";
+import { ChartType } from "ng-chartist";
+import { Subscription, timer } from "rxjs";
 
 export interface LiveData {
   labels: string[];
@@ -13,7 +13,7 @@ export function getRandomInt(min: number, max: number): number {
 }
 
 @Component({
-  selector: 'app-live-chart',
+  selector: "app-live-chart",
   template: `
     <h4>Live Updating</h4>
     <x-chartist [data]="data" [type]="type"> </x-chartist>
@@ -30,14 +30,14 @@ export class LiveChartComponent implements OnDestroy {
       labels: [],
       series: [[]],
     };
-    this.type = 'Bar';
+    this.type = "Bar";
 
     this.timerSubscription = timer(0, 2500).subscribe(() => this.updateData());
   }
 
   updateData() {
     const time: Date = new Date();
-    const formattedTime = formatDate(time, 'HH:mm:ss', 'en');
+    const formattedTime = formatDate(time, "HH:mm:ss", "en");
     const random = getRandomInt(1, 40);
     const data = this.data.series[0];
     const labels = this.data.labels;

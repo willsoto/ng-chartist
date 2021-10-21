@@ -68,7 +68,7 @@ Add to styles section in `angular.json` file:
 
 ```typescript
 // app.module.ts
-import { ChartistModule } from 'ng-chartist';
+import { ChartistModule } from "ng-chartist";
 
 @NgModule({
   imports: [

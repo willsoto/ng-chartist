@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { IChartistData, ILineChartOptions } from 'chartist';
-import ChartistTooltip from 'chartist-plugin-tooltips-updated';
-import { ChartType } from 'ng-chartist';
+import { Component } from "@angular/core";
+import { IChartistData, ILineChartOptions } from "chartist";
+import ChartistTooltip from "chartist-plugin-tooltips-updated";
+import { ChartType } from "ng-chartist";
 
 /**
  * Following example shows how to use updated version of Chartist tooltip plugin with ng-chartist
@@ -9,16 +9,16 @@ import { ChartType } from 'ng-chartist';
  * https://github.com/LukBukkit/chartist-plugin-tooltip
  */
 @Component({
-  selector: 'app-tooltip-chart',
+  selector: "app-tooltip-chart",
   template: `
     <h4>Tooltips</h4>
     <x-chartist [data]="data" [type]="type" [options]="options"> </x-chartist>
   `,
 })
 export class TooltipChartComponent {
-  type: ChartType = 'Line';
+  type: ChartType = "Line";
   data: IChartistData = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     series: [
       [12, 9, 7, 8, 5],
       [2, 1, 3.5, 7, 3],

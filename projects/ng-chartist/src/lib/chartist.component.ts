@@ -8,13 +8,13 @@ import {
   OnInit,
   Output,
   SimpleChanges,
-} from '@angular/core';
-import * as Chartist from 'chartist';
+} from "@angular/core";
+import * as Chartist from "chartist";
 
 /**
  * Possible chart types
  */
-export type ChartType = 'Pie' | 'Bar' | 'Line';
+export type ChartType = "Pie" | "Bar" | "Line";
 
 export type ChartInterfaces =
   | Chartist.IChartistPieChart
@@ -52,8 +52,8 @@ export interface ChartEvent {
  ```
  */
 @Component({
-  selector: 'x-chartist',
-  template: '',
+  selector: "x-chartist",
+  template: "",
   styles: [
     `
       :host {
@@ -154,7 +154,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
       return;
     }
 
-    if (!this.chart || 'type' in changes) {
+    if (!this.chart || "type" in changes) {
       this.renderChart();
     } else if (changes.data || changes.options) {
       this.chart.update(this.data, this.options);
