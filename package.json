@@ -55,7 +55,7 @@
     "@types/chartist": "~0.11.1",
     "@types/jasmine": "3.10.1",
     "@types/jasminewd2": "~2.0.10",
-    "@types/node": "~16.11.4",
+    "@types/node": "~16.11.6",
     "@typescript-eslint/eslint-plugin": "~4.33.0",
     "@typescript-eslint/parser": "~4.33.0",
     "chartist": "~0.11.4",
