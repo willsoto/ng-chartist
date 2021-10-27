@@ -40,7 +40,7 @@
     "@angular-eslint/eslint-plugin": "~12.6.0",
     "@angular-eslint/eslint-plugin-template": "~12.6.1",
     "@angular-eslint/schematics": "~12.6.0",
-    "@angular-eslint/template-parser": "~12.6.0",
+    "@angular-eslint/template-parser": "~12.6.1",
     "@angular/cli": "~12.2.11",
     "@angular/common": "~12.2.11",
     "@angular/compiler": "~12.2.11",
