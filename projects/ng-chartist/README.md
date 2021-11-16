@@ -1,9 +1,5 @@
 # Angular Chartist
 
-[![npm version](https://badge.fury.io/js/ng-chartist.svg)](http://badge.fury.io/js/ng-chartist)
-[![NPM downloads](https://img.shields.io/npm/dt/ng-chartist.svg)](https://npmjs.org/package/ng-chartist)
-[![build status](https://action-badges.now.sh/willsoto/ng-chartist)](https://action-badges.now.sh/)
-
 ## Demo
 
 [https://willsoto.github.io/ng-chartist/demo/](https://willsoto.github.io/ng-chartist/demo/index.html)
