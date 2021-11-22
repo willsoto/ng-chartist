@@ -3,5 +3,6 @@
   "dest": "../../dist/ng-chartist",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": ["README.md"]
 }

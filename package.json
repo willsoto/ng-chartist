@@ -45,7 +45,7 @@
       [
         "@semantic-release/npm",
         {
-          "pkgRoot": "projects/ng-chartist/dist"
+          "pkgRoot": "dist/ng-chartist"
         }
       ],
       "@semantic-release/changelog"

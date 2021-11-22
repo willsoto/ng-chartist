@@ -28,10 +28,5 @@
     "@angular/common": "^12.0.2",
     "@angular/core": "^12.0.2",
     "chartist": "^0.11.4"
-  },
-  "ngPackage": {
-    "assets": [
-      "README.md"
-    ]
   }
 }
