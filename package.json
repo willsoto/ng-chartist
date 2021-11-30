@@ -4,18 +4,19 @@
   "private": true,
   "license": "Apache-2.0",
   "scripts": {
-    "build": "npm run build:lib",
-    "build:lib": "ng build ng-chartist",
+    "build": "ng build ng-chartist",
     "checkstyle": "prettier . --check",
     "e2e": "ng e2e",
     "format": "prettier . --write",
     "lint": "ng lint ng-chartist",
     "ng": "ng",
     "prepare": "husky install",
-    "prerelease": "npm run build:lib",
+    "prerelease": "npm run build",
     "release": "semantic-release",
     "start": "ng serve ng-chartist-demo",
-    "test": "ng test ng-chartist --watch=false --browsers=ChromeHeadless"
+    "test": "ng test ng-chartist --watch=false",
+    "test:coverage": "ng test ng-chartist --watch=false --code-coverage",
+    "typecheck": "npm run build"
   },
   "commitlint": {
     "extends": [
@@ -99,6 +100,7 @@
     "prettier": "~2.5.0",
     "prettier-plugin-organize-imports": "~2.3.4",
     "prettier-plugin-packagejson": "~2.2.15",
+    "puppeteer": "~12.0.1",
     "rxjs": "~7.4.0",
     "semantic-release": "~18.0.1",
     "ts-node": "~10.4.0",
