@@ -1,3 +1,16 @@
+# [6.3.0](https://github.com/willsoto/ng-chartist/compare/v6.2.0...v6.3.0) (2021-11-30)
+
+
+### Bug Fixes
+
+* **ci:** add appropriate build scripts ([302be90](https://github.com/willsoto/ng-chartist/commit/302be906aea01e30b149caab0a2b265c2f7f9ba3))
+
+
+### Features
+
+* add node-tests reusable workflow ([cfc8425](https://github.com/willsoto/ng-chartist/commit/cfc8425789ebeca5fe0a4b3eb6802f2a8e33f615))
+* **releases:** generate and commit changelog ([55e20ce](https://github.com/willsoto/ng-chartist/commit/55e20ced7a4fcfdfaa5ff20b27157147e3060280))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
