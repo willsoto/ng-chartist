@@ -96,7 +96,7 @@
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "~1.7.0",
     "lint-staged": "~12.1.2",
-    "ng-packagr": "~13.0.8",
+    "ng-packagr": "~13.1.1",
     "prettier": "~2.5.1",
     "prettier-plugin-organize-imports": "~2.3.4",
     "prettier-plugin-packagejson": "~2.2.15",
