@@ -101,7 +101,7 @@
     "prettier-plugin-organize-imports": "~2.3.4",
     "prettier-plugin-packagejson": "~2.2.15",
     "puppeteer": "~13.0.1",
-    "rxjs": "~7.4.0",
+    "rxjs": "~7.5.1",
     "semantic-release": "~18.0.1",
     "ts-node": "~10.4.0",
     "tslib": "~2.3.1",
