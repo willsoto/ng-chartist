@@ -82,7 +82,7 @@
     "chartist-plugin-tooltips-updated": "~0.1.4",
     "commitlint": "~16.0.2",
     "core-js": "~3.20.3",
-    "eslint": "~8.6.0",
+    "eslint": "~8.7.0",
     "eslint-config-prettier": "~8.3.0",
     "eslint-plugin-import": "~2.25.4",
     "eslint-plugin-jsdoc": "~37.6.1",
