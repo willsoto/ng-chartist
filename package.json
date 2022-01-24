@@ -105,7 +105,7 @@
     "semantic-release": "~18.0.1",
     "ts-node": "~10.4.0",
     "tslib": "~2.3.1",
-    "typescript": "~4.5.4",
+    "typescript": "~4.5.5",
     "zone.js": "~0.11.4"
   },
   "volta": {
