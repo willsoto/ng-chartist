@@ -1,3 +1,10 @@
+## [6.3.1](https://github.com/willsoto/ng-chartist/compare/v6.3.0...v6.3.1) (2022-01-28)
+
+
+### Bug Fixes
+
+* update peerDependencies for @angular/* to ^12.0.0 || ^13.0.0 ([a247b84](https://github.com/willsoto/ng-chartist/commit/a247b84ab5a102259f02556a1ee32a66c9ef2ab1)), closes [#1074](https://github.com/willsoto/ng-chartist/issues/1074)
+
 # [6.3.0](https://github.com/willsoto/ng-chartist/compare/v6.2.0...v6.3.0) (2021-11-30)
 
 
