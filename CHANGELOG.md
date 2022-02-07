@@ -1,3 +1,10 @@
+# [6.4.0](https://github.com/willsoto/ng-chartist/compare/v6.3.1...v6.4.0) (2022-02-07)
+
+
+### Features
+
+* upgrade packages ([478a132](https://github.com/willsoto/ng-chartist/commit/478a132dc8ee89c18443ec040e21ef72e2114556))
+
 ## [6.3.1](https://github.com/willsoto/ng-chartist/compare/v6.3.0...v6.3.1) (2022-01-28)
 
 
