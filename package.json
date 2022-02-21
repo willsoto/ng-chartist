@@ -63,7 +63,7 @@
     "@angular/cli": "~13.2.3",
     "@angular/common": "~13.2.2",
     "@angular/compiler": "~13.2.1",
-    "@angular/compiler-cli": "~13.2.2",
+    "@angular/compiler-cli": "~13.2.3",
     "@angular/core": "~13.2.1",
     "@angular/language-service": "~13.2.2",
     "@angular/platform-browser": "~13.2.1",
