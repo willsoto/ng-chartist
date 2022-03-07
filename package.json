@@ -68,7 +68,7 @@
     "@angular/language-service": "~13.2.4",
     "@angular/platform-browser": "~13.2.4",
     "@angular/platform-browser-dynamic": "~13.2.4",
-    "@angular/router": "~13.2.4",
+    "@angular/router": "~13.2.5",
     "@commitlint/config-conventional": "~16.2.1",
     "@semantic-release/changelog": "~6.0.1",
     "@semantic-release/git": "~10.0.1",
