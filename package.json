@@ -83,7 +83,7 @@
     "commitlint": "~16.2.1",
     "core-js": "~3.21.1",
     "eslint": "~8.10.0",
-    "eslint-config-prettier": "~8.4.0",
+    "eslint-config-prettier": "~8.5.0",
     "eslint-plugin-import": "~2.25.4",
     "eslint-plugin-jsdoc": "~37.9.4",
     "eslint-plugin-prefer-arrow": "~1.2.3",
