@@ -16,7 +16,8 @@
     "start": "ng serve ng-chartist-demo",
     "test": "ng test ng-chartist --watch=false",
     "test:coverage": "ng test ng-chartist --watch=false --code-coverage",
-    "typecheck": "npm run build"
+    "typecheck": "npm run build",
+    "upgrade-deps": "ncu --upgrade --peer --doctor"
   },
   "commitlint": {
     "extends": [
@@ -97,6 +98,7 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "lint-staged": "~12.3.7",
     "ng-packagr": "~13.3.0",
+    "npm-check-updates": "~12.5.4",
     "prettier": "~2.6.0",
     "prettier-plugin-organize-imports": "~2.3.4",
     "prettier-plugin-packagejson": "~2.2.16",
