@@ -1,3 +1,10 @@
+# [6.8.0](https://github.com/willsoto/ng-chartist/compare/v6.7.0...v6.8.0) (2022-06-26)
+
+
+### Features
+
+* upgrade to Angular 14 ([faf8d6f](https://github.com/willsoto/ng-chartist/commit/faf8d6f90a9e62622608736c7a48382e5b867c63))
+
 # [6.7.0](https://github.com/willsoto/ng-chartist/compare/v6.6.0...v6.7.0) (2022-03-14)
 
 
