@@ -11,7 +11,7 @@
     "lint": "ng lint ng-chartist",
     "ng": "ng",
     "prepare": "husky install",
-    "prerelease": "npm run build",
+    "prerelease": "pnpm run build",
     "release": "semantic-release",
     "start": "ng serve ng-chartist-demo",
     "test": "ng test ng-chartist --watch=false",
