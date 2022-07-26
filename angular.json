@@ -146,7 +146,7 @@
   "defaultProject": "ng-chartist",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics",
-    "packageManager": "npm",
+    "packageManager": "pnpm",
     "analytics": false
   }
 }

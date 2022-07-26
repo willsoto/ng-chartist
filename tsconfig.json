@@ -11,7 +11,7 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "target": "es5",
+    "target": "ES2022",
     "lib": ["es2018", "dom"],
     "paths": {
       "ng-chartist": ["projects/ng-chartist/dist"],

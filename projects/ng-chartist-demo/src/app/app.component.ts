@@ -53,7 +53,7 @@ export class AppComponent {
               axisX: {
                 labelInterpolationFnc(
                   value: number,
-                  index: number
+                  index: number,
                 ): string | null {
                   return index % 4 === 0 ? `W${value}` : null;
                 },
