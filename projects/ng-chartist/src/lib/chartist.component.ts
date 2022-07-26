@@ -139,7 +139,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
       nativeElement,
       this.data,
       this.options,
-      this.responsiveOptions
+      this.responsiveOptions,
     );
 
     if (this.events) {
