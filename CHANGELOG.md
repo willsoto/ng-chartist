@@ -1,3 +1,11 @@
+## [6.8.1](https://github.com/willsoto/ng-chartist/compare/v6.8.0...v6.8.1) (2022-07-26)
+
+
+### Bug Fixes
+
+* **workflows:** upgrade to node-ci v2.0.1 ([61c5013](https://github.com/willsoto/ng-chartist/commit/61c5013e956a183e9f7b1e666ba18f023075f8e9))
+* **workflows:** upgrade to node-ci v2.0.2 ([a47108e](https://github.com/willsoto/ng-chartist/commit/a47108e3ab4e1693381570731590170af824f1eb))
+
 # [6.8.0](https://github.com/willsoto/ng-chartist/compare/v6.7.0...v6.8.0) (2022-06-26)
 
 
