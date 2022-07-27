@@ -50,7 +50,7 @@ specifiers:
   puppeteer: 15.5.0
   rxjs: 7.5.6
   semantic-release: 19.0.3
-  ts-node: 10.8.2
+  ts-node: 10.9.1
   tslib: 2.4.0
   typescript: 4.7.4
   zone.js: 0.11.7
@@ -105,7 +105,7 @@ devDependencies:
   puppeteer: 15.5.0
   rxjs: 7.5.6
   semantic-release: 19.0.3
-  ts-node: 10.8.2_tdn3ypgnfy6bmey2q4hu5jonwi
+  ts-node: 10.9.1_tdn3ypgnfy6bmey2q4hu5jonwi
   tslib: 2.4.0
   typescript: 4.7.4
   zone.js: 0.11.7
@@ -4042,7 +4042,7 @@ packages:
     dependencies:
       '@types/node': 18.0.6
       cosmiconfig: 7.0.1
-      ts-node: 10.8.2_tdn3ypgnfy6bmey2q4hu5jonwi
+      ts-node: 10.9.1_tdn3ypgnfy6bmey2q4hu5jonwi
       typescript: 4.7.4
     transitivePeerDependencies:
       - '@swc/core'
@@ -9993,8 +9993,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-node/10.8.2_tdn3ypgnfy6bmey2q4hu5jonwi:
-    resolution: {integrity: sha512-LYdGnoGddf1D6v8REPtIH+5iq/gTDuZqv2/UJUU7tKjuEU8xVZorBM+buCGNjj+pGEud+sOoM4CX3/YzINpENA==}
+  /ts-node/10.9.1_tdn3ypgnfy6bmey2q4hu5jonwi:
+    resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
       '@swc/core': '>=1.2.50'
