@@ -43,7 +43,7 @@ specifiers:
   karma-jasmine: 5.1.0
   karma-jasmine-html-reporter: 2.0.0
   lint-staged: 13.0.3
-  ng-packagr: 14.0.4
+  ng-packagr: 14.1.0
   prettier: 2.7.1
   prettier-plugin-organize-imports: 3.0.0
   prettier-plugin-packagejson: 2.2.18
@@ -56,7 +56,7 @@ specifiers:
   zone.js: 0.11.7
 
 devDependencies:
-  '@angular-devkit/build-angular': 14.1.0_mi47ywhxm6tgq4apy22yurmynm
+  '@angular-devkit/build-angular': 14.1.0_gerqodarvzpklbg6qrgd2tgesi
   '@angular-eslint/builder': 14.0.2_he2ccbldppg44uulnyq4rwocfa
   '@angular-eslint/eslint-plugin': 14.0.2_he2ccbldppg44uulnyq4rwocfa
   '@angular-eslint/eslint-plugin-template': 14.0.2_he2ccbldppg44uulnyq4rwocfa
@@ -98,7 +98,7 @@ devDependencies:
   karma-jasmine: 5.1.0_karma@6.4.0
   karma-jasmine-html-reporter: 2.0.0_kn32zzqrpbpapqtjwiltm573ri
   lint-staged: 13.0.3
-  ng-packagr: 14.0.4_5c2iebmfzfpvallz5r5vev4oru
+  ng-packagr: 14.1.0_5c2iebmfzfpvallz5r5vev4oru
   prettier: 2.7.1
   prettier-plugin-organize-imports: 3.0.0_gd3y7r3s3evy6b2vthd7dmacga
   prettier-plugin-packagejson: 2.2.18_prettier@2.7.1
@@ -130,7 +130,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular/14.1.0_mi47ywhxm6tgq4apy22yurmynm:
+  /@angular-devkit/build-angular/14.1.0_gerqodarvzpklbg6qrgd2tgesi:
     resolution: {integrity: sha512-AtecSuDEPLYd3p7uFVKpoA0XNcq+NvVYFJK8h90BG+IRZtzEm7ZJeYdohXVeVfTO5GvpNFN1XoHxR5rxiXeBhg==}
     engines: {node: ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -193,7 +193,7 @@ packages:
       loader-utils: 3.2.0
       mini-css-extract-plugin: 2.6.1_webpack@5.73.0
       minimatch: 5.1.0
-      ng-packagr: 14.0.4_5c2iebmfzfpvallz5r5vev4oru
+      ng-packagr: 14.1.0_5c2iebmfzfpvallz5r5vev4oru
       open: 8.4.0
       ora: 5.4.1
       parse5-html-rewriting-stream: 6.0.1
@@ -7424,8 +7424,8 @@ packages:
     resolution: {integrity: sha512-EZSPZB70jiVsivaBLYDCyntd5eH8NTSMOn3rB+HxwdmKThGELLdYv8qVIMWvZEFy9w8ZZpW9h9OB32l1rGtj7g==}
     dev: true
 
-  /ng-packagr/14.0.4_5c2iebmfzfpvallz5r5vev4oru:
-    resolution: {integrity: sha512-GqrokUDpJTYoKKwIFJK+daiOff+G4oVlV7KVfIicpSwg2R++FCWolRCwqn571wMEHssyH8qIsDYSRocA4YLRFA==}
+  /ng-packagr/14.1.0_5c2iebmfzfpvallz5r5vev4oru:
+    resolution: {integrity: sha512-08B+bOp53YhmPobI1tK0YwGUAysden/PHtBUtmLaJxIHYVZqzH/RIFVaZLx+k+70TFqs+P2Hjpmo3wblWqFzxg==}
     engines: {node: ^14.15.0 || >=16.10.0}
     hasBin: true
     peerDependencies:
