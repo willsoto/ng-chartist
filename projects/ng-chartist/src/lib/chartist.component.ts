@@ -9,30 +9,52 @@ import {
   Output,
   SimpleChanges,
 } from "@angular/core";
-import * as Chartist from "chartist";
+import {
+  BarChart,
+  BarChartData,
+  BarChartOptions,
+  LineChart,
+  LineChartData,
+  LineChartOptions,
+  PieChart,
+  PieChartData,
+  PieChartOptions,
+  ResponsiveOptions,
+} from "chartist";
 
-/**
- * Possible chart types
- */
-export type ChartType = "Pie" | "Bar" | "Line";
+type ChartTypes = BarChart | LineChart | PieChart;
 
-export type ChartInterfaces =
-  | Chartist.IChartistPieChart
-  | Chartist.IChartistBarChart
-  | Chartist.IChartistLineChart;
-export type ChartOptions =
-  | Chartist.IBarChartOptions
-  | Chartist.ILineChartOptions
-  | Chartist.IPieChartOptions;
-export type ResponsiveOptionTuple =
-  Chartist.IResponsiveOptionTuple<ChartOptions>;
-export type ResponsiveOptions = ResponsiveOptionTuple[];
+export interface BarChartConfiguration {
+  type: "Bar";
+  data: BarChartData;
+  options?: BarChartOptions;
+  responsiveOptions?: ResponsiveOptions<BarChartOptions>;
+}
+
+export interface LineChartConfiguration {
+  type: "Line";
+  data: LineChartData;
+  options?: LineChartOptions;
+  responsiveOptions?: ResponsiveOptions<LineChartOptions>;
+}
+
+export interface PieChartConfiguration {
+  type: "Pie";
+  data: PieChartData;
+  options?: PieChartOptions;
+  responsiveOptions?: ResponsiveOptions<PieChartOptions>;
+}
+
+export type Configuration =
+  | BarChartConfiguration
+  | LineChartConfiguration
+  | PieChartConfiguration;
 
 /**
  * Represents chart events.
  */
 export interface ChartEvent {
-  [eventName: string]: (data: any) => void;
+  [eventName: string]: (data: unknown) => void;
 }
 
 /**
@@ -43,10 +65,7 @@ export interface ChartEvent {
  * ### Example
  ```html
  <x-chartist
-   [type]="type"
-   [data]="data"
-   [options]="options"
-   [responsiveOptions]="responsiveOptions"
+   [configuration]="configuration"
    [events]="events"
  ></x-chartist>
  ```
@@ -63,29 +82,8 @@ export interface ChartEvent {
   ],
 })
 export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
-  /**
-   * The data object that needs to consist of a labels and a series array.
-   */
   @Input()
-  data: Chartist.IChartistData;
-
-  /**
-   * Chartist chart type.
-   */
-  @Input()
-  type: ChartType;
-
-  /**
-   * The options object which overrides the default options.
-   */
-  @Input()
-  options: Chartist.IChartOptions;
-
-  /**
-   * An array of responsive option arrays which are a media query and options object pair: [[mediaQueryString, optionsObject],[more...]]
-   */
-  @Input()
-  responsiveOptions: ResponsiveOptions;
+  configuration: Configuration;
 
   /**
    * Events object where keys are Chartist event names and values are event handler functions.
@@ -103,14 +101,14 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
    * Event handler function will receive chart instance argument.
    */
   @Output()
-  initialized = new EventEmitter<ChartInterfaces>();
+  initialized = new EventEmitter<ChartTypes>();
 
-  chart: ChartInterfaces;
+  chart: ChartTypes;
 
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): void {
-    if (this.type && this.data) {
+    if (this.configuration.type && this.configuration.data) {
       this.renderChart();
     }
   }
@@ -128,19 +126,32 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
 
   renderChart() {
     const nativeElement = this.elementRef.nativeElement;
+    const { type, data, options, responsiveOptions } = this.configuration;
 
-    if (!(this.type in Chartist)) {
-      throw new Error(`${this.type} is not a valid chart type`);
+    if (type === "Bar") {
+      this.chart = new BarChart(
+        nativeElement,
+        data,
+        options,
+        responsiveOptions,
+      );
+    } else if (type === "Line") {
+      this.chart = new LineChart(
+        nativeElement,
+        data,
+        options,
+        responsiveOptions,
+      );
+    } else if (type === "Pie") {
+      this.chart = new PieChart(
+        nativeElement,
+        data,
+        options,
+        responsiveOptions,
+      );
+    } else {
+      throw new Error(`${type} is not a known chart type`);
     }
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    const Chart = Chartist[this.type];
-
-    this.chart = new Chart(
-      nativeElement,
-      this.data,
-      this.options,
-      this.responsiveOptions,
-    );
 
     if (this.events) {
       this.bindEvents();
@@ -150,14 +161,22 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   update(changes: SimpleChanges): void {
-    if (!this.type || !this.data) {
+    const { type, data, options } = this.configuration;
+
+    if (!type || !data) {
       return;
     }
 
-    if (!this.chart || "type" in changes) {
+    const changedConfiguration = changes.configuration
+      .currentValue as Configuration;
+
+    if (!this.chart || changedConfiguration.type !== type) {
       this.renderChart();
-    } else if (changes.data || changes.options) {
-      this.chart.update(this.data, this.options);
+    } else if (
+      "data" in changedConfiguration ||
+      "options" in changedConfiguration
+    ) {
+      this.chart.update(data, options);
     }
   }
 

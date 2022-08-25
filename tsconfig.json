@@ -12,11 +12,7 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "target": "ES2022",
-    "lib": ["es2018", "dom"],
-    "paths": {
-      "ng-chartist": ["projects/ng-chartist/dist"],
-      "ng-chartist/*": ["projects/ng-chartist/dist/*"]
-    }
+    "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
     "strictTemplates": true,
