@@ -1,6 +1,7 @@
+import { SimpleChange } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import * as Chartist from "chartist";
-import { ChartistComponent, ChartType } from "./chartist.component";
+import { BarChart } from "chartist";
+import { ChartistComponent } from "./chartist.component";
 
 const data = {
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -44,25 +45,24 @@ describe("chartist component", () => {
     expect(instance).toBeDefined();
   });
 
-  describe("ON INIT", () => {
-    const chartType: ChartType = "Bar";
-
+  describe("onInit", () => {
     beforeEach(() => {
-      instance.data = data[chartType];
-      instance.type = chartType;
+      instance.configuration = {
+        type: "Bar",
+        data: data["Bar"],
+      };
     });
 
     it("should initialize the correct chart only once", () => {
-      spyOn(Chartist, chartType).and.callThrough();
       instance.ngOnInit();
 
-      expect(Chartist[chartType]).toHaveBeenCalledTimes(1);
+      expect(instance.chart).toBeInstanceOf(BarChart);
     });
 
     it("should return the correct chart instance", () => {
       instance.ngOnInit();
 
-      expect(instance["chart"] instanceof Chartist[chartType]).toBe(true);
+      expect(instance.chart instanceof BarChart).toBe(true);
     });
 
     it("should emit initialized event when chart is initialized", () => {
@@ -79,40 +79,44 @@ describe("chartist component", () => {
       };
       instance.ngOnInit();
 
-      expect(instance["bindEvents"]).toHaveBeenCalled();
+      expect(instance.bindEvents).toHaveBeenCalled();
     });
 
     it("should not initialize chart when type is missing", () => {
-      instance.type = undefined;
+      instance.configuration.type = undefined;
 
       instance.ngOnInit();
 
-      expect(instance["chart"]).toBeUndefined();
+      expect(instance.chart).toBeUndefined();
     });
 
     it("should not initialize chart when data is missing", () => {
-      instance.data = undefined;
+      instance.configuration.data = undefined;
 
       instance.ngOnInit();
 
-      expect(instance["chart"]).toBeUndefined();
+      expect(instance.chart).toBeUndefined();
     });
   });
 
-  describe("ON CHANGES", () => {
-    const chartType: ChartType = "Bar";
-
+  describe("ngOnChanges", () => {
     beforeEach(() => {
-      instance.data = data[chartType];
-      instance.type = chartType;
+      instance.configuration = {
+        type: "Bar",
+        data: data["Bar"],
+      };
     });
 
     it("should re-render the chart if the chart type changes", () => {
       spyOn(instance, "renderChart").and.callThrough();
       instance.ngOnChanges({
-        type: {
-          currentValue: instance.type,
-        } as any,
+        configuration: {
+          currentValue: {
+            ...instance.configuration,
+            type: "Line",
+            data: {},
+          },
+        } as SimpleChange,
       });
 
       expect(instance["renderChart"]).toHaveBeenCalled();
@@ -121,9 +125,13 @@ describe("chartist component", () => {
     it("should emit initialized event when the chart type changes", () => {
       spyOn(instance.initialized, "emit").and.callThrough();
       instance.ngOnChanges({
-        type: {
-          currentValue: instance.type,
-        } as any,
+        configuration: {
+          currentValue: {
+            ...instance.configuration,
+            type: "Line",
+            data: {},
+          },
+        } as SimpleChange,
       });
 
       expect(instance.initialized.emit).toHaveBeenCalled();
@@ -132,36 +140,41 @@ describe("chartist component", () => {
     it("should update the chart if the data changes", () => {
       instance.ngOnInit();
 
-      spyOn(instance["chart"], "update").and.callThrough();
+      spyOn(instance.chart, "update").and.callThrough();
       spyOn(instance, "renderChart").and.callThrough();
 
       instance.ngOnChanges({
-        data: {
-          currentValue: instance.data,
-        } as any,
+        configuration: {
+          currentValue: {
+            ...instance.configuration,
+            data: {},
+          },
+        } as SimpleChange,
       });
 
-      expect(instance["renderChart"]).not.toHaveBeenCalled();
-      expect(instance["chart"].update).toHaveBeenCalled();
+      expect(instance.renderChart).not.toHaveBeenCalled();
+      expect(instance.chart.update).toHaveBeenCalled();
     });
 
     it("should update the chart if the options change", () => {
       instance.ngOnInit();
 
-      spyOn(instance["chart"], "update").and.callThrough();
+      spyOn(instance.chart, "update").and.callThrough();
       spyOn(instance, "renderChart").and.callThrough();
 
-      instance.options = {
-        reverseData: true,
-      };
       instance.ngOnChanges({
-        options: {
-          currentValue: instance.options,
-        } as any,
+        configuration: {
+          currentValue: {
+            ...instance.configuration,
+            options: {
+              chartPadding: 5,
+            },
+          },
+        } as SimpleChange,
       });
 
-      expect(instance["renderChart"]).not.toHaveBeenCalled();
-      expect(instance["chart"].update).toHaveBeenCalled();
+      expect(instance.renderChart).not.toHaveBeenCalled();
+      expect(instance.chart.update).toHaveBeenCalled();
     });
   });
 });
