@@ -1,20 +1,46 @@
 # Angular Chartist
 
-## Development
+## Installation
 
-### Prepare your environment
+```bash
+npm install ng-chartist chartist
+```
 
-- Install [Node.js](http://nodejs.org/)
-- Install local dev dependencies: `npm ci` while current directory is this repo
+```bash
+pnpm add ng-chartist chartist
+```
 
-### Development server
+## Usage
 
-Run `npm run build:lib` and then `npm run start` to start a development server.
+```typescript
+import { ChartistModule } from "ng-chartist";
+import { NgModule } from "@angular/core";
 
-### Testing
+@NgModule({
+  imports: [ChartistModule],
+})
+export class SomeModule {}
+```
 
-Run `npm run test` to run tests.
+```ts
+import { Component } from "@angular/core";
+import { Configuration } from "ng-chartist";
 
-## License
+@Component()
+export class SomeComponent {
+  public configuration: Configuration = {
+    // Specify the type of chart and the rest of the config will be typed
+    type: "Bar",
+    // Required
+    data: {},
+    // Optional
+    options: {},
+    // Optional
+    responsiveOptions: {},
+  };
+}
+```
 
-Apache-2.0
+```html
+<x-chartist [configuration]="configuration"></x-chartist>
+```
