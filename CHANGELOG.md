@@ -1,3 +1,15 @@
+# [7.0.0](https://github.com/willsoto/ng-chartist/compare/v6.8.1...v7.0.0) (2022-08-26)
+
+
+### chore
+
+* **deps:** update dependency chartist to v1 ([247d3b1](https://github.com/willsoto/ng-chartist/commit/247d3b129e5d69c108054c49a67c833c27d64d29)), closes [#1217](https://github.com/willsoto/ng-chartist/issues/1217)
+
+
+### BREAKING CHANGES
+
+* **deps:** Updates Chartist to v1. Use version v6 if you must use Chartist v0.x
+
 ## [6.8.1](https://github.com/willsoto/ng-chartist/compare/v6.8.0...v6.8.1) (2022-07-26)
 
 
