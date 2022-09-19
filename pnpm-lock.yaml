@@ -20,7 +20,7 @@ specifiers:
   '@commitlint/config-conventional': 17.1.0
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/git': 10.0.1
-  '@types/jasmine': 4.0.3
+  '@types/jasmine': 4.3.0
   '@types/jasminewd2': 2.0.10
   '@types/node': 18.0.6
   '@typescript-eslint/eslint-plugin': 5.32.0
@@ -74,7 +74,7 @@ devDependencies:
   '@commitlint/config-conventional': 17.1.0
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.5
   '@semantic-release/git': 10.0.1_semantic-release@19.0.5
-  '@types/jasmine': 4.0.3
+  '@types/jasmine': 4.3.0
   '@types/jasminewd2': 2.0.10
   '@types/node': 18.0.6
   '@typescript-eslint/eslint-plugin': 5.32.0_iosr3hrei2tubxveewluhu5lhy
@@ -2970,14 +2970,14 @@ packages:
       '@types/node': 18.0.6
     dev: true
 
-  /@types/jasmine/4.0.3:
-    resolution: {integrity: sha512-Opp1LvvEuZdk8fSSvchK2mZwhVrsNT0JgJE9Di6MjnaIpmEXM8TLCPPrVtNTYh8+5MPdY8j9bAHMu2SSfwpZJg==}
+  /@types/jasmine/4.3.0:
+    resolution: {integrity: sha512-u1jWakf8CWvLfSEZyxmzkgBzOEvXH/szpT0e6G8BTkx5Eu0BhDn7sbc5dz0JBN/6Wwm9rBe+JAsk9tJRyH9ZkA==}
     dev: true
 
   /@types/jasminewd2/2.0.10:
     resolution: {integrity: sha512-J7mDz7ovjwjc+Y9rR9rY53hFWKATcIkrr9DwQWmOas4/pnIPJTXawnzjwpHm3RSxz/e3ZVUvQ7cRbd5UQLo10g==}
     dependencies:
-      '@types/jasmine': 4.0.3
+      '@types/jasmine': 4.3.0
     dev: true
 
   /@types/json-schema/7.0.11:
