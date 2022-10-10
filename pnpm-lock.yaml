@@ -25,7 +25,7 @@ specifiers:
   '@types/node': 18.0.6
   '@typescript-eslint/eslint-plugin': 5.32.0
   '@typescript-eslint/parser': 5.32.0
-  chartist: 1.1.2
+  chartist: 1.2.1
   commitlint: 17.1.2
   core-js: 3.25.5
   eslint: 8.23.1
@@ -79,7 +79,7 @@ devDependencies:
   '@types/node': 18.0.6
   '@typescript-eslint/eslint-plugin': 5.32.0_wtwcgsfhwlwfdaanwualniiuci
   '@typescript-eslint/parser': 5.32.0_4brgkhw6cq4me3drk3kxrpb2mm
-  chartist: 1.1.2
+  chartist: 1.2.1
   commitlint: 17.1.2
   core-js: 3.25.5
   eslint: 8.23.1
@@ -3902,8 +3902,8 @@ packages:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: true
 
-  /chartist/1.1.2:
-    resolution: {integrity: sha512-ccz4ob0rkW6ayxmge3CYkNhwiKLhmz9u2j8WCJw0MUbtQavGuL2KX0GrVntkohSSBgqogqeANFPIigeGrFoTKQ==}
+  /chartist/1.2.1:
+    resolution: {integrity: sha512-daq0Ke7xWp87loUJLNyQqGVJSQ/hqcw8MnntMAZ7t46jOmPG1+IrUrAwQhkfkbHP35rRtF9vwRpGG9YkwtANiQ==}
     engines: {node: '>=14'}
     dev: true
 
