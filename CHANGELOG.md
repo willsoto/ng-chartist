@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/willsoto/ng-chartist/compare/v7.0.0...v7.0.1) (2022-11-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tslib to v2.4.1 ([3ace5c6](https://github.com/willsoto/ng-chartist/commit/3ace5c613f9209703446c4edc895fefa2af5339f))
+
 # [7.0.0](https://github.com/willsoto/ng-chartist/compare/v6.8.1...v7.0.0) (2022-08-26)
 
 
