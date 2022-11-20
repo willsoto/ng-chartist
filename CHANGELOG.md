@@ -1,3 +1,10 @@
+## [7.0.2](https://github.com/willsoto/ng-chartist/compare/v7.0.1...v7.0.2) (2022-11-20)
+
+
+### Bug Fixes
+
+* **workflows:** set puppeteer cache location ([ed37cb3](https://github.com/willsoto/ng-chartist/commit/ed37cb3ea5ef8ff92a869078c399b88b056dd0ff))
+
 ## [7.0.1](https://github.com/willsoto/ng-chartist/compare/v7.0.0...v7.0.1) (2022-11-01)
 
 
