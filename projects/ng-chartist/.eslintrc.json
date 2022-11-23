@@ -5,10 +5,7 @@
     {
       "files": ["*.ts"],
       "parserOptions": {
-        "project": [
-          "projects/ng-chartist/tsconfig.lib.json",
-          "projects/ng-chartist/tsconfig.spec.json"
-        ],
+        "project": ["./tsconfig.lib.json", "./tsconfig.spec.json"],
         "createDefaultProgram": true
       },
       "rules": {

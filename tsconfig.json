@@ -1,21 +1,23 @@
 {
+  "angularCompilerOptions": {
+    "disableTypeScriptVersionCheck": true,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
-    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "skipLibCheck": true,
+    "lib": ["es2018", "dom"],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "outDir": "./dist/out-tsc",
     "resolveJsonModule": true,
-    "target": "ES2022",
-    "lib": ["es2018", "dom"]
-  },
-  "angularCompilerOptions": {
-    "strictTemplates": true,
-    "disableTypeScriptVersionCheck": true
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "target": "ES2022"
   }
 }

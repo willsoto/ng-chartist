@@ -27,7 +27,7 @@ module.exports = function (config) {
       suppressAll: true, // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require("path").join(__dirname, "../../coverage/ng-chartist"),
+      dir: require("path").join(__dirname, "./coverage/ng-chartist"),
       subdir: ".",
       reporters: [{ type: "html" }, { type: "text-summary" }],
     },

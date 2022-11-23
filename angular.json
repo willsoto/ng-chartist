@@ -12,14 +12,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ng-chartist/ng-package.json"
+            "project": "./ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-chartist/tsconfig.lib.prod.json"
+              "tsConfig": "./tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ng-chartist/tsconfig.lib.json"
+              "tsConfig": "./tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,9 +27,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-chartist/src/test.ts",
-            "tsConfig": "projects/ng-chartist/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-chartist/karma.conf.js"
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "./tsconfig.spec.json",
+            "karmaConfig": "./karma.conf.js"
           }
         },
         "lint": {
