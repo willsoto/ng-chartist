@@ -1,3 +1,10 @@
+# [7.1.0](https://github.com/willsoto/ng-chartist/compare/v7.0.2...v7.1.0) (2022-11-23)
+
+
+### Features
+
+* **deps:** update angular monorepo to v15 ([a40515c](https://github.com/willsoto/ng-chartist/commit/a40515cf1ef92516cdf98881e37faeb6f34ea540))
+
 ## [7.0.2](https://github.com/willsoto/ng-chartist/compare/v7.0.1...v7.0.2) (2022-11-20)
 
 
