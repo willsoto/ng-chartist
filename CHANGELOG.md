@@ -1,3 +1,10 @@
+## [7.1.1](https://github.com/willsoto/ng-chartist/compare/v7.1.0...v7.1.1) (2022-11-23)
+
+
+### Bug Fixes
+
+* **ng-packagr:** include the correct package.json ([4ebed56](https://github.com/willsoto/ng-chartist/commit/4ebed56920cb53386f91316c513580bfdeb68ca3))
+
 # [7.1.0](https://github.com/willsoto/ng-chartist/compare/v7.0.2...v7.1.0) (2022-11-23)
 
 
