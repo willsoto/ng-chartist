@@ -46,7 +46,7 @@ specifiers:
   prettier: 2.8.0
   prettier-plugin-organize-imports: 3.2.0
   prettier-plugin-packagejson: 2.3.0
-  puppeteer: 19.2.2
+  puppeteer: 19.3.0
   rxjs: 7.5.7
   semantic-release: 19.0.5
   ts-node: 10.9.1
@@ -100,7 +100,7 @@ devDependencies:
   prettier: 2.8.0
   prettier-plugin-organize-imports: 3.2.0_brpckf4sz23pco3jyty2eys3iq
   prettier-plugin-packagejson: 2.3.0_prettier@2.8.0
-  puppeteer: 19.2.2
+  puppeteer: 19.3.0
   rxjs: 7.5.7
   semantic-release: 19.0.5
   ts-node: 10.9.1_wup25etrarvlqkprac7h35hj7u
@@ -8446,8 +8446,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /puppeteer-core/19.2.2:
-    resolution: {integrity: sha512-faojf+1pZ/tHXSr4x1q+9MVd9FrL3rpdbC0w7qN7MNClMoLuCvMbpR4vzcjoiJYgclt1n+SOPUOmHQViTw6frw==}
+  /puppeteer-core/19.3.0:
+    resolution: {integrity: sha512-P8VAAOBnBJo/7DKJnj1b0K9kZBF2D8lkdL94CjJ+DZKCp182LQqYemPI9omUSZkh4bgykzXjZhaVR1qtddTTQg==}
     engines: {node: '>=14.1.0'}
     dependencies:
       cross-fetch: 3.1.5
@@ -8467,8 +8467,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer/19.2.2:
-    resolution: {integrity: sha512-m1T5Mog5qu5+dMBptWYTn6pXRdnFbydbVUCthqwbfd8/kOiMlzZBR9ywjX79LpvI1Sj+/z8+FKeIsjnMul8ZYA==}
+  /puppeteer/19.3.0:
+    resolution: {integrity: sha512-WJbi/ULaeuFOz7cfMgJlJCBAZiyqIFeQ6os4h5ex3PVTt2qosXgwI9eruFZqFAwJRv8x5pOuMhWR0aSRgyDqEg==}
     engines: {node: '>=14.1.0'}
     requiresBuild: true
     dependencies:
@@ -8477,7 +8477,7 @@ packages:
       https-proxy-agent: 5.0.1
       progress: 2.0.3
       proxy-from-env: 1.1.0
-      puppeteer-core: 19.2.2
+      puppeteer-core: 19.3.0
     transitivePeerDependencies:
       - bufferutil
       - encoding
