@@ -44,7 +44,7 @@ specifiers:
   lint-staged: 13.0.4
   ng-packagr: 15.0.1
   prettier: 2.8.0
-  prettier-plugin-organize-imports: 3.2.0
+  prettier-plugin-organize-imports: 3.2.1
   prettier-plugin-packagejson: 2.3.0
   puppeteer: 19.3.0
   rxjs: 7.5.7
@@ -98,7 +98,7 @@ devDependencies:
   lint-staged: 13.0.4
   ng-packagr: 15.0.1_2sp2ek3ewt72hvffve27en2zfa
   prettier: 2.8.0
-  prettier-plugin-organize-imports: 3.2.0_brpckf4sz23pco3jyty2eys3iq
+  prettier-plugin-organize-imports: 3.2.1_brpckf4sz23pco3jyty2eys3iq
   prettier-plugin-packagejson: 2.3.0_prettier@2.8.0
   puppeteer: 19.3.0
   rxjs: 7.5.7
@@ -8259,8 +8259,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-organize-imports/3.2.0_brpckf4sz23pco3jyty2eys3iq:
-    resolution: {integrity: sha512-jeZ13YVKgXYCzkuwnoR6saKxJmdRYWMxS2G/su1V3qDWqTo1Q5iSoTblBxsXXAmomXfPqa/uA7YCK0/S86KLOQ==}
+  /prettier-plugin-organize-imports/3.2.1_brpckf4sz23pco3jyty2eys3iq:
+    resolution: {integrity: sha512-bty7C2Ecard5EOXirtzeCAqj4FU4epeuWrQt/Z+sh8UVEpBlBZ3m3KNPz2kFu7KgRTQx/C9o4/TdquPD1jOqjQ==}
     peerDependencies:
       '@volar/vue-language-plugin-pug': ^1.0.4
       '@volar/vue-typescript': ^1.0.4
