@@ -41,7 +41,7 @@ specifiers:
   karma-coverage: 2.2.0
   karma-jasmine: 5.1.0
   karma-jasmine-html-reporter: 2.0.0
-  lint-staged: 13.0.4
+  lint-staged: 13.1.0
   ng-packagr: 15.0.1
   prettier: 2.8.0
   prettier-plugin-organize-imports: 3.2.1
@@ -95,7 +95,7 @@ devDependencies:
   karma-coverage: 2.2.0
   karma-jasmine: 5.1.0_karma@6.4.1
   karma-jasmine-html-reporter: 2.0.0_uk6l45dlsjldsnfgnal4othgyq
-  lint-staged: 13.0.4
+  lint-staged: 13.1.0
   ng-packagr: 15.0.1_v5bnlpytrinrrfpppi3aeeu774
   prettier: 2.8.0
   prettier-plugin-organize-imports: 3.2.1_brpckf4sz23pco3jyty2eys3iq
@@ -6867,8 +6867,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged/13.0.4:
-    resolution: {integrity: sha512-HxlHCXoYRsq9QCby5wFozmZW00hMs/9e3l+/dz6Qr8Kle4UH0kJTdABAbqhzG+3pcG6QjL9kz7NgGBfph+a5dw==}
+  /lint-staged/13.1.0:
+    resolution: {integrity: sha512-pn/sR8IrcF/T0vpWLilih8jmVouMlxqXxKuAojmbiGX5n/gDnz+abdPptlj0vYnbfE0SQNl3CY/HwtM0+yfOVQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
