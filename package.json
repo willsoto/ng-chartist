@@ -90,7 +90,7 @@
     "prettier": "2.8.1",
     "prettier-plugin-organize-imports": "3.2.1",
     "prettier-plugin-packagejson": "2.3.0",
-    "puppeteer": "19.4.0",
+    "puppeteer": "19.4.1",
     "rxjs": "7.6.0",
     "semantic-release": "19.0.5",
     "ts-node": "10.9.1",
