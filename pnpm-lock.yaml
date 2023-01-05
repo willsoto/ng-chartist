@@ -33,7 +33,7 @@ specifiers:
   eslint-plugin-import: 2.26.0
   eslint-plugin-jsdoc: 39.6.4
   eslint-plugin-prefer-arrow: 1.2.3
-  husky: 8.0.2
+  husky: 8.0.3
   jasmine-core: 4.5.0
   jasmine-spec-reporter: 7.0.0
   karma: 6.4.1
@@ -87,7 +87,7 @@ devDependencies:
   eslint-plugin-import: 2.26.0_smw3o7qjeokkcohbvp7rylsoqq
   eslint-plugin-jsdoc: 39.6.4_eslint@8.30.0
   eslint-plugin-prefer-arrow: 1.2.3_eslint@8.30.0
-  husky: 8.0.2
+  husky: 8.0.3
   jasmine-core: 4.5.0
   jasmine-spec-reporter: 7.0.0
   karma: 6.4.1
@@ -6054,8 +6054,8 @@ packages:
       ms: 2.1.3
     dev: true
 
-  /husky/8.0.2:
-    resolution: {integrity: sha512-Tkv80jtvbnkK3mYWxPZePGFpQ/tT3HNSs/sasF9P2YfkMezDl3ON37YN6jUUI4eTg5LcyVynlb6r4eyvOmspvg==}
+  /husky/8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
