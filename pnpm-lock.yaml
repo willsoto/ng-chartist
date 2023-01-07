@@ -29,7 +29,7 @@ specifiers:
   commitlint: 17.4.0
   core-js: 3.27.1
   eslint: 8.31.0
-  eslint-config-prettier: 8.5.0
+  eslint-config-prettier: 8.6.0
   eslint-plugin-import: 2.26.0
   eslint-plugin-jsdoc: 39.6.4
   eslint-plugin-prefer-arrow: 1.2.3
@@ -83,7 +83,7 @@ devDependencies:
   commitlint: 17.4.0_@types+node@18.11.18
   core-js: 3.27.1
   eslint: 8.31.0
-  eslint-config-prettier: 8.5.0_eslint@8.31.0
+  eslint-config-prettier: 8.6.0_eslint@8.31.0
   eslint-plugin-import: 2.26.0_ejk3zt536nc2nr7uicalblhboi
   eslint-plugin-jsdoc: 39.6.4_eslint@8.31.0
   eslint-plugin-prefer-arrow: 1.2.3_eslint@8.31.0
@@ -5020,8 +5020,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-prettier/8.5.0_eslint@8.31.0:
-    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+  /eslint-config-prettier/8.6.0_eslint@8.31.0:
+    resolution: {integrity: sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
