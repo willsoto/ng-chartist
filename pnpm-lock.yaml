@@ -31,7 +31,7 @@ specifiers:
   eslint: 8.31.0
   eslint-config-prettier: 8.6.0
   eslint-plugin-import: 2.26.0
-  eslint-plugin-jsdoc: 39.6.4
+  eslint-plugin-jsdoc: 39.6.7
   eslint-plugin-prefer-arrow: 1.2.3
   husky: 8.0.3
   jasmine-core: 4.5.0
@@ -85,7 +85,7 @@ devDependencies:
   eslint: 8.31.0
   eslint-config-prettier: 8.6.0_eslint@8.31.0
   eslint-plugin-import: 2.26.0_ejk3zt536nc2nr7uicalblhboi
-  eslint-plugin-jsdoc: 39.6.4_eslint@8.31.0
+  eslint-plugin-jsdoc: 39.6.7_eslint@8.31.0
   eslint-plugin-prefer-arrow: 1.2.3_eslint@8.31.0
   husky: 8.0.3
   jasmine-core: 4.5.0
@@ -5132,8 +5132,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-jsdoc/39.6.4_eslint@8.31.0:
-    resolution: {integrity: sha512-fskvdLCfwmPjHb6e+xNGDtGgbF8X7cDwMtVLAP2WwSf9Htrx68OAx31BESBM1FAwsN2HTQyYQq7m4aW4Q4Nlag==}
+  /eslint-plugin-jsdoc/39.6.7_eslint@8.31.0:
+    resolution: {integrity: sha512-0mrzXrHvL2ZLe3QK9X0OEDy7Fs2cFQ/f1d1G5KHEGD+13D1qg56Iovq0uOkYf5bJlHiKPytWVgOOO9y7kLW3VA==}
     engines: {node: ^14 || ^16 || ^17 || ^18 || ^19}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
