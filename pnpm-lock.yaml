@@ -17,7 +17,7 @@ specifiers:
   '@angular/platform-browser': 15.1.4
   '@angular/platform-browser-dynamic': 15.1.4
   '@angular/router': 15.1.4
-  '@commitlint/config-conventional': 17.4.2
+  '@commitlint/config-conventional': 17.4.3
   '@semantic-release/changelog': 6.0.2
   '@semantic-release/git': 10.0.1
   '@types/jasmine': 4.3.1
@@ -26,7 +26,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.47.1
   '@typescript-eslint/parser': 5.47.1
   chartist: 1.3.0
-  commitlint: 17.4.2
+  commitlint: 17.4.3
   core-js: 3.27.2
   eslint: 8.31.0
   eslint-config-prettier: 8.6.0
@@ -71,7 +71,7 @@ devDependencies:
   '@angular/platform-browser': 15.1.4_7ja4ey4czlmo7rvvxywvjqjcby
   '@angular/platform-browser-dynamic': 15.1.4_ohokuiwz5epmc3j7lxm4wjl25a
   '@angular/router': 15.1.4_g7mjdvsmeszabti4mywkhjexwi
-  '@commitlint/config-conventional': 17.4.2
+  '@commitlint/config-conventional': 17.4.3
   '@semantic-release/changelog': 6.0.2_semantic-release@19.0.5
   '@semantic-release/git': 10.0.1_semantic-release@19.0.5
   '@types/jasmine': 4.3.1
@@ -80,7 +80,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.47.1_lvo7o7p54stfpyst4gx66zkfk4
   '@typescript-eslint/parser': 5.47.1_ifw3q4r6iq3gw7cspzs2siycvu
   chartist: 1.3.0
-  commitlint: 17.4.2
+  commitlint: 17.4.3
   core-js: 3.27.2
   eslint: 8.31.0
   eslint-config-prettier: 8.6.0_eslint@8.31.0
@@ -1757,13 +1757,13 @@ packages:
     engines: {node: '>=0.1.90'}
     dev: true
 
-  /@commitlint/cli/17.4.2:
-    resolution: {integrity: sha512-0rPGJ2O1owhpxMIXL9YJ2CgPkdrFLKZElIZHXDN8L8+qWK1DGH7Q7IelBT1pchXTYTuDlqkOTdh//aTvT3bSUA==}
+  /@commitlint/cli/17.4.3:
+    resolution: {integrity: sha512-IPTS7AZuBHgD0gl24El8HwuDM9zJN9JLa5KmZUQoFD1BQeGGdzAYJOnAr85CeJWpTDok0BGHDL0+4odnH0iTyA==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
       '@commitlint/format': 17.4.0
-      '@commitlint/lint': 17.4.2
+      '@commitlint/lint': 17.4.3
       '@commitlint/load': 17.4.2
       '@commitlint/read': 17.4.2
       '@commitlint/types': 17.4.0
@@ -1777,8 +1777,8 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /@commitlint/config-conventional/17.4.2:
-    resolution: {integrity: sha512-JVo1moSj5eDMoql159q8zKCU8lkOhQ+b23Vl3LVVrS6PXDLQIELnJ34ChQmFVbBdSSRNAbbXnRDhosFU+wnuHw==}
+  /@commitlint/config-conventional/17.4.3:
+    resolution: {integrity: sha512-8EsY2iDw74hCk3hIQSg7/E0R8/KtPjnFPZVwmmHxcjhZjkSykmxysefICPDnbI3xgxfov0zwL1WKDHM8zglJdw==}
     engines: {node: '>=v14'}
     dependencies:
       conventional-changelog-conventionalcommits: 5.0.0
@@ -1789,7 +1789,7 @@ packages:
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/types': 17.4.0
-      ajv: 8.11.2
+      ajv: 8.12.0
     dev: true
 
   /@commitlint/ensure/17.4.0:
@@ -1825,13 +1825,13 @@ packages:
       semver: 7.3.8
     dev: true
 
-  /@commitlint/lint/17.4.2:
-    resolution: {integrity: sha512-HcymabrdBhsDMNzIv146+ZPNBPBK5gMNsVH+el2lCagnYgCi/4ixrHooeVyS64Fgce2K26+MC7OQ4vVH8wQWVw==}
+  /@commitlint/lint/17.4.3:
+    resolution: {integrity: sha512-GnPsqEYmXIB/MaBhRMzkiDJWyjuLrKad4xoxKO4N6Kc19iqjR4DPc/bl2dxeW9kUmtrAtefOzIEzJAevpA5y2w==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/is-ignored': 17.4.2
       '@commitlint/parse': 17.4.2
-      '@commitlint/rules': 17.4.2
+      '@commitlint/rules': 17.4.3
       '@commitlint/types': 17.4.0
     dev: true
 
@@ -1895,8 +1895,8 @@ packages:
       resolve-global: 1.0.0
     dev: true
 
-  /@commitlint/rules/17.4.2:
-    resolution: {integrity: sha512-OGrPsMb9Fx3/bZ64/EzJehY9YDSGWzp81Pj+zJiY+r/NSgJI3nUYdlS37jykNIugzazdEXfMtQ10kmA+Kx2pZQ==}
+  /@commitlint/rules/17.4.3:
+    resolution: {integrity: sha512-xHReDfE3Z+O9p1sXeEhPRSk4FifBsC4EbXzvQ4aa0ykQe+n/iZDd4CrFC/Oiv2K9BU4ZnFHak30IbMLa4ks1Rw==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/ensure': 17.4.0
@@ -4031,12 +4031,12 @@ packages:
     engines: {node: '>= 12.0.0'}
     dev: true
 
-  /commitlint/17.4.2:
-    resolution: {integrity: sha512-1UQecX+vSJHQXTKFMRZmf8EG3BYYjkT26JLe6FTQhu7N67FiWdWbqXMpcQSpqx/kWNz9a+DX2au2e61IH89PDA==}
+  /commitlint/17.4.3:
+    resolution: {integrity: sha512-3MGkngRG3x3KY5uKWxgyKK7WU5apelorn4jeJsu8aCotuaoPXYtZX8Ym7a/ZzB19UUuWADnKWVTWBePvweu3aA==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
-      '@commitlint/cli': 17.4.2
+      '@commitlint/cli': 17.4.3
       '@commitlint/types': 17.4.0
     transitivePeerDependencies:
       - '@swc/core'
