@@ -43,7 +43,7 @@ specifiers:
   karma-jasmine-html-reporter: 2.0.0
   lint-staged: 13.1.0
   ng-packagr: 15.0.3
-  prettier: 2.8.3
+  prettier: 2.8.4
   prettier-plugin-organize-imports: 3.2.2
   prettier-plugin-packagejson: 2.3.0
   puppeteer: 19.5.2
@@ -97,9 +97,9 @@ devDependencies:
   karma-jasmine-html-reporter: 2.0.0_uk6l45dlsjldsnfgnal4othgyq
   lint-staged: 13.1.0
   ng-packagr: 15.0.3_s4pyx3b74owwujjek7au7smc7i
-  prettier: 2.8.3
-  prettier-plugin-organize-imports: 3.2.2_ioxdq35luteszuxmt2jhnqjeca
-  prettier-plugin-packagejson: 2.3.0_prettier@2.8.3
+  prettier: 2.8.4
+  prettier-plugin-organize-imports: 3.2.2_silln3pw57har7jydmecgzoypa
+  prettier-plugin-packagejson: 2.3.0_prettier@2.8.4
   puppeteer: 19.5.2
   rxjs: 7.8.0
   semantic-release: 19.0.5
@@ -8165,7 +8165,7 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-organize-imports/3.2.2_ioxdq35luteszuxmt2jhnqjeca:
+  /prettier-plugin-organize-imports/3.2.2_silln3pw57har7jydmecgzoypa:
     resolution: {integrity: sha512-e97lE6odGSiHonHJMTYC0q0iLXQyw0u5z/PJpvP/3vRy6/Zi9kLBwFAbEGjDzIowpjQv8b+J04PDamoUSQbzGA==}
     peerDependencies:
       '@volar/vue-language-plugin-pug': ^1.0.4
@@ -8178,11 +8178,11 @@ packages:
       '@volar/vue-typescript':
         optional: true
     dependencies:
-      prettier: 2.8.3
+      prettier: 2.8.4
       typescript: 4.9.5
     dev: true
 
-  /prettier-plugin-packagejson/2.3.0_prettier@2.8.3:
+  /prettier-plugin-packagejson/2.3.0_prettier@2.8.4:
     resolution: {integrity: sha512-2SAPMMk1UDkqsB7DifWKcwCm6VC52JXMrzLHfbcQHJRWhRCj9zziOy+s+2XOyPBeyqFqS+A/1IKzOrxKFTo6pw==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -8190,12 +8190,12 @@ packages:
       prettier:
         optional: true
     dependencies:
-      prettier: 2.8.3
+      prettier: 2.8.4
       sort-package-json: 1.57.0
     dev: true
 
-  /prettier/2.8.3:
-    resolution: {integrity: sha512-tJ/oJ4amDihPoufT5sM0Z1SKEuKay8LfVAMlbbhnnkvt6BUserZylqo2PN+p9KeljLr0OHa2rXHU1T8reeoTrw==}
+  /prettier/2.8.4:
+    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
