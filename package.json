@@ -92,7 +92,7 @@
     "prettier-plugin-packagejson": "2.4.3",
     "puppeteer": "19.11.1",
     "rxjs": "7.8.1",
-    "semantic-release": "21.0.1",
+    "semantic-release": "21.0.2",
     "ts-node": "10.9.1",
     "tslib": "2.4.1",
     "typescript": "5.0.4",
