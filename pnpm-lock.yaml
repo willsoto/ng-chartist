@@ -17,7 +17,7 @@ specifiers:
   '@angular/platform-browser': 15.2.9
   '@angular/platform-browser-dynamic': 15.2.9
   '@angular/router': 15.2.9
-  '@commitlint/config-conventional': 17.6.1
+  '@commitlint/config-conventional': 17.6.3
   '@semantic-release/changelog': 6.0.3
   '@semantic-release/git': 10.0.1
   '@types/jasmine': 4.3.1
@@ -26,7 +26,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.59.2
   '@typescript-eslint/parser': 5.59.2
   chartist: 1.3.0
-  commitlint: 17.6.1
+  commitlint: 17.6.3
   core-js: 3.30.1
   eslint: 8.39.0
   eslint-config-prettier: 8.8.0
@@ -71,7 +71,7 @@ devDependencies:
   '@angular/platform-browser': 15.2.9_saasvbjwcyvrg46rivfba7ybci
   '@angular/platform-browser-dynamic': 15.2.9_3gutb3tlgpthkmyhcebhmqcd4u
   '@angular/router': 15.2.9_fn7m5m2aaraoyaufnj5zsfszqq
-  '@commitlint/config-conventional': 17.6.1
+  '@commitlint/config-conventional': 17.6.3
   '@semantic-release/changelog': 6.0.3_semantic-release@21.0.2
   '@semantic-release/git': 10.0.1_semantic-release@21.0.2
   '@types/jasmine': 4.3.1
@@ -80,7 +80,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.59.2_n4wuahc72jbzapcoi6ni6mvcla
   '@typescript-eslint/parser': 5.59.2_iacogk7kkaymxepzhgcbytyi7q
   chartist: 1.3.0
-  commitlint: 17.6.1
+  commitlint: 17.6.3
   core-js: 3.30.1
   eslint: 8.39.0
   eslint-config-prettier: 8.8.0_eslint@8.39.0
@@ -1758,13 +1758,13 @@ packages:
     engines: {node: '>=0.1.90'}
     dev: true
 
-  /@commitlint/cli/17.6.1:
-    resolution: {integrity: sha512-kCnDD9LE2ySiTnj/VPaxy4/oRayRcdv4aCuVxtoum8SxIU7OADHc0nJPQfheE8bHcs3zZdWzDMWltRosuT13bg==}
+  /@commitlint/cli/17.6.3:
+    resolution: {integrity: sha512-ItSz2fd4F+CujgIbQOfNNerDF1eFlsBGEfp9QcCb1kxTYMuKTYZzA6Nu1YRRrIaaWwe2E7awUGpIMrPoZkOG3A==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
       '@commitlint/format': 17.4.4
-      '@commitlint/lint': 17.6.1
+      '@commitlint/lint': 17.6.3
       '@commitlint/load': 17.5.0
       '@commitlint/read': 17.5.1
       '@commitlint/types': 17.4.4
@@ -1778,8 +1778,8 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /@commitlint/config-conventional/17.6.1:
-    resolution: {integrity: sha512-ng/ybaSLuTCH9F+7uavSOnEQ9EFMl7lHEjfAEgRh1hwmEe8SpLKpQeMo2aT1IWvHaGMuTb+gjfbzoRf2IR23NQ==}
+  /@commitlint/config-conventional/17.6.3:
+    resolution: {integrity: sha512-bLyHEjjRWqlLQWIgYFHmUPbEFMOOLXeF3QbUinDIJev/u9e769tkoTH9YPknEywiuIrAgZaVo+OfzAIsJP0fsw==}
     engines: {node: '>=v14'}
     dependencies:
       conventional-changelog-conventionalcommits: 5.0.0
@@ -1818,19 +1818,19 @@ packages:
       chalk: 4.1.2
     dev: true
 
-  /@commitlint/is-ignored/17.4.4:
-    resolution: {integrity: sha512-Y3eo1SFJ2JQDik4rWkBC4tlRIxlXEFrRWxcyrzb1PUT2k3kZ/XGNuCDfk/u0bU2/yS0tOA/mTjFsV+C4qyACHw==}
+  /@commitlint/is-ignored/17.6.3:
+    resolution: {integrity: sha512-LQbNdnPbxrpbcrVKR5yf51SvquqktpyZJwqXx3lUMF6+nT9PHB8xn3wLy8pi2EQv5Zwba484JnUwDE1ygVYNQA==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/types': 17.4.4
-      semver: 7.3.8
+      semver: 7.5.0
     dev: true
 
-  /@commitlint/lint/17.6.1:
-    resolution: {integrity: sha512-VARJ9kxH64isgwVnC+ABPafCYzqxpsWJIpDaTuI0gh8aX4GQ0i7cn9tvxtFNfJj4ER2BAJeWJ0vURdNYjK2RQQ==}
+  /@commitlint/lint/17.6.3:
+    resolution: {integrity: sha512-fBlXwt6SHJFgm3Tz+luuo3DkydAx9HNC5y4eBqcKuDuMVqHd2ugMNr+bQtx6riv9mXFiPoKp7nE4Xn/ls3iVDA==}
     engines: {node: '>=v14'}
     dependencies:
-      '@commitlint/is-ignored': 17.4.4
+      '@commitlint/is-ignored': 17.6.3
       '@commitlint/parse': 17.4.4
       '@commitlint/rules': 17.6.1
       '@commitlint/types': 17.4.4
@@ -2317,14 +2317,14 @@ packages:
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     dependencies:
       '@gar/promisify': 1.1.3
-      semver: 7.3.8
+      semver: 7.5.0
     dev: true
 
   /@npmcli/fs/3.1.0:
     resolution: {integrity: sha512-7kZUAaLscfgbwBQRbvdMYaZOWyMEcPTH/tJjnyAWJ/dvvs9Ef+CERx/qJb9GExJpl1qipaDGn7KqHnFGGixd0w==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      semver: 7.3.8
+      semver: 7.5.0
     dev: true
 
   /@npmcli/git/4.0.3:
@@ -2338,7 +2338,7 @@ packages:
       proc-log: 3.0.0
       promise-inflight: 1.0.1
       promise-retry: 2.0.1
-      semver: 7.3.8
+      semver: 7.5.0
       which: 3.0.0
     transitivePeerDependencies:
       - bluebird
@@ -2718,7 +2718,7 @@ packages:
       read-pkg: 8.0.0
       registry-auth-token: 5.0.2
       semantic-release: 21.0.2
-      semver: 7.3.8
+      semver: 7.5.0
       tempy: 3.0.0
     dev: true
 
@@ -3066,7 +3066,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.3.8
+      semver: 7.5.0
       tsutils: 3.21.0_typescript@5.0.4
       typescript: 5.0.4
     transitivePeerDependencies:
@@ -3087,7 +3087,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.3.8
+      semver: 7.5.0
       tsutils: 3.21.0_typescript@5.0.4
       typescript: 5.0.4
     transitivePeerDependencies:
@@ -3128,7 +3128,7 @@ packages:
       '@typescript-eslint/typescript-estree': 5.59.2_typescript@5.0.4
       eslint: 8.39.0
       eslint-scope: 5.1.1
-      semver: 7.3.8
+      semver: 7.5.0
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -3785,7 +3785,7 @@ packages:
   /builtins/5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
     dependencies:
-      semver: 7.3.8
+      semver: 7.5.0
     dev: true
 
   /bytes/3.0.0:
@@ -4086,12 +4086,12 @@ packages:
     engines: {node: '>= 12.0.0'}
     dev: true
 
-  /commitlint/17.6.1:
-    resolution: {integrity: sha512-yO11o5DmN/X4VCL+aLzgfJ1YXOM7qFzMN659SpISS4EBiv+QO16A0jeJU9rgVRbM2K06M7AfBQkZz7EPR3sAnQ==}
+  /commitlint/17.6.3:
+    resolution: {integrity: sha512-0S6j3gKZyLmY4F/YchW7lqXiBeplFBKJqXcrOdxhzJdsZdqiPZxqsN7zq++Ovc4iMLnX65W4bJB7YKalYfXesw==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
-      '@commitlint/cli': 17.6.1
+      '@commitlint/cli': 17.6.3
       '@commitlint/types': 17.4.4
     transitivePeerDependencies:
       - '@swc/core'
@@ -4383,7 +4383,7 @@ packages:
       postcss-modules-scope: 3.0.0_postcss@8.4.21
       postcss-modules-values: 4.0.0_postcss@8.4.21
       postcss-value-parser: 4.2.0
-      semver: 7.3.8
+      semver: 7.5.0
       webpack: 5.76.1_esbuild@0.17.8
     dev: true
 
@@ -7529,7 +7529,7 @@ packages:
       nopt: 6.0.0
       npmlog: 6.0.2
       rimraf: 3.0.2
-      semver: 7.3.8
+      semver: 7.5.0
       tar: 6.1.12
       which: 2.0.2
     transitivePeerDependencies:
@@ -7564,7 +7564,7 @@ packages:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.11.0
-      semver: 7.3.8
+      semver: 7.5.0
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -7574,7 +7574,7 @@ packages:
     dependencies:
       hosted-git-info: 6.1.1
       is-core-module: 2.11.0
-      semver: 7.3.8
+      semver: 7.5.0
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -7604,7 +7604,7 @@ packages:
     resolution: {integrity: sha512-SBU9oFglRVZnfElwAtF14NivyulDqF1VKqqwNsFW9HDcbHMAPHpRSsVFgKuwFGq/hVvWZExz62Th0kvxn/XE7Q==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      semver: 7.3.8
+      semver: 7.5.0
     dev: true
 
   /npm-normalize-package-bin/3.0.0:
@@ -7618,7 +7618,7 @@ packages:
     dependencies:
       hosted-git-info: 6.1.1
       proc-log: 3.0.0
-      semver: 7.3.8
+      semver: 7.5.0
       validate-npm-package-name: 5.0.0
     dev: true
 
@@ -7636,7 +7636,7 @@ packages:
       npm-install-checks: 6.0.0
       npm-normalize-package-bin: 3.0.0
       npm-package-arg: 10.1.0
-      semver: 7.3.8
+      semver: 7.5.0
     dev: true
 
   /npm-registry-fetch/14.0.2:
@@ -8212,7 +8212,7 @@ packages:
       cosmiconfig: 7.1.0
       klona: 2.0.5
       postcss: 8.4.21
-      semver: 7.3.8
+      semver: 7.5.0
       webpack: 5.76.1_esbuild@0.17.8
     dev: true
 
@@ -8929,7 +8929,7 @@ packages:
     resolution: {integrity: sha512-0Ju4+6A8iOnpL/Thra7dZsSlOHYAHIeMxfhWQRI1/VLcT3WDBZKKtQt/QkBOsiIN9ZpuvHE6cGZ0x4glCMmfiA==}
     engines: {node: '>=12'}
     dependencies:
-      semver: 7.3.8
+      semver: 7.5.0
     dev: true
 
   /semver-regex/4.0.5:
@@ -8949,6 +8949,14 @@ packages:
 
   /semver/7.3.8:
     resolution: {integrity: sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: true
+
+  /semver/7.5.0:
+    resolution: {integrity: sha512-+XC0AD/R7Q2mPSRuy2Id0+CGTZ98+8f+KvwirxOKIEyid+XSx6HbC63p+O4IndTHuX5Z+JxQ0TghCkO5Cg/2HA==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
