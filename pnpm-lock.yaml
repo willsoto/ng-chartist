@@ -27,7 +27,7 @@ specifiers:
   '@typescript-eslint/parser': 5.59.2
   chartist: 1.3.0
   commitlint: 17.6.3
-  core-js: 3.30.1
+  core-js: 3.30.2
   eslint: 8.40.0
   eslint-config-prettier: 8.8.0
   eslint-plugin-import: 2.27.5
@@ -81,7 +81,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.59.2_3qfatcekpgbllh6uk5ivyhkbxq
   chartist: 1.3.0
   commitlint: 17.6.3
-  core-js: 3.30.1
+  core-js: 3.30.2
   eslint: 8.40.0
   eslint-config-prettier: 8.8.0_eslint@8.40.0
   eslint-plugin-import: 2.27.5_fpivltgahi4upti426avloygci
@@ -4279,8 +4279,8 @@ packages:
       browserslist: 4.21.5
     dev: true
 
-  /core-js/3.30.1:
-    resolution: {integrity: sha512-ZNS5nbiSwDTq4hFosEDqm65izl2CWmLz0hARJMyNQBgkUZMIF51cQiMvIQKA6hvuaeWxQDP3hEedM1JZIgTldQ==}
+  /core-js/3.30.2:
+    resolution: {integrity: sha512-uBJiDmwqsbJCWHAwjrx3cvjbMXP7xD72Dmsn5LOJpiRmE3WbBbN5rCqQ2Qh6Ek6/eOrjlWngEynBWo4VxerQhg==}
     requiresBuild: true
     dev: true
 
