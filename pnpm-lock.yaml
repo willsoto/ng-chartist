@@ -46,7 +46,7 @@ specifiers:
   prettier: 2.8.8
   prettier-plugin-organize-imports: 3.2.2
   prettier-plugin-packagejson: 2.4.3
-  puppeteer: 20.1.1
+  puppeteer: 20.1.2
   rxjs: 7.8.1
   semantic-release: 21.0.2
   ts-node: 10.9.1
@@ -100,7 +100,7 @@ devDependencies:
   prettier: 2.8.8
   prettier-plugin-organize-imports: 3.2.2_j5pxtsccu66l27vudenovfwlqy
   prettier-plugin-packagejson: 2.4.3_prettier@2.8.8
-  puppeteer: 20.1.1_typescript@5.0.4
+  puppeteer: 20.1.2_typescript@5.0.4
   rxjs: 7.8.1
   semantic-release: 21.0.2
   ts-node: 10.9.1_x553fjfla674sodvstc3oio7dy
@@ -2537,8 +2537,8 @@ packages:
       config-chain: 1.1.13
     dev: true
 
-  /@puppeteer/browsers/1.0.1_typescript@5.0.4:
-    resolution: {integrity: sha512-9wkYhON9zBgtjYRE3FcokGCfjG25zjzNAYmsHpiWitRZ/4DeT3v125/fCUU66SaPJ4nUsxGNPgpS1TOcQ+8StA==}
+  /@puppeteer/browsers/1.1.0_typescript@5.0.4:
+    resolution: {integrity: sha512-+Nfk52G9cRAKq/V2LEaOlKIMsIuERSofk8hXEy6kMQtjg9Te1iuKymWOR+iKwwzj1RCkZU0fuOoSIclR839MNw==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     peerDependencies:
@@ -8407,8 +8407,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /puppeteer-core/20.1.1_typescript@5.0.4:
-    resolution: {integrity: sha512-iB9F2Om8J+nU4qi30oYw0hMWOw6eQN7kFkLLI/u3UvxONOCx5o0KmM6+byaK2/QGIuQu2ly1mPaJnC1DyoW07Q==}
+  /puppeteer-core/20.1.2_typescript@5.0.4:
+    resolution: {integrity: sha512-S1BLte+jVC/ugZkNoxFW9Fvbyr30CKZ0IIumf98FFqLh06Vuc21fddsr34botKtz27T81pqkpDYXNXYomA01dg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       typescript: '>= 4.7.4'
@@ -8416,17 +8416,12 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@puppeteer/browsers': 1.0.1_typescript@5.0.4
+      '@puppeteer/browsers': 1.1.0_typescript@5.0.4
       chromium-bidi: 0.4.7_5222unh4tkeylqma7dhccidrk4
       cross-fetch: 3.1.5
       debug: 4.3.4
       devtools-protocol: 0.0.1120988
-      extract-zip: 2.0.1
-      https-proxy-agent: 5.0.1
-      proxy-from-env: 1.1.0
-      tar-fs: 2.1.1
       typescript: 5.0.4
-      unbzip2-stream: 1.4.3
       ws: 8.13.0
     transitivePeerDependencies:
       - bufferutil
@@ -8435,16 +8430,13 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer/20.1.1_typescript@5.0.4:
-    resolution: {integrity: sha512-agGDvDPIgYYwXL1WFP/O+HiDnFHJxtkmqyg4QOiHhgAgopyjOc+itL8SuXkJzXNSh9pnjGcZvl7ouJy/rU3SRg==}
+  /puppeteer/20.1.2_typescript@5.0.4:
+    resolution: {integrity: sha512-QYDp+iVMP30TwlkXFOocON9qR3Nac5ez7PdXbY90mfuEgZb9vf3/OXL2vHprxwPtb2hgD4AxXvLZhEIqfD2y8Q==}
     requiresBuild: true
     dependencies:
-      '@puppeteer/browsers': 1.0.1_typescript@5.0.4
+      '@puppeteer/browsers': 1.1.0_typescript@5.0.4
       cosmiconfig: 8.1.3
-      https-proxy-agent: 5.0.1
-      progress: 2.0.3
-      proxy-from-env: 1.1.0
-      puppeteer-core: 20.1.1_typescript@5.0.4
+      puppeteer-core: 20.1.2_typescript@5.0.4
     transitivePeerDependencies:
       - bufferutil
       - encoding
