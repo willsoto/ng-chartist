@@ -42,7 +42,7 @@ specifiers:
   karma-jasmine: 5.1.0
   karma-jasmine-html-reporter: 2.0.0
   lint-staged: 13.2.2
-  ng-packagr: 16.0.0
+  ng-packagr: 16.0.1
   prettier: 2.8.8
   prettier-plugin-organize-imports: 3.2.2
   prettier-plugin-packagejson: 2.4.3
@@ -55,7 +55,7 @@ specifiers:
   zone.js: 0.13.0
 
 devDependencies:
-  '@angular-devkit/build-angular': 15.2.8_jib5deb2or36r5xhd7i55crgsy
+  '@angular-devkit/build-angular': 15.2.8_hwbvbelgafnwrzr34fmh2qgaea
   '@angular-eslint/builder': 15.2.1_3qfatcekpgbllh6uk5ivyhkbxq
   '@angular-eslint/eslint-plugin': 15.2.1_3qfatcekpgbllh6uk5ivyhkbxq
   '@angular-eslint/eslint-plugin-template': 15.2.1_3qfatcekpgbllh6uk5ivyhkbxq
@@ -96,7 +96,7 @@ devDependencies:
   karma-jasmine: 5.1.0_karma@6.4.2
   karma-jasmine-html-reporter: 2.0.0_cxwlpiagq7t2nkpvfrmwozbm4y
   lint-staged: 13.2.2
-  ng-packagr: 16.0.0_7k34nmt54uzc6grddsedlb5xzq
+  ng-packagr: 16.0.1_7k34nmt54uzc6grddsedlb5xzq
   prettier: 2.8.8
   prettier-plugin-organize-imports: 3.2.2_j5pxtsccu66l27vudenovfwlqy
   prettier-plugin-packagejson: 2.4.3_prettier@2.8.8
@@ -138,7 +138,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular/15.2.8_jib5deb2or36r5xhd7i55crgsy:
+  /@angular-devkit/build-angular/15.2.8_hwbvbelgafnwrzr34fmh2qgaea:
     resolution: {integrity: sha512-TGDnXhhOG6h6TOrWWzfnkha7wYBOXi7iJc1o1w1VKCayE3T6TZZdF847aK66vL9KG7AKYVdGhWEGw2WBHUBUpg==}
     engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -207,7 +207,7 @@ packages:
       loader-utils: 3.2.1
       magic-string: 0.29.0
       mini-css-extract-plugin: 2.7.2_webpack@5.76.1
-      ng-packagr: 16.0.0_7k34nmt54uzc6grddsedlb5xzq
+      ng-packagr: 16.0.1_7k34nmt54uzc6grddsedlb5xzq
       open: 8.4.1
       ora: 5.4.1
       parse5-html-rewriting-stream: 7.0.0
@@ -7427,8 +7427,8 @@ packages:
     resolution: {integrity: sha512-EZSPZB70jiVsivaBLYDCyntd5eH8NTSMOn3rB+HxwdmKThGELLdYv8qVIMWvZEFy9w8ZZpW9h9OB32l1rGtj7g==}
     dev: true
 
-  /ng-packagr/16.0.0_7k34nmt54uzc6grddsedlb5xzq:
-    resolution: {integrity: sha512-PSgzS9WMypXyZbI5G54mNiarT54a3j5vf5pj84BOWJaSh6MbX3q49fR1ql41A+qtkPkG+e7xQ3IhMOnOMilobg==}
+  /ng-packagr/16.0.1_7k34nmt54uzc6grddsedlb5xzq:
+    resolution: {integrity: sha512-MiJvSR+8olzCViwkQ6ihHLFWVNLdsfUNPCxrZqR7u1nOC/dXlWPf//l2IG0KLdVhHNCiM64mNdwaTpgDEBMD3w==}
     engines: {node: ^16.14.0 || >=18.10.0}
     hasBin: true
     peerDependencies:
