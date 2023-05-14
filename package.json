@@ -78,7 +78,7 @@
     "eslint-plugin-jsdoc": "39.9.1",
     "eslint-plugin-prefer-arrow": "1.2.3",
     "husky": "8.0.3",
-    "jasmine-core": "4.6.0",
+    "jasmine-core": "5.0.0",
     "jasmine-spec-reporter": "7.0.0",
     "karma": "6.4.2",
     "karma-chrome-launcher": "3.2.0",
