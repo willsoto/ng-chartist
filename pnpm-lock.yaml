@@ -50,7 +50,7 @@ specifiers:
   rxjs: 7.8.1
   semantic-release: 21.0.2
   ts-node: 10.9.1
-  tslib: 2.4.1
+  tslib: 2.5.1
   typescript: 5.0.4
   zone.js: 0.13.0
 
@@ -96,7 +96,7 @@ devDependencies:
   karma-jasmine: 5.1.0_karma@6.4.2
   karma-jasmine-html-reporter: 2.0.0_ziikyyy7djtzwz4kbrbpififzm
   lint-staged: 13.2.2
-  ng-packagr: 16.0.1_7k34nmt54uzc6grddsedlb5xzq
+  ng-packagr: 16.0.1_x2tckbwziekwegwgazpbcitcke
   prettier: 2.8.8
   prettier-plugin-organize-imports: 3.2.2_j5pxtsccu66l27vudenovfwlqy
   prettier-plugin-packagejson: 2.4.3_prettier@2.8.8
@@ -104,7 +104,7 @@ devDependencies:
   rxjs: 7.8.1
   semantic-release: 21.0.2
   ts-node: 10.9.1_s5yysxq5pekb2utcoyjmfmampi
-  tslib: 2.4.1
+  tslib: 2.5.1
   typescript: 5.0.4
   zone.js: 0.13.0
 
@@ -207,7 +207,7 @@ packages:
       loader-utils: 3.2.1
       magic-string: 0.29.0
       mini-css-extract-plugin: 2.7.2_webpack@5.76.1
-      ng-packagr: 16.0.1_7k34nmt54uzc6grddsedlb5xzq
+      ng-packagr: 16.0.1_x2tckbwziekwegwgazpbcitcke
       open: 8.4.1
       ora: 5.4.1
       parse5-html-rewriting-stream: 7.0.0
@@ -436,7 +436,7 @@ packages:
     dependencies:
       '@angular/core': 15.2.9_rxjs@7.8.1+zone.js@0.13.0
       rxjs: 7.8.1
-      tslib: 2.4.1
+      tslib: 2.5.1
     dev: true
 
   /@angular/compiler-cli/15.2.9_es3nngthv3dllqbj7ldfzotsuu:
@@ -456,7 +456,7 @@ packages:
       magic-string: 0.27.0
       reflect-metadata: 0.1.13
       semver: 7.3.8
-      tslib: 2.4.1
+      tslib: 2.5.1
       typescript: 5.0.4
       yargs: 17.7.1
     transitivePeerDependencies:
@@ -473,7 +473,7 @@ packages:
         optional: true
     dependencies:
       '@angular/core': 15.2.9_rxjs@7.8.1+zone.js@0.13.0
-      tslib: 2.4.1
+      tslib: 2.5.1
     dev: true
 
   /@angular/core/15.2.9_rxjs@7.8.1+zone.js@0.13.0:
@@ -484,7 +484,7 @@ packages:
       zone.js: ~0.11.4 || ~0.12.0 || ~0.13.0
     dependencies:
       rxjs: 7.8.1
-      tslib: 2.4.1
+      tslib: 2.5.1
       zone.js: 0.13.0
     dev: true
 
@@ -501,7 +501,7 @@ packages:
       '@angular/core': 15.2.9_rxjs@7.8.1+zone.js@0.13.0
       '@angular/platform-browser': 15.2.9_saasvbjwcyvrg46rivfba7ybci
       rxjs: 7.8.1
-      tslib: 2.4.1
+      tslib: 2.5.1
     dev: true
 
   /@angular/language-service/15.2.9:
@@ -522,7 +522,7 @@ packages:
       '@angular/compiler': 15.2.9_@angular+core@15.2.9
       '@angular/core': 15.2.9_rxjs@7.8.1+zone.js@0.13.0
       '@angular/platform-browser': 15.2.9_saasvbjwcyvrg46rivfba7ybci
-      tslib: 2.4.1
+      tslib: 2.5.1
     dev: true
 
   /@angular/platform-browser/15.2.9_saasvbjwcyvrg46rivfba7ybci:
@@ -538,7 +538,7 @@ packages:
     dependencies:
       '@angular/common': 15.2.9_ptit4znhzkqjjm7vgqsryxfu3i
       '@angular/core': 15.2.9_rxjs@7.8.1+zone.js@0.13.0
-      tslib: 2.4.1
+      tslib: 2.5.1
     dev: true
 
   /@angular/router/15.2.9_fn7m5m2aaraoyaufnj5zsfszqq:
@@ -554,7 +554,7 @@ packages:
       '@angular/core': 15.2.9_rxjs@7.8.1+zone.js@0.13.0
       '@angular/platform-browser': 15.2.9_saasvbjwcyvrg46rivfba7ybci
       rxjs: 7.8.1
-      tslib: 2.4.1
+      tslib: 2.5.1
     dev: true
 
   /@assemblyscript/loader/0.10.1:
@@ -2513,7 +2513,7 @@ packages:
       open: 8.4.1
       picocolors: 1.0.0
       tiny-glob: 0.2.9
-      tslib: 2.4.1
+      tslib: 2.5.1
     dev: true
 
   /@pnpm/config.env-replace/1.1.0:
@@ -6084,7 +6084,7 @@ packages:
   /injection-js/2.4.0:
     resolution: {integrity: sha512-6jiJt0tCAo9zjHbcwLiPL+IuNe9SQ6a9g0PEzafThW3fOQi0mrmiJGBJvDD6tmhPh8cQHIQtCOrJuBfQME4kPA==}
     dependencies:
-      tslib: 2.4.1
+      tslib: 2.5.1
     dev: true
 
   /inquirer/8.2.4:
@@ -6718,7 +6718,7 @@ packages:
     dependencies:
       copy-anything: 2.0.6
       parse-node-version: 1.0.1
-      tslib: 2.4.1
+      tslib: 2.5.1
     optionalDependencies:
       errno: 0.1.8
       graceful-fs: 4.2.10
@@ -7431,7 +7431,7 @@ packages:
     resolution: {integrity: sha512-EZSPZB70jiVsivaBLYDCyntd5eH8NTSMOn3rB+HxwdmKThGELLdYv8qVIMWvZEFy9w8ZZpW9h9OB32l1rGtj7g==}
     dev: true
 
-  /ng-packagr/16.0.1_7k34nmt54uzc6grddsedlb5xzq:
+  /ng-packagr/16.0.1_x2tckbwziekwegwgazpbcitcke:
     resolution: {integrity: sha512-MiJvSR+8olzCViwkQ6ihHLFWVNLdsfUNPCxrZqR7u1nOC/dXlWPf//l2IG0KLdVhHNCiM64mNdwaTpgDEBMD3w==}
     engines: {node: ^16.14.0 || >=18.10.0}
     hasBin: true
@@ -7469,7 +7469,7 @@ packages:
       rollup: 3.4.0
       rxjs: 7.8.1
       sass: 1.58.1
-      tslib: 2.4.1
+      tslib: 2.5.1
       typescript: 5.0.4
     optionalDependencies:
       esbuild: 0.17.8
@@ -8791,7 +8791,7 @@ packages:
   /rxjs/7.8.1:
     resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
     dependencies:
-      tslib: 2.4.1
+      tslib: 2.5.1
     dev: true
 
   /safe-buffer/5.1.2:
@@ -9483,7 +9483,7 @@ packages:
     engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
       '@pkgr/utils': 2.3.1
-      tslib: 2.5.0
+      tslib: 2.5.1
     dev: true
 
   /tapable/2.2.1:
@@ -9713,12 +9713,12 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tslib/2.4.1:
-    resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
-    dev: true
-
   /tslib/2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
+    dev: true
+
+  /tslib/2.5.1:
+    resolution: {integrity: sha512-KaI6gPil5m9vF7DKaoXxx1ia9fxS4qG5YveErRRVknPDXXriu5M8h48YRjB6h5ZUOKuAKlSJYb0GaDe8I39fRw==}
     dev: true
 
   /tsutils/3.21.0_typescript@5.0.4:
@@ -10392,5 +10392,5 @@ packages:
   /zone.js/0.13.0:
     resolution: {integrity: sha512-7m3hNNyswsdoDobCkYNAy5WiUulkMd3+fWaGT9ij6iq3Zr/IwJo4RMCYPSDjT+r7tnPErmY9sZpKhWQ8S5k6XQ==}
     dependencies:
-      tslib: 2.5.0
+      tslib: 2.5.1
     dev: true
