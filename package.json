@@ -98,7 +98,7 @@
     "typescript": "5.0.4",
     "zone.js": "0.13.0"
   },
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.6.0",
   "volta": {
     "node": "18.16.0"
   }
