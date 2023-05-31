@@ -4,7 +4,6 @@ import { BarChart } from "chartist";
 import { ChartistComponent } from "./chartist.component";
 
 const data = {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   Bar: {
     labels: [
       "Jan",
@@ -75,6 +74,7 @@ describe("chartist component", () => {
     it("should bind events if there are events", () => {
       spyOn(instance, "bindEvents").and.callThrough();
       instance.events = {
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
         draw: () => {},
       };
       instance.ngOnInit();
