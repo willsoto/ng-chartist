@@ -1,3 +1,15 @@
+# [8.0.0](https://github.com/willsoto/ng-chartist/compare/v7.1.4...v8.0.0) (2023-05-31)
+
+
+### Features
+
+* upgrade to Angular 16 ([050fd7e](https://github.com/willsoto/ng-chartist/commit/050fd7e489ce8d1769e02ac22fd3ac3ddb541e3f)), closes [#1428](https://github.com/willsoto/ng-chartist/issues/1428) [#1429](https://github.com/willsoto/ng-chartist/issues/1429) [#1430](https://github.com/willsoto/ng-chartist/issues/1430)
+
+
+### BREAKING CHANGES
+
+* Major Angular version bump. No API changes to the library.
+
 ## [7.1.4](https://github.com/willsoto/ng-chartist/compare/v7.1.3...v7.1.4) (2023-05-19)
 
 
