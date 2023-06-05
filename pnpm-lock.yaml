@@ -123,8 +123,8 @@ devDependencies:
     specifier: 5.1.0
     version: 5.1.0(karma@6.4.2)
   karma-jasmine-html-reporter:
-    specifier: 2.0.0
-    version: 2.0.0(jasmine-core@5.0.0)(karma-jasmine@5.1.0)(karma@6.4.2)
+    specifier: 2.1.0
+    version: 2.1.0(jasmine-core@5.0.0)(karma-jasmine@5.1.0)(karma@6.4.2)
   lint-staged:
     specifier: 13.2.2
     version: 13.2.2
@@ -7078,10 +7078,10 @@ packages:
       - supports-color
     dev: true
 
-  /karma-jasmine-html-reporter@2.0.0(jasmine-core@5.0.0)(karma-jasmine@5.1.0)(karma@6.4.2):
-    resolution: {integrity: sha512-SB8HNNiazAHXM1vGEzf8/tSyEhkfxuDdhYdPBX2Mwgzt0OuF2gicApQ+uvXLID/gXyJQgvrM9+1/2SxZFUUDIA==}
+  /karma-jasmine-html-reporter@2.1.0(jasmine-core@5.0.0)(karma-jasmine@5.1.0)(karma@6.4.2):
+    resolution: {integrity: sha512-sPQE1+nlsn6Hwb5t+HHwyy0A1FNCVKuL1192b+XNauMYWThz2kweiBVW1DqloRpVvZIJkIoHVB7XRpK78n1xbQ==}
     peerDependencies:
-      jasmine-core: ^4.0.0
+      jasmine-core: ^4.0.0 || ^5.0.0
       karma: ^6.0.0
       karma-jasmine: ^5.0.0
     dependencies:
