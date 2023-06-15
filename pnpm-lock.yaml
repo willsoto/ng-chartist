@@ -84,8 +84,8 @@ devDependencies:
     specifier: 17.6.5
     version: 17.6.5
   core-js:
-    specifier: 3.30.2
-    version: 3.30.2
+    specifier: 3.31.0
+    version: 3.31.0
   eslint:
     specifier: ^8.40.0
     version: 8.41.0
@@ -4634,8 +4634,8 @@ packages:
       browserslist: 4.21.5
     dev: true
 
-  /core-js@3.30.2:
-    resolution: {integrity: sha512-uBJiDmwqsbJCWHAwjrx3cvjbMXP7xD72Dmsn5LOJpiRmE3WbBbN5rCqQ2Qh6Ek6/eOrjlWngEynBWo4VxerQhg==}
+  /core-js@3.31.0:
+    resolution: {integrity: sha512-NIp2TQSGfR6ba5aalZD+ZQ1fSxGhDo/s1w0nx3RYzf2pnJxt7YynxFlFScP6eV7+GZsKO95NSjGxyJsU3DZgeQ==}
     requiresBuild: true
     dev: true
 
