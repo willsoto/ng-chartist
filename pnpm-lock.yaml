@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -63,8 +63,8 @@ devDependencies:
     specifier: 10.0.1
     version: 10.0.1(semantic-release@21.0.5)
   '@types/jasmine':
-    specifier: 4.3.2
-    version: 4.3.2
+    specifier: 4.3.3
+    version: 4.3.3
   '@types/jasminewd2':
     specifier: 2.0.10
     version: 2.0.10
@@ -3389,14 +3389,14 @@ packages:
       '@types/node': 18.16.18
     dev: true
 
-  /@types/jasmine@4.3.2:
-    resolution: {integrity: sha512-lKkWBcbxEZX/7nxPqEtv/OjPLaBa2j0o+hmv5Yn83b/+11C1kfBAkgvmrb13WDkmizUJ3B+jYrWh4M0YRtrzEQ==}
+  /@types/jasmine@4.3.3:
+    resolution: {integrity: sha512-KqJKAl72n2azOoohHe07OwQekDnGVGFkWGQgZ5fcE3rt+ahDFtoJ7Jte5qxW/acSlcV/ys/r2XmjtXiUs59o+w==}
     dev: true
 
   /@types/jasminewd2@2.0.10:
     resolution: {integrity: sha512-J7mDz7ovjwjc+Y9rR9rY53hFWKATcIkrr9DwQWmOas4/pnIPJTXawnzjwpHm3RSxz/e3ZVUvQ7cRbd5UQLo10g==}
     dependencies:
-      '@types/jasmine': 4.3.2
+      '@types/jasmine': 4.3.3
     dev: true
 
   /@types/json-schema@7.0.11:
