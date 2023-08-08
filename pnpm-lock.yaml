@@ -141,8 +141,8 @@ devDependencies:
     specifier: 2.4.5
     version: 2.4.5(prettier@3.0.1)
   puppeteer:
-    specifier: 21.0.1
-    version: 21.0.1
+    specifier: 21.0.2
+    version: 21.0.2
   rxjs:
     specifier: 7.8.1
     version: 7.8.1
@@ -2797,8 +2797,8 @@ packages:
       config-chain: 1.1.13
     dev: true
 
-  /@puppeteer/browsers@1.5.0:
-    resolution: {integrity: sha512-za318PweGINh5LnHSph7C4xhs0tmRjCD8EPpzcKlw4nzSPhnULj+LTG3+TGefZvW1ti5gjw2JkdQvQsivBeZlg==}
+  /@puppeteer/browsers@1.5.1:
+    resolution: {integrity: sha512-OY8S5/DIsCSn/jahxw+qhCKa6jYQff6yq1oenzakISLvGcwWpyMzshJ3BIR7iP0vG0RPJjvHRLRxbsWw4kah1w==}
     engines: {node: '>=16.3.0'}
     hasBin: true
     dependencies:
@@ -9277,11 +9277,11 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /puppeteer-core@21.0.1:
-    resolution: {integrity: sha512-E8eWLGhaZZpa7dYe/58qGX7SLb4mTg42NP5M7B+ibPrncgNjTOQa9x1sFIlTn1chF/BmoZqOcMIvwuxcb/9XzQ==}
+  /puppeteer-core@21.0.2:
+    resolution: {integrity: sha512-6tRjB9RZmPApPhQhzXZxmPUBt+6KM2P/eCp8p2o0DvK3P1V2qYkRi6/EQJEBIFquqZ+kF1zaW9Tg69p0dQlqFg==}
     engines: {node: '>=16.3.0'}
     dependencies:
-      '@puppeteer/browsers': 1.5.0
+      '@puppeteer/browsers': 1.5.1
       chromium-bidi: 0.4.20(devtools-protocol@0.0.1147663)
       cross-fetch: 4.0.0
       debug: 4.3.4
@@ -9294,14 +9294,14 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer@21.0.1:
-    resolution: {integrity: sha512-KTjmSdPZ6bMkq3EbAzAUhcB3gMDXvdwd6912rxG9hNtjwRJzHSA568vh6vIbO2WQeNmozRdt1LtiUMLSWfeMrg==}
+  /puppeteer@21.0.2:
+    resolution: {integrity: sha512-RAgbVjvwLABz8y+83xGdE+v7JLmvvcyGSlhQUX6k3rpBeRIO593E3DCaSY9VRUq3VJPMm7nWzDiZjUaK1tIpQg==}
     engines: {node: '>=16.3.0'}
     requiresBuild: true
     dependencies:
-      '@puppeteer/browsers': 1.5.0
+      '@puppeteer/browsers': 1.5.1
       cosmiconfig: 8.2.0
-      puppeteer-core: 21.0.1
+      puppeteer-core: 21.0.2
     transitivePeerDependencies:
       - bufferutil
       - encoding
