@@ -51,8 +51,8 @@ devDependencies:
     specifier: 16.2.0
     version: 16.2.0(@angular/common@16.2.0)(@angular/compiler@16.2.0)(@angular/core@16.2.0)(@angular/platform-browser@16.2.0)
   '@angular/router':
-    specifier: 16.2.0
-    version: 16.2.0(@angular/common@16.2.0)(@angular/core@16.2.0)(@angular/platform-browser@16.2.0)(rxjs@7.8.1)
+    specifier: 16.2.1
+    version: 16.2.1(@angular/common@16.2.0)(@angular/core@16.2.0)(@angular/platform-browser@16.2.0)(rxjs@7.8.1)
   '@commitlint/config-conventional':
     specifier: 17.7.0
     version: 17.7.0
@@ -592,13 +592,13 @@ packages:
       tslib: 2.6.1
     dev: true
 
-  /@angular/router@16.2.0(@angular/common@16.2.0)(@angular/core@16.2.0)(@angular/platform-browser@16.2.0)(rxjs@7.8.1):
-    resolution: {integrity: sha512-bFOaE7PNF0UHgVhl8BvyHiZHizTRZO7w3V29VqsdXUMMugBR4kr1/FXGzXTaz+9/eK7LokUwN9pjKKENNmhdyg==}
+  /@angular/router@16.2.1(@angular/common@16.2.0)(@angular/core@16.2.0)(@angular/platform-browser@16.2.0)(rxjs@7.8.1):
+    resolution: {integrity: sha512-C0WfcktsC25G37unxdH/5I7PbkVBSEB1o+0DJK9/HG97r1yzEkptF6fbRIzDBTS7dX0NfWN/PTAKF0ep7YlHvA==}
     engines: {node: ^16.14.0 || >=18.10.0}
     peerDependencies:
-      '@angular/common': 16.2.0
-      '@angular/core': 16.2.0
-      '@angular/platform-browser': 16.2.0
+      '@angular/common': 16.2.1
+      '@angular/core': 16.2.1
+      '@angular/platform-browser': 16.2.1
       rxjs: ^6.5.3 || ^7.4.0
     dependencies:
       '@angular/common': 16.2.0(@angular/core@16.2.0)(rxjs@7.8.1)
