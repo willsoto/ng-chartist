@@ -9,20 +9,20 @@ devDependencies:
     specifier: 16.2.1
     version: 16.2.1(@angular/compiler-cli@16.2.3)(@types/node@18.17.14)(karma@6.4.2)(ng-packagr@16.2.2)(typescript@5.2.2)
   '@angular-eslint/builder':
-    specifier: 16.1.1
-    version: 16.1.1(eslint@8.41.0)(typescript@5.2.2)
+    specifier: 16.1.2
+    version: 16.1.2(eslint@8.41.0)(typescript@5.2.2)
   '@angular-eslint/eslint-plugin':
-    specifier: 16.1.1
-    version: 16.1.1(eslint@8.41.0)(typescript@5.2.2)
+    specifier: 16.1.2
+    version: 16.1.2(eslint@8.41.0)(typescript@5.2.2)
   '@angular-eslint/eslint-plugin-template':
-    specifier: 16.1.1
-    version: 16.1.1(eslint@8.41.0)(typescript@5.2.2)
+    specifier: 16.1.2
+    version: 16.1.2(eslint@8.41.0)(typescript@5.2.2)
   '@angular-eslint/schematics':
-    specifier: 16.1.1
-    version: 16.1.1(@angular/cli@16.2.1)(eslint@8.41.0)(typescript@5.2.2)
+    specifier: 16.1.2
+    version: 16.1.2(@angular/cli@16.2.1)(eslint@8.41.0)(typescript@5.2.2)
   '@angular-eslint/template-parser':
-    specifier: 16.1.1
-    version: 16.1.1(eslint@8.41.0)(typescript@5.2.2)
+    specifier: 16.1.2
+    version: 16.1.2(eslint@8.41.0)(typescript@5.2.2)
   '@angular/cli':
     specifier: 16.2.1
     version: 16.2.1
@@ -352,8 +352,8 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-eslint/builder@16.1.1(eslint@8.41.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-NaB/A0mmlzp7laiucRUsRyoCrOE1In3UifsGP0vD6yjUpefk4g0v+0vCg8mhsIky8gYDtBE9YRfUiLA9FlF/FA==}
+  /@angular-eslint/builder@16.1.2(eslint@8.41.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-Y95IBEWqzWA7SyIh5nlPuFasw/4lOILrAdY5Ji6tOpIJgNFoiR9K1UcH46i34r3384ApN8GEQJ7FlK6D6qCOJA==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
@@ -368,18 +368,18 @@ packages:
       - debug
     dev: true
 
-  /@angular-eslint/bundled-angular-compiler@16.1.1:
-    resolution: {integrity: sha512-TB01AWZBDfrZBxN1I50HfBXtC7q4NI5fwl1aS4tOfef2/kQjTtR9zmha8CsxjDkAOa9tA/4MUayAMqEBQLuHKQ==}
+  /@angular-eslint/bundled-angular-compiler@16.1.2:
+    resolution: {integrity: sha512-wDiHPFsKTijMcQUPNcoHOJ5kezIPCCbmDK6LHH7hAdAC/eDY9NHL5e4zQ2Xkf3/r1PFuwVLGTwwreEHlmeENDw==}
     dev: true
 
-  /@angular-eslint/eslint-plugin-template@16.1.1(eslint@8.41.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-hwbpiUxLIY3TnZycieh+G4fbTWGMfzKx076O5Vuh2H4ZfXfs6ZXoi3Z0TH6X9lTmdgrwzOg1v4o5kdqu7MqPBg==}
+  /@angular-eslint/eslint-plugin-template@16.1.2(eslint@8.41.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-2qsoUgPg9Qp4EVUJRwWcJ+8JMxBb0ma3pNBjFmY6LOd59igRYorJKfWep4Nln1EicYRDRsCLzeLHO976+b1yaQ==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
     dependencies:
-      '@angular-eslint/bundled-angular-compiler': 16.1.1
-      '@angular-eslint/utils': 16.1.1(eslint@8.41.0)(typescript@5.2.2)
+      '@angular-eslint/bundled-angular-compiler': 16.1.2
+      '@angular-eslint/utils': 16.1.2(eslint@8.41.0)(typescript@5.2.2)
       '@typescript-eslint/type-utils': 5.62.0(eslint@8.41.0)(typescript@5.2.2)
       '@typescript-eslint/utils': 5.62.0(eslint@8.41.0)(typescript@5.2.2)
       aria-query: 5.3.0
@@ -390,13 +390,13 @@ packages:
       - supports-color
     dev: true
 
-  /@angular-eslint/eslint-plugin@16.1.1(eslint@8.41.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-GauEwFGEcgIdsld4cVarFJYYxaRbMLzbpxyvBUDFg4LNjlcQNt7zfqXRLJoZAaFJFPtGtAoo1+6BlEKErsntuQ==}
+  /@angular-eslint/eslint-plugin@16.1.2(eslint@8.41.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-lYVvoKUIOg/ez15yfN4zY2A++vnIeJe1xh2ADNTmmjSh2PFV24K9YOgrTbgrY3Ul9kzGDTBkvYqslq+IvMGdIw==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
     dependencies:
-      '@angular-eslint/utils': 16.1.1(eslint@8.41.0)(typescript@5.2.2)
+      '@angular-eslint/utils': 16.1.2(eslint@8.41.0)(typescript@5.2.2)
       '@typescript-eslint/utils': 5.62.0(eslint@8.41.0)(typescript@5.2.2)
       eslint: 8.41.0
       typescript: 5.2.2
@@ -404,13 +404,13 @@ packages:
       - supports-color
     dev: true
 
-  /@angular-eslint/schematics@16.1.1(@angular/cli@16.2.1)(eslint@8.41.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-KlR01gpURPjz5OcoEvmKv3zi8l6lFpXYmqkXbGMCz828QlqBz1X7iGLAPJki+WUFSFKbRsf4qqaWq6O/8vph7Q==}
+  /@angular-eslint/schematics@16.1.2(@angular/cli@16.2.1)(eslint@8.41.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-319i47NU6nfaAaQTQYN7k320proTIBCueWGt+fbT11210CMqQriFmD+B85AatCwQgMgLd8Rhs1/F7YL2OOhegA==}
     peerDependencies:
       '@angular/cli': '>= 16.0.0 < 17.0.0'
     dependencies:
-      '@angular-eslint/eslint-plugin': 16.1.1(eslint@8.41.0)(typescript@5.2.2)
-      '@angular-eslint/eslint-plugin-template': 16.1.1(eslint@8.41.0)(typescript@5.2.2)
+      '@angular-eslint/eslint-plugin': 16.1.2(eslint@8.41.0)(typescript@5.2.2)
+      '@angular-eslint/eslint-plugin-template': 16.1.2(eslint@8.41.0)(typescript@5.2.2)
       '@angular/cli': 16.2.1
       '@nx/devkit': 16.5.1(nx@16.5.1)
       ignore: 5.2.4
@@ -426,25 +426,25 @@ packages:
       - typescript
     dev: true
 
-  /@angular-eslint/template-parser@16.1.1(eslint@8.41.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-ZJ+M4+JGYcsIP/t+XiuzL5A5pCjjCen272U3/M/WqIMDDxyIKrHubK1bVtr2kndCEudqud+WyJU0ub13UIwGgw==}
+  /@angular-eslint/template-parser@16.1.2(eslint@8.41.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-vIkPOShVJLBEHYY3jISCVvJF3lXL//Y70J8T9lY2CBowgqp6AzzJ6cZU7JxrORN6b64rBUVvUtCGo8L36GvfuA==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
     dependencies:
-      '@angular-eslint/bundled-angular-compiler': 16.1.1
+      '@angular-eslint/bundled-angular-compiler': 16.1.2
       eslint: 8.41.0
       eslint-scope: 7.2.0
       typescript: 5.2.2
     dev: true
 
-  /@angular-eslint/utils@16.1.1(eslint@8.41.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-cmSTyFFY2TMLjhKdju0KQ9GB6nnXt1AbY9tZ0UtWGo3NKbrBUogc+PR9ma17VRAGhvdj/sSVkStphJH3F7rUgQ==}
+  /@angular-eslint/utils@16.1.2(eslint@8.41.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-2yfEK3BPSJsUhP4JCz0EB6ktu4E4+/zc9qdtZvPWNF/eww2J/oYVPjY47C/HVg4MXpjJTI8vbdkvcnxrICIkfw==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
     dependencies:
-      '@angular-eslint/bundled-angular-compiler': 16.1.1
+      '@angular-eslint/bundled-angular-compiler': 16.1.2
       '@typescript-eslint/utils': 5.62.0(eslint@8.41.0)(typescript@5.2.2)
       eslint: 8.41.0
       typescript: 5.2.2
