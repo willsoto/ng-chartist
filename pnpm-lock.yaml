@@ -7,7 +7,7 @@ settings:
 devDependencies:
   '@angular-devkit/build-angular':
     specifier: 16.2.1
-    version: 16.2.1(@angular/compiler-cli@16.2.4)(@types/node@18.17.14)(karma@6.4.2)(ng-packagr@16.2.2)(typescript@5.2.2)
+    version: 16.2.1(@angular/compiler-cli@16.2.4)(@types/node@18.17.14)(karma@6.4.2)(ng-packagr@16.2.3)(typescript@5.2.2)
   '@angular-eslint/builder':
     specifier: 16.1.2
     version: 16.1.2(eslint@8.41.0)(typescript@5.2.2)
@@ -129,8 +129,8 @@ devDependencies:
     specifier: 14.0.1
     version: 14.0.1
   ng-packagr:
-    specifier: 16.2.2
-    version: 16.2.2(@angular/compiler-cli@16.2.4)(tslib@2.6.2)(typescript@5.2.2)
+    specifier: 16.2.3
+    version: 16.2.3(@angular/compiler-cli@16.2.4)(tslib@2.6.2)(typescript@5.2.2)
   prettier:
     specifier: 3.0.3
     version: 3.0.3
@@ -182,7 +182,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular@16.2.1(@angular/compiler-cli@16.2.4)(@types/node@18.17.14)(karma@6.4.2)(ng-packagr@16.2.2)(typescript@5.2.2):
+  /@angular-devkit/build-angular@16.2.1(@angular/compiler-cli@16.2.4)(@types/node@18.17.14)(karma@6.4.2)(ng-packagr@16.2.3)(typescript@5.2.2):
     resolution: {integrity: sha512-2CkBOk76O8ROys5NUcRBMLdFVPuBfr3oy9omP5nO0aQVA9mWc3TRy/MeqDbr0xcY8LyJBB4B1jEQrkjWaeSDcA==}
     engines: {node: ^16.14.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -259,7 +259,7 @@ packages:
       magic-string: 0.30.1
       mini-css-extract-plugin: 2.7.6(webpack@5.88.2)
       mrmime: 1.0.1
-      ng-packagr: 16.2.2(@angular/compiler-cli@16.2.4)(tslib@2.6.2)(typescript@5.2.2)
+      ng-packagr: 16.2.3(@angular/compiler-cli@16.2.4)(tslib@2.6.2)(typescript@5.2.2)
       open: 8.4.2
       ora: 5.4.1
       parse5-html-rewriting-stream: 7.0.0
@@ -8611,8 +8611,8 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /ng-packagr@16.2.2(@angular/compiler-cli@16.2.4)(tslib@2.6.2)(typescript@5.2.2):
-    resolution: {integrity: sha512-ZO+FxFXFYvdunlIdz/Jkyr2Q8h/U6FeuCHLwC6Tsi52NIjOVqFqJUZxpqotQCh8FYoaO8F6mOhhcP6YH1uhArA==}
+  /ng-packagr@16.2.3(@angular/compiler-cli@16.2.4)(tslib@2.6.2)(typescript@5.2.2):
+    resolution: {integrity: sha512-VTJ7Qtge52+1subkhmF5nOqLNbVutA8/igJ0A5vH6Mgpb8Z/3HeZomtD1SHzZF5Dqp+p+QPHE548FWYu1MdMSQ==}
     engines: {node: ^16.14.0 || >=18.10.0}
     hasBin: true
     peerDependencies:
