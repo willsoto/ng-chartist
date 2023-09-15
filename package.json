@@ -64,7 +64,7 @@
     "@commitlint/config-conventional": "17.7.0",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/jasmine": "4.3.5",
+    "@types/jasmine": "4.3.6",
     "@types/jasminewd2": "2.0.10",
     "@types/node": "18.17.16",
     "@typescript-eslint/eslint-plugin": "6.7.0",
