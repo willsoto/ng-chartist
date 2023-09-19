@@ -141,8 +141,8 @@ devDependencies:
     specifier: 2.4.5
     version: 2.4.5(prettier@3.0.3)
   puppeteer:
-    specifier: 21.3.0
-    version: 21.3.0(typescript@5.2.2)
+    specifier: 21.3.1
+    version: 21.3.1(typescript@5.2.2)
   rxjs:
     specifier: 7.8.1
     version: 7.8.1
@@ -1968,8 +1968,8 @@ packages:
       '@commitlint/types': 17.4.4
       '@types/node': 20.4.7
       chalk: 4.1.2
-      cosmiconfig: 8.3.5(typescript@5.2.2)
-      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.4.7)(cosmiconfig@8.3.5)(ts-node@10.9.1)(typescript@5.2.2)
+      cosmiconfig: 8.3.6(typescript@5.2.2)
+      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.4.7)(cosmiconfig@8.3.6)(ts-node@10.9.1)(typescript@5.2.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -5020,7 +5020,7 @@ packages:
       vary: 1.1.2
     dev: true
 
-  /cosmiconfig-typescript-loader@4.4.0(@types/node@20.4.7)(cosmiconfig@8.3.5)(ts-node@10.9.1)(typescript@5.2.2):
+  /cosmiconfig-typescript-loader@4.4.0(@types/node@20.4.7)(cosmiconfig@8.3.6)(ts-node@10.9.1)(typescript@5.2.2):
     resolution: {integrity: sha512-BabizFdC3wBHhbI4kJh0VkQP9GkBfoHPydD0COMce1nJ1kJAB3F2TmJ/I7diULBKtmEWSwEbuN/KDtgnmUUVmw==}
     engines: {node: '>=v14.21.3'}
     peerDependencies:
@@ -5030,7 +5030,7 @@ packages:
       typescript: '>=4'
     dependencies:
       '@types/node': 20.4.7
-      cosmiconfig: 8.3.5(typescript@5.2.2)
+      cosmiconfig: 8.3.6(typescript@5.2.2)
       ts-node: 10.9.1(@types/node@20.4.7)(typescript@5.2.2)
       typescript: 5.2.2
     dev: true
@@ -9492,7 +9492,7 @@ packages:
       postcss: ^7.0.0 || ^8.0.1
       webpack: ^5.0.0
     dependencies:
-      cosmiconfig: 8.3.5(typescript@5.2.2)
+      cosmiconfig: 8.3.6(typescript@5.2.2)
       jiti: 1.19.1
       postcss: 8.4.27
       semver: 7.5.4
@@ -9707,8 +9707,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /puppeteer-core@21.3.0:
-    resolution: {integrity: sha512-3+KR7blDHZEGYhe/9Xpj7vl13MAXKhnnSfajEs6hlTY4FtPMfa/fXMuxZtWbQO0/s0B5QASmVmtO7wZScJ4Cgw==}
+  /puppeteer-core@21.3.1:
+    resolution: {integrity: sha512-3VrCDEAHk0hPvE8qtfKgsT8CzRuaQrDQGXdCOuMFJM7Ap+ghpQzhPa9H3DE3gZgwDvC5Jt7SxUkAWLCeNbD0xw==}
     engines: {node: '>=16.3.0'}
     dependencies:
       '@puppeteer/browsers': 1.7.1
@@ -9724,14 +9724,14 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer@21.3.0(typescript@5.2.2):
-    resolution: {integrity: sha512-+PLO2dLos4Kh+97yUrWD8t+hpN9Eq84vH3AQi7Qtc6VV1ucRSimhPr94etgJS6rZDorbviWlm+3i6XvFSJNhsg==}
+  /puppeteer@21.3.1(typescript@5.2.2):
+    resolution: {integrity: sha512-MhDvA+BYmzx+9vHJ/ZtknhlPbSPjTlHQnW1QYfkGpBcGW2Yy6eMahjkNuhAzN29H9tb47IcT0QsVcUy3Txx+SA==}
     engines: {node: '>=16.3.0'}
     requiresBuild: true
     dependencies:
       '@puppeteer/browsers': 1.7.1
       cosmiconfig: 8.3.6(typescript@5.2.2)
-      puppeteer-core: 21.3.0
+      puppeteer-core: 21.3.1
     transitivePeerDependencies:
       - bufferutil
       - encoding
