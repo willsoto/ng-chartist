@@ -141,8 +141,8 @@ devDependencies:
     specifier: 2.4.5
     version: 2.4.5(prettier@3.0.3)
   puppeteer:
-    specifier: 21.3.5
-    version: 21.3.5(typescript@5.2.2)
+    specifier: 21.3.6
+    version: 21.3.6(typescript@5.2.2)
   rxjs:
     specifier: 7.8.1
     version: 7.8.1
@@ -9715,8 +9715,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /puppeteer-core@21.3.5:
-    resolution: {integrity: sha512-C/yVgvob/HbUVTedhnURDruFkJYHEqJWlb6YltJGj/T7yzWdG4ouQ0JER8aX5g2RS4DMQ0xMNuhUVYMqC2QfnQ==}
+  /puppeteer-core@21.3.6:
+    resolution: {integrity: sha512-ZH6tjTdRXwW2fx5W3jBbG+yUVQdDfZW1kjfwvWwMzsnKEli5ZwV70Zp97GOebHQHrK8zM3vX5VqI9sd48c9PnQ==}
     engines: {node: '>=16.3.0'}
     dependencies:
       '@puppeteer/browsers': 1.7.1
@@ -9732,14 +9732,14 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer@21.3.5(typescript@5.2.2):
-    resolution: {integrity: sha512-Lff7dgN7D1AHnPBgceZiZpcXVpKOcnSCtBy+TZlwqYBumGapOky3/rUPScd6I6poh5XpPNzya6gbipBasAs7xA==}
+  /puppeteer@21.3.6(typescript@5.2.2):
+    resolution: {integrity: sha512-ulK9+KLvdaVsG0EKbKyw/DCXCz88rsnrvIJg9tY8AmkGR01AxI4ZJTH9BJl1OE7cLfh2vxjBvY+xfvJod6rfgw==}
     engines: {node: '>=16.3.0'}
     requiresBuild: true
     dependencies:
       '@puppeteer/browsers': 1.7.1
       cosmiconfig: 8.3.6(typescript@5.2.2)
-      puppeteer-core: 21.3.5
+      puppeteer-core: 21.3.6
     transitivePeerDependencies:
       - bufferutil
       - encoding
