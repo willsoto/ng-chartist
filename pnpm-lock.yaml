@@ -66,8 +66,8 @@ devDependencies:
     specifier: 5.1.1
     version: 5.1.1
   '@types/jasminewd2':
-    specifier: 2.0.12
-    version: 2.0.12
+    specifier: 2.0.13
+    version: 2.0.13
   '@types/node':
     specifier: 20.8.10
     version: 20.8.10
@@ -3371,8 +3371,8 @@ packages:
     resolution: {integrity: sha512-qL4GoZHHJl1JQ0vK31OtXMfkfGxYJnysmYz9kk0E8j5W96ThKykBF90uD3PcVmQUAzulbsaus2eFiBhCH5itfw==}
     dev: true
 
-  /@types/jasminewd2@2.0.12:
-    resolution: {integrity: sha512-C4rXKMnGqLqTw4mgfiT0fL91g5oFAUhreR8jeeYk4xYcgh1/CImqgn5pWcErnpJJS43XFUfHGit0sSPQ39G1Pg==}
+  /@types/jasminewd2@2.0.13:
+    resolution: {integrity: sha512-aJ3wj8tXMpBrzQ5ghIaqMisD8C3FIrcO6sDKHqFbuqAsI7yOxj0fA7MrRCPLZHIVUjERIwsMmGn/vB0UQ9u0Hg==}
     dependencies:
       '@types/jasmine': 5.1.1
     dev: true
