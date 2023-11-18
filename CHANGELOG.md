@@ -1,3 +1,10 @@
+# [8.2.0](https://github.com/willsoto/ng-chartist/compare/v8.1.3...v8.2.0) (2023-11-18)
+
+
+### Features
+
+* support Angular 17 ([d5cc3dc](https://github.com/willsoto/ng-chartist/commit/d5cc3dca829c6c1ba4c2bb42798b3ff762766886))
+
 ## [8.1.3](https://github.com/willsoto/ng-chartist/compare/v8.1.2...v8.1.3) (2023-08-19)
 
 
