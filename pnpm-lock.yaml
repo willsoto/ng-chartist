@@ -63,8 +63,8 @@ devDependencies:
     specifier: 10.0.1
     version: 10.0.1(semantic-release@22.0.8)
   '@types/jasmine':
-    specifier: 5.1.2
-    version: 5.1.2
+    specifier: 5.1.3
+    version: 5.1.3
   '@types/jasminewd2':
     specifier: 2.0.13
     version: 2.0.13
@@ -3396,14 +3396,14 @@ packages:
       '@types/node': 20.9.2
     dev: true
 
-  /@types/jasmine@5.1.2:
-    resolution: {integrity: sha512-GJzYZWAr7aZuVsQwo77ErgdnqiXiz1lwsXXKgsJEwMlAxWQqjpiTGh0JOpLGXSlIFvIAFbgZTHs0u+jBzh/GFg==}
+  /@types/jasmine@5.1.3:
+    resolution: {integrity: sha512-p86WqZZDuj3WGkf8Ltz+9OoRITkek4uk6GCz5zvbtWKHvEt2+Ib0xIbeD1/KfA5QmWe1G5YCrAtC8K0/CGJJHA==}
     dev: true
 
   /@types/jasminewd2@2.0.13:
     resolution: {integrity: sha512-aJ3wj8tXMpBrzQ5ghIaqMisD8C3FIrcO6sDKHqFbuqAsI7yOxj0fA7MrRCPLZHIVUjERIwsMmGn/vB0UQ9u0Hg==}
     dependencies:
-      '@types/jasmine': 5.1.2
+      '@types/jasmine': 5.1.3
     dev: true
 
   /@types/json-schema@7.0.12:
