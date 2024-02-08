@@ -7,7 +7,7 @@ settings:
 devDependencies:
   '@angular-devkit/build-angular':
     specifier: 17.1.2
-    version: 17.1.2(@angular/compiler-cli@17.1.2)(@types/node@20.11.16)(karma@6.4.2)(ng-packagr@17.1.2)(typescript@5.3.3)
+    version: 17.1.2(@angular/compiler-cli@17.1.3)(@types/node@20.11.16)(karma@6.4.2)(ng-packagr@17.1.2)(typescript@5.3.3)
   '@angular-eslint/builder':
     specifier: 17.2.1
     version: 17.2.1(eslint@8.41.0)(typescript@5.3.3)
@@ -33,8 +33,8 @@ devDependencies:
     specifier: 17.1.2
     version: 17.1.2(@angular/core@17.1.2)
   '@angular/compiler-cli':
-    specifier: 17.1.2
-    version: 17.1.2(@angular/compiler@17.1.2)(typescript@5.3.3)
+    specifier: 17.1.3
+    version: 17.1.3(@angular/compiler@17.1.2)(typescript@5.3.3)
   '@angular/core':
     specifier: 17.1.2
     version: 17.1.2(rxjs@7.8.1)(zone.js@0.14.3)
@@ -130,7 +130,7 @@ devDependencies:
     version: 15.2.2
   ng-packagr:
     specifier: 17.1.2
-    version: 17.1.2(@angular/compiler-cli@17.1.2)(tslib@2.6.2)(typescript@5.3.3)
+    version: 17.1.2(@angular/compiler-cli@17.1.3)(tslib@2.6.2)(typescript@5.3.3)
   prettier:
     specifier: 3.2.5
     version: 3.2.5
@@ -182,7 +182,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular@17.1.2(@angular/compiler-cli@17.1.2)(@types/node@20.11.16)(karma@6.4.2)(ng-packagr@17.1.2)(typescript@5.3.3):
+  /@angular-devkit/build-angular@17.1.2(@angular/compiler-cli@17.1.3)(@types/node@20.11.16)(karma@6.4.2)(ng-packagr@17.1.2)(typescript@5.3.3):
     resolution: {integrity: sha512-QIDTP+TjiCKCYRZYb8to4ymvIV1Djcfd5c17VdgMGhRqIQAAK1V4f4A1njdhGYOrgsLajZQAnKvFfk2ZMeI37A==}
     engines: {node: ^18.13.0 || >=20.9.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -227,7 +227,7 @@ packages:
       '@angular-devkit/architect': 0.1701.2
       '@angular-devkit/build-webpack': 0.1701.2(webpack-dev-server@4.15.1)(webpack@5.89.0)
       '@angular-devkit/core': 17.1.2
-      '@angular/compiler-cli': 17.1.2(@angular/compiler@17.1.2)(typescript@5.3.3)
+      '@angular/compiler-cli': 17.1.3(@angular/compiler@17.1.2)(typescript@5.3.3)
       '@babel/core': 7.23.7
       '@babel/generator': 7.23.6
       '@babel/helper-annotate-as-pure': 7.22.5
@@ -238,7 +238,7 @@ packages:
       '@babel/preset-env': 7.23.7(@babel/core@7.23.7)
       '@babel/runtime': 7.23.7
       '@discoveryjs/json-ext': 0.5.7
-      '@ngtools/webpack': 17.1.2(@angular/compiler-cli@17.1.2)(typescript@5.3.3)(webpack@5.89.0)
+      '@ngtools/webpack': 17.1.2(@angular/compiler-cli@17.1.3)(typescript@5.3.3)(webpack@5.89.0)
       '@vitejs/plugin-basic-ssl': 1.0.2(vite@5.0.12)
       ansi-colors: 4.1.3
       autoprefixer: 10.4.16(postcss@8.4.33)
@@ -263,7 +263,7 @@ packages:
       magic-string: 0.30.5
       mini-css-extract-plugin: 2.7.6(webpack@5.89.0)
       mrmime: 2.0.0
-      ng-packagr: 17.1.2(@angular/compiler-cli@17.1.2)(tslib@2.6.2)(typescript@5.3.3)
+      ng-packagr: 17.1.2(@angular/compiler-cli@17.1.3)(tslib@2.6.2)(typescript@5.3.3)
       open: 8.4.2
       ora: 5.4.1
       parse5-html-rewriting-stream: 7.0.0
@@ -499,12 +499,12 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@angular/compiler-cli@17.1.2(@angular/compiler@17.1.2)(typescript@5.3.3):
-    resolution: {integrity: sha512-4P4ttCe4IF9yq7bxCDxbVW7purN7qV0nqofP5Tth1xCsgIJeGmOMMQJN5RJCZNrAPMkvMv39eV878sgcDjbpOA==}
+  /@angular/compiler-cli@17.1.3(@angular/compiler@17.1.2)(typescript@5.3.3):
+    resolution: {integrity: sha512-bNDHXo3Twub0BZK9OmXly+0REs0RuR1SUXlTAeq+0XubCvnBDvpg9peL7UTTGS5YRo9sUTBnR6faSUA1F5objQ==}
     engines: {node: ^18.13.0 || >=20.9.0}
     hasBin: true
     peerDependencies:
-      '@angular/compiler': 17.1.2
+      '@angular/compiler': 17.1.3
       typescript: '>=5.2 <5.4'
     dependencies:
       '@angular/compiler': 17.1.2(@angular/core@17.1.2)
@@ -513,7 +513,7 @@ packages:
       chokidar: 3.5.3
       convert-source-map: 1.9.0
       reflect-metadata: 0.1.13
-      semver: 7.5.4
+      semver: 7.6.0
       tslib: 2.6.2
       typescript: 5.3.3
       yargs: 17.7.2
@@ -2391,7 +2391,7 @@ packages:
       call-bind: 1.0.2
     dev: true
 
-  /@ngtools/webpack@17.1.2(@angular/compiler-cli@17.1.2)(typescript@5.3.3)(webpack@5.89.0):
+  /@ngtools/webpack@17.1.2(@angular/compiler-cli@17.1.3)(typescript@5.3.3)(webpack@5.89.0):
     resolution: {integrity: sha512-MdNVSIp0x8AK26L+CxMTXH4weq2sNIp4C09RSdk7y6UkfBxMA3O0jTto9tW3ehkBaaGZ4dSiWkXA8L/ydMiQmA==}
     engines: {node: ^18.13.0 || >=20.9.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -2399,7 +2399,7 @@ packages:
       typescript: '>=5.2 <5.4'
       webpack: ^5.54.0
     dependencies:
-      '@angular/compiler-cli': 17.1.2(@angular/compiler@17.1.2)(typescript@5.3.3)
+      '@angular/compiler-cli': 17.1.3(@angular/compiler@17.1.2)(typescript@5.3.3)
       typescript: 5.3.3
       webpack: 5.89.0(esbuild@0.19.11)
     dev: true
@@ -3473,7 +3473,7 @@ packages:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
-      semver: 7.5.4
+      semver: 7.6.0
       ts-api-utils: 1.0.1(typescript@5.3.3)
       typescript: 5.3.3
     transitivePeerDependencies:
@@ -3495,7 +3495,7 @@ packages:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
-      semver: 7.5.4
+      semver: 7.6.0
       ts-api-utils: 1.0.1(typescript@5.3.3)
       typescript: 5.3.3
     transitivePeerDependencies:
@@ -3515,7 +3515,7 @@ packages:
       '@typescript-eslint/types': 6.19.0
       '@typescript-eslint/typescript-estree': 6.19.0(typescript@5.3.3)
       eslint: 8.41.0
-      semver: 7.5.4
+      semver: 7.6.0
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -8065,7 +8065,7 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /ng-packagr@17.1.2(@angular/compiler-cli@17.1.2)(tslib@2.6.2)(typescript@5.3.3):
+  /ng-packagr@17.1.2(@angular/compiler-cli@17.1.3)(tslib@2.6.2)(typescript@5.3.3):
     resolution: {integrity: sha512-H7WRiqbM91lOItixrKc9XP1ZLpsxwIk3l0JDnhSePvKQlMe1UsNrnYHzBek6iVyMolCuz86YR0Dovbpyi4aOzA==}
     engines: {node: ^18.13.0 || >=20.9.0}
     hasBin: true
@@ -8078,7 +8078,7 @@ packages:
       tailwindcss:
         optional: true
     dependencies:
-      '@angular/compiler-cli': 17.1.2(@angular/compiler@17.1.2)(typescript@5.3.3)
+      '@angular/compiler-cli': 17.1.3(@angular/compiler@17.1.2)(typescript@5.3.3)
       '@rollup/plugin-json': 6.0.1(rollup@4.5.0)
       '@rollup/plugin-node-resolve': 15.2.3(rollup@4.5.0)
       '@rollup/wasm-node': 4.5.0
