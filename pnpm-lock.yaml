@@ -141,8 +141,8 @@ devDependencies:
     specifier: 2.4.11
     version: 2.4.11(prettier@3.2.5)
   puppeteer:
-    specifier: 22.1.0
-    version: 22.1.0(typescript@5.3.3)
+    specifier: 22.2.0
+    version: 22.2.0(typescript@5.3.3)
   rxjs:
     specifier: 7.8.1
     version: 7.8.1
@@ -2592,8 +2592,8 @@ packages:
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
       agent-base: 7.1.0
-      http-proxy-agent: 7.0.0
-      https-proxy-agent: 7.0.2
+      http-proxy-agent: 7.0.2
+      https-proxy-agent: 7.0.4
       lru-cache: 10.0.1
       socks-proxy-agent: 8.0.2
     transitivePeerDependencies:
@@ -2953,8 +2953,8 @@ packages:
       config-chain: 1.1.13
     dev: true
 
-  /@puppeteer/browsers@2.0.1:
-    resolution: {integrity: sha512-IQj/rJY1MNfZ6Z2ERu+6S0LkIPBSXRGddgmvODqjm1afHy04aJIiWmoohuFtL78SPSlbjpIMuFVfhyqsR5Ng4A==}
+  /@puppeteer/browsers@2.1.0:
+    resolution: {integrity: sha512-xloWvocjvryHdUjDam/ZuGMh7zn4Sn3ZAaV4Ah2e2EwEt90N3XphZlSsU3n0VDc1F7kggCjMuH0UuxfPQ5mD9w==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
@@ -2962,6 +2962,7 @@ packages:
       extract-zip: 2.0.1
       progress: 2.0.3
       proxy-agent: 6.4.0
+      semver: 7.6.0
       tar-fs: 3.0.5
       unbzip2-stream: 1.4.3
       yargs: 17.7.2
@@ -3205,8 +3206,8 @@ packages:
       debug: 4.3.4
       dir-glob: 3.0.1
       globby: 13.1.4
-      http-proxy-agent: 7.0.0
-      https-proxy-agent: 7.0.2
+      http-proxy-agent: 7.0.2
+      https-proxy-agent: 7.0.4
       issue-parser: 6.0.0
       lodash-es: 4.17.21
       mime: 3.0.0
@@ -4624,12 +4625,12 @@ packages:
     engines: {node: '>=6.0'}
     dev: true
 
-  /chromium-bidi@0.5.9(devtools-protocol@0.0.1232444):
+  /chromium-bidi@0.5.9(devtools-protocol@0.0.1249869):
     resolution: {integrity: sha512-wOTX3m2zuHX0zRX4h7Ol1DAGz0cqHzo2IrAPvOqBxdd4ZR32vxg4FKNjmBihi1oP9b1QGSBBG5VNUUXUCsxDfg==}
     peerDependencies:
       devtools-protocol: '*'
     dependencies:
-      devtools-protocol: 0.0.1232444
+      devtools-protocol: 0.0.1249869
       mitt: 3.0.1
       urlpattern-polyfill: 10.0.0
     dev: true
@@ -5305,8 +5306,8 @@ packages:
     resolution: {integrity: sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g==}
     dev: true
 
-  /devtools-protocol@0.0.1232444:
-    resolution: {integrity: sha512-pM27vqEfxSxRkTMnF+XCmxSEb6duO5R+t8A9DEEJgy4Wz2RVanje2mmj99B6A3zv2r/qGfYlOvYznUhuokizmg==}
+  /devtools-protocol@0.0.1249869:
+    resolution: {integrity: sha512-Ctp4hInA0BEavlUoRy9mhGq0i+JSo/AwVyX2EFgZmV1kYB+Zq+EMBAn52QWu6FbRr10hRb6pBl420upbp4++vg==}
     dev: true
 
   /di@0.0.1:
@@ -6823,16 +6824,6 @@ packages:
 
   /http-parser-js@0.5.8:
     resolution: {integrity: sha512-SGeBX54F94Wgu5RH3X5jsDtf4eHyRogWX1XGT3b4HuW3tQPM4AaBzoUji/4AAJNXCEOWZ5O0DgZmJw1947gD5Q==}
-    dev: true
-
-  /http-proxy-agent@7.0.0:
-    resolution: {integrity: sha512-+ZT+iBxVUQ1asugqnD6oWoRiS25AkjNfG085dKJGtGxkdwLQrMKU5wJr2bOOFAXzKcTuqq+7fZlTMgG3SRfIYQ==}
-    engines: {node: '>= 14'}
-    dependencies:
-      agent-base: 7.1.0
-      debug: 4.3.4
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /http-proxy-agent@7.0.2:
@@ -9513,15 +9504,15 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /puppeteer-core@22.1.0:
-    resolution: {integrity: sha512-LdsQxslPf0Rpk6gLvkyyrraad2S4PUjGCT2CAKS2EnrRPpzIb6fsrFnoPNZxLlMkU7apU1g4Nf5wYePdSjxLkQ==}
+  /puppeteer-core@22.2.0:
+    resolution: {integrity: sha512-rxLM860FP05CxCPAn6dwY0KnVhbnogsXu4XORb+2hb/va69v7R1VdJWLMGHd7EE5wfpT8oFZ7Q6NN85OhOtV9Q==}
     engines: {node: '>=18'}
     dependencies:
-      '@puppeteer/browsers': 2.0.1
-      chromium-bidi: 0.5.9(devtools-protocol@0.0.1232444)
+      '@puppeteer/browsers': 2.1.0
+      chromium-bidi: 0.5.9(devtools-protocol@0.0.1249869)
       cross-fetch: 4.0.0
       debug: 4.3.4
-      devtools-protocol: 0.0.1232444
+      devtools-protocol: 0.0.1249869
       ws: 8.16.0
     transitivePeerDependencies:
       - bufferutil
@@ -9530,15 +9521,15 @@ packages:
       - utf-8-validate
     dev: true
 
-  /puppeteer@22.1.0(typescript@5.3.3):
-    resolution: {integrity: sha512-suatHy6A48YkoykjrJNkJaixWVrvnPtzIgngK17V/P0MvgSyJzuu21PyR+0lWIK0cfZqKqmR8CHZvHzOCd4MIg==}
+  /puppeteer@22.2.0(typescript@5.3.3):
+    resolution: {integrity: sha512-0Ax7zeqqbQL6Zcpo1WAvrqWQAnGsLB4tmQUUwsb5Cfo05XaQ78LWUUjaO4um7qaddKpZfk0vXlGcRVwtedpWfg==}
     engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@puppeteer/browsers': 2.0.1
+      '@puppeteer/browsers': 2.1.0
       cosmiconfig: 9.0.0(typescript@5.3.3)
-      puppeteer-core: 22.1.0
+      puppeteer-core: 22.2.0
     transitivePeerDependencies:
       - bufferutil
       - encoding
