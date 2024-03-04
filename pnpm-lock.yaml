@@ -7,7 +7,7 @@ settings:
 devDependencies:
   '@angular-devkit/build-angular':
     specifier: 17.2.2
-    version: 17.2.2(@angular/compiler-cli@17.2.3)(@types/node@20.11.24)(karma@6.4.3)(ng-packagr@17.2.0)(typescript@5.3.3)
+    version: 17.2.2(@angular/compiler-cli@17.2.3)(@types/node@20.11.24)(karma@6.4.3)(ng-packagr@17.2.1)(typescript@5.3.3)
   '@angular-eslint/builder':
     specifier: 17.2.1
     version: 17.2.1(eslint@8.57.0)(typescript@5.3.3)
@@ -129,8 +129,8 @@ devDependencies:
     specifier: 15.2.2
     version: 15.2.2
   ng-packagr:
-    specifier: 17.2.0
-    version: 17.2.0(@angular/compiler-cli@17.2.3)(tslib@2.6.2)(typescript@5.3.3)
+    specifier: 17.2.1
+    version: 17.2.1(@angular/compiler-cli@17.2.3)(tslib@2.6.2)(typescript@5.3.3)
   prettier:
     specifier: 3.2.5
     version: 3.2.5
@@ -187,7 +187,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular@17.2.2(@angular/compiler-cli@17.2.3)(@types/node@20.11.24)(karma@6.4.3)(ng-packagr@17.2.0)(typescript@5.3.3):
+  /@angular-devkit/build-angular@17.2.2(@angular/compiler-cli@17.2.3)(@types/node@20.11.24)(karma@6.4.3)(ng-packagr@17.2.1)(typescript@5.3.3):
     resolution: {integrity: sha512-K55xBiWBfxD4wmxLR2viOPbBryOk6YaZeNr72IMkp1yIrIy1BES6LDJi7R9fDW7+TprqZdM4B91Tkc+BCwYQzQ==}
     engines: {node: ^18.13.0 || >=20.9.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -268,7 +268,7 @@ packages:
       magic-string: 0.30.7
       mini-css-extract-plugin: 2.8.0(webpack@5.90.1)
       mrmime: 2.0.0
-      ng-packagr: 17.2.0(@angular/compiler-cli@17.2.3)(tslib@2.6.2)(typescript@5.3.3)
+      ng-packagr: 17.2.1(@angular/compiler-cli@17.2.3)(tslib@2.6.2)(typescript@5.3.3)
       open: 8.4.2
       ora: 5.4.1
       parse5-html-rewriting-stream: 7.0.0
@@ -8527,8 +8527,8 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /ng-packagr@17.2.0(@angular/compiler-cli@17.2.3)(tslib@2.6.2)(typescript@5.3.3):
-    resolution: {integrity: sha512-M2N4IoXkoZQjxstIL2OkCUhBUWH6LhyOtRv8Xi5FFQKxQL7C8/4OL8oilZRbHt2W7DyE3QpQk60S8AbZEypk9w==}
+  /ng-packagr@17.2.1(@angular/compiler-cli@17.2.3)(tslib@2.6.2)(typescript@5.3.3):
+    resolution: {integrity: sha512-Y0qukNaNkDfDp2gyJQ76pG4tKmENDNXiUacSvxmXZF5sCPM4DWS+SL5cZTqNFur70eocRTrWqtOoARSIPA1WMg==}
     engines: {node: ^18.13.0 || >=20.9.0}
     hasBin: true
     peerDependencies:
@@ -8559,7 +8559,7 @@ packages:
       jsonc-parser: 3.2.1
       less: 4.2.0
       ora: 5.4.1
-      piscina: 4.3.1
+      piscina: 4.4.0
       postcss: 8.4.35
       rxjs: 7.8.1
       sass: 1.70.0
@@ -9390,6 +9390,12 @@ packages:
 
   /piscina@4.3.1:
     resolution: {integrity: sha512-MBj0QYm3hJQ/C/wIXTN1OCYC8uQ4BBJ4LVele2P4ZwVQAH04vkk8E1SpDbuemLAL1dZorbuOob9rYqJeWCcCRg==}
+    optionalDependencies:
+      nice-napi: 1.0.2
+    dev: true
+
+  /piscina@4.4.0:
+    resolution: {integrity: sha512-+AQduEJefrOApE4bV7KRmp3N2JnnyErlVqq4P/jmko4FPz9Z877BCccl/iB3FdrWSUkvbGV9Kan/KllJgat3Vg==}
     optionalDependencies:
       nice-napi: 1.0.2
     dev: true
