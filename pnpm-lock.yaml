@@ -12,20 +12,20 @@ importers:
         specifier: 17.3.8
         version: 17.3.8(@angular/compiler-cli@17.3.10(@angular/compiler@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6)))(typescript@5.4.5))(@types/express@4.17.14)(@types/node@20.12.12)(chokidar@3.5.3)(karma@6.4.3)(ng-packagr@18.0.0(@angular/compiler-cli@17.3.10(@angular/compiler@17.3.10(@angular/core@17.3.10(rxjs@7.8.1)(zone.js@0.14.6)))(typescript@5.4.5))(tslib@2.6.2)(typescript@5.4.5))(typescript@5.4.5)
       '@angular-eslint/builder':
-        specifier: 17.5.0
-        version: 17.5.0(eslint@8.57.0)(typescript@5.4.5)
+        specifier: 17.5.1
+        version: 17.5.1(eslint@8.57.0)(typescript@5.4.5)
       '@angular-eslint/eslint-plugin':
-        specifier: 17.5.0
-        version: 17.5.0(eslint@8.57.0)(typescript@5.4.5)
+        specifier: 17.5.1
+        version: 17.5.1(eslint@8.57.0)(typescript@5.4.5)
       '@angular-eslint/eslint-plugin-template':
-        specifier: 17.5.0
-        version: 17.5.0(eslint@8.57.0)(typescript@5.4.5)
+        specifier: 17.5.1
+        version: 17.5.1(eslint@8.57.0)(typescript@5.4.5)
       '@angular-eslint/schematics':
-        specifier: 17.5.0
-        version: 17.5.0(@angular/cli@17.3.8(chokidar@3.5.3))(eslint@8.57.0)(typescript@5.4.5)
+        specifier: 17.5.1
+        version: 17.5.1(@angular/cli@17.3.8(chokidar@3.5.3))(eslint@8.57.0)(typescript@5.4.5)
       '@angular-eslint/template-parser':
-        specifier: 17.5.0
-        version: 17.5.0(eslint@8.57.0)(typescript@5.4.5)
+        specifier: 17.5.1
+        version: 17.5.1(eslint@8.57.0)(typescript@5.4.5)
       '@angular/cli':
         specifier: 17.3.8
         version: 17.3.8(chokidar@3.5.3)
@@ -240,40 +240,40 @@ packages:
     resolution: {integrity: sha512-QRVEYpIfgkprNHc916JlPuNbLzOgrm9DZalHasnLUz4P6g7pR21olb8YCyM2OTJjombNhya9ZpckcADU5Qyvlg==}
     engines: {node: ^18.13.0 || >=20.9.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
 
-  '@angular-eslint/builder@17.5.0':
-    resolution: {integrity: sha512-YSUf9VT5HwRSRWX97dIbSOHg6YvFqWGXVQSl4wrFPGM3le+ORzg3q85ZjCf37zL7ru1Z9b7MKtmz0paHSQJYnw==}
+  '@angular-eslint/builder@17.5.1':
+    resolution: {integrity: sha512-PWnH1t/Tdrdh+JwTJ87iXW//n1DPf3zF2MeKKfw8tiNOKjmCReL09KTabv+1Tbnm5B0ih6eOWCUG1N9VmcCubg==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
 
-  '@angular-eslint/bundled-angular-compiler@17.5.0':
-    resolution: {integrity: sha512-s9CNt4kznYtngGcGe8LvR8r/DS9/SFElIRAPKL5Ek+d/OTxLclkZQyWzHTQ5IZ0UTp6NG2cg9FIHvWmaNZfYTg==}
+  '@angular-eslint/bundled-angular-compiler@17.5.1':
+    resolution: {integrity: sha512-2gYFcWsGcw3BytCzt6DzKNayOHhW1dhMAgttor94lXLYOYN82eLGomC+aZF/U6fqVGBjm5JIEJpWbNF+NawZ7w==}
 
-  '@angular-eslint/eslint-plugin-template@17.5.0':
-    resolution: {integrity: sha512-opJ+hXFf3t6RbUolfNGBePz0tU9+jSbiwCVJRNJwkosoooX371t3b4tk7Bhc3T1qhbqrLS2LHRR8NZ6qwBNGCw==}
+  '@angular-eslint/eslint-plugin-template@17.5.1':
+    resolution: {integrity: sha512-OgTN6ogZSA7Fi/9Zfk3EZumr06MZPXyI7Y9A09WzkjgUikCXDNoYwvkT4Bh0jOtwDDhtAAFC9/TehJQj7f4o5A==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
 
-  '@angular-eslint/eslint-plugin@17.5.0':
-    resolution: {integrity: sha512-+FLn66Gq19T5ITP8c5R62XIx3fyHnwcPWgpZewjFXuyN+8VaKZCMZkmxaQcii5raWkXj18RlymTae0ueGBcM1w==}
+  '@angular-eslint/eslint-plugin@17.5.1':
+    resolution: {integrity: sha512-6/BLBJatp4DK9XtiVIh3UGIkZkikmtnV3tSvxtxG0LR1/zY+iWZIyQlmoJ42jRh3F0L46lmb14Z0iaIsPXuRGQ==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
 
-  '@angular-eslint/schematics@17.5.0':
-    resolution: {integrity: sha512-sm1ifXOCAvEe1FYqYE2sNH8uWYRE5b8lg7R2bpQdueVM9zwro9+bsZLS1f3U0yyBEwIKx8s/FuxPrWnOIXmQFg==}
+  '@angular-eslint/schematics@17.5.1':
+    resolution: {integrity: sha512-TvmsY08ViPqjUGAGl4ED477XzQ9qj7NXhZKN2aphIT+gZ8wVnOoBSWy+n2OSicrM6Eb0MSyACLZHnoD06+Z2sQ==}
     peerDependencies:
       '@angular/cli': '>= 17.0.0 < 18.0.0'
 
-  '@angular-eslint/template-parser@17.5.0':
-    resolution: {integrity: sha512-kspvJwoDO+kTbXAFYAXxtriMlMttJH7nx0tytYZ6758DFxPD/IKAQmfi9bhr2ZtRwfBwPgXmcr/wgFV+Oy8tMQ==}
+  '@angular-eslint/template-parser@17.5.1':
+    resolution: {integrity: sha512-DJcYacYEb17uUlQFYIKSjmlzWJEfev5pOMddDewV3h6oVm4T77X1SH/u8n5Oz1Zy13TrLWponwFORCKhg7nOfg==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
 
-  '@angular-eslint/utils@17.5.0':
-    resolution: {integrity: sha512-qBl6QNM/PJCtD3l1K38p2lQ6Uo07HzWhp4xDn7kMZCQgJMgp4t4q9EcDCXpub5XRZshH24qr+SEi5SHG81Bs5w==}
+  '@angular-eslint/utils@17.5.1':
+    resolution: {integrity: sha512-Rji1fC9OLDzRaeM2Aven0HdEnqaIgLn5cD6JQphTi1o4TzIXAcSrB9g52dVkH3RnqtOGYSIfFpA6+lQfn7wLOA==}
     peerDependencies:
       eslint: ^7.20.0 || ^8.0.0
       typescript: '*'
@@ -3782,6 +3782,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.3:
     resolution: {integrity: sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==}
@@ -6423,7 +6424,7 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular-eslint/builder@17.5.0(eslint@8.57.0)(typescript@5.4.5)':
+  '@angular-eslint/builder@17.5.1(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
       '@nx/devkit': 17.2.8(nx@17.2.8)
       eslint: 8.57.0
@@ -6434,12 +6435,12 @@ snapshots:
       - '@swc/core'
       - debug
 
-  '@angular-eslint/bundled-angular-compiler@17.5.0': {}
+  '@angular-eslint/bundled-angular-compiler@17.5.1': {}
 
-  '@angular-eslint/eslint-plugin-template@17.5.0(eslint@8.57.0)(typescript@5.4.5)':
+  '@angular-eslint/eslint-plugin-template@17.5.1(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
-      '@angular-eslint/bundled-angular-compiler': 17.5.0
-      '@angular-eslint/utils': 17.5.0(eslint@8.57.0)(typescript@5.4.5)
+      '@angular-eslint/bundled-angular-compiler': 17.5.1
+      '@angular-eslint/utils': 17.5.1(eslint@8.57.0)(typescript@5.4.5)
       '@typescript-eslint/type-utils': 7.10.0(eslint@8.57.0)(typescript@5.4.5)
       '@typescript-eslint/utils': 7.10.0(eslint@8.57.0)(typescript@5.4.5)
       aria-query: 5.3.0
@@ -6449,20 +6450,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@angular-eslint/eslint-plugin@17.5.0(eslint@8.57.0)(typescript@5.4.5)':
+  '@angular-eslint/eslint-plugin@17.5.1(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
-      '@angular-eslint/bundled-angular-compiler': 17.5.0
-      '@angular-eslint/utils': 17.5.0(eslint@8.57.0)(typescript@5.4.5)
+      '@angular-eslint/bundled-angular-compiler': 17.5.1
+      '@angular-eslint/utils': 17.5.1(eslint@8.57.0)(typescript@5.4.5)
       '@typescript-eslint/utils': 7.10.0(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
 
-  '@angular-eslint/schematics@17.5.0(@angular/cli@17.3.8(chokidar@3.5.3))(eslint@8.57.0)(typescript@5.4.5)':
+  '@angular-eslint/schematics@17.5.1(@angular/cli@17.3.8(chokidar@3.5.3))(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
-      '@angular-eslint/eslint-plugin': 17.5.0(eslint@8.57.0)(typescript@5.4.5)
-      '@angular-eslint/eslint-plugin-template': 17.5.0(eslint@8.57.0)(typescript@5.4.5)
+      '@angular-eslint/eslint-plugin': 17.5.1(eslint@8.57.0)(typescript@5.4.5)
+      '@angular-eslint/eslint-plugin-template': 17.5.1(eslint@8.57.0)(typescript@5.4.5)
       '@angular/cli': 17.3.8(chokidar@3.5.3)
       '@nx/devkit': 17.2.8(nx@17.2.8)
       ignore: 5.3.1
@@ -6477,16 +6478,16 @@ snapshots:
       - supports-color
       - typescript
 
-  '@angular-eslint/template-parser@17.5.0(eslint@8.57.0)(typescript@5.4.5)':
+  '@angular-eslint/template-parser@17.5.1(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
-      '@angular-eslint/bundled-angular-compiler': 17.5.0
+      '@angular-eslint/bundled-angular-compiler': 17.5.1
       eslint: 8.57.0
       eslint-scope: 8.0.0
       typescript: 5.4.5
 
-  '@angular-eslint/utils@17.5.0(eslint@8.57.0)(typescript@5.4.5)':
+  '@angular-eslint/utils@17.5.1(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
-      '@angular-eslint/bundled-angular-compiler': 17.5.0
+      '@angular-eslint/bundled-angular-compiler': 17.5.1
       '@typescript-eslint/utils': 7.10.0(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
       typescript: 5.4.5
