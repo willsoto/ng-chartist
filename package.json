@@ -101,7 +101,7 @@
     "semantic-release": "24.0.0",
     "ts-node": "10.9.2",
     "tslib": "2.6.3",
-    "typescript": "5.4.5",
+    "typescript": "5.5.2",
     "zone.js": "0.14.7"
   },
   "packageManager": "pnpm@9.4.0",
