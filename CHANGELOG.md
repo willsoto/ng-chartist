@@ -1,3 +1,10 @@
+## [8.3.2](https://github.com/willsoto/ng-chartist/compare/v8.3.1...v8.3.2) (2024-06-29)
+
+
+### Bug Fixes
+
+* support Angular 18 ([c7c039a](https://github.com/willsoto/ng-chartist/commit/c7c039a87ff1534468dc0999cca1555edf3bf2d3)), closes [#2170](https://github.com/willsoto/ng-chartist/issues/2170)
+
 ## [8.3.1](https://github.com/willsoto/ng-chartist/compare/v8.3.0...v8.3.1) (2024-06-04)
 
 
