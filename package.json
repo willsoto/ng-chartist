@@ -10,7 +10,7 @@
     "format": "prettier . --write",
     "lint": "ng lint ng-chartist",
     "ng": "ng",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "semantic-release",
     "test": "ng test ng-chartist --watch=false",
     "test:coverage": "ng test ng-chartist --watch=false --code-coverage",
