@@ -22,7 +22,7 @@
     "**/*.{js,mjs,ts,json,map}"
   ],
   "dependencies": {
-    "tslib": "2.6.3"
+    "tslib": "2.7.0"
   },
   "peerDependencies": {
     "@angular/common": "^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0",
