@@ -6054,8 +6054,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  ua-parser-js@0.7.32:
-    resolution: {integrity: sha512-f9BESNVhzlhEFf2CHMSj40NWOjYPl1YKYbrvIr/hFTDEmLq7SRbWvm7FcdcpCYT95zrOhC7gZSxjdnnTpBcwVw==}
+  ua-parser-js@0.7.39:
+    resolution: {integrity: sha512-IZ6acm6RhQHNibSt7+c09hhvsKy9WUr4DVbeq9U8o71qxyYtJpQeDxQnMrVqnIFMLcQjHO0I9wgfO2vIahht4w==}
+    hasBin: true
 
   uglify-js@3.17.4:
     resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
@@ -10995,7 +10996,7 @@ snapshots:
       socket.io: 4.7.4
       source-map: 0.6.1
       tmp: 0.2.3
-      ua-parser-js: 0.7.32
+      ua-parser-js: 0.7.39
       yargs: 16.2.0
     transitivePeerDependencies:
       - bufferutil
@@ -12936,7 +12937,7 @@ snapshots:
 
   typescript@5.6.3: {}
 
-  ua-parser-js@0.7.32: {}
+  ua-parser-js@0.7.39: {}
 
   uglify-js@3.17.4:
     optional: true
