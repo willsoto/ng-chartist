@@ -32,7 +32,7 @@ describe("chartist component", () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ChartistComponent],
+      imports: [ChartistComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ChartistComponent);
