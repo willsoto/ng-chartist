@@ -1,3 +1,17 @@
+# [9.0.0](https://github.com/willsoto/ng-chartist/compare/v8.3.2...v9.0.0) (2024-11-29)
+
+
+### Features
+
+* drop support for Angular v12 to v15 ([ddecdaf](https://github.com/willsoto/ng-chartist/commit/ddecdafdd0d7e9ee0934918b3810068da158f902))
+
+
+### BREAKING CHANGES
+
+* Angular v15 and below is no longer supported
+
+Signed-off-by: Will Soto <willsoto@users.noreply.github.com>
+
 ## [8.3.2](https://github.com/willsoto/ng-chartist/compare/v8.3.1...v8.3.2) (2024-06-29)
 
 
