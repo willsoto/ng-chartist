@@ -108,5 +108,15 @@
   "volta": {
     "node": "22.12.0",
     "pnpm": "10.4.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "core-js",
+      "esbuild",
+      "lmdb",
+      "msgpackr-extract",
+      "puppeteer"
+    ]
   }
 }
