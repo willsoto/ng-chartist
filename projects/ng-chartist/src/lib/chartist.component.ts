@@ -8,6 +8,7 @@ import {
   OnInit,
   Output,
   SimpleChanges,
+  inject,
 } from "@angular/core";
 import {
   BarChart,
@@ -82,6 +83,8 @@ export interface ChartEvent {
   ],
 })
 export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
+  private elementRef = inject(ElementRef);
+
   @Input()
   configuration: Configuration;
 
@@ -104,8 +107,6 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   initialized = new EventEmitter<ChartTypes>();
 
   chart: ChartTypes;
-
-  constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): void {
     if (this.configuration.type && this.configuration.data) {
