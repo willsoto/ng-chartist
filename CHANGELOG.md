@@ -1,3 +1,10 @@
+# [9.1.0](https://github.com/willsoto/ng-chartist/compare/v9.0.0...v9.1.0) (2025-07-06)
+
+
+### Features
+
+* **deps:** update Angular to v20 ([cb6a332](https://github.com/willsoto/ng-chartist/commit/cb6a3328b9794e592c841559cc8003110404782c))
+
 # [9.0.0](https://github.com/willsoto/ng-chartist/compare/v8.3.2...v9.0.0) (2024-11-29)
 
 
