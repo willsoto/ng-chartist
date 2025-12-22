@@ -1,3 +1,17 @@
+# [10.0.0](https://github.com/willsoto/ng-chartist/compare/v9.1.0...v10.0.0) (2025-12-22)
+
+
+### Features
+
+* upgrade to Angular 21 ([789cd7b](https://github.com/willsoto/ng-chartist/commit/789cd7b268238d3c9fbb33e89b3ac330b04e1993))
+
+
+### BREAKING CHANGES
+
+* Drops supports for Angular 16 and 17
+
+Signed-off-by: Will Soto <willsoto@users.noreply.github.com>
+
 # [9.1.0](https://github.com/willsoto/ng-chartist/compare/v9.0.0...v9.1.0) (2025-07-06)
 
 
