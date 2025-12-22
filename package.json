@@ -52,11 +52,11 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "20.3.13",
-    "@angular-eslint/builder": "21.0.1",
-    "@angular-eslint/eslint-plugin": "21.0.1",
-    "@angular-eslint/eslint-plugin-template": "21.0.1",
-    "@angular-eslint/schematics": "21.0.1",
-    "@angular-eslint/template-parser": "21.0.1",
+    "@angular-eslint/builder": "21.1.0",
+    "@angular-eslint/eslint-plugin": "21.1.0",
+    "@angular-eslint/eslint-plugin-template": "21.1.0",
+    "@angular-eslint/schematics": "21.1.0",
+    "@angular-eslint/template-parser": "21.1.0",
     "@angular/cli": "20.3.13",
     "@angular/common": "20.3.15",
     "@angular/compiler": "20.3.15",
@@ -72,9 +72,9 @@
     "@semantic-release/git": "10.0.1",
     "@types/jasmine": "5.1.13",
     "@types/jasminewd2": "2.0.13",
-    "@types/node": "24.10.1",
-    "@typescript-eslint/eslint-plugin": "8.48.1",
-    "@typescript-eslint/parser": "8.48.1",
+    "@types/node": "24.10.4",
+    "@typescript-eslint/eslint-plugin": "8.49.0",
+    "@typescript-eslint/parser": "8.49.0",
     "chartist": "1.5.0",
     "commitlint": "20.2.0",
     "core-js": "3.47.0",
@@ -96,7 +96,7 @@
     "prettier": "3.7.4",
     "prettier-plugin-organize-imports": "4.3.0",
     "prettier-plugin-packagejson": "2.5.20",
-    "puppeteer": "24.32.0",
+    "puppeteer": "24.33.0",
     "rxjs": "7.8.2",
     "semantic-release": "25.0.2",
     "ts-node": "10.9.2",
@@ -104,10 +104,10 @@
     "typescript": "5.9.3",
     "zone.js": "0.16.0"
   },
-  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a",
+  "packageManager": "pnpm@10.25.0+sha512.5e82639027af37cf832061bcc6d639c219634488e0f2baebe785028a793de7b525ffcd3f7ff574f5e9860654e098fe852ba8ac5dd5cefe1767d23a020a92f501",
   "volta": {
-    "node": "24.11.1",
-    "pnpm": "10.24.0"
+    "node": "24.12.0",
+    "pnpm": "10.25.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
