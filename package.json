@@ -73,8 +73,8 @@
     "@types/jasmine": "5.1.13",
     "@types/jasminewd2": "2.0.13",
     "@types/node": "24.10.4",
-    "@typescript-eslint/eslint-plugin": "8.50.0",
-    "@typescript-eslint/parser": "8.50.0",
+    "@typescript-eslint/eslint-plugin": "8.50.1",
+    "@typescript-eslint/parser": "8.50.1",
     "chartist": "1.5.0",
     "commitlint": "20.2.0",
     "core-js": "3.47.0",
@@ -104,10 +104,10 @@
     "typescript": "5.9.3",
     "zone.js": "0.16.0"
   },
-  "packageManager": "pnpm@10.26.1+sha512.664074abc367d2c9324fdc18037097ce0a8f126034160f709928e9e9f95d98714347044e5c3164d65bd5da6c59c6be362b107546292a8eecb7999196e5ce58fa",
+  "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6",
   "volta": {
     "node": "24.12.0",
-    "pnpm": "10.26.1"
+    "pnpm": "10.26.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
