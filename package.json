@@ -70,7 +70,7 @@
     "@commitlint/config-conventional": "20.3.1",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/jasmine": "5.1.15",
+    "@types/jasmine": "6.0.0",
     "@types/jasminewd2": "2.0.13",
     "@types/node": "24.10.9",
     "@typescript-eslint/eslint-plugin": "8.53.1",
