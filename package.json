@@ -95,7 +95,7 @@
     "ng-packagr": "21.1.0",
     "prettier": "3.8.1",
     "prettier-plugin-organize-imports": "4.3.0",
-    "prettier-plugin-packagejson": "2.5.22",
+    "prettier-plugin-packagejson": "3.0.0",
     "puppeteer": "24.36.1",
     "rxjs": "7.8.2",
     "semantic-release": "25.0.3",
