@@ -78,7 +78,7 @@
     "chartist": "1.5.0",
     "commitlint": "20.5.0",
     "core-js": "3.49.0",
-    "eslint": "^9.0.0",
+    "eslint": "^10.0.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsdoc": "62.8.1",
