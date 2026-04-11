@@ -11,6 +11,22 @@ jobs:
     uses: "willsoto/actions/.github/workflows/node-ci.yml@4.0.0"
     with:
       cacheEnabled: false
-    secrets:
-      GitHubToken: ${{ secrets.GH_TOKEN }}
-      NPMToken: ${{ secrets.NPM_TOKEN }}
+
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs:
+      - "test"
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: asdf-vm/actions/install@v4
+      - uses: pnpm/action-setup@v5
+      - run: "pnpm install --frozen-lockfile --ignore-scripts"
+      - run: "pnpm run build"
+      - run: "pnpm run release"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
