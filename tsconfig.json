@@ -7,7 +7,7 @@
   },
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "strict": false,
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -15,6 +15,7 @@
     "moduleResolution": "bundler",
     "outDir": "./dist/out-tsc",
     "resolveJsonModule": true,
+    "types": ["jasmine", "node"],
     "skipLibCheck": true,
     "sourceMap": true,
     "target": "ES2022"
