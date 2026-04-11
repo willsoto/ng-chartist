@@ -86,7 +86,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   private elementRef = inject(ElementRef);
 
   @Input()
-  configuration: Configuration;
+  configuration!: Configuration;
 
   /**
    * Events object where keys are Chartist event names and values are event handler functions.
@@ -96,7 +96,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
    * Event handler function will receive a data argument which contains event data.
    */
   @Input()
-  events: ChartEvent;
+  events?: ChartEvent;
 
   /**
    * Event emitted after Chartist chart has been initialized.
@@ -106,7 +106,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   @Output()
   initialized = new EventEmitter<ChartTypes>();
 
-  chart: ChartTypes;
+  chart?: ChartTypes;
 
   ngOnInit(): void {
     if (this.configuration.type && this.configuration.data) {
@@ -121,7 +121,7 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
   ngOnDestroy(): void {
     if (this.chart) {
       this.chart.detach();
-      this.chart = null;
+      this.chart = undefined;
     }
   }
 
@@ -129,36 +129,24 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     const nativeElement = this.elementRef.nativeElement;
     const { type, data, options, responsiveOptions } = this.configuration;
 
+    let chart: ChartTypes;
     if (type === "Bar") {
-      this.chart = new BarChart(
-        nativeElement,
-        data,
-        options,
-        responsiveOptions,
-      );
+      chart = new BarChart(nativeElement, data, options, responsiveOptions);
     } else if (type === "Line") {
-      this.chart = new LineChart(
-        nativeElement,
-        data,
-        options,
-        responsiveOptions,
-      );
+      chart = new LineChart(nativeElement, data, options, responsiveOptions);
     } else if (type === "Pie") {
-      this.chart = new PieChart(
-        nativeElement,
-        data,
-        options,
-        responsiveOptions,
-      );
+      chart = new PieChart(nativeElement, data, options, responsiveOptions);
     } else {
       throw new Error(`${type} is not a known chart type`);
     }
 
+    this.chart = chart;
+
     if (this.events) {
-      this.bindEvents();
+      this.bindEvents(chart, this.events);
     }
 
-    this.initialized.emit(this.chart);
+    this.initialized.emit(chart);
   }
 
   update(changes: SimpleChanges): void {
@@ -181,9 +169,9 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
     }
   }
 
-  bindEvents(): void {
-    for (const event of Object.keys(this.events)) {
-      this.chart.on(event, this.events[event]);
+  bindEvents(chart: ChartTypes, events: ChartEvent): void {
+    for (const event of Object.keys(events)) {
+      chart.on(event, events[event]);
     }
   }
 }

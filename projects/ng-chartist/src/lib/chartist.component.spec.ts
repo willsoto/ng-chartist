@@ -1,7 +1,7 @@
 import { SimpleChange } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { BarChart } from "chartist";
-import { ChartistComponent } from "./chartist.component";
+import { ChartistComponent, Configuration } from "./chartist.component";
 
 const data = {
   Bar: {
@@ -83,7 +83,9 @@ describe("chartist component", () => {
     });
 
     it("should not initialize chart when type is missing", () => {
-      instance.configuration.type = undefined;
+      instance.configuration = {
+        data: data["Bar"],
+      } as unknown as Configuration;
 
       instance.ngOnInit();
 
@@ -91,7 +93,9 @@ describe("chartist component", () => {
     });
 
     it("should not initialize chart when data is missing", () => {
-      instance.configuration.data = undefined;
+      instance.configuration = {
+        type: "Bar",
+      } as unknown as Configuration;
 
       instance.ngOnInit();
 
@@ -140,7 +144,7 @@ describe("chartist component", () => {
     it("should update the chart if the data changes", () => {
       instance.ngOnInit();
 
-      spyOn(instance.chart, "update").and.callThrough();
+      spyOn(instance.chart!, "update").and.callThrough();
       spyOn(instance, "renderChart").and.callThrough();
 
       instance.ngOnChanges({
@@ -153,13 +157,13 @@ describe("chartist component", () => {
       });
 
       expect(instance.renderChart).not.toHaveBeenCalled();
-      expect(instance.chart.update).toHaveBeenCalled();
+      expect(instance.chart!.update).toHaveBeenCalled();
     });
 
     it("should update the chart if the options change", () => {
       instance.ngOnInit();
 
-      spyOn(instance.chart, "update").and.callThrough();
+      spyOn(instance.chart!, "update").and.callThrough();
       spyOn(instance, "renderChart").and.callThrough();
 
       instance.ngOnChanges({
@@ -174,7 +178,7 @@ describe("chartist component", () => {
       });
 
       expect(instance.renderChart).not.toHaveBeenCalled();
-      expect(instance.chart.update).toHaveBeenCalled();
+      expect(instance.chart!.update).toHaveBeenCalled();
     });
   });
 });
