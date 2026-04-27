@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - uses: asdf-vm/actions/install@v4
-      - uses: pnpm/action-setup@v5
+      - uses: pnpm/action-setup@v6
       - run: "pnpm install --frozen-lockfile --ignore-scripts"
       - run: "pnpm run build"
       - run: "pnpm run release"
