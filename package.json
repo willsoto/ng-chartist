@@ -97,7 +97,7 @@
     "typescript-eslint": "8.61.1",
     "zone.js": "0.16.2"
   },
-  "packageManager": "pnpm@10.34.3",
+  "packageManager": "pnpm@11.9.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
