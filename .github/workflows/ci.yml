@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    uses: "willsoto/actions/.github/workflows/node-ci.yml@4.0.0"
+    uses: "willsoto/actions/.github/workflows/node-ci.yml@v6.0.1"
     with:
       cacheEnabled: false
 
