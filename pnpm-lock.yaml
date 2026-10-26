@@ -87,8 +87,8 @@ importers:
         specifier: 22.6.0
         version: 22.6.0(chokidar@5.0.0)(eslint@10.13.0(jiti@2.6.1))(typescript-eslint@8.71.2(eslint@10.13.0(jiti@2.6.1))(typescript@6.0.3))(typescript@6.0.3)
       chartist:
-        specifier: 1.5.0
-        version: 1.5.0
+        specifier: 2.1.0
+        version: 2.1.0
       commitlint:
         specifier: 21.2.4
         version: 21.2.4(conventional-commits-parser@7.0.1)(typescript@6.0.3)
@@ -3205,8 +3205,8 @@ packages:
   chardet@2.1.1:
     resolution: {integrity: sha512-PsezH1rqdV9VvyNhxxOW32/d75r01NY7TQCmOqomRo15ZSOKbpTFVsfjghxo6JloQUCGnH4k1LGu0R4yCLlWQQ==}
 
-  chartist@1.5.0:
-    resolution: {integrity: sha512-mcCJuWHpNqkJucuWEeHxymQCQEeAOkamGypqCV5+C+uI2NF4I3BOn/tjIuZaowJVNAcrY9BG3janLaCWSNVPDw==}
+  chartist@2.1.0:
+    resolution: {integrity: sha512-ii9KpmBS9Bhx/zvbRBr1KFOx24jCesiIUM2vFAl2KO+nmvsjNLqlvVq/9aDdrUKf2sst5c3MEozEQGZElSPnXA==}
     engines: {node: '>=14'}
 
   chokidar@3.6.0:
@@ -9844,7 +9844,7 @@ snapshots:
 
   chardet@2.1.1: {}
 
-  chartist@1.5.0: {}
+  chartist@2.1.0: {}
 
   chokidar@3.6.0:
     dependencies:

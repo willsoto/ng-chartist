@@ -72,7 +72,7 @@
     "@typescript-eslint/eslint-plugin": "8.71.2",
     "@typescript-eslint/parser": "8.71.2",
     "angular-eslint": "22.6.0",
-    "chartist": "1.5.0",
+    "chartist": "2.1.0",
     "commitlint": "21.2.4",
     "core-js": "3.50.0",
     "eslint": "^10.0.0",
