@@ -2,9 +2,9 @@
 pre-commit:
   parallel: true
   jobs:
-    - name: prettier
-      glob: "*.{ts,js,md,json,html}"
-      run: pnpm exec prettier --write {staged_files}
+    - name: oxfmt
+      glob: "*.{ts,js,md,json,html,yml,yaml}"
+      run: pnpm exec oxfmt --no-error-on-unmatched-pattern {staged_files}
       stage_fixed: true
 
 commit-msg:

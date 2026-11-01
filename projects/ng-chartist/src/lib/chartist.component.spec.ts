@@ -1,6 +1,7 @@
 import { SimpleChange } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { BarChart } from "chartist";
+
 import { ChartistComponent, Configuration } from "./chartist.component";
 
 const data = {
