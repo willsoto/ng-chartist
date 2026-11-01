@@ -1,8 +1,9 @@
-import { SimpleChange } from "@angular/core";
+import { Component, SimpleChange, signal } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { BarChart } from "chartist";
+import { BarChart, LineChart, PieChart } from "chartist";
+import { compat } from "chartist/compat";
 
-import { ChartistComponent, Configuration } from "./chartist.component";
+import { ChartEvent, ChartistComponent, Configuration } from "./chartist.component";
 
 const data = {
   Bar: {
@@ -168,5 +169,93 @@ describe("chartist component", () => {
       expect(instance.renderChart).not.toHaveBeenCalled();
       expect(instance.chart!.update).toHaveBeenCalled();
     });
+  });
+
+  it("should throw for an unknown chart type", () => {
+    instance.configuration = {
+      type: "Donut",
+      data: data["Bar"],
+    } as unknown as Configuration;
+
+    expect(() => instance.ngOnInit()).toThrow("Donut is not a known chart type");
+  });
+});
+
+@Component({
+  imports: [ChartistComponent],
+  template: `<x-chartist [configuration]="configuration()" [events]="events" />`,
+})
+class HostComponent {
+  configuration = signal<Configuration>({ type: "Bar", data: data["Bar"] });
+  events?: ChartEvent;
+}
+
+describe("chartist component in a host template", () => {
+  let fixture: ComponentFixture<HostComponent>;
+  let host: HostComponent;
+
+  function chartist(): ChartistComponent {
+    return fixture.debugElement.children[0].componentInstance;
+  }
+
+  function svg(): SVGElement | null {
+    return fixture.nativeElement.querySelector("x-chartist > svg");
+  }
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(HostComponent);
+    host = fixture.componentInstance;
+  });
+
+  it.each([
+    { type: "Bar", chartClass: BarChart, data: data["Bar"] },
+    { type: "Line", chartClass: LineChart, data: data["Bar"] },
+    { type: "Pie", chartClass: PieChart, data: { series: [5, 3, 4] } },
+  ] as const)(
+    "should render a $type chart into the host element",
+    async ({ type, chartClass, data }) => {
+      host.configuration.set({ type, data } as Configuration);
+      await fixture.whenStable();
+
+      expect(chartist().chart).toBeInstanceOf(chartClass);
+      await vi.waitFor(() => expect(svg()?.classList).toContain(`ct-chart-${type.toLowerCase()}`));
+    },
+  );
+
+  // Chartist 2 only emits the 1.x event names when the compat plugin is installed.
+  it("should forward chart events to the bound handlers", async () => {
+    const created = vi.fn();
+    host.events = { created };
+    host.configuration.set({ type: "Bar", data: data["Bar"], options: { plugins: [compat] } });
+    await fixture.whenStable();
+
+    await vi.waitFor(() => expect(created).toHaveBeenCalled());
+  });
+
+  it("should update the existing chart when data changes", async () => {
+    const onData = vi.fn();
+    host.events = { data: onData };
+    host.configuration.set({ type: "Bar", data: data["Bar"], options: { plugins: [compat] } });
+    await fixture.whenStable();
+    await vi.waitFor(() => expect(svg()).not.toBeNull());
+
+    const chart = chartist().chart;
+    const nextData = { labels: ["Jan"], series: [[1]] };
+    host.configuration.set({ type: "Bar", data: nextData, options: { plugins: [compat] } });
+    await fixture.whenStable();
+
+    expect(chartist().chart).toBe(chart);
+    expect(onData).toHaveBeenLastCalledWith({ type: "update", data: nextData });
+  });
+
+  it("should detach the chart when destroyed", async () => {
+    await fixture.whenStable();
+    const component = chartist();
+    const detach = vi.spyOn(component.chart!, "detach");
+
+    fixture.destroy();
+
+    expect(detach).toHaveBeenCalled();
+    expect(component.chart).toBeUndefined();
   });
 });
