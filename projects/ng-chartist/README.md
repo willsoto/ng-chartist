@@ -27,6 +27,7 @@ Add the Chartist stylesheet to the `styles` array in `angular.json`:
 
 | ng-chartist | Angular | Chartist |
 | ----------- | ------- | -------- |
+| 12.x        | 18–22   | 2.x      |
 | 11.x        | 18–22   | 1.x, 2.x |
 | 10.x        | 18–21   | 1.x      |
 | 9.x         | 16–19   | 1.x      |
@@ -79,30 +80,33 @@ import { ChartistModule } from "ng-chartist";
 export class SomeModule {}
 ```
 
-`type` can be `"Bar"`, `"Line"` or `"Pie"`. Assigning a new `configuration` object updates the chart. If `type` changes, the chart is re-created.
+`type` can be `"Bar"`, `"Line"` or `"Pie"`. Assigning a new `configuration` object updates the chart in place when only `data` or `options` change. Changing `type`, `responsiveOptions`, `options.on` or `options.plugins` re-creates the chart.
 
 ### Events
 
-Pass Chartist event handlers through `events`, and use `initialized` to get the underlying chart instance:
+Chartist 2 charts emit phase events (`render`, `mount`, …). Pass listeners through `options.on`, and plugins through `options.plugins`:
 
 ```ts
-import { ChartEvent } from "ng-chartist";
-
-events: ChartEvent = {
-  draw: (data) => {
-    // ...
+configuration: Configuration = {
+  type: "Line",
+  data,
+  options: {
+    on: {
+      mount: ({ elementOf, scene }) => {
+        // ...
+      },
+    },
   },
 };
 ```
 
+Use `initialized` to get the chart handle, for example to listen to custom events with `on()`:
+
 ```html
-<x-chartist
-  [configuration]="configuration"
-  [events]="events"
-  (initialized)="onInitialized($event)" />
+<x-chartist [configuration]="configuration" (initialized)="onInitialized($event)" />
 ```
 
-Handlers are bound when the chart is created, so set `events` before the chart first renders.
+The 1.x events (`draw`, `created`, …) are only emitted when the `compat` plugin from `chartist/compat` is in `options.plugins`.
 
 ## License
 
