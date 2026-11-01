@@ -65,14 +65,14 @@ describe("chartist component", () => {
     });
 
     it("should emit initialized event when chart is initialized", () => {
-      spyOn(instance.initialized, "emit").and.callThrough();
+      vi.spyOn(instance.initialized, "emit");
       instance.ngOnInit();
 
       expect(instance.initialized.emit).toHaveBeenCalled();
     });
 
     it("should bind events if there are events", () => {
-      spyOn(instance, "bindEvents").and.callThrough();
+      vi.spyOn(instance, "bindEvents");
       instance.events = {
         // eslint-disable-next-line @typescript-eslint/no-empty-function
         draw: () => {},
@@ -112,7 +112,7 @@ describe("chartist component", () => {
     });
 
     it("should re-render the chart if the chart type changes", () => {
-      spyOn(instance, "renderChart").and.callThrough();
+      vi.spyOn(instance, "renderChart");
       instance.ngOnChanges({
         configuration: {
           currentValue: {
@@ -127,7 +127,7 @@ describe("chartist component", () => {
     });
 
     it("should emit initialized event when the chart type changes", () => {
-      spyOn(instance.initialized, "emit").and.callThrough();
+      vi.spyOn(instance.initialized, "emit");
       instance.ngOnChanges({
         configuration: {
           currentValue: {
@@ -144,8 +144,8 @@ describe("chartist component", () => {
     it("should update the chart if the data changes", () => {
       instance.ngOnInit();
 
-      spyOn(instance.chart!, "update").and.callThrough();
-      spyOn(instance, "renderChart").and.callThrough();
+      vi.spyOn(instance.chart!, "update");
+      vi.spyOn(instance, "renderChart");
 
       instance.ngOnChanges({
         configuration: {
@@ -163,8 +163,8 @@ describe("chartist component", () => {
     it("should update the chart if the options change", () => {
       instance.ngOnInit();
 
-      spyOn(instance.chart!, "update").and.callThrough();
-      spyOn(instance, "renderChart").and.callThrough();
+      vi.spyOn(instance.chart!, "update");
+      vi.spyOn(instance, "renderChart");
 
       instance.ngOnChanges({
         configuration: {

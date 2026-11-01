@@ -5,4 +5,5 @@ allowBuilds:
   lefthook: false
   lmdb: true
   msgpackr-extract: true
-  puppeteer: true
+
+extendNodePath: false
