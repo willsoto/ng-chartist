@@ -25,10 +25,11 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular/build:unit-test",
           "options": {
             "tsConfig": "./tsconfig.spec.json",
-            "karmaConfig": "./karma.conf.js"
+            "runner": "vitest",
+            "browsers": ["chromiumHeadless"]
           }
         },
         "lint": {

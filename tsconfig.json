@@ -15,7 +15,7 @@
     "moduleResolution": "bundler",
     "outDir": "./dist/out-tsc",
     "resolveJsonModule": true,
-    "types": ["jasmine", "node"],
+    "types": ["vitest/globals", "node"],
     "skipLibCheck": true,
     "sourceMap": true,
     "target": "ES2022"
