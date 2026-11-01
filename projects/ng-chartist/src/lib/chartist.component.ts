@@ -47,9 +47,7 @@ export interface PieChartConfiguration {
 }
 
 export type Configuration =
-  | BarChartConfiguration
-  | LineChartConfiguration
-  | PieChartConfiguration;
+  BarChartConfiguration | LineChartConfiguration | PieChartConfiguration;
 
 /**
  * Represents chart events.
