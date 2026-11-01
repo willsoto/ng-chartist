@@ -1,6 +1,5 @@
 allowBuilds:
   "@parcel/watcher": true
-  core-js: true
   esbuild: true
   lefthook: false
   lmdb: true
