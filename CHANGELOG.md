@@ -1,3 +1,17 @@
+# [12.0.0](https://github.com/willsoto/ng-chartist/compare/v11.0.0...v12.0.0) (2026-11-01)
+
+
+* feat!: use chartist 2 preset api ([5115c39](https://github.com/willsoto/ng-chartist/commit/5115c3901a45812b1f061498c84948cd46cdbfb4))
+
+
+### BREAKING CHANGES
+
+* chartist 1.x is no longer supported. The `events` input
+and `ChartEvent` type are removed; pass phase listeners through
+`options.on` instead. `options` and `responsiveOptions` now use the
+chartist 2 preset option types, and `initialized` emits the preset
+handle.
+
 # [11.0.0](https://github.com/willsoto/ng-chartist/compare/v10.0.0...v11.0.0) (2026-11-01)
 
 
