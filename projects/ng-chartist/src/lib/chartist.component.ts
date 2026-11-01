@@ -46,10 +46,7 @@ export interface PieChartConfiguration {
   responsiveOptions?: ResponsiveOptions<PieChartOptions>;
 }
 
-export type Configuration =
-  | BarChartConfiguration
-  | LineChartConfiguration
-  | PieChartConfiguration;
+export type Configuration = BarChartConfiguration | LineChartConfiguration | PieChartConfiguration;
 
 /**
  * Represents chart events.
@@ -156,15 +153,11 @@ export class ChartistComponent implements OnInit, OnChanges, OnDestroy {
       return;
     }
 
-    const changedConfiguration = changes.configuration
-      .currentValue as Configuration;
+    const changedConfiguration = changes.configuration.currentValue as Configuration;
 
     if (!this.chart || changedConfiguration.type !== type) {
       this.renderChart();
-    } else if (
-      "data" in changedConfiguration ||
-      "options" in changedConfiguration
-    ) {
+    } else if ("data" in changedConfiguration || "options" in changedConfiguration) {
       this.chart.update(data, options);
     }
   }

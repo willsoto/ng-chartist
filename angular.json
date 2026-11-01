@@ -35,10 +35,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/ng-chartist/**/*.ts",
-              "projects/ng-chartist/**/*.html"
-            ]
+            "lintFilePatterns": ["projects/ng-chartist/**/*.ts", "projects/ng-chartist/**/*.html"]
           }
         }
       }
