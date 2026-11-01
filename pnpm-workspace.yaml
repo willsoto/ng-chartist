@@ -1,0 +1,8 @@
+allowBuilds:
+  "@parcel/watcher": true
+  core-js: true
+  esbuild: true
+  lefthook: false
+  lmdb: true
+  msgpackr-extract: true
+  puppeteer: true
