@@ -1,196 +1,23 @@
-import { Component, SimpleChange, signal } from "@angular/core";
+import { Component, signal } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { BarChart, LineChart, PieChart } from "chartist";
-import { compat } from "chartist/compat";
 
-import { ChartEvent, ChartistComponent, Configuration } from "./chartist.component";
+import { ChartistComponent, Configuration } from "./chartist.component";
 
-const data = {
-  Bar: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    series: [
-      [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-      [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4],
-    ],
-  },
+const barData = {
+  labels: ["Jan", "Feb", "Mar"],
+  series: [[5, 4, 3]],
 };
-
-describe("chartist component", () => {
-  let instance: ChartistComponent;
-  let fixture: ComponentFixture<ChartistComponent>;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [ChartistComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(ChartistComponent);
-    instance = fixture.componentInstance;
-  });
-
-  it("should be initialized", () => {
-    expect(fixture).toBeDefined();
-    expect(instance).toBeDefined();
-  });
-
-  describe("onInit", () => {
-    beforeEach(() => {
-      instance.configuration = {
-        type: "Bar",
-        data: data["Bar"],
-      };
-    });
-
-    it("should initialize the correct chart only once", () => {
-      instance.ngOnInit();
-
-      expect(instance.chart).toBeInstanceOf(BarChart);
-    });
-
-    it("should return the correct chart instance", () => {
-      instance.ngOnInit();
-
-      expect(instance.chart instanceof BarChart).toBe(true);
-    });
-
-    it("should emit initialized event when chart is initialized", () => {
-      vi.spyOn(instance.initialized, "emit");
-      instance.ngOnInit();
-
-      expect(instance.initialized.emit).toHaveBeenCalled();
-    });
-
-    it("should bind events if there are events", () => {
-      vi.spyOn(instance, "bindEvents");
-      instance.events = {
-        // eslint-disable-next-line @typescript-eslint/no-empty-function
-        draw: () => {},
-      };
-      instance.ngOnInit();
-
-      expect(instance.bindEvents).toHaveBeenCalled();
-    });
-
-    it("should not initialize chart when type is missing", () => {
-      instance.configuration = {
-        data: data["Bar"],
-      } as unknown as Configuration;
-
-      instance.ngOnInit();
-
-      expect(instance.chart).toBeUndefined();
-    });
-
-    it("should not initialize chart when data is missing", () => {
-      instance.configuration = {
-        type: "Bar",
-      } as unknown as Configuration;
-
-      instance.ngOnInit();
-
-      expect(instance.chart).toBeUndefined();
-    });
-  });
-
-  describe("ngOnChanges", () => {
-    beforeEach(() => {
-      instance.configuration = {
-        type: "Bar",
-        data: data["Bar"],
-      };
-    });
-
-    it("should re-render the chart if the chart type changes", () => {
-      vi.spyOn(instance, "renderChart");
-      instance.ngOnChanges({
-        configuration: {
-          currentValue: {
-            ...instance.configuration,
-            type: "Line",
-            data: {},
-          },
-        } as SimpleChange,
-      });
-
-      expect(instance["renderChart"]).toHaveBeenCalled();
-    });
-
-    it("should emit initialized event when the chart type changes", () => {
-      vi.spyOn(instance.initialized, "emit");
-      instance.ngOnChanges({
-        configuration: {
-          currentValue: {
-            ...instance.configuration,
-            type: "Line",
-            data: {},
-          },
-        } as SimpleChange,
-      });
-
-      expect(instance.initialized.emit).toHaveBeenCalled();
-    });
-
-    it("should update the chart if the data changes", () => {
-      instance.ngOnInit();
-
-      vi.spyOn(instance.chart!, "update");
-      vi.spyOn(instance, "renderChart");
-
-      instance.ngOnChanges({
-        configuration: {
-          currentValue: {
-            ...instance.configuration,
-            data: {},
-          },
-        } as SimpleChange,
-      });
-
-      expect(instance.renderChart).not.toHaveBeenCalled();
-      expect(instance.chart!.update).toHaveBeenCalled();
-    });
-
-    it("should update the chart if the options change", () => {
-      instance.ngOnInit();
-
-      vi.spyOn(instance.chart!, "update");
-      vi.spyOn(instance, "renderChart");
-
-      instance.ngOnChanges({
-        configuration: {
-          currentValue: {
-            ...instance.configuration,
-            options: {
-              chartPadding: 5,
-            },
-          },
-        } as SimpleChange,
-      });
-
-      expect(instance.renderChart).not.toHaveBeenCalled();
-      expect(instance.chart!.update).toHaveBeenCalled();
-    });
-  });
-
-  it("should throw for an unknown chart type", () => {
-    instance.configuration = {
-      type: "Donut",
-      data: data["Bar"],
-    } as unknown as Configuration;
-
-    expect(() => instance.ngOnInit()).toThrow("Donut is not a known chart type");
-  });
-});
 
 @Component({
   imports: [ChartistComponent],
-  template: `<x-chartist [configuration]="configuration()" [events]="events" />`,
+  template: `<x-chartist [configuration]="configuration()" (initialized)="initialized($event)" />`,
 })
 class HostComponent {
-  configuration = signal<Configuration>({ type: "Bar", data: data["Bar"] });
-  events?: ChartEvent;
+  configuration = signal<Configuration>({ type: "Bar", data: barData });
+  initialized = vi.fn();
 }
 
-describe("chartist component in a host template", () => {
+describe("ChartistComponent", () => {
   let fixture: ComponentFixture<HostComponent>;
   let host: HostComponent;
 
@@ -198,8 +25,8 @@ describe("chartist component in a host template", () => {
     return fixture.debugElement.children[0].componentInstance;
   }
 
-  function svg(): SVGElement | null {
-    return fixture.nativeElement.querySelector("x-chartist > svg");
+  function query(selector: string): Element[] {
+    return Array.from(fixture.nativeElement.querySelectorAll(`x-chartist ${selector}`));
   }
 
   beforeEach(() => {
@@ -208,54 +35,100 @@ describe("chartist component in a host template", () => {
   });
 
   it.each([
-    { type: "Bar", chartClass: BarChart, data: data["Bar"] },
-    { type: "Line", chartClass: LineChart, data: data["Bar"] },
-    { type: "Pie", chartClass: PieChart, data: { series: [5, 3, 4] } },
-  ] as const)(
-    "should render a $type chart into the host element",
-    async ({ type, chartClass, data }) => {
-      host.configuration.set({ type, data } as Configuration);
-      await fixture.whenStable();
-
-      expect(chartist().chart).toBeInstanceOf(chartClass);
-      await vi.waitFor(() => expect(svg()?.classList).toContain(`ct-chart-${type.toLowerCase()}`));
-    },
-  );
-
-  // Chartist 2 only emits the 1.x event names when the compat plugin is installed.
-  it("should forward chart events to the bound handlers", async () => {
-    const created = vi.fn();
-    host.events = { created };
-    host.configuration.set({ type: "Bar", data: data["Bar"], options: { plugins: [compat] } });
+    { type: "Bar", data: barData },
+    { type: "Line", data: barData },
+    { type: "Pie", data: { labels: ["A", "B", "C"], series: [5, 3, 4] } },
+  ] as const)("should render a $type chart", async (configuration) => {
+    host.configuration.set(configuration as Configuration);
     await fixture.whenStable();
 
-    await vi.waitFor(() => expect(created).toHaveBeenCalled());
+    const svgs = query("> svg");
+    expect(svgs).toHaveLength(1);
+    expect(svgs[0].classList).toContain(`ct-chart-${configuration.type.toLowerCase()}`);
+  });
+
+  it("should create the chart once and emit it", async () => {
+    await fixture.whenStable();
+
+    expect(host.initialized).toHaveBeenCalledOnce();
+    expect(host.initialized).toHaveBeenCalledWith(chartist().chart);
   });
 
   it("should update the existing chart when data changes", async () => {
-    const onData = vi.fn();
-    host.events = { data: onData };
-    host.configuration.set({ type: "Bar", data: data["Bar"], options: { plugins: [compat] } });
     await fixture.whenStable();
-    await vi.waitFor(() => expect(svg()).not.toBeNull());
+    expect(query(".ct-bar")).toHaveLength(3);
 
-    const chart = chartist().chart;
-    const nextData = { labels: ["Jan"], series: [[1]] };
-    host.configuration.set({ type: "Bar", data: nextData, options: { plugins: [compat] } });
+    host.configuration.set({
+      type: "Bar",
+      data: { labels: ["A", "B", "C", "D", "E"], series: [[1, 2, 3, 4, 5]] },
+    });
     await fixture.whenStable();
 
-    expect(chartist().chart).toBe(chart);
-    expect(onData).toHaveBeenLastCalledWith({ type: "update", data: nextData });
+    expect(query(".ct-bar")).toHaveLength(5);
+    expect(host.initialized).toHaveBeenCalledOnce();
   });
 
-  it("should detach the chart when destroyed", async () => {
+  it("should update the existing chart when options change", async () => {
+    host.configuration.set({ type: "Line", data: barData });
     await fixture.whenStable();
+    expect(query(".ct-point")).toHaveLength(3);
+    host.initialized.mockClear();
+
+    host.configuration.set({ type: "Line", data: barData, options: { showPoint: false } });
+    await fixture.whenStable();
+
+    expect(query(".ct-point")).toHaveLength(0);
+    expect(host.initialized).not.toHaveBeenCalled();
+  });
+
+  it("should replace the chart when the type changes", async () => {
+    await fixture.whenStable();
+    const barChart = chartist().chart;
+
+    host.configuration.set({ type: "Line", data: barData });
+    await fixture.whenStable();
+
+    const svgs = query("> svg");
+    expect(svgs).toHaveLength(1);
+    expect(svgs[0].classList).toContain("ct-chart-line");
+    expect(chartist().chart).not.toBe(barChart);
+    expect(host.initialized).toHaveBeenLastCalledWith(chartist().chart);
+  });
+
+  it("should pass phase listeners to the chart", async () => {
+    const render = vi.fn();
+    host.configuration.set({ type: "Bar", data: barData, options: { on: { render } } });
+    await fixture.whenStable();
+
+    expect(render).toHaveBeenCalled();
+  });
+
+  it("should replace the chart when phase listeners change", async () => {
+    await fixture.whenStable();
+    const render = vi.fn();
+
+    host.configuration.set({ type: "Bar", data: barData, options: { on: { render } } });
+    await fixture.whenStable();
+
+    expect(render).toHaveBeenCalled();
+    expect(host.initialized).toHaveBeenCalledTimes(2);
+  });
+
+  it("should remove the chart when destroyed", async () => {
+    await fixture.whenStable();
+    const element: HTMLElement = fixture.nativeElement.querySelector("x-chartist");
     const component = chartist();
-    const detach = vi.spyOn(component.chart!, "detach");
 
     fixture.destroy();
 
-    expect(detach).toHaveBeenCalled();
+    expect(element.querySelector("svg")).toBeNull();
     expect(component.chart).toBeUndefined();
+  });
+
+  it("should throw for an unknown chart type", () => {
+    const fixture = TestBed.createComponent(ChartistComponent);
+    fixture.componentRef.setInput("configuration", { type: "Donut", data: barData });
+
+    expect(() => fixture.detectChanges()).toThrow("Donut is not a known chart type");
   });
 });
