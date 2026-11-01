@@ -1,3 +1,13 @@
+# [11.0.0](https://github.com/willsoto/ng-chartist/compare/v10.0.0...v11.0.0) (2026-11-01)
+
+
+* chore(deps)!: update pnpm, jasmine-core, and puppeteer ([322d27c](https://github.com/willsoto/ng-chartist/commit/322d27c5aac4461581043d00e521f8ea93b8b9c2))
+
+
+### BREAKING CHANGES
+
+* update major dependencies
+
 # [10.0.0](https://github.com/willsoto/ng-chartist/compare/v9.1.0...v10.0.0) (2025-12-22)
 
 
