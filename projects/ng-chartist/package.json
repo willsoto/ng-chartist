@@ -4,20 +4,20 @@
   "description": "Chartist component for Angular",
   "keywords": [
     "angular",
-    "chartist",
     "charting",
+    "chartist",
     "charts"
   ],
   "homepage": "https://github.com/willsoto/ng-chartist",
   "bugs": {
     "url": "https://github.com/willsoto/ng-chartist/issues"
   },
+  "license": "Apache-2.0",
+  "author": "Will Soto",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/willsoto/ng-chartist.git"
   },
-  "license": "Apache-2.0",
-  "author": "Will Soto",
   "files": [
     "**/*.{js,mjs,ts,json,map}"
   ],

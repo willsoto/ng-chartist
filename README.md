@@ -13,8 +13,8 @@ pnpm add ng-chartist chartist
 ## Usage
 
 ```typescript
-import { ChartistModule } from "ng-chartist";
 import { NgModule } from "@angular/core";
+import { ChartistModule } from "ng-chartist";
 
 @NgModule({
   imports: [ChartistModule],
