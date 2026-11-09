@@ -1,3 +1,10 @@
+## [12.0.1](https://github.com/willsoto/ng-chartist/compare/v12.0.0...v12.0.1) (2026-11-09)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([6a0ac00](https://github.com/willsoto/ng-chartist/commit/6a0ac008931f31bcdc604426717a2055b5e96ef2))
+
 # [12.0.0](https://github.com/willsoto/ng-chartist/compare/v11.0.0...v12.0.0) (2026-11-01)
 
 
