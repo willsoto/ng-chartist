@@ -21,14 +21,14 @@
     "@angular-eslint/eslint-plugin-template": "22.6.0",
     "@angular-eslint/schematics": "22.6.0",
     "@angular-eslint/template-parser": "22.6.0",
-    "@angular/build": "22.2.5",
-    "@angular/cli": "22.2.5",
-    "@angular/common": "22.2.4",
-    "@angular/compiler": "22.2.4",
-    "@angular/compiler-cli": "22.2.4",
-    "@angular/core": "22.2.4",
-    "@angular/language-service": "22.2.4",
-    "@angular/platform-browser": "22.2.4",
+    "@angular/build": "22.2.6",
+    "@angular/cli": "22.2.6",
+    "@angular/common": "22.2.5",
+    "@angular/compiler": "22.2.5",
+    "@angular/compiler-cli": "22.2.5",
+    "@angular/core": "22.2.5",
+    "@angular/language-service": "22.2.5",
+    "@angular/platform-browser": "22.2.5",
     "@commitlint/config-conventional": "21.2.4",
     "@eslint/js": "10.0.1",
     "@semantic-release/changelog": "7.0.0",
@@ -36,22 +36,22 @@
     "@types/node": "26.6.6",
     "@typescript-eslint/eslint-plugin": "8.72.1",
     "@typescript-eslint/parser": "8.72.1",
-    "@vitest/browser-playwright": "5.0.5",
-    "@vitest/coverage-v8": "5.0.5",
+    "@vitest/browser-playwright": "5.1.0",
+    "@vitest/coverage-v8": "5.1.0",
     "angular-eslint": "22.6.0",
     "chartist": "2.2.0",
     "commitlint": "21.2.4",
     "eslint": "^10.0.0",
     "lefthook": "2.2.2",
-    "ng-packagr": "22.2.5",
-    "oxfmt": "0.75.0",
-    "playwright": "1.64.1",
+    "ng-packagr": "22.2.6",
+    "oxfmt": "0.77.0",
+    "playwright": "1.65.0",
     "rxjs": "7.8.2",
     "semantic-release": "25.0.9",
     "tslib": "2.9.1",
     "typescript": "6.0.3",
     "typescript-eslint": "8.72.1",
-    "vitest": "5.0.5"
+    "vitest": "5.1.0"
   },
   "commitlint": {
     "extends": [
@@ -82,5 +82,5 @@
       "@semantic-release/git"
     ]
   },
-  "packageManager": "pnpm@12.17.0"
+  "packageManager": "pnpm@12.18.0"
 }
